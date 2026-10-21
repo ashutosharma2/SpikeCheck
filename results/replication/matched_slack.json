@@ -1,0 +1,77 @@
+{
+ "slack_budget (proposed argmax)": 0.586821425121701,
+ "best_within_budget": {
+  "cbase argmax": {
+   "recall_paper": 0.31779842744817727,
+   "cover@1": 0.29195854181558256,
+   "cover@3": 0.1602215868477484,
+   "f1_fwd": 0.4034299816664373,
+   "throttle_core_h@3 (min)": 3963.444166666666,
+   "configs_within_budget": 1
+  },
+  "cbase quantile": {
+   "recall_paper": 0.695746962115797,
+   "cover@1": 0.6568263045032166,
+   "cover@3": 0.44253037884203,
+   "f1_fwd": 0.44758759217505495,
+   "throttle_core_h@3 (min)": 1525.8374999999999,
+   "configs_within_budget": 7
+  },
+  "naive": {
+   "recall_paper": 0.14896354538956397,
+   "cover@1": 0.08463187991422444,
+   "cover@3": 0.07569692637598284,
+   "f1_fwd": 0.1884162804357842,
+   "throttle_core_h@3 (min)": 5620.748333333333,
+   "configs_within_budget": 1
+  },
+  "oracle": {
+   "recall_paper": 0.9997855611150822,
+   "cover@1": 0.9964260185847034,
+   "cover@3": 1.0,
+   "f1_fwd": 0.9998927690602996,
+   "throttle_core_h@3 (min)": 0.0,
+   "configs_within_budget": 2
+  },
+  "proposed argmax": {
+   "recall_paper": 0.615939957112223,
+   "cover@1": 0.5288777698355969,
+   "cover@3": 0.5657612580414582,
+   "f1_fwd": 0.24390002404101557,
+   "throttle_core_h@3 (min)": 1584.8600000000001,
+   "configs_within_budget": 1
+  },
+  "proposed_full argmax": {
+   "recall_paper": 0.6100071479628306,
+   "cover@1": 0.5319513938527519,
+   "cover@3": 0.5607934238741958,
+   "f1_fwd": 0.27686523790106043,
+   "throttle_core_h@3 (min)": 1846.555,
+   "configs_within_budget": 1
+  },
+  "proposed_full quantile": {
+   "recall_paper": 0.6422087205146533,
+   "cover@1": 0.5687991422444604,
+   "cover@3": 0.5934953538241601,
+   "f1_fwd": 0.28088494712462225,
+   "throttle_core_h@3 (min)": 1652.4433333333332,
+   "configs_within_budget": 1
+  },
+  "rolling-max": {
+   "recall_paper": 0.3527519656897784,
+   "cover@1": 0.31315225160829163,
+   "cover@3": 0.32426733380986417,
+   "f1_fwd": 0.19273427741576243,
+   "throttle_core_h@3 (min)": 1863.315,
+   "configs_within_budget": 6
+  },
+  "rolling-quantile": {
+   "recall_paper": 0.2836311651179414,
+   "cover@1": 0.2976411722659042,
+   "cover@3": 0.2981057898498928,
+   "f1_fwd": 0.36353918529785356,
+   "throttle_core_h@3 (min)": 1780.8775833333345,
+   "configs_within_budget": 2
+  }
+ }
+}
