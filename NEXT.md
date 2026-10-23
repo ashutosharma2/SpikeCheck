@@ -1,13 +1,22 @@
 # Next session: one task
 
-**Publish SpikeCheck as a private GitHub repo**
-Everything is committed locally on three branches: `main` (the dated history and the repo setup), `docs` (diagrams, ADRs, README, project story, all in plainer wording) and `horizon30-results` (the 30-minute follow-up, built on `docs`). Nothing is on GitHub yet.
+**Split spikes by type and see where each method gains**
+The look-ahead beats the paper's target overall, but nobody knows which spikes it gains on. Spikes come in at least three kinds: isolated ones that arrive out of nowhere, follow-on ones that come soon after an earlier spike, and seasonal ones that repeat at about the same time each day. If the gains sit mostly in follow-on and seasonal spikes, a simple heuristic might match them, and isolated spikes may be close to unpredictable from CPU history alone (opportunity #3 in [the review](docs/review.md)).
 
-1. Sign `gh` in to `ashutosharma2`, create the private repo `SpikeCheck`, and push `main`.
-2. Push `docs` and open PR 1 into `main` with a SOART description. Merge it with a merge commit.
-3. Push `horizon30-results` and open PR 2 into `main` the same way, then delete both branches.
+Work on a branch, `spike-types` (one branch and PR per task; merge with a merge commit, never squash).
 
-Done when: the private repo shows the full history, both PRs are merged with merge commits, and no file mentions anything it shouldn't.
+1. Decide the definitions before looking at any results:
+   - how close an earlier spike has to be for a spike to count as follow-on;
+   - how close to the same time yesterday counts as seasonal;
+   - what happens when a spike fits both, and whether a spike preceded by a slow ramp is its own type.
+
+   Write the choices down in an ADR.
+2. Label every real spike on the test traces with its type, using `find_spikes` in `scripts/metrics.py`. Count how many fall into each type.
+3. Score spike coverage per type for cbase, proposed, fwdmax and fwdmax6 (three seeds each), plus the rolling-max and seasonal-max baselines, at matched over-provisioning and at 5, 15 and 30-minute delays. The saved test predictions are enough, so nothing needs retraining. If `data/` was wiped, rerun `scripts/get_data.sh` and the runners first.
+4. Write the result up in `docs/replication.md`, update the README findings and the diagrams if anything changes, add a LOG line, and set the next task here.
+5. Open the PR with a SOART description.
+
+Done when: every test spike has a type, coverage is reported per type for every method across three seeds, and the write-up says which types each method gains on.
 
 ## End of every milestone
 - Update README.md (status, findings) and docs/architecture.md (all diagrams; solid = done, dashed = planned).
