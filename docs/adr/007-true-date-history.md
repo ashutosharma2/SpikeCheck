@@ -39,3 +39,4 @@ Alternatives considered:
 ## Troubleshooting
 
 - The 22 October commit can't run on its own: without `train.py` it can evaluate but not train. That's the price of keeping the dates true, and it's accepted.
+- Before publishing, three sentences in the original review and replication write-up that described the working set-up rather than the research were removed from the commits they first appeared in. Everything else in those commits, and every date, is as it was.
