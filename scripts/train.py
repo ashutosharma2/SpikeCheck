@@ -4,6 +4,8 @@
   proposed  target = class of max(x[t-6 : t+5])       (paper's Strategy 1 target, as in its code)
   fwdmax    target = class of max(x[t : t+5])         (Strategy 1's 5-step look-ahead without the
             6-step past hold; isolates horizon from shaping)
+  fwdmax6   target = class of max(x[t : t+6])         (6-step = 30-min look-ahead, so the forecast
+            issued 6 steps early still covers the step it is applied to)
   proposed_full  same target, plus the paper's input ("values") transform: max over the last 2
             samples, then log (approximated on raw non-negative features before z-scoring)
 
@@ -46,6 +48,8 @@ def make_target(x, mode):
         v = x.copy()
     elif mode == 'fwdmax':
         v = proposed_target(x, past=1, future=5)
+    elif mode == 'fwdmax6':
+        v = proposed_target(x, past=1, future=6)
     elif mode in ('proposed', 'proposed_full'):
         v = proposed_target(x)
     else:
@@ -106,7 +110,8 @@ def main(data_path, repo_root, mode, out_dir, minutes=90, seed=SEED):
 
     def sample(n_tr, k):
         i = rng.integers(0, n_tr, size=n_tr * k)
-        t = rng.integers(LAG, T - 5, size=n_tr * k)    # proposed target needs t+4 < T
+        hi = T - 6 if mode == 'fwdmax6' else T - 5       # target must exist: t+4 < T (t+5 for fwdmax6)
+        t = rng.integers(LAG, hi, size=n_tr * k)
         return torch.tensor(i, device=dev), torch.tensor(t, device=dev)
 
     vi, vt = sample(va_s.shape[0], VAL_WINDOWS)

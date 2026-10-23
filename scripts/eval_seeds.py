@@ -27,7 +27,8 @@ QS = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.85, 0.9, 0.95, 0.98, 0.99, 0.995
 BUDGETS = [0.4, 0.5, 0.6, 0.7, 0.8, 1.0, 1.2, 1.5]
 METRICS = ['recall_paper', 'cover@1', 'cover@3', 'cover@6', 'f1_fwd',
            'throttle_core_h@1', 'throttle_core_h@3', 'throttle_core_h@6']
-COLORS = {'cbase': '#F58518', 'proposed': '#B279A2', 'fwdmax': '#4C78A8', 'seasonal-max': '#72B7B2'}
+COLORS = {'cbase': '#F58518', 'proposed': '#B279A2', 'fwdmax': '#4C78A8', 'fwdmax6': '#54A24B',
+          'seasonal-max': '#72B7B2'}
 
 
 def score(Xte, Y, req):
@@ -83,17 +84,18 @@ def main(data_path, models_dir, out_dir):
     summary = interp.groupby(['budget', 'mode'])[METRICS].agg(['mean', 'std', 'count'])
     summary.to_csv(f'{out_dir}/matched_slack_summary.csv')
 
-    # seed-paired differences vs Strategy 1
+    # seed-paired differences (mode a - mode b)
     paired = {}
-    for other in ('fwdmax', 'cbase'):
+    for other, ref in (('fwdmax', 'proposed'), ('cbase', 'proposed'),
+                       ('fwdmax6', 'proposed'), ('fwdmax6', 'fwdmax')):
         for b in BUDGETS:
             a = interp[(interp['mode'] == other) & (interp.budget == b)].set_index('seed')
-            p = interp[(interp['mode'] == 'proposed') & (interp.budget == b)].set_index('seed')
+            p = interp[(interp['mode'] == ref) & (interp.budget == b)].set_index('seed')
             common = a.index.intersection(p.index)
             if len(common) == 0:
                 continue
             d = a.loc[common, METRICS] - p.loc[common, METRICS]
-            paired[f'{other} - proposed @ slack {b}'] = {
+            paired[f'{other} - {ref} @ slack {b}'] = {
                 m: {'mean': float(d[m].mean()), 'min': float(d[m].min()), 'max': float(d[m].max()),
                     'n_seeds': int(d[m].notna().sum())} for m in METRICS}
     json.dump(paired, open(f'{out_dir}/paired_vs_proposed.json', 'w'), indent=1)
