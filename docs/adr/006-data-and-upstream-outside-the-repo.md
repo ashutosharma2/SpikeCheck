@@ -5,26 +5,26 @@
 
 ## Scenario
 
-SpikeCheck should let someone check every number and rerun the work, without the repo becoming huge or republishing what isn't ours.
+SpikeCheck should let someone check every number and rerun the work, without the repo becoming huge or republishing things that aren't ours.
 
 ## Obstacle
 
-- **The data is large.** The raw trace is 29 GB, the prepared inputs about 420 MB, and the trained models with their predictions about 1.2 GB. GitHub rejects files over 100 MB, and history keeps every file ever committed.
-- **Redistribution is unclear.** Alibaba gates the trace behind a short survey, and its redistribution terms weren't confirmed.
-- **The authors' code is theirs.** It's Apache-2.0, so copying it would be allowed, but it would mix their work with ours.
+The data is large. The raw trace is 29 GB, the prepared inputs about 420 MB, and the trained models with their predictions about 1.2 GB. GitHub rejects files over 100 MB, and a repo's history keeps every file ever committed.
+
+Redistribution is unclear: Alibaba asks people to fill in a short survey before downloading the trace, and I couldn't confirm its redistribution terms.
+
+And the authors' code is theirs. It's Apache-2.0, so copying it in would be allowed, but it would mix their work with ours.
 
 ## Action
 
-- **Tracked:** code, results (CSV, JSON and PNG, about 1.3 MB), docs, and `chosen_containers.csv` (300 KB, to pin the exact sample).
-- **Not tracked:** everything in `data/` and `upstream/`, both in `.gitignore`.
-- **Data.** `scripts/get_data.sh` downloads and prepares the trace from Alibaba's public bucket.
-- **Authors' code.** `scripts/setup.sh` clones the authors' repository and checks out commit `98f0d51`, the version the experiments used.
-- **Portable paths.** `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` let both live anywhere.
+The repo tracks the code, the results (CSV, JSON and PNG, about 1.3 MB), the docs, and `chosen_containers.csv` (300 KB, which pins the exact sample). Everything in `data/` and `upstream/` stays out, and both are in `.gitignore`.
+
+`scripts/get_data.sh` downloads and prepares the trace from Alibaba's public bucket. `scripts/setup.sh` clones the authors' repository and checks out commit `98f0d51`, the version the experiments used. `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` let both live anywhere.
 
 Alternatives considered:
 
-- **Git LFS for the data.** Workable for the prepared inputs, but GitHub's free LFS quota is small, and it still republishes Alibaba's data.
-- **Copy the authors' code in.** Self-contained, but blurs authorship and freezes their code without a reason.
+- Git LFS for the data. It would work for the prepared inputs, but GitHub's free LFS quota is small, and it still republishes Alibaba's data.
+- Copy the authors' code in. Self-contained, but it blurs who wrote what and freezes their code for no reason.
 
 ## Result
 
@@ -33,4 +33,4 @@ Alternatives considered:
 
 ## Troubleshooting
 
-- **The pin matters.** The evaluator, the model and the experiments all import from the authors' code, so a later change upstream could silently change results. Pinning the commit in `setup.sh` rules that out.
+- The pin matters. The evaluator, the model and the experiments all import from the authors' code, so a later change there could quietly change our results. Pinning the commit in `setup.sh` rules that out.
