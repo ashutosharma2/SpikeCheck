@@ -1,6 +1,6 @@
 # Agulló et al. (2025): Alibaba re-check with fixed metrics, rolling-max baselines and quantile readout
 
-Run on 2026-10-22, following up on `../agullo2025_critical_review.md` (opportunities #2 and #3, audit items D1–D6 and C3–C4).
+Run on 2026-10-22, following up on the [critical review](review.md) (opportunities #2 and #3, audit items D1–D6 and C3–C4).
 
 ## What was run
 
@@ -36,7 +36,7 @@ Bootstrap 95% CIs over test traces (500 resamples):
 - **cbase q=0.9 − proposed**: Δrecall [−0.009, +0.009], Δslack [−0.180, −0.148]. That is the same recall with about 30% less over-provisioning.
 - **cbase q=0.95 − proposed**: Δrecall [+0.069, +0.090] with Δslack [−0.020, +0.006]. That is higher recall at the same slack.
 
-So, **with the paper's own recall window, a plain CE model read at an upper quantile dominates the Strategy-1 target.** Figure: `results/pareto_recall_paper.png`.
+So, **with the paper's own recall window, a plain CE model read at an upper quantile dominates the Strategy-1 target.** Figure: [`results/replication/pareto_recall_paper.png`](../results/replication/pareto_recall_paper.png).
 
 ### 3. With actuation delay, Strategy 1 does win, because it forecasts further ahead
 The ranking flips when the allocation must be decided 15 min in advance (`cover@3`):
@@ -47,7 +47,7 @@ The ranking flips when the allocation must be decided 15 min in advance (`cover@
 | cbase q = 0.95 | 0.581 | 0.443 | 0.415 |
 | best rolling max within budget | 0.567 | 0.324 | 0.329 |
 
-Bootstrap: cbase q=0.95 − proposed Δcover@3 is [−0.139, −0.108]. The proposed family's quantile readouts also form the best front for cover@3 (`results/pareto_cover_at_3.png`).
+Bootstrap: cbase q=0.95 − proposed Δcover@3 is [−0.139, −0.108]. The proposed family's quantile readouts also form the best front for cover@3 ([`results/replication/pareto_cover_at_3.png`](../results/replication/pareto_cover_at_3.png)).
 
 The likely mechanism [inference]: the Strategy-1 target includes x[t+1..t+4], which gives a 20-minute look-ahead. Its value is the **horizon**, not the asymmetric shaping. Supporting this, a *perfect* Strategy-1 forecaster covers only 28% of spikes at a 30-min delay, versus 99.6% at 5 min.
 
@@ -62,7 +62,7 @@ Throttled core-hours with a 15-min delay, summed over 893 test traces:
 | seasonal max w=6 | 0.741 | 1,221 |
 | proposed q = 0.7 | 0.716 | 1,169 |
 
-All learned variants and seasonal-max lie within about 5–10% of each other at matched slack. Rolling max is about 15–20% worse (`results/pareto_throttle_core_h_at_3.png`). Large differences in spike-event metrics translate into **small differences in throttled volume**. This is the first concrete evidence for opportunity #1 (metric validity).
+All learned variants and seasonal-max lie within about 5–10% of each other at matched slack. Rolling max is about 15–20% worse ([`results/replication/pareto_throttle_core_h_at_3.png`](../results/replication/pareto_throttle_core_h_at_3.png)). Large differences in spike-event metrics translate into **small differences in throttled volume**. This is the first concrete evidence for opportunity #1 (metric validity).
 
 ### 5. Other findings
 - **Rolling max does *not* recover Strategy 1's gain** at matched slack (recall 0.35 vs 0.62). My hypothesis H3, "gains are mostly persistence", is **not supported** in this form. The learned models capture more than recent peaks. Seasonal max comes closest (recall 0.58 at slack 0.74), but proposed still beats it at equal slack (0.69).
@@ -79,7 +79,7 @@ To separate them, I trained a third target, **fwdmax** = max(x[t … t+4]). It k
 
 Each model's softmax was decoded at 15 quantiles (q = 0.1 … 0.995), which gives one over-provisioning curve per run. Every curve was then interpolated at fixed **slack/usage budgets**, so the comparisons below are at equal over-provisioning. Differences are **seed-paired** (seed k vs seed k).
 
-Files are in `results_horizon/`: `matched_slack_summary.csv`, `paired_vs_proposed.json`, `all_runs.csv` and the `seeds_*.png` plots.
+Files are in [`results/horizon/`](../results/horizon/): `matched_slack_summary.csv`, `paired_vs_proposed.json`, `all_runs.csv` and the `seeds_*.png` plots.
 
 ### Result: the horizon explains Strategy 1's advantage, and the past-hold makes it worse
 
@@ -116,8 +116,8 @@ What this shows:
 
 This also refines result 4 above. Once the horizon is separated from the shaping, the learned targets are no longer "within 5–10% of each other". A horizon-matched target throttles 24–31% less than cbase, and 9–19% less than Strategy 1, at equal over-provisioning.
 
-![coverage, 15-min delay](results_horizon/seeds_cover_at_3.png)
-![throttled core-hours, 15-min delay](results_horizon/seeds_throttle_core_h_at_3.png)
+![coverage, 15-min delay](../results/horizon/seeds_cover_at_3.png)
+![throttled core-hours, 15-min delay](../results/horizon/seeds_throttle_core_h_at_3.png)
 
 **Run notes:**
 - fwdmax and seeds 1–2 of cbase/proposed were trained with a lower-memory `train.py` (inputs memory-mapped and stored as float16 on the GPU; peak footprint 3.9 GB → 2.5 GB).
@@ -138,4 +138,11 @@ This also refines result 4 above. Once the horizon is separated from the shaping
   - a look-ahead matched to a 30-min delay
 
 ## Reproduce
-`scripts/run_all.sh` (prep → train ×3 → eval). For the horizon follow-up, run `scripts/run_seeds.sh` (7 training runs), then `scripts/eval_seeds.py`. `scripts/overnight.sh` chains both under `caffeinate`. It expects the aggregated `alibaba_5min.npz` from `stream_alibaba.py`, which takes about 2.3 h at 4 MB/s, and the authors' repo at `../repo/rf`.
+From the repo root:
+
+1. `scripts/setup.sh`: clones the authors' code at the pinned commit and installs the packages in `requirements.txt`.
+2. `scripts/get_data.sh`: streams the trace (about 2.3 h at 4 MB/s) and builds `data/data.npz`.
+3. `scripts/run_all.sh`: the first replication (three targets, seed 0), written to `results/replication/`.
+4. `RUNS="fwdmax:0 fwdmax:1 fwdmax:2 cbase:1 proposed:1 cbase:2 proposed:2" scripts/overnight.sh`: the horizon follow-up, written to `results/horizon/`.
+
+`SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` move the data and the authors' code elsewhere (see `scripts/common.sh`).
