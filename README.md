@@ -22,7 +22,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | With no actuation delay, a plain classifier read at an upper quantile is as good or better | Same recall as the proposed method with about 30% less over-provisioning |
 | With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.44 at the same over-provisioning |
 | Looking ahead is what helps; holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 19% less throttling at slack 0.6 |
-| The look-ahead must be at least as long as the delay | A perfect forecaster of the paper's 25-minute target covers 99.6% of spikes at a 5-minute delay but only 28% at 30 minutes |
+| The look-ahead has to be at least as long as the delay | A 30-minute look-ahead covers 0.74 of spikes at a 30-minute delay against 0.59 for the 25-minute one (slack 0.8, all three seeds), with no cost at shorter delays |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
 
@@ -33,7 +33,7 @@ The details and every caveat are in the [replication write-up](docs/replication.
 | Review of the paper | Done |
 | First replication (paper reproduced, quantile readout) | Done |
 | Horizon vs hold, three seeds | Done |
-| 30-minute look-ahead, three seeds | Running |
+| 30-minute look-ahead, three seeds | Done |
 | Strategy 2 (altered loss), calibration, spike types, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
@@ -64,7 +64,7 @@ flowchart LR
 
 ```
 scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, runners
-results/      replication/, horizon/ (and horizon30/ when it finishes): CSV, JSON, plots
+results/      replication/, horizon/, horizon30/: CSV, JSON, plots
 docs/         review, replication write-up, architecture diagrams, project story, ADRs
 data/         downloaded and generated data, models (not committed)
 upstream/     the authors' code at a pinned commit (not committed)

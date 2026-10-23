@@ -108,7 +108,7 @@ What this shows:
 2. The hold costs more than it gives. Keeping the allocation high after a spike spends over-provisioning on time that has already passed. The gap is widest when the budget is tight: +8 points of coverage and 19% less throttling at slack 0.6.
 3. Looking ahead costs nothing when there's no delay. With no actuation delay fwdmax matches cbase (0.674 against 0.671 at slack 0.6, 0.751 against 0.741 at 0.8). At a 15-minute delay it's far better, with 0.19 to 0.22 more coverage at slack 0.6 to 0.8.
 4. The single-seed result for cbase against proposed holds across seeds. cbase wins or ties with no delay (0.01 to 0.11 more coverage) and loses at a 15-minute delay (0.11 to 0.15 less, in every seed).
-5. The look-ahead has to match the delay. At a 30-minute delay, every model trained on a 25-minute look-ahead loses most of its edge (fwdmax beats proposed by only 0.02 to 0.05), and coverage at slack 0.8 stays below 0.6 for all of them. [Inference: a target whose look-ahead matches the delay should bring the gain back. Not tested yet.]
+5. The look-ahead has to match the delay. At a 30-minute delay, every model trained on a 25-minute look-ahead loses most of its edge (fwdmax beats proposed by only 0.02 to 0.05), and coverage at slack 0.8 stays below 0.6 for all of them. A target whose look-ahead matches the delay was tested next, and it brings the gain back (see the 30-minute follow-up below).
 6. Seeds make little difference. Coverage varies by an sd of at most 0.02. Strategy 1 is the noisiest, with a throttled core-hours sd of 35 to 43 against 11 to 13 for fwdmax.
 7. The paper's recall window can't see any of this. With no delay and a symmetric band, fwdmax and proposed score about the same at slack 0.8 and above (differences from −0.02 to +0.04). The difference only shows once delay or throttled CPU is measured.
 
@@ -123,13 +123,53 @@ Run notes:
 - Best epochs: cbase 13, 14 and 8; fwdmax 11, 16 and 16; proposed 7, 15 and 19. All finished within the 60-minute cap.
 - Seasonal max is in `matched_slack_by_seed.csv` for reference. At slack 0.8 it covers 0.643 of spikes at a 15-minute delay, below both learned look-ahead targets.
 
+## Follow-up: a look-ahead that matches a 30-minute delay (3 seeds, run 23 October 2026)
+
+With a 30-minute delay, the allocation in force during a spike was decided 6 steps earlier. The 25-minute target (fwdmax) only reaches 5 steps ahead, so it misses every such spike by one step. A new target, fwdmax6 = max(x[t … t+5]), reaches 6 steps ahead. I trained it with seeds 0, 1 and 2 on the same data, inputs, model and settings, and evaluated it together with the nine earlier models, at matched over-provisioning.
+
+The files are in [`results/horizon30/`](../results/horizon30/).
+
+### Result: a look-ahead that matches the delay brings coverage back, and costs nothing at shorter delays
+
+Mean over 3 seeds (± sd), at matched over-provisioning:
+
+| slack budget | metric | fwdmax6 (30-min look-ahead) | fwdmax (25-min) | proposed (Strategy 1) |
+|---|---|---|---|---|
+| 0.6 | spikes covered, 30-min delay | 0.659 ± .008 | 0.477 ± .009 | 0.431 ± .009 |
+| 0.6 | throttled core-h, 30-min delay | 1,256 ± 10 | 1,483 ± 3 | 1,746 ± 18 |
+| 0.8 | spikes covered, 30-min delay | 0.744 ± .005 | 0.590 ± .009 | 0.556 ± .007 |
+| 0.8 | throttled core-h, 30-min delay | 923 ± 13 | 1,127 ± 2 | 1,252 ± 29 |
+| 1.0 | spikes covered, 30-min delay | 0.800 ± .003 | 0.677 ± .008 | 0.655 ± .009 |
+| 1.0 | throttled core-h, 30-min delay | 727 ± 12 | 905 ± 2 | 971 ± 26 |
+| 0.8 | spikes covered, 15-min delay | 0.762 ± .005 | 0.757 ± .005 | 0.718 ± .015 |
+| 0.8 | spikes covered, no extra delay | 0.755 ± .005 | 0.751 ± .005 | 0.699 ± .019 |
+
+Differences paired by seed. All three seeds have the same sign unless the range crosses zero.
+
+| slack | fwdmax6 minus fwdmax, covered at 30 min | fwdmax6 minus proposed, covered at 30 min | fwdmax6 minus fwdmax, covered at 15 min |
+|---|---|---|---|
+| 0.6 | +0.182 [+0.179, +0.186] | +0.228 [+0.216, +0.242] | +0.006 [−0.002, +0.014] |
+| 0.8 | +0.154 [+0.150, +0.158] | +0.188 [+0.182, +0.200] | +0.005 [−0.002, +0.010] |
+| 1.0 | +0.123 [+0.119, +0.128] | +0.145 [+0.136, +0.158] | +0.005 [−0.000, +0.008] |
+| 1.2 | +0.097 [+0.093, +0.100] | +0.113 [+0.106, +0.124] | +0.005 [+0.000, +0.008] |
+
+What this shows:
+1. The gain comes back. At a 30-minute delay and slack 0.8, fwdmax6 covers 0.74 of spikes, close to what the 25-minute target covers at a 15-minute delay (0.76). Across slack 0.6 to 1.0 it throttles 15 to 20% less CPU than fwdmax at that delay, and 25 to 28% less than Strategy 1.
+2. It costs nothing at shorter delays. I expected the longer look-ahead to waste some over-provisioning when the delay is short, but it doesn't measurably: at 5 and 15 minutes its coverage differs from fwdmax's by at most 0.006, and those seed ranges cross zero.
+3. So the rule holds: the look-ahead has to be at least as long as the actuation delay, and none of the delays tested needs the hold after a spike.
+4. The paper's recall window points the wrong way again. It scores fwdmax6 slightly below fwdmax (0.731 against 0.745 at slack 0.8); only delay-aware coverage and throttling show the gain.
+
+Training: best epochs 16, 16 and 20, all within the 60-minute cap, with best validation loss between 1.156 and 1.174.
+
+![coverage, 30-min delay](../results/horizon30/seeds_cover_at_6.png)
+
 ## Limitations (read before citing)
 - The first run used one seed per model (the horizon follow-up uses three), a 60-minute training cap and early stopping. The paper's learning rate of 0.01 made validation loss noisy, and proposed stopped after 7 epochs. The confidence intervals cover the sampling of test traces, not training variance.
 - The preprocessing is a reconstruction. The trace count, the gap and variance filters, the target (max CPU per 5-minute bin) and the bins (40 of 2.5 CPU points each) approximate the authors' pipeline but aren't it.
 - The corrected spike detector (a 4-step refractory period, a minimum rise of 2 CPU points) changes which events count as spikes, so recall here can't be compared number for number with the paper's tables. Only the rows from the authors' evaluator can.
 - The throttling measure is crude. It treats the 5-minute maximum CPU as demand, ignores what happens inside each bin and any contention, and has no SLO signal.
 - Training and test traces cover the same time window, as in the paper. Generalisation across time and clusters is untested.
-- Not done yet: Strategy 2 (the altered loss), conformal calibration, splitting spikes by type (#3), and a look-ahead matched to a 30-minute delay.
+- Not done yet: Strategy 2 (the altered loss), conformal calibration, and splitting spikes by type (#3).
 
 ## Reproduce
 From the repo root:
@@ -138,5 +178,6 @@ From the repo root:
 2. `scripts/get_data.sh` streams the trace (about 2.3 hours at 4 MB/s) and builds `data/data.npz`.
 3. `scripts/run_all.sh` runs the first replication (three targets, seed 0) and writes `results/replication/`.
 4. `RUNS="fwdmax:0 fwdmax:1 fwdmax:2 cbase:1 proposed:1 cbase:2 proposed:2" scripts/overnight.sh` runs the horizon follow-up and writes `results/horizon/`.
+5. `RUNS="fwdmax6:0 fwdmax6:1 fwdmax6:2" RES=horizon30 scripts/overnight.sh` runs the 30-minute follow-up and writes `results/horizon30/`.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).

@@ -30,7 +30,7 @@ The delay flips the ranking:
 - At a 15-minute delay the paper's method wins (coverage 0.57 against 0.44), because its target looks ahead.
 - A perfect forecaster of the paper's target covers 99.6% of spikes at a 5-minute delay but only 28% at 30 minutes, because its 25-minute look-ahead is shorter than the delay.
 
-This led to the horizon experiments: one target that only looks ahead, and one whose look-ahead matches a 30-minute delay.
+This led to the horizon experiments: one target that only looks ahead, and one whose look-ahead matches a 30-minute delay. The second confirmed the rule. A look-ahead at least as long as the delay brings coverage back (0.74 against 0.59 at a 30-minute delay and slack 0.8), and costs nothing at shorter delays.
 
 ## Troubleshooting
 

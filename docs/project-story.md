@@ -2,7 +2,7 @@
 
 Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was planned and done, the decisions behind it, and what went wrong along the way. The reasoning behind each decision is in the [ADRs](adr/).
 
-**Status:** in progress. The review, the replication and the three-seed horizon experiment are done. A 30-minute look-ahead experiment is running, and the next steps are in [NEXT.md](../NEXT.md).
+**Status:** in progress. The review, the replication and both three-seed horizon experiments are done. The next steps are in [NEXT.md](../NEXT.md).
 
 ---
 
@@ -36,8 +36,8 @@ I read the paper and the authors' evaluation code side by side, and found that o
 ### Horizon experiment (22 to 23 October)
 The paper's target does two things at once: it looks 25 minutes ahead, and it keeps the allocation high for 30 minutes after a spike. A third target that only looks ahead separates the two. I trained each target with three seeds, overnight.
 
-### 30-minute look-ahead (23 October, running)
-A target whose look-ahead matches a 30-minute delay, to test whether that brings coverage back at that delay.
+### 30-minute look-ahead (23 October)
+When the delay is 30 minutes, the 25-minute look-ahead misses every spike by one step. A target that looks 30 minutes ahead tests whether matching the look-ahead to the delay brings coverage back. Three seeds again.
 
 ### This repository (23 October)
 Code, results and docs, with scripts that fetch the data and the authors' code ([ADR-006](adr/006-data-and-upstream-outside-the-repo.md)), and a history dated by when each file actually existed ([ADR-007](adr/007-true-date-history.md)).
@@ -48,7 +48,7 @@ Code, results and docs, with scripts that fetch the data and the authors' code (
 - **Which method wins depends on the delay.** With no actuation delay, a plain classifier read at an upper quantile matches the paper's recall with about 30% less over-provisioning. With a 15-minute delay the paper's method wins, with coverage of 0.57 against 0.44.
 - **Looking ahead helps and holding hurts.** A target that only looks ahead beats the paper's at every level of over-provisioning, in all three seeds: 8 more points of spike coverage and 19% less throttled CPU at slack 0.6. Holding the allocation after a spike spends budget on spikes that are already over.
 - **The paper's metric can't see this.** On its recall window the two targets look the same. The difference only shows once delay or throttled CPU is measured.
-- **The look-ahead has to match the delay.** Even a perfect forecaster of the paper's 25-minute target covers only 28% of spikes when the delay is 30 minutes.
+- **The look-ahead has to match the delay.** Even a perfect forecaster of the paper's 25-minute target covers only 28% of spikes when the delay is 30 minutes. A 30-minute look-ahead brings it back: 0.74 coverage at slack 0.8 against 0.59 for the 25-minute target, in all three seeds, with no measurable cost at 5 or 15-minute delays.
 
 ## T: Troubleshooting
 
