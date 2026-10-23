@@ -4,7 +4,7 @@
 
 - **Scenario:** SpikeCheck re-examines Agulló et al. (2025), a method for forecasting CPU spikes so that cloud resources can be added before a spike arrives. It audits the paper's metrics, replicates the method on the Alibaba 2018 trace and tests what makes it work.
 - **Obstacle:** to follow the findings, a reader needs four things at once: where the numbers come from, how a forecast becomes a score, what the paper's metrics get wrong, and what each experiment compared.
-- **Action:** one diagram for each of those questions, drawn from the scripts as they are now. Solid lines and boxes are done; dashed ones are planned or still running.
+- **Action:** one diagram for each of those questions, drawn from the scripts as they are now. Solid lines and boxes are done; dashed ones are planned.
 - **Result:** every number in the write-up can be traced back to the raw trace, and the main finding (looking ahead helps, holding after a spike hurts) has its own picture.
 - **Troubleshooting:** a diagram is only useful while it matches the code, so these get updated at the end of every milestone.
 
@@ -59,13 +59,11 @@ flowchart TD
     UP --> M
     EVAL1 --> R1
     EVAL2 --> R2
-    EVAL2 -.-> R3
+    EVAL2 --> R3
 
-    classDef planned stroke-dasharray: 5 5
-    class R3 planned
 ```
 
-`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `results/horizon30/` is dashed because that run is still going.
+`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results.
 
 ## 2. From forecast to score
 
@@ -130,9 +128,9 @@ Each target answers "what should the model predict for step t?" differently. The
 | cbase: next value | | | | | | | ■ | | | | | |
 | proposed (Strategy 1): hold + look-ahead | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | |
 | fwdmax: 25-min look-ahead | | | | | | | ■ | ■ | ■ | ■ | ■ | |
-| fwdmax6: 30-min look-ahead *(running)* | | | | | | | ■ | ■ | ■ | ■ | ■ | ■ |
+| fwdmax6: 30-min look-ahead | | | | | | | ■ | ■ | ■ | ■ | ■ | ■ |
 
-Steps t−6 to t−1 are already known when the forecast is made, so the paper's target spends part of its prediction on keeping the allocation high after a spike has passed. fwdmax keeps only the look-ahead. With a 15-minute delay (3 steps), the allocation in force during a spike was forecast 3 steps earlier, so a target has to reach at least 2 steps ahead to cover it. With a 30-minute delay (6 steps) it has to reach 5 steps ahead, and only fwdmax6 does.
+Steps t−6 to t−1 are already known when the forecast is made, so the paper's target spends part of its prediction on keeping the allocation high after a spike has passed. fwdmax keeps only the look-ahead. With a 15-minute delay (3 steps), the allocation in force during a spike was forecast 3 steps earlier, so a target has to reach at least 2 steps ahead to cover it. With a 30-minute delay (6 steps) it has to reach 5 steps ahead, and only fwdmax6 does. The results agree: at a 30-minute delay and slack 0.8, fwdmax6 covers 0.74 of spikes, against 0.59 for fwdmax and 0.56 for the paper's target.
 
 This one is a table rather than a Mermaid chart because Mermaid has no grid layout for time steps.
 
@@ -162,10 +160,6 @@ flowchart LR
         PD["seed-paired differences<br/>(seed k against seed k)"]
     end
     FIXED --> VARIED --> SCORE
-    T -.- F6["fwdmax6 results pending"]
-
-    classDef planned stroke-dasharray: 5 5
-    class F6 planned
 ```
 
 Any forecaster can cover more spikes by asking for more CPU, so forecasters are compared at equal over-provisioning: each model's quantile curve is read at the same slack. Pairing seeds then keeps training noise out of the differences.
