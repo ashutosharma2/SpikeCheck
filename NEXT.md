@@ -1,17 +1,14 @@
 # Next session: one task
 
-**Write up the 30-minute look-ahead results**
-The 30-minute target (fwdmax6) tests whether a look-ahead that matches the actuation delay restores spike coverage at a 30-minute delay. At slack 0.8, the 25-minute target covers 0.59 at that delay.
+**Publish SpikeCheck as a private GitHub repo**
+Everything is committed locally on three branches: `main` (the dated history and the repo setup), `docs` (diagrams, ADRs, README, project story, all in plainer wording) and `horizon30-results` (the 30-minute follow-up, built on `docs`). Nothing is on GitHub yet.
 
-Work on a branch, `horizon30-results` (one branch and PR per task; merge with a merge commit, never squash).
+1. Add a "Learned:" part to each LOG line, in my own words.
+2. Sign `gh` in to `ashutosharma2`, create the private repo `SpikeCheck`, and push `main`.
+3. Push `docs` and open PR 1 into `main` with a SOART description. Merge it with a merge commit.
+4. Push `horizon30-results` and open PR 2 into `main` the same way, then delete both branches.
 
-1. Check the run finished: three fwdmax6 seeds trained, then `eval_seeds.py` over all twelve models.
-2. Copy the outputs into `results/horizon30/`.
-3. Compare fwdmax6 with fwdmax and the paper's target at matched slack, at 15 and 30-minute delays, and note what the longer look-ahead costs at shorter delays.
-4. Add a section to `docs/replication.md`; one line to this LOG; set the next task here.
-5. Open the PR (SOART description).
-
-Done when: the 30-minute question has an answer backed by three seeds, and it's written up.
+Done when: the private repo shows the full history, both PRs are merged with merge commits, and no file mentions anything it shouldn't.
 
 ## End of every milestone
 - Update README.md (status, findings) and docs/architecture.md (all diagrams; solid = done, dashed = planned).
