@@ -1,19 +1,19 @@
 # SpikeCheck
 
-**Does forecasting CPU spikes actually help cloud provisioning, and how would you know?**
+**Does forecasting CPU spikes help cloud provisioning, and how would you know?**
 
-Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it anticipates CPU spikes, and report that this doubles spike-prediction scores. SpikeCheck audits how those scores are computed, rebuilds the experiment on the public Alibaba 2018 cluster trace, and tests what actually makes the method work.
+Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work.
 
 **[Read the project story](docs/project-story.md)**: the problems, decisions and fixes behind SpikeCheck, in SOART format.
 
 ## How it works
 
-1. **Audit the metrics.** The paper's over-provisioning metric divides by about 1e-10 and its spike precision rewards forecasts that lag ([review](docs/review.md), [ADR-001](docs/adr/001-corrected-metrics.md)).
-2. **Rebuild the data.** Stream the 29 GB Alibaba container trace into 5-minute steps and select 5,946 long-running containers ([ADR-005](docs/adr/005-rebuilt-preprocessing.md)).
-3. **Train the authors' model on different targets.** Same model, inputs and data; only what it's asked to predict changes ([ADR-004](docs/adr/004-change-one-thing-at-a-time.md)).
-4. **Score fairly.** Allocations take effect after a 5, 15 or 30-minute delay ([ADR-002](docs/adr/002-score-under-actuation-delay.md)), and forecasters are compared at equal over-provisioning with three seeds each ([ADR-003](docs/adr/003-compare-at-equal-over-provisioning.md)).
+1. Check the paper's metrics. Its over-provisioning metric divides by about 1e-10, and its spike precision rewards forecasts that lag ([review](docs/review.md), [ADR-001](docs/adr/001-corrected-metrics.md)).
+2. Rebuild the data: stream the 29 GB Alibaba container trace into 5-minute steps and keep 5,946 long-running containers ([ADR-005](docs/adr/005-rebuilt-preprocessing.md)).
+3. Train the authors' model on different targets. The model, inputs and data stay the same; only what it's asked to predict changes ([ADR-004](docs/adr/004-change-one-thing-at-a-time.md)).
+4. Score fairly. Allocations take effect after a 5, 15 or 30-minute delay ([ADR-002](docs/adr/002-score-under-actuation-delay.md)), and forecasters are compared at equal over-provisioning, with three seeds each ([ADR-003](docs/adr/003-compare-at-equal-over-provisioning.md)).
 
-## Key findings
+## Findings
 
 | Finding | Evidence |
 |---|---|
@@ -21,10 +21,10 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | Its over-provisioning numbers are an artefact | Every forecaster scores 10¹⁵ to 10¹⁷, even repeating the last value |
 | With no actuation delay, a plain classifier read at an upper quantile is as good or better | Same recall as the proposed method with about 30% less over-provisioning |
 | With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.44 at the same over-provisioning |
-| The look-ahead is what helps; holding the allocation after a spike hurts | A look-ahead-only target beats the paper's at every budget, in all three seeds: +8 points of coverage and 19% less throttling at slack 0.6 |
+| Looking ahead is what helps; holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 19% less throttling at slack 0.6 |
 | The look-ahead must be at least as long as the delay | A perfect forecaster of the paper's 25-minute target covers 99.6% of spikes at a 5-minute delay but only 28% at 30 minutes |
 
-Details and every caveat: [replication write-up](docs/replication.md).
+The details and every caveat are in the [replication write-up](docs/replication.md).
 
 ## Status
 
@@ -48,7 +48,7 @@ flowchart LR
     E --> R["results/"]
 ```
 
-## Key decisions
+## Decisions
 
 | ADR | Decision |
 |---|---|
