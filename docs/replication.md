@@ -171,7 +171,7 @@ On 27 October macOS cleared the temporary folder that held the working data. Tha
 What was done:
 1. `scripts/get_data.sh` re-streamed the trace. The rebuilt inputs (`X.npy`) are byte for byte the same as a copy saved before the cleanup, so the data behind every result is unchanged.
 2. The lost models were retrained with the committed `train.py`: cbase, proposed and fwdmax for seed 0, and proposed_full.
-3. Every results folder was regenerated: `results/replication/`, `results/horizon/` and `results/horizon30/`.
+3. Every results folder was regenerated: `results/replication/`, `results/horizon/` and `results/horizon30/` ([ADR-008](adr/008-publish-reproducible-results.md)).
 
 fwdmax seed 0 came back identical, with the same validation loss at every epoch and the same scores. It had first been trained with the current script, so the script reproduces exactly on the same machine. cbase, proposed and proposed_full came back different, because they were first trained with an earlier float32 version of `train.py` that no longer exists ([ADR-007](adr/007-true-date-history.md)). Seed-0 spike coverage moved by up to 0.04. The authors' repository publishes no trained models or predictions, so the paper's tables are still the only outside reference.
 

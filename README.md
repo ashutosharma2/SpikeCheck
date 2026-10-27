@@ -60,6 +60,7 @@ flowchart LR
 | [005](docs/adr/005-rebuilt-preprocessing.md) | Rebuild the preprocessing, keeping the authors' choices where known |
 | [006](docs/adr/006-data-and-upstream-outside-the-repo.md) | Keep the data and the authors' code out of the repo; pin their commit |
 | [007](docs/adr/007-true-date-history.md) | Date commits by when each file's content actually existed |
+| [008](docs/adr/008-publish-reproducible-results.md) | Publish only results the committed code can regenerate |
 
 ## Repository layout
 
