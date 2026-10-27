@@ -35,7 +35,7 @@ Alternatives considered:
 
 ## Result
 
-- The paper's headline reproduces on its own evaluator: spike F1 goes from 0.42 to 0.65 for the TempInc model (the paper reports 0.27 to 0.64).
+- The paper's headline reproduces on its own evaluator: spike F1 goes from 0.41 to 0.68 for the TempInc model (the paper reports 0.27 to 0.64).
 - With forward-only precision, repeating the last value drops from 1.00 to 0.26, and the rolling maximum from 0.99 to 0.07.
 - Every results table can be read both ways.
 

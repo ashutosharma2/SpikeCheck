@@ -26,7 +26,7 @@ Alternatives considered:
 
 ## Result
 
-- At equal over-provisioning, the plain classifier read at the 0.9 quantile matches the paper's recall with about 30% less over-provisioning.
+- At equal over-provisioning, the plain classifier read at an upper quantile matches the paper's recall with 14 to 29% less over-provisioning across three seeds.
 - The horizon finding holds in all three seeds at every budget tested, and spike coverage varies between seeds by at most 0.02.
 - The numbers are in `results/horizon/matched_slack_summary.csv` and `paired_vs_proposed.json`.
 
