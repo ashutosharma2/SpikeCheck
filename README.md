@@ -17,11 +17,11 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 
 | Finding | Evidence |
 |---|---|
-| The paper's headline reproduces on its own evaluator | Spike F1 0.42 → 0.65 for the TempInc model (paper: 0.27 → 0.64) |
+| The paper's headline reproduces on its own evaluator | Spike F1 0.41 → 0.68 for the TempInc model (paper: 0.27 → 0.64) |
 | Its over-provisioning numbers are an artefact | Every forecaster scores 10¹⁵ to 10¹⁷, even repeating the last value |
-| With no actuation delay, a plain classifier read at an upper quantile is as good or better | Same recall as the proposed method with about 30% less over-provisioning |
-| With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.44 at the same over-provisioning |
-| Looking ahead is what helps; holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 19% less throttling at slack 0.6 |
+| With no actuation delay, a plain classifier read at an upper quantile is as good or better | Same recall as the proposed method with 14 to 29% less over-provisioning, across three seeds |
+| With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.43 at about the same over-provisioning |
+| Looking ahead is what helps; holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 18% less throttling at slack 0.6 |
 | The look-ahead has to be at least as long as the delay | A 30-minute look-ahead covers 0.74 of spikes at a 30-minute delay against 0.59 for the 25-minute one (slack 0.8, all three seeds), with no cost at shorter delays |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
@@ -34,6 +34,7 @@ The details and every caveat are in the [replication write-up](docs/replication.
 | First replication (paper reproduced, quantile readout) | Done |
 | Horizon vs hold, three seeds | Done |
 | 30-minute look-ahead, three seeds | Done |
+| Rebuild: every result regenerated from the committed scripts | Done |
 | Strategy 2 (altered loss), calibration, spike types, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
@@ -59,6 +60,7 @@ flowchart LR
 | [005](docs/adr/005-rebuilt-preprocessing.md) | Rebuild the preprocessing, keeping the authors' choices where known |
 | [006](docs/adr/006-data-and-upstream-outside-the-repo.md) | Keep the data and the authors' code out of the repo; pin their commit |
 | [007](docs/adr/007-true-date-history.md) | Date commits by when each file's content actually existed |
+| [008](docs/adr/008-publish-reproducible-results.md) | Publish only results the committed code can regenerate |
 
 ## Repository layout
 

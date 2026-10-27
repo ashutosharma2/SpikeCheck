@@ -2,7 +2,7 @@
 
 Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was planned and done, the decisions behind it, and what went wrong along the way. The reasoning behind each decision is in the [ADRs](adr/).
 
-**Status:** in progress. The review, the replication and both three-seed horizon experiments are done. The next steps are in [NEXT.md](../NEXT.md).
+**Status:** in progress. The review, the replication and both three-seed horizon experiments are done, and every result has been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
 
 ---
 
@@ -42,11 +42,14 @@ When the delay is 30 minutes, the 25-minute look-ahead misses every spike by one
 ### This repository (23 October)
 Code, results and docs, with scripts that fetch the data and the authors' code ([ADR-006](adr/006-data-and-upstream-outside-the-repo.md)), and a history dated by when each file actually existed ([ADR-007](adr/007-true-date-history.md)).
 
+### Rebuild (27 to 28 October)
+macOS cleared the temporary folder that held the working data, along with several trained models and their predictions. I re-streamed the trace with the repo's own scripts, checked that the rebuilt inputs were byte for byte the same as a saved copy, retrained the lost models with the committed `train.py` and regenerated every result folder. Three of the old models had been trained with an earlier version of the script, so I replaced their results instead of keeping numbers nobody could reproduce ([ADR-008](adr/008-publish-reproducible-results.md)). What changed is in the [replication write-up](replication.md#rebuild-every-result-regenerated-from-the-committed-scripts-28-october-2026).
+
 ## R: Results
 
-- **The paper's result reproduces.** On the authors' evaluator, spike F1 goes from 0.42 to 0.65 (the paper reports 0.27 to 0.64). The over-provisioning artefact reproduces too: every forecaster scores between 10¹⁵ and 10¹⁷.
-- **Which method wins depends on the delay.** With no actuation delay, a plain classifier read at an upper quantile matches the paper's recall with about 30% less over-provisioning. With a 15-minute delay the paper's method wins, with coverage of 0.57 against 0.44.
-- **Looking ahead helps and holding hurts.** A target that only looks ahead beats the paper's at every level of over-provisioning, in all three seeds: 8 more points of spike coverage and 19% less throttled CPU at slack 0.6. Holding the allocation after a spike spends budget on spikes that are already over.
+- **The paper's result reproduces.** On the authors' evaluator, spike F1 goes from 0.41 to 0.68 (the paper reports 0.27 to 0.64). The over-provisioning artefact reproduces too: every forecaster scores between 10¹⁵ and 10¹⁷.
+- **Which method wins depends on the delay.** With no actuation delay, a plain classifier read at an upper quantile matches the paper's recall with 14 to 29% less over-provisioning across three seeds. With a 15-minute delay the paper's method wins, with coverage of 0.57 against 0.43.
+- **Looking ahead helps and holding hurts.** A target that only looks ahead beats the paper's at every level of over-provisioning, in all three seeds: 8 more points of spike coverage and 18% less throttled CPU at slack 0.6. Holding the allocation after a spike spends budget on spikes that are already over.
 - **The paper's metric can't see this.** On its recall window the two targets look the same. The difference only shows once delay or throttled CPU is measured.
 - **The look-ahead has to match the delay.** Even a perfect forecaster of the paper's 25-minute target covers only 28% of spikes when the delay is 30 minutes. A 30-minute look-ahead brings it back: 0.74 coverage at slack 0.8 against 0.59 for the 25-minute target, in all three seeds, with no measurable cost at 5 or 15-minute delays.
 
@@ -64,3 +67,6 @@ Code, results and docs, with scripts that fetch the data and the authors' code (
 | The quantile curves barely overlapped | The first quantile grid (0.5 to 0.99) was too narrow | Widen it to 0.1 to 0.995 | Make sure a comparison has data on both sides before reading it |
 | The first run's `train.py` no longer exists | It was changed for seeds and memory before the repo existed | Leave it out of the dated commit and say so ([ADR-007](adr/007-true-date-history.md)) | Commit early; a lost history can't be rebuilt |
 | A draft ADR quoted a number that wasn't in our data | It came from memory of the paper, not from our results | Check every figure in the docs against the result files before committing | A number in a doc needs a source file |
+| The working data and several trained models disappeared | macOS deletes files in temporary folders that haven't been opened for a few days, and the data lived in one | Keep data in the repo's git-ignored `data/` folder, re-stream the trace and retrain the lost runs | Keep anything expensive to rebuild out of temporary folders |
+| Three retrained models didn't match the published ones | cbase, proposed and proposed_full had first been trained with the earlier float32 `train.py`, which no longer exists. fwdmax seed 0, first trained with the current script, came back identical | Retrain with the committed script and regenerate every result ([ADR-008](adr/008-publish-reproducible-results.md)) | Publish only results the committed code can reproduce |
+| A run note said the old seed-0 runs fell inside the spread of the other seeds | The claim wasn't checked at every delay: with no delay, the old proposed seed 0 was below both other seeds | Correct the note and the conclusions that leaned on it | Check a claim about the data against every slice it covers |
