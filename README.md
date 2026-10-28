@@ -35,7 +35,8 @@ The details and every caveat are in the [replication write-up](docs/replication.
 | Horizon vs hold, three seeds | Done |
 | 30-minute look-ahead, three seeds | Done |
 | Rebuild: every result regenerated from the committed scripts | Done |
-| Strategy 2 (altered loss), calibration, spike types, time and cluster holdouts | [Backlog](BACKLOG.md) |
+| Spike types: definitions fixed before any scores ([ADR-009](docs/adr/009-spike-types.md)) | In progress |
+| Strategy 2 (altered loss), calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
 
@@ -61,6 +62,7 @@ flowchart LR
 | [006](docs/adr/006-data-and-upstream-outside-the-repo.md) | Keep the data and the authors' code out of the repo; pin their commit |
 | [007](docs/adr/007-true-date-history.md) | Date commits by when each file's content actually existed |
 | [008](docs/adr/008-publish-reproducible-results.md) | Publish only results the committed code can regenerate |
+| [009](docs/adr/009-spike-types.md) | Define mutually exclusive spike types |
 
 ## Repository layout
 

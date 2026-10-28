@@ -5,14 +5,9 @@ The look-ahead beats the paper's target overall, but nobody knows which spikes i
 
 Work on a branch, `spike-types` (one branch and PR per task; merge with a merge commit, never squash).
 
-1. Decide the definitions before looking at any results:
-   - how close an earlier spike has to be for a spike to count as follow-on;
-   - how close to the same time yesterday counts as seasonal;
-   - what happens when a spike fits both, and whether a spike preceded by a slow ramp is its own type.
-
-   Write the choices down in an ADR.
-2. Label every real spike on the test traces with its type, using `find_spikes` in `scripts/metrics.py`. Count how many fall into each type.
-3. Score spike coverage per type for cbase, proposed, fwdmax and fwdmax6 (three seeds each), plus the rolling-max and seasonal-max baselines, at matched over-provisioning and at 5, 15 and 30-minute delays. The saved test predictions are enough, so nothing needs retraining. If `data/` was wiped, rerun `scripts/get_data.sh` and the runners first.
+1. Decide the definitions before looking at any results. Done: [ADR-009](docs/adr/009-spike-types.md) defines four exclusive labels (unknown, seasonal, follow-on, isolated) and defers ramps.
+2. Label every real spike on the test traces with its type, using `find_spikes` in `scripts/metrics.py`. Count how many fall into each type, and check the counts against ADR-009.
+3. Score spike coverage per type for cbase, proposed, fwdmax and fwdmax6 (three seeds each), plus the rolling-max and seasonal-max baselines, at matched over-provisioning and at 5, 15 and 30-minute delays. Repeat for the six sensitivity settings in ADR-009. The saved test predictions are enough, so nothing needs retraining. If `data/` was wiped, rerun `scripts/get_data.sh` and the runners first.
 4. Write the result up in `docs/replication.md`, update the README findings and the diagrams if anything changes, add a LOG line, and set the next task here.
 5. Open the PR with a SOART description.
 
