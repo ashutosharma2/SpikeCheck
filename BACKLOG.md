@@ -16,4 +16,4 @@
 
 ## Repo
 - [ ] Reread docs/review.md before making the repo public
-- [ ] Pick a licence before making the repo public
+- [x] Pick a licence: MIT for the code, CC BY 4.0 for the docs and results

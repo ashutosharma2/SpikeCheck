@@ -73,6 +73,8 @@ upstream/     the authors' code at a pinned commit (not committed)
 LOG.md        one line per session
 NEXT.md       the next single task
 BACKLOG.md    parked ideas
+LICENSE       MIT, for the code
+LICENSE-docs  CC BY 4.0, for the docs and results
 ```
 
 ## Running it
@@ -92,3 +94,9 @@ The horizon experiments use `scripts/run_seeds.sh` and `scripts/overnight.sh`; s
 - Agulló, F., Gutierrez-Torre, A., Torres, J., Berral, J. Ll. (2025). Enhancing the output of time series forecasting algorithms for cloud resource provisioning. *Future Generation Computer Systems* 170, 107833. https://doi.org/10.1016/j.future.2025.107833
 - Authors' code: https://github.com/FerranAgulloLopez/ResourceForecasting (Apache-2.0)
 - Alibaba cluster trace 2018: https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2018
+
+## Licence
+
+- The code is under the MIT License ([LICENSE](LICENSE)).
+- The docs and results are under CC BY 4.0 ([LICENSE-docs](LICENSE-docs)). Reuse them as long as you credit the source.
+- Two things aren't covered. `results/replication/chosen_containers.csv` comes from the Alibaba 2018 trace, which Alibaba publishes without a licence, so it stays under Alibaba's terms. The authors' code, which `scripts/setup.sh` downloads, stays under its own Apache-2.0 licence.

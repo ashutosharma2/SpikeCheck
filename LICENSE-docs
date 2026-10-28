@@ -1,0 +1,20 @@
+Copyright (c) 2026 Ashutosh Sharma
+
+The documentation and results in this repository are licensed under the
+Creative Commons Attribution 4.0 International License (CC BY 4.0). That
+covers README.md, LOG.md, NEXT.md, BACKLOG.md, everything in docs/ and
+everything in results/. The code is under the MIT License in LICENSE.
+
+You may share and adapt them for any purpose, including commercially, as long
+as you credit the source, link to the licence and say if you made changes.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+Not covered:
+
+- results/replication/chosen_containers.csv lists container and app IDs and
+  resource requests from the Alibaba 2018 cluster trace. Alibaba publishes no
+  licence for the trace and gives download access through a survey, so this
+  file stays under Alibaba's terms.
+- The authors' code (ResourceForecasting), which scripts/setup.sh downloads,
+  stays under its own Apache-2.0 licence.
