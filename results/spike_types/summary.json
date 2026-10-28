@@ -1,0 +1,23 @@
+{
+  "traces": 893,
+  "spikes": 27980,
+  "gaps": 27088,
+  "gap_min": 5,
+  "gap_median": 30.0,
+  "gap_mean": 45.97508121677495,
+  "gap_share_le6": 0.09362079149438866,
+  "gap_share_le12": 0.2587123449497933,
+  "first_known_step": 1051,
+  "close": 2536,
+  "close_seasonal": 543,
+  "close_unknown": 460,
+  "close_follow_on": 1533,
+  "plateau_pairs": 332,
+  "offset_eligible": 21680,
+  "day_match_share_by_tol": {
+    "+-1": 0.30862546125461254,
+    "+-2": 0.37619926199261994,
+    "+-3": 0.4263376383763838
+  },
+  "ref250_spikes_differing_after_detect_start": 38
+}
