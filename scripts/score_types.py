@@ -10,6 +10,10 @@ Paired differences come with the per-seed range and a 95% paired bootstrap over 
 traces (the same resampled traces for both sides; baseline frontiers stay frozen). Unknown
 spikes are scored but left out of the paired comparisons.
 
+Two sub-groups split follow-on spikes by whether the previous peak alone (highest CPU from the
+previous spike's start up to the spike) would cover them, i.e. is at least (1 - ALPHA) of the
+spike. They test whether the hold explains proposed's lead on follow-on spikes.
+
 usage: python score_types.py <data.npz> <models_seeds_dir> <out_dir> [<horizon30_dir> <replication_dir>]
 The optional folders are checked: summed over types, coverage must match the published results.
 """
@@ -28,11 +32,12 @@ import pandas as pd
 import baselines as B
 from eval_seeds import BUDGETS, COLORS, QS
 from metrics import ALPHA, START, find_spikes
-from spike_types import SETTINGS, label_trace
+from spike_types import SETTINGS, label_trace, previous_peak
 from train import LAG, decode
 
 DELAYS = (1, 3, 6)
-GROUPS = ('all', 'seasonal', 'follow-on', 'isolated', 'unknown', 'seasonal, close', 'seasonal, not close')
+GROUPS = ('all', 'seasonal', 'follow-on', 'isolated', 'unknown', 'seasonal, close', 'seasonal, not close',
+          'follow-on, previous peak covers', 'follow-on, previous peak short')
 PAIRED_GROUPS = [g for g in GROUPS if g != 'unknown']
 FAMILIES = {                     # the same settings as run_eval.py and eval_seeds.py
     'rolling-max': [(f'w={w} m={m}', lambda X, w=w, m=m: B.rolling_max(X, w, m))
@@ -133,18 +138,23 @@ def main(data_path, models_dir, out_dir, horizon30_dir=None, replication_dir=Non
     member = np.zeros((len(tid), len(names), len(GROUPS)), dtype=bool)
     lab = {s: [] for s in names}
     cls = {s: [] for s in names}
+    peak_ok = {s: [] for s in names}
     for x in Xte:
         for s in names:
-            _, l, c = label_trace(x, **SETTINGS[s])
+            sp, l, c, prev = label_trace(x, **SETTINGS[s])
             lab[s].append(l)
             cls[s].append(c)
+            with np.errstate(invalid='ignore'):
+                peak_ok[s].append(previous_peak(x, sp, prev) >= (1 - ALPHA) * x[sp])
     for si, s in enumerate(names):
-        l, c = np.concatenate(lab[s]), np.concatenate(cls[s])
+        l, c, ok = np.concatenate(lab[s]), np.concatenate(cls[s]), np.concatenate(peak_ok[s])
         assert len(l) == len(tid)
-        sea = l == 'seasonal'
+        sea, fo = l == 'seasonal', l == 'follow-on'
         for gi, g in enumerate(GROUPS):
             member[:, si, gi] = {'all': np.ones(len(l), bool), 'seasonal, close': sea & c,
-                                 'seasonal, not close': sea & ~c}.get(g, l == g)
+                                 'seasonal, not close': sea & ~c,
+                                 'follow-on, previous peak covers': fo & ok,
+                                 'follow-on, previous peak short': fo & ~ok}.get(g, l == g)
     n_group = np.stack([[np.bincount(tid, weights=member[:, s, g], minlength=N)
                          for g in range(len(GROUPS))] for s in range(len(names))])   # (S, G, N)
     usage = Xte[:, START:].sum(axis=1)

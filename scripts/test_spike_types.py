@@ -5,7 +5,7 @@ usage: python test_spike_types.py
 import numpy as np
 
 from metrics import GAMMA
-from spike_types import DAY, DETECT_START, label_spikes, label_trace
+from spike_types import DAY, DETECT_START, label_spikes, label_trace, previous_peak, previous_spike
 
 K = 1400                        # a spike with a full day of history
 
@@ -62,15 +62,24 @@ def test_ref250_looks_back_before_detection_start():
     assert label_last([765], ref=[760, 765], ref_start=GAMMA) == ('follow-on', True)
 
 
+def test_previous_spike_and_peak():
+    assert previous_spike([5, 10, 20], [3, 10, 15]).tolist() == [3, 3, 15]
+    assert previous_spike([2], [3, 10]).tolist() == [-1]
+    x = np.array([0, 9, 7, 0, 0, 0, 10, 0], dtype=float)
+    peak = previous_peak(x, [6, 1], [1, -1])
+    assert peak[0] == 9 and np.isnan(peak[1])           # max of x[1:6], not including the spike
+
+
 def test_synthetic_trace_end_to_end():
     rng = np.random.default_rng(0)
     x = 20 + 0.1 * rng.standard_normal(2304)
     bumps = [900, 1100, 1105, 1100 + DAY, 1105 + DAY]
     x[bumps] += 20
-    spikes, labels, close = label_trace(x)
+    spikes, labels, close, prev = label_trace(x)
     assert spikes.tolist() == bumps, spikes
     assert labels.tolist() == ['unknown', 'isolated', 'follow-on', 'seasonal', 'seasonal']
     assert close.tolist() == [False, False, True, False, True]
+    assert prev.tolist() == [-1, 900, 1100, 1105, 1100 + DAY]
 
 
 if __name__ == '__main__':

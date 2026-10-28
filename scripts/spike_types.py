@@ -58,12 +58,27 @@ def label_spikes(spikes, ref, ref_start, tol=1, follow=6):
     return labels, close
 
 
+def previous_spike(spikes, ref):
+    """Position of the reference spike before each spike, or -1 if there is none."""
+    ref = np.asarray(ref, dtype=np.int64)
+    i = np.searchsorted(ref, spikes) - 1
+    if len(ref) == 0:
+        return np.full(len(spikes), -1, dtype=np.int64)
+    return np.where(i >= 0, ref[np.clip(i, 0, None)], -1)
+
+
+def previous_peak(x, spikes, prev):
+    """Highest CPU from the previous spike's start up to (not including) each spike; NaN without one."""
+    return np.array([x[p:k].max() if p >= 0 else np.nan for k, p in zip(spikes, prev)])
+
+
 def label_trace(x, tol=1, follow=6, ref_start=DETECT_START):
-    """Detect the published spikes on one trace and label them. Returns (spikes, labels, close)."""
+    """Detect the published spikes on one trace and label them.
+    Returns (spikes, labels, close, prev), prev being the previous reference spike or -1."""
     spikes = find_spikes(x)
     ref = spikes if ref_start == DETECT_START else find_spikes(x, start=ref_start)
     labels, close = label_spikes(spikes, ref, ref_start, tol, follow)
-    return spikes, labels, close
+    return spikes, labels, close, previous_spike(spikes, ref)
 
 
 def above_threshold(x):
