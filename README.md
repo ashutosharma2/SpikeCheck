@@ -2,7 +2,7 @@
 
 **Does forecasting CPU spikes help cloud provisioning, and how would you know?**
 
-Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work.
+Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds one part of the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work. That part is Strategy 1 with the TempInc model. The paper's Google data, other five models and Strategy 2 weren't run, mainly because this was done on one 8 GB laptop ([why](docs/replication.md#scope-one-part-of-the-paper-and-why)).
 
 **[Read the project story](docs/project-story.md)**: the problems, decisions and fixes behind SpikeCheck, in SOART format.
 
@@ -12,6 +12,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 2. Rebuild the data: stream the 29 GB Alibaba container trace into 5-minute steps and keep 5,946 long-running containers ([ADR-005](docs/adr/005-rebuilt-preprocessing.md)).
 3. Train the authors' model on different targets. The model, inputs and data stay the same; only what it's asked to predict changes ([ADR-004](docs/adr/004-change-one-thing-at-a-time.md)).
 4. Score fairly. Allocations take effect after a 5, 15 or 30-minute delay ([ADR-002](docs/adr/002-score-under-actuation-delay.md)), and forecasters are compared at equal over-provisioning, with three seeds each ([ADR-003](docs/adr/003-compare-at-equal-over-provisioning.md)).
+5. Split the spikes by type: seasonal, follow-on, isolated, or unknown when there isn't a day of history ([ADR-009](docs/adr/009-spike-types.md)).
 
 ## Findings
 
@@ -21,8 +22,9 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | Its over-provisioning numbers are an artefact | Every forecaster scores 10¹⁵ to 10¹⁷, even repeating the last value |
 | With no actuation delay, a plain classifier read at an upper quantile is as good or better | Same recall as the proposed method with 14 to 29% less over-provisioning, across three seeds |
 | With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.43 at about the same over-provisioning |
-| Looking ahead is what helps; holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 18% less throttling at slack 0.6 |
+| Overall, looking ahead is what helps and holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 18% less throttling at slack 0.6 |
 | The look-ahead has to be at least as long as the delay | A 30-minute look-ahead covers 0.74 of spikes at a 30-minute delay against 0.59 for the 25-minute one (slack 0.8, all three seeds), with no cost at shorter delays |
+| One overall score hides where each method gains | At a 15-minute delay and slack 0.8, the look-ahead beats the paper's target on seasonal (+0.030) and isolated (+0.045) spikes and trails it on follow-on spikes (−0.084). The follow-on result depends on the 6-step definition |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
 
@@ -35,7 +37,7 @@ The details and every caveat are in the [replication write-up](docs/replication.
 | Horizon vs hold, three seeds | Done |
 | 30-minute look-ahead, three seeds | Done |
 | Rebuild: every result regenerated from the committed scripts | Done |
-| Spike types: definitions fixed before any scores ([ADR-009](docs/adr/009-spike-types.md)) | In progress |
+| Spike types: definitions fixed before any scores, three seeds, six label settings ([ADR-009](docs/adr/009-spike-types.md)) | Done |
 | Strategy 2 (altered loss), calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
@@ -67,14 +69,16 @@ flowchart LR
 ## Repository layout
 
 ```
-scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, runners
-results/      replication/, horizon/, horizon30/: CSV, JSON, plots
+scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, spike types, runners
+results/      replication/, horizon/, horizon30/, spike_types/: CSV, JSON, plots
 docs/         review, replication write-up, architecture diagrams, project story, ADRs
 data/         downloaded and generated data, models (not committed)
 upstream/     the authors' code at a pinned commit (not committed)
 LOG.md        one line per session
 NEXT.md       the next single task
 BACKLOG.md    parked ideas
+LICENSE       MIT, for the code
+LICENSE-docs  CC BY 4.0, for the docs and results
 ```
 
 ## Running it
@@ -94,3 +98,9 @@ The horizon experiments use `scripts/run_seeds.sh` and `scripts/overnight.sh`; s
 - Agulló, F., Gutierrez-Torre, A., Torres, J., Berral, J. Ll. (2025). Enhancing the output of time series forecasting algorithms for cloud resource provisioning. *Future Generation Computer Systems* 170, 107833. https://doi.org/10.1016/j.future.2025.107833
 - Authors' code: https://github.com/FerranAgulloLopez/ResourceForecasting (Apache-2.0)
 - Alibaba cluster trace 2018: https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2018
+
+## Licence
+
+- The code is under the MIT License ([LICENSE](LICENSE)).
+- The docs and results are under CC BY 4.0 ([LICENSE-docs](LICENSE-docs)). Reuse them as long as you credit the source.
+- Two things aren't covered. `results/replication/chosen_containers.csv` comes from the Alibaba 2018 trace, which Alibaba publishes without a licence, so it stays under Alibaba's terms. The authors' code, which `scripts/setup.sh` downloads, stays under its own Apache-2.0 licence.
