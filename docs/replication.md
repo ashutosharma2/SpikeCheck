@@ -6,13 +6,16 @@ Run on 2026-10-22 as a follow-up to the [critical review](review.md). It tests o
 
 I replicated Strategy 1 with the TempInc model on Alibaba. I didn't run the paper's Google data, its other five models or Strategy 2, so nothing here tests them.
 
-### How the scope was set
+### Why this scope
 
-A full replication was never the plan. The project began with the [review](review.md), which looked for questions the paper left open. The first run was the review's cheapest checks: fix the metrics, then try a rolling-max baseline and the quantile readout, on Alibaba first. Each result raised the next question, so the work followed those questions and never went back to widen coverage.
+I had two main reasons:
+
+1. I wasn't setting out to perform a complete replication. My goal was an adversarial [review](review.md) of the paper: identify specific weaknesses in its claims and investigate whether its results held up under scrutiny.
+2. I wanted to start with the cheapest and most informative checks on Alibaba: reconstruct the setup, fix the metric issues, and run the rolling-max baseline and the quantile-readout check. I then followed the questions each result raised, rather than committing up front to every model and strategy.
 
 ### Practical constraints
 
-These shaped how the work ran. They would also make a wider replication slower, though I didn't attempt one and hit a limit.
+Hardware, network and training constraints later influenced how far the investigation could go, but they weren't the original reasons for this scope. I didn't attempt a wider replication, so I can't say they would have prevented one.
 
 | Constraint | Detail |
 |---|---|
@@ -21,11 +24,11 @@ These shaped how the work ran. They would also make a wider replication slower, 
 | Training time | About 30 minutes per model and up to 2.5 GB of memory, with runs going one at a time. Six models on two datasets is 12 model and dataset pairs before any repeat seeds or Strategy 2, and this work covers one pair |
 | Missing author materials | The authors publish neither their preprocessing nor trained models, so each dataset needs its own reconstruction. The paper's Google set also goes through a PCA step with no public script |
 
-### Research choices
+### What I don't claim as a decision
 
-- I chose to start on Alibaba. I didn't decide against Google at the start, and the follow-up questions never sent me back to it. I checked its size afterwards: about 2.4 TiB compressed, offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), so adding it would need a different setup.
-- TempInc with Strategy 1 is the pair behind the paper's headline result, 0.27 to 0.64 on Alibaba, so that's the claim I checked.
-- Strategy 2 wasn't run and stays in the [backlog](../BACKLOG.md). The review had already flagged its evidence as contradicting itself (item C4), and the quantile readout tests a similar idea more directly, but that isn't a test of Strategy 2.
+- Google: I didn't deliberately reject it. I started on Alibaba, and the follow-up questions never sent me back. I checked its size afterwards: about 2.4 TiB compressed, offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), so adding it would need a different setup.
+- TempInc with Strategy 1: this is the pair behind the paper's headline result, 0.27 to 0.64 on Alibaba, and it's what the first run used. I don't claim it as an original research decision.
+- Strategy 2: it's unfinished and in the [backlog](../BACKLOG.md), not formally rejected. The review flagged its evidence as contradicting itself (item C4), but that isn't a test of it.
 
 None of this says whether the paper's other results are right.
 
