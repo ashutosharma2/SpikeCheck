@@ -2,7 +2,7 @@
 
 **Does forecasting CPU spikes help cloud provisioning, and how would you know?**
 
-Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds one part of the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work. That part is Strategy 1 with the TempInc model. The paper's Google data, other five models and Strategy 2 weren't run, mainly because this was done on one 8 GB laptop ([why](docs/replication.md#scope-one-part-of-the-paper-and-why)).
+Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds one part of the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work. That part is Strategy 1 with the TempInc model. The paper's Google data, other five models and Strategy 2 weren't run ([scope and why](docs/replication.md#scope-one-part-of-the-paper-and-why)).
 
 **[Read the project story](docs/project-story.md)**: the problems, decisions and fixes behind SpikeCheck, in SOART format.
 
