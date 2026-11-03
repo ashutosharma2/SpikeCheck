@@ -2,6 +2,24 @@
 
 Run on 2026-10-22 as a follow-up to the [critical review](review.md). It tests opportunities #2 and #3 and audit items D1 to D6 and C3 to C4. Every result was regenerated from the committed scripts on 2026-10-28 (see [Rebuild](#rebuild-every-result-regenerated-from-the-committed-scripts-28-october-2026)).
 
+## Scope: one part of the paper, and why
+
+I replicated Strategy 1 with the TempInc model on Alibaba. I didn't run the paper's Google data, its other five models or Strategy 2, so nothing here tests them.
+
+What limited it:
+
+| Constraint | Detail |
+|---|---|
+| Hardware | One 8 GB M1 laptop with 18 GB of free disk and a 4 MB/s connection. Training one model takes about 30 minutes and up to 2.5 GB of memory, and the runs went one at a time. |
+| Google's trace | About 2.4 TiB compressed and offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), against 29 GB for Alibaba, which could be streamed. The paper also filters it with a PCA step whose scripts aren't public. |
+| Size of the grid | Six models on two datasets is 12 model and dataset pairs, before adding Strategy 2 or repeat seeds. This work covers one pair. |
+| Missing materials | The authors publish neither their preprocessing nor trained models, so each dataset needs its own reconstruction. |
+| Experience | I was new to Python, PyTorch and this kind of evaluation, and every step had to be something I could explain. |
+
+TempInc is the paper's best model and Strategy 1 is its largest reported gain, so I started with that pair. Strategy 2 is parked in the [backlog](../BACKLOG.md): the [review](review.md) found that its evidence contradicts itself (item C4), and the quantile readout tested below reaches an upper quantile directly.
+
+These limits explain the scope. They say nothing about whether the paper's other results are right.
+
 ## What was run
 
 | Step | What | Notes |
@@ -81,7 +99,7 @@ Each model's softmax was read at 15 quantiles (q from 0.1 to 0.995), giving one 
 
 The files are in [`results/horizon/`](../results/horizon/): `matched_slack_summary.csv`, `paired_vs_proposed.json`, `all_runs.csv` and the `seeds_*.png` plots.
 
-### Result: the horizon explains Strategy 1's advantage, and the hold makes it worse
+### Result: the horizon explains Strategy 1's advantage, and overall the hold makes it worse
 
 Mean over 3 seeds (± sd), at matched over-provisioning:
 
@@ -107,7 +125,7 @@ Differences paired by seed, fwdmax minus proposed. All three seeds have the same
 
 What this shows:
 1. The look-ahead is what helps. At equal over-provisioning, the look-ahead-only target covers more spikes than Strategy 1 at a 15-minute delay, at a 30-minute delay and with no delay, and it throttles 6 to 18% less CPU. That holds in all three seeds at every budget tested.
-2. The hold costs more than it gives. Keeping the allocation high after a spike spends over-provisioning on time that has already passed. The gap is widest when the budget is tight: +8 points of coverage and 18% less throttling at slack 0.6.
+2. Overall, the hold costs more than it gives. Keeping the allocation high after a spike spends over-provisioning on time that has already passed. The gap is widest when the budget is tight: +8 points of coverage and 18% less throttling at slack 0.6. The hold still leads on one group, follow-on spikes at 5 and 15 minutes (see [spike types](#follow-up-which-spikes-does-each-method-gain-on-3-seeds-run-28-october-2026)).
 3. Looking ahead costs nothing when there's no delay. With no actuation delay fwdmax matches or slightly beats cbase (0.674 against 0.658 at slack 0.6, 0.751 against 0.731 at 0.8). At a 15-minute delay it's far better, with 0.19 to 0.22 more coverage at slack 0.6 to 0.8.
 4. The single-seed result for cbase against proposed holds across seeds only in part. At a 15-minute delay cbase loses in every seed (0.12 to 0.16 less coverage at slack 0.6 to 1.2). With no delay it wins only when the budget is tight: 0.09 more coverage at slack 0.6 and 0.02 at 0.8, in every seed. From slack 1.0 up the seeds disagree and the mean difference is within 0.01.
 5. The look-ahead has to match the delay. At a 30-minute delay, every model trained on a 25-minute look-ahead loses most of its edge (fwdmax beats proposed by only 0.02 to 0.05), and coverage at slack 0.8 stays below 0.6 for all of them. A target whose look-ahead matches the delay was tested next, and it brings the gain back (see the 30-minute follow-up below).
@@ -126,7 +144,7 @@ Run notes:
 
 ## Follow-up: a look-ahead that matches a 30-minute delay (3 seeds, run 23 October 2026)
 
-With a 30-minute delay, the allocation in force during a spike was decided 6 steps earlier. The 25-minute target (fwdmax) only reaches 5 steps ahead, so it misses every such spike by one step. A new target, fwdmax6 = max(x[t … t+5]), reaches 6 steps ahead. I trained it with seeds 0, 1 and 2 on the same data, inputs, model and settings, and evaluated it together with the nine earlier models, at matched over-provisioning.
+With a 30-minute delay, the allocation in force at spike step k is the forecast for step k−5. The window of the 25-minute target (fwdmax) for that forecast runs from k−5 to k−1, so it stops one step short of the spike. Nearby values can still reach 80% of the spike, which is why fwdmax still covers 0.59 of spikes at slack 0.8. A new target, fwdmax6 = max(x[t … t+5]), reaches the spike itself. I trained it with seeds 0, 1 and 2 on the same data, inputs, model and settings, and evaluated it together with the nine earlier models, at matched over-provisioning.
 
 The files are in [`results/horizon30/`](../results/horizon30/).
 
@@ -157,7 +175,7 @@ Differences paired by seed. All three seeds have the same sign unless the range 
 What this shows:
 1. The gain comes back. At a 30-minute delay and slack 0.8, fwdmax6 covers 0.74 of spikes, close to what the 25-minute target covers at a 15-minute delay (0.76). Across slack 0.6 to 1.0 it throttles 15 to 20% less CPU than fwdmax at that delay, and 24 to 28% less than Strategy 1.
 2. It costs nothing at shorter delays. I expected the longer look-ahead to waste some over-provisioning when the delay is short, but it doesn't measurably: at 5 and 15 minutes its coverage differs from fwdmax's by at most 0.006, and those seed ranges cross zero.
-3. So the rule holds: the look-ahead has to be at least as long as the actuation delay, and none of the delays tested needs the hold after a spike.
+3. So the rule holds: the look-ahead has to be at least as long as the actuation delay. Overall coverage doesn't need the hold after a spike at any delay tested, though the hold still leads on follow-on spikes at 5 and 15 minutes (see [spike types](#follow-up-which-spikes-does-each-method-gain-on-3-seeds-run-28-october-2026)).
 4. The paper's recall window points the wrong way again. It scores fwdmax6 slightly below fwdmax (0.731 against 0.745 at slack 0.8); only delay-aware coverage and throttling show the gain.
 
 Training: 16, 16 and 20 epochs, with best validation loss between 1.156 and 1.174. Seeds 0 and 1 stopped early; seed 2 was still improving when it reached the 60-minute cap.

@@ -5,7 +5,7 @@
 - **Scenario:** SpikeCheck re-examines Agulló et al. (2025), a method for forecasting CPU spikes so that cloud resources can be added before a spike arrives. It audits the paper's metrics, replicates the method on the Alibaba 2018 trace and tests what makes it work.
 - **Obstacle:** to follow the findings, a reader needs four things at once: where the numbers come from, how a forecast becomes a score, what the paper's metrics get wrong, and what each experiment compared.
 - **Action:** one diagram for each of those questions, drawn from the scripts as they are now. Solid lines and boxes are done; dashed ones are planned.
-- **Result:** every number in the write-up can be traced back to the raw trace, and the main finding (looking ahead helps, holding after a spike hurts) has its own picture.
+- **Result:** every number in the write-up can be traced back to the raw trace, and the main overall finding (looking ahead helps, holding after a spike hurts) has its own picture.
 - **Troubleshooting:** a diagram is only useful while it matches the code, so these get updated at the end of every milestone.
 
 Contents:

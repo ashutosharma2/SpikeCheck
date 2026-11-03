@@ -12,7 +12,7 @@ Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was 
 
 Cloud platforms forecast how much CPU each workload will need, so they can lend spare capacity to other work without starving anyone. Most forecasters are trained to be right on average, which makes them late or too low exactly when a workload spikes. Agulló et al. (2025) propose changing what the forecaster is trained to predict so that it sees spikes coming, and report that this roughly doubles spike-prediction scores.
 
-I wanted to find a question the paper left open, and to check its claims on real data before building on them. Two constraints shaped the work. I had one laptop: an 8 GB M1 MacBook with 18 GB of free disk and a 4 MB/s connection, against a 29 GB trace. And I'm new to Python, PyTorch and this kind of evaluation, so every step had to be something I could explain.
+I wanted to find a question the paper left open, and to check its claims on real data before building on them. Two constraints shaped the work. I had one laptop: an 8 GB M1 MacBook with 18 GB of free disk and a 4 MB/s connection, against a 29 GB trace. And I'm new to Python, PyTorch and this kind of evaluation, so every step had to be something I could explain. Those limits set the scope too: I replicated Strategy 1 with TempInc on Alibaba, not the paper's Google data (about 2.4 TiB), its other five models or Strategy 2 ([why](replication.md#scope-one-part-of-the-paper-and-why)).
 
 ## O: Obstacles
 
@@ -37,7 +37,7 @@ I read the paper and the authors' evaluation code side by side, and found that o
 The paper's target does two things at once: it looks 25 minutes ahead, and it keeps the allocation high for 30 minutes after a spike. A third target that only looks ahead separates the two. I trained each target with three seeds, overnight.
 
 ### 30-minute look-ahead (23 October)
-When the delay is 30 minutes, the 25-minute look-ahead misses every spike by one step. A target that looks 30 minutes ahead tests whether matching the look-ahead to the delay brings coverage back. Three seeds again.
+When the delay is 30 minutes, the 25-minute look-ahead's window stops one step short of the spike, though nearby values can still reach 80% of it. A target that looks 30 minutes ahead tests whether matching the look-ahead to the delay brings coverage back. Three seeds again.
 
 ### This repository (23 October)
 Code, results and docs, with scripts that fetch the data and the authors' code ([ADR-006](adr/006-data-and-upstream-outside-the-repo.md)), and a history dated by when each file actually existed ([ADR-007](adr/007-true-date-history.md)).
@@ -49,7 +49,7 @@ macOS cleared the temporary folder that held the working data, along with severa
 
 - **The paper's result reproduces.** On the authors' evaluator, spike F1 goes from 0.41 to 0.68 (the paper reports 0.27 to 0.64). The over-provisioning artefact reproduces too: every forecaster scores between 10¹⁵ and 10¹⁷.
 - **Which method wins depends on the delay.** With no actuation delay, a plain classifier read at an upper quantile matches the paper's recall with 14 to 29% less over-provisioning across three seeds. With a 15-minute delay the paper's method wins, with coverage of 0.57 against 0.43.
-- **Looking ahead helps and holding hurts.** A target that only looks ahead beats the paper's at every level of over-provisioning, in all three seeds: 8 more points of spike coverage and 18% less throttled CPU at slack 0.6. Holding the allocation after a spike spends budget on spikes that are already over.
+- **Overall, looking ahead helps and holding hurts.** A target that only looks ahead beats the paper's at every level of over-provisioning, in all three seeds: 8 more points of spike coverage and 18% less throttled CPU at slack 0.6. Holding the allocation after a spike spends budget on spikes that are already over. The exception is follow-on spikes, below.
 - **The paper's metric can't see this.** On its recall window the two targets look the same. The difference only shows once delay or throttled CPU is measured.
 - **The look-ahead has to match the delay.** Even a perfect forecaster of the paper's 25-minute target covers only 28% of spikes when the delay is 30 minutes. A 30-minute look-ahead brings it back: 0.74 coverage at slack 0.8 against 0.59 for the 25-minute target, in all three seeds, with no measurable cost at 5 or 15-minute delays.
 

@@ -2,7 +2,7 @@
 
 **Does forecasting CPU spikes help cloud provisioning, and how would you know?**
 
-Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work.
+Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds one part of the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work. That part is Strategy 1 with the TempInc model. The paper's Google data, other five models and Strategy 2 weren't run, mainly because this was done on one 8 GB laptop ([why](docs/replication.md#scope-one-part-of-the-paper-and-why)).
 
 **[Read the project story](docs/project-story.md)**: the problems, decisions and fixes behind SpikeCheck, in SOART format.
 
@@ -21,7 +21,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | Its over-provisioning numbers are an artefact | Every forecaster scores 10¹⁵ to 10¹⁷, even repeating the last value |
 | With no actuation delay, a plain classifier read at an upper quantile is as good or better | Same recall as the proposed method with 14 to 29% less over-provisioning, across three seeds |
 | With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.43 at about the same over-provisioning |
-| Looking ahead is what helps; holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 18% less throttling at slack 0.6 |
+| Overall, looking ahead is what helps and holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 18% less throttling at slack 0.6 |
 | The look-ahead has to be at least as long as the delay | A 30-minute look-ahead covers 0.74 of spikes at a 30-minute delay against 0.59 for the 25-minute one (slack 0.8, all three seeds), with no cost at shorter delays |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
