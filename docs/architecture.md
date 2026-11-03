@@ -41,6 +41,8 @@ flowchart TD
     R1["results/replication/"]
     R2["results/horizon/"]
     R3["results/horizon30/"]
+    EVAL3["spike_types.py, score_types.py<br/>spike labels, coverage per type"]
+    R4["results/spike_types/"]
 
     OSS --> META
     OSS --> STREAM
@@ -60,10 +62,14 @@ flowchart TD
     EVAL1 --> R1
     EVAL2 --> R2
     EVAL2 --> R3
+    PROBS --> EVAL3
+    BASE --> EVAL3
+    M --> EVAL3
+    EVAL3 --> R4
 
 ```
 
-`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results.
+`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py` and `score_types.py` read the saved predictions, so they need no retraining.
 
 ## 2. From forecast to score
 
@@ -158,6 +164,7 @@ flowchart LR
         DL["at delays of 5, 15 and 30 minutes"]
         MS["at equal over-provisioning:<br/>each quantile curve read at<br/>slack 0.4 … 1.5"]
         PD["seed-paired differences<br/>(seed k against seed k)"]
+        TY["per spike type, at six label settings,<br/>with a 95% bootstrap over test traces"]
     end
     FIXED --> VARIED --> SCORE
 ```

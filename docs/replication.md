@@ -201,13 +201,97 @@ What changed:
 
 The earlier numbers are in the Git history, up to commit b5c2e2a.
 
+## Follow-up: which spikes does each method gain on? (3 seeds, run 28 October 2026)
+
+An overall coverage score can't say where a method gains. So I split the test spikes into four exclusive types, with the definitions fixed before any method was scored per type ([ADR-009](adr/009-spike-types.md)):
+
+| Label | Rule, checked in this order | Spikes |
+|---|---|---|
+| Unknown | Before step 1,051, so a full day of detected history isn't there | 5,916 (21.1%) |
+| Seasonal | Another spike starts within ±1 step of 288 steps (24 hours) earlier | 6,749 (24.1%) |
+| Follow-on | The previous spike started at most 6 steps (30 minutes) earlier | 1,533 (5.5%) |
+| Isolated | None of the above | 13,782 (49.3%) |
+
+Over-provisioning is spent across the whole trace, so it's matched overall, and each forecaster's coverage at that budget is then split by type. The saved test predictions were enough, so nothing was retrained. Rolling max and seasonal max are read along a frontier chosen per delay on the validation traces and then frozen, so no baseline setting was picked with test scores.
+
+Differences show the three-seed mean and a 95% paired bootstrap over whole test traces (500 resamples). The interval measures variation across sampled test traces with the models held fixed, and the seeds show training randomness. Neither shows that a result carries over to other clusters or later days. I fixed the labels first but didn't write down predictions, so this section describes the results and doesn't test a prediction.
+
+The files are in [`results/spike_types/`](../results/spike_types/). Summed over types, coverage matches `results/horizon30/` and `results/replication/` (largest difference 2.2e-15).
+
+### Result: the look-ahead leads on seasonal and isolated spikes, the hold leads on follow-on spikes
+
+Spikes covered at slack 0.8. Learned models are the mean of 3 seeds, and baselines are one run:
+
+| Delay | Type | cbase | proposed | fwdmax | fwdmax6 | rolling max | seasonal max |
+|---|---|---|---|---|---|---|---|
+| 5 min | Seasonal | 0.927 | 0.893 | 0.926 | 0.928 | 0.318 | 0.899 |
+| 5 min | Follow-on | 0.851 | 0.933 | 0.851 | 0.851 | 0.901 | 0.900 |
+| 5 min | Isolated | 0.668 | 0.632 | 0.691 | 0.695 | 0.417 | 0.505 |
+| 15 min | Seasonal | 0.543 | 0.914 | 0.944 | 0.946 | 0.324 | 0.899 |
+| 15 min | Follow-on | 0.816 | 0.925 | 0.841 | 0.842 | 0.888 | 0.884 |
+| 15 min | Isolated | 0.597 | 0.648 | 0.693 | 0.699 | 0.425 | 0.514 |
+| 30 min | Seasonal | 0.498 | 0.517 | 0.568 | 0.926 | 0.328 | 0.897 |
+| 30 min | Follow-on | 0.818 | 0.814 | 0.810 | 0.822 | 0.746 | 0.780 |
+| 30 min | Isolated | 0.567 | 0.575 | 0.607 | 0.687 | 0.448 | 0.506 |
+
+fwdmax minus proposed at slack 0.8, with 95% trace intervals:
+
+| Type | 5 min | 15 min | 30 min |
+|---|---|---|---|
+| Seasonal | +0.033 [+0.025, +0.044] | +0.030 [+0.023, +0.040] | +0.051 [+0.042, +0.059] |
+| Follow-on | −0.081 [−0.103, −0.062] | −0.084 [−0.107, −0.064] | −0.004 [−0.021, +0.011] |
+| Isolated | +0.059 [+0.050, +0.070] | +0.045 [+0.037, +0.054] | +0.033 [+0.025, +0.041] |
+
+What this shows:
+1. The hold leads on follow-on spikes at 5 and 15 minutes. The paper's target covers about 0.08 more of them than fwdmax, in all three seeds. At 30 minutes the lead is gone, and the seed range crosses zero.
+2. The look-ahead leads on the other two types. fwdmax beats the paper's target on seasonal and isolated spikes at all three delays, in all three seeds.
+3. At a 30-minute delay, fwdmax6's gain over fwdmax is largest on seasonal spikes: +0.358 [+0.335, +0.385], against +0.079 [+0.072, +0.087] on isolated and +0.011 [+0.003, +0.019] on follow-on. A daily baseline already does well there. The paper's target trails seasonal max by 0.380 [0.351, 0.413] on seasonal spikes, and fwdmax6 beats it by 0.029 [0.018, 0.038].
+4. At 15 minutes, isolated spikes are fwdmax's lowest type (0.693), but the learned models still cover far more of them than the baselines: fwdmax minus seasonal max is +0.179 [+0.165, +0.192]. That doesn't show the models foresee these spikes, because at slack 0.8 part of the coverage is headroom.
+5. The 543 seasonal spikes that also came within 6 steps of an earlier spike behave differently from the other 6,206. At 15 minutes, fwdmax minus proposed is −0.005 [−0.019, +0.007] on the 543 and +0.034 [+0.026, +0.044] on the rest, so the look-ahead's seasonal lead comes from spikes outside the hold's window.
+
+![coverage by type, 15-min delay](../results/spike_types/cover_by_type_at_3.png)
+
+### Does the old peak explain the hold's lead?
+
+A hold could lead on follow-on spikes simply because the previous peak is already high enough. To check, I split follow-on spikes by whether the previous peak, the highest CPU from the previous spike's start up to the spike, reaches 80% of the spike.
+
+| Group, slack 0.8 | Spikes | proposed, 15 min | fwdmax, 15 min | fwdmax minus proposed, 15 min | fwdmax minus proposed, 5 min |
+|---|---|---|---|---|---|
+| Previous peak covers | 1,336 | 0.990 | 0.904 | −0.086 [−0.109, −0.067] | −0.084 [−0.107, −0.065] |
+| Previous peak too low | 197 | 0.482 | 0.410 | −0.072 [−0.130, −0.016] | −0.062 [−0.116, −0.003] |
+
+The paper's target still leads where holding the old peak can't cover the spike, so the old peak can't be the whole explanation. The split can't say how much the old peak accounts for: 87% of follow-on spikes are in the first group, so most of any lead lands there by size alone.
+
+My reading of why [inference, not tested]: the paper's target also includes the climb to the previous peak and the steps after it, so training may teach the model to expect renewed activity after a burst. At matched slack that extra allocation has to be paid for with budget elsewhere, and the seasonal and isolated deficits above fit that.
+
+### How much depends on the labels
+
+ADR-009 fixed six label settings before any scores: the base, a seasonal tolerance of ±2 or ±3 steps, a follow-on window of 8 or 12 steps, and seasonal history taken from a detection run starting at step 250.
+
+fwdmax minus proposed on follow-on spikes, slack 0.8. Negative means the paper's target is ahead:
+
+| Follow-on window | Spikes | 5 min | 15 min | 30 min |
+|---|---|---|---|---|
+| 6 steps (base) | 1,533 | −0.081 [−0.103, −0.062] | −0.084 [−0.107, −0.064] | −0.004 [−0.021, +0.011] |
+| 8 steps | 2,371 | −0.035 [−0.051, −0.022] | −0.097 [−0.119, −0.079] | −0.049 [−0.068, −0.033] |
+| 12 steps | 4,029 | +0.019 [+0.007, +0.032] | −0.032 [−0.046, −0.017] | −0.086 [−0.102, −0.071] |
+
+- On seasonal and isolated spikes, fwdmax stays ahead in all six settings at all three delays, with every interval above zero (smallest lower bound +0.017).
+- On follow-on spikes, the wider seasonal tolerances and the step-250 history stay close to the base.
+- The follow-on window matters. At 12 steps the 5-minute result changes sign, and at 30 minutes the paper's target gains a lead it doesn't have at 6 steps. Widening the window moves 838 (8 steps) or 2,496 (12 steps) isolated spikes into follow-on. What this means is still open, so the follow-on result belongs to the 6-step definition, not to every spike that comes soon after another.
+
+Limits of this section:
+- The labels are operational choices. Between a fifth and a third of seasonal labels could be chance matches, 332 of the 2,536 close pairs (13%) are one plateau counted twice, and the 21% of spikes labelled unknown are left out of the type comparisons ([ADR-009](adr/009-spike-types.md)).
+- The scores describe the groups as defined. They don't show that the groups come from distinct workload mechanisms.
+
 ## Limitations (read before citing)
 - The first run used one seed per model (the horizon follow-up uses three), a 60-minute training cap and early stopping. The paper's learning rate of 0.01 made validation loss noisy, and cbase stopped after 7 epochs. The confidence intervals cover the sampling of test traces, not training variance.
 - The preprocessing is a reconstruction. The trace count, the gap and variance filters, the target (max CPU per 5-minute bin) and the bins (40 of 2.5 CPU points each) approximate the authors' pipeline but aren't it.
 - The corrected spike detector (a 4-step refractory period, a minimum rise of 2 CPU points) changes which events count as spikes, so recall here can't be compared number for number with the paper's tables. Only the rows from the authors' evaluator can.
 - The throttling measure is crude. It treats the 5-minute maximum CPU as demand, ignores what happens inside each bin and any contention, and has no SLO signal.
 - Training and test traces cover the same time window, as in the paper. Generalisation across time and clusters is untested.
-- Not done yet: Strategy 2 (the altered loss), conformal calibration, and splitting spikes by type (#3).
+- This is a partial replication (see [Scope](#scope-one-part-of-the-paper-and-why)). Nothing here tests the paper's Google results, its other five models or Strategy 2.
+- Not done yet: Strategy 2 (the altered loss) and conformal calibration.
 
 ## Reproduce
 From the repo root:
@@ -217,5 +301,6 @@ From the repo root:
 3. `scripts/run_all.sh` runs the first replication (three targets, seed 0) and writes `results/replication/`.
 4. `RUNS="fwdmax:0 fwdmax:1 fwdmax:2 cbase:1 proposed:1 cbase:2 proposed:2" scripts/overnight.sh` runs the horizon follow-up and writes `results/horizon/`.
 5. `RUNS="fwdmax6:0 fwdmax6:1 fwdmax6:2" RES=horizon30 scripts/overnight.sh` runs the 30-minute follow-up and writes `results/horizon30/`.
+6. `python scripts/spike_types.py data/data.npz results/spike_types` labels the test spikes and writes the counts. Then `python scripts/score_types.py data/data.npz data/models_seeds results/spike_types results/horizon30 results/replication` scores coverage per type from the saved predictions and checks the totals against the published results. `python scripts/test_spike_types.py` tests the labelling rules on synthetic traces.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).

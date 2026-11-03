@@ -12,6 +12,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 2. Rebuild the data: stream the 29 GB Alibaba container trace into 5-minute steps and keep 5,946 long-running containers ([ADR-005](docs/adr/005-rebuilt-preprocessing.md)).
 3. Train the authors' model on different targets. The model, inputs and data stay the same; only what it's asked to predict changes ([ADR-004](docs/adr/004-change-one-thing-at-a-time.md)).
 4. Score fairly. Allocations take effect after a 5, 15 or 30-minute delay ([ADR-002](docs/adr/002-score-under-actuation-delay.md)), and forecasters are compared at equal over-provisioning, with three seeds each ([ADR-003](docs/adr/003-compare-at-equal-over-provisioning.md)).
+5. Split the spikes by type: seasonal, follow-on, isolated, or unknown when there isn't a day of history ([ADR-009](docs/adr/009-spike-types.md)).
 
 ## Findings
 
@@ -23,6 +24,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | With a 15-minute delay, the proposed method wins, because its target looks ahead | Spike coverage 0.57 against 0.43 at about the same over-provisioning |
 | Overall, looking ahead is what helps and holding the allocation after a spike hurts | A target that only looks ahead beats the paper's at every budget, in all three seeds: +8 points of coverage and 18% less throttling at slack 0.6 |
 | The look-ahead has to be at least as long as the delay | A 30-minute look-ahead covers 0.74 of spikes at a 30-minute delay against 0.59 for the 25-minute one (slack 0.8, all three seeds), with no cost at shorter delays |
+| One overall score hides where each method gains | At a 15-minute delay and slack 0.8, the look-ahead beats the paper's target on seasonal (+0.030) and isolated (+0.045) spikes and trails it on follow-on spikes (−0.084). The follow-on result depends on the 6-step definition |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
 
@@ -35,7 +37,7 @@ The details and every caveat are in the [replication write-up](docs/replication.
 | Horizon vs hold, three seeds | Done |
 | 30-minute look-ahead, three seeds | Done |
 | Rebuild: every result regenerated from the committed scripts | Done |
-| Spike types: definitions fixed before any scores ([ADR-009](docs/adr/009-spike-types.md)) | In progress |
+| Spike types: definitions fixed before any scores, three seeds, six label settings ([ADR-009](docs/adr/009-spike-types.md)) | Done |
 | Strategy 2 (altered loss), calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
@@ -67,8 +69,8 @@ flowchart LR
 ## Repository layout
 
 ```
-scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, runners
-results/      replication/, horizon/, horizon30/: CSV, JSON, plots
+scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, spike types, runners
+results/      replication/, horizon/, horizon30/, spike_types/: CSV, JSON, plots
 docs/         review, replication write-up, architecture diagrams, project story, ADRs
 data/         downloaded and generated data, models (not committed)
 upstream/     the authors' code at a pinned commit (not committed)

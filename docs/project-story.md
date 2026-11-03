@@ -2,7 +2,7 @@
 
 Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was planned and done, the decisions behind it, and what went wrong along the way. The reasoning behind each decision is in the [ADRs](adr/).
 
-**Status:** in progress. The review, the replication and both three-seed horizon experiments are done, and every result has been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
+**Status:** in progress. The review, the replication, both three-seed horizon experiments and the spike-type split are done, and every result has been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
 
 ---
 
@@ -45,6 +45,9 @@ Code, results and docs, with scripts that fetch the data and the authors' code (
 ### Rebuild (27 to 28 October)
 macOS cleared the temporary folder that held the working data, along with several trained models and their predictions. I re-streamed the trace with the repo's own scripts, checked that the rebuilt inputs were byte for byte the same as a saved copy, retrained the lost models with the committed `train.py` and regenerated every result folder. Three of the old models had been trained with an earlier version of the script, so I replaced their results instead of keeping numbers nobody could reproduce ([ADR-008](adr/008-publish-reproducible-results.md)). What changed is in the [replication write-up](replication.md#rebuild-every-result-regenerated-from-the-committed-scripts-28-october-2026).
 
+### Spike types (28 October)
+An overall score can't say where a method gains. I sorted every test spike into unknown, seasonal, follow-on or isolated, and fixed the definitions before scoring any method per type ([ADR-009](adr/009-spike-types.md)). I matched over-provisioning overall, split coverage by type at six label settings, and added a 95% bootstrap over whole test traces on top of the seed ranges. Then I split follow-on spikes by whether the previous peak alone would cover them. The [write-up](replication.md#follow-up-which-spikes-does-each-method-gain-on-3-seeds-run-28-october-2026) has the tables.
+
 ## R: Results
 
 - **The paper's result reproduces.** On the authors' evaluator, spike F1 goes from 0.41 to 0.68 (the paper reports 0.27 to 0.64). The over-provisioning artefact reproduces too: every forecaster scores between 10¹⁵ and 10¹⁷.
@@ -52,6 +55,7 @@ macOS cleared the temporary folder that held the working data, along with severa
 - **Overall, looking ahead helps and holding hurts.** A target that only looks ahead beats the paper's at every level of over-provisioning, in all three seeds: 8 more points of spike coverage and 18% less throttled CPU at slack 0.6. Holding the allocation after a spike spends budget on spikes that are already over. The exception is follow-on spikes, below.
 - **The paper's metric can't see this.** On its recall window the two targets look the same. The difference only shows once delay or throttled CPU is measured.
 - **The look-ahead has to match the delay.** Even a perfect forecaster of the paper's 25-minute target covers only 28% of spikes when the delay is 30 minutes. A 30-minute look-ahead brings it back: 0.74 coverage at slack 0.8 against 0.59 for the 25-minute target, in all three seeds, with no measurable cost at 5 or 15-minute delays.
+- **One overall score hides where each method gains.** At a 15-minute delay and slack 0.8, the look-ahead beats the paper's target on seasonal (+0.030) and isolated (+0.045) spikes and trails it on follow-on spikes (−0.084). That follow-on result belongs to the 6-step definition: at 12 steps the 5-minute sign flips, and what that means is still open.
 
 ## T: Troubleshooting
 
@@ -70,3 +74,10 @@ macOS cleared the temporary folder that held the working data, along with severa
 | The working data and several trained models disappeared | macOS deletes files in temporary folders that haven't been opened for a few days, and the data lived in one | Keep data in the repo's git-ignored `data/` folder, re-stream the trace and retrain the lost runs | Keep anything expensive to rebuild out of temporary folders |
 | Three retrained models didn't match the published ones | cbase, proposed and proposed_full had first been trained with the earlier float32 `train.py`, which no longer exists. fwdmax seed 0, first trained with the current script, came back identical | Retrain with the committed script and regenerate every result ([ADR-008](adr/008-publish-reproducible-results.md)) | Publish only results the committed code can reproduce |
 | A run note said the old seed-0 runs fell inside the spread of the other seeds | The claim wasn't checked at every delay: with no delay, the old proposed seed 0 was below both other seeds | Correct the note and the conclusions that leaned on it | Check a claim about the data against every slice it covers |
+| My first follow-on window of 4 steps would have been empty | The detector's 4-step refractory period means no two spikes start closer than 5 steps | Use 6 steps, the length of the paper's hold | Check a definition against the detector that produces the data |
+| Spikes with no match a day earlier looked isolated | The detector starts at step 762, so 5,916 spikes have no complete day of history | Label them unknown and leave them out of type comparisons | Missing history isn't evidence |
+| The first ±2 and ±3 seasonal match rates were slightly off (37.3% and 42.3%) | They came from a check outside the repo, on a larger set of spikes than the ±1 rate | Regenerate every ADR-009 count with `spike_types.py`, which gives 37.6% and 42.6% | Counts belong in committed code |
+| I first said the previous peak "explains much" of the hold's lead | 87% of follow-on spikes sit in the group the peak covers, so most of any lead lands there by size | Compare the lead per spike, and say the split can't give a share | Compare rates before counts |
+| I didn't write predictions before scoring per type | I fixed the labels first and stopped there | Report these results as description, and write the prediction first in the next test | Fixing a definition isn't fixing a prediction |
+| The docs said the 25-minute look-ahead "misses every spike" at a 30-minute delay | I reasoned from the window instead of checking the score: it still covers 0.59 of spikes. An outside review caught it | Say the window stops one step short and nearby values can still pass | Check a claim against the number it implies |
+| The docs said the hold hurts, without saying overall | The first experiments only had overall scores, and the per-type split later showed the hold leading on follow-on spikes | Add "overall" and point to the follow-on result | A conclusion holds for the slice it was measured on |
