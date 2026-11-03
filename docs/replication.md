@@ -357,6 +357,32 @@ Limits of this section:
 - A full pass wouldn't have shown that a hold is worthwhile, only that computing it can stand in for learning it.
 - I searched for this comparison at a matched budget and didn't find it, but that search wasn't exhaustive, so I don't claim it's new.
 
+## Conclusion
+
+### Does the paper's result hold?
+
+I directionally reproduced the paper's spike-detection improvement using TempInc with Strategy 1 on Alibaba public data. On the authors' own evaluator, F1 increased from 0.41 to 0.68, compared with the paper's reported improvement from 0.27 to 0.64. However, this was a partial reproduction using reconstructed preprocessing, 5,946 traces instead of 5,168, eight input features instead of 18, and one seed. Google data, the other five models and Strategy 2 were not tested.
+
+The scope reflected my original goal of conducting an adversarial review rather than a full replication. I started with the cheapest, most informative checks on Alibaba, then followed the questions raised by each result. TempInc with Strategy 1 was the pair used in the first run and associated with the paper's headline result, not a winner selected through a comparison of all models.
+
+Hardware, storage, network and training limits led me to stream the Alibaba trace rather than store it, reduce training memory from 3.9 GB to 2.5 GB and cap training at 60 minutes. These constraints shaped how I executed the investigation, but were not the original reasons for setting its scope.
+
+### Does a better spike score help provisioning?
+
+The paper's spike-detection score alone does not establish provisioning value. Its recall doesn't consistently distinguish strategies: fwdmax and the proposed target have similar recall at slack 0.8 and above, while fwdmax6 scores slightly below fwdmax despite better coverage at a 30-minute delay (0.744 versus 0.590). The preferred approach also changes with actuation delay and spike type. The paper's over-provisioning metric produces values of 10¹⁵ to 10¹⁷ because its denominator is about 1e-10, so it cannot support reliable conclusions about resource efficiency.
+
+Actuation-delay-aware coverage and the throttling proxy usually moved together, though not always: at 15 minutes and slack 0.5, cbase covers 0.064 fewer spikes than the proposed target but throttles 9.3% less. These are offline comparisons using a proxy, not evidence of improved real-world provisioning. I have no autoscaler simulation, latency measurements or customer-impact data, and throttling is estimated from five-minute CPU maxima. Therefore, I cannot establish that better spike prediction leads to better real-world provisioning.
+
+### Does the hold need to be learned?
+
+At both 5- and 15-minute actuation delays, the computed hold achieved higher overall coverage than the learned hold (+1.12 and +0.82 percentage points, with 95% trace bootstrap intervals above zero) while reducing throttled core-hours by 5.4% and 5.7%. Follow-on coverage met my predefined 1-point non-inferiority margin at 5 minutes (−0.44 points, [−0.95, +0.03]) but failed it at 15 minutes (−0.76 points, [−1.40, −0.11]). So three of four checks passed and, by my rule, the complete hypothesis is not supported. The failure means I cannot establish non-inferiority at 15 minutes, although it does not prove that the loss exceeds my 1-point tolerance. Validation split the other way, failing at 5 minutes and passing at 15, so I don't read this as a stable difference between the delays.
+
+Against no hold, the computed hold improved follow-on coverage at 15 minutes (0.917 versus 0.841), but reduced all-spike coverage (0.733 versus 0.757) and increased throttling (906 versus 860 core-hours). Therefore, the experiment identifies a trade-off rather than establishing that a hold is universally worthwhile. It is limited to one trace and one time window, and I had already seen related test results. My literature search wasn't exhaustive, so I don't claim the comparison is new.
+
+### Overall
+
+The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold.
+
 ## Limitations (read before citing)
 - The first run used one seed per model (the horizon follow-up uses three), a 60-minute training cap and early stopping. The paper's learning rate of 0.01 made validation loss noisy, and cbase stopped after 7 epochs. The confidence intervals cover the sampling of test traces, not training variance.
 - The preprocessing is a reconstruction. The trace count, the gap and variance filters, the target (max CPU per 5-minute bin) and the bins (40 of 2.5 CPU points each) approximate the authors' pipeline but aren't it.

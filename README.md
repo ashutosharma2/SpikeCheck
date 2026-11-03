@@ -30,6 +30,12 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
 
+## Conclusion
+
+The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold.
+
+The [full conclusion](docs/replication.md#conclusion) covers what was reproduced, where the evidence stops and what can't be claimed.
+
 ## Status
 
 | Part | State |
