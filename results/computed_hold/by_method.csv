@@ -1,0 +1,2593 @@
+method,seed,d,budget,measure,value,n_spikes
+proposed,0,,0.6,slack share: after spike,0.347032,
+proposed,0,,0.6,slack share: run-up,0.0983653,
+proposed,0,,0.6,slack share: other,0.554603,
+proposed,0,1,0.6,cover: all,0.576408,27980
+proposed,0,1,0.6,cover: seasonal,0.770343,6749
+proposed,0,1,0.6,cover: follow-on,0.911915,1533
+proposed,0,1,0.6,cover: isolated,0.479305,13782
+proposed,0,1,0.6,cover: unknown,0.494439,5916
+proposed,0,1,0.6,"cover: follow-on, previous peak covers",0.999111,1336
+proposed,0,1,0.6,"cover: follow-on, previous peak short",0.320577,197
+proposed,0,1,0.6,cover: size q1,0.818962,7738
+proposed,0,1,0.6,cover: size q2,0.626043,7221
+proposed,0,1,0.6,cover: size q3,0.465042,6689
+proposed,0,1,0.6,cover: size q4,0.341038,6332
+proposed,0,1,0.6,throttle core-hours: all,1234.41,
+proposed,0,1,0.6,throttle core-hours: after spike,103.205,
+proposed,0,1,0.6,throttle core-hours: run-up,914.444,
+proposed,0,1,0.6,throttle core-hours: other,216.758,
+proposed,0,3,0.6,cover: all,0.60439,27980
+proposed,0,3,0.6,cover: seasonal,0.799299,6749
+proposed,0,3,0.6,cover: follow-on,0.897625,1533
+proposed,0,3,0.6,cover: isolated,0.512369,13782
+proposed,0,3,0.6,cover: unknown,0.520428,5916
+proposed,0,3,0.6,"cover: follow-on, previous peak covers",0.981895,1336
+proposed,0,3,0.6,"cover: follow-on, previous peak short",0.326131,197
+proposed,0,3,0.6,cover: size q1,0.845976,7738
+proposed,0,3,0.6,cover: size q2,0.663161,7221
+proposed,0,3,0.6,cover: size q3,0.485599,6689
+proposed,0,3,0.6,cover: size q4,0.367629,6332
+proposed,0,3,0.6,throttle core-hours: all,1431.45,
+proposed,0,3,0.6,throttle core-hours: after spike,299.223,
+proposed,0,3,0.6,throttle core-hours: run-up,883.792,
+proposed,0,3,0.6,throttle core-hours: other,248.44,
+proposed,0,6,0.6,cover: all,0.435022,27980
+proposed,0,6,0.6,cover: seasonal,0.394968,6749
+proposed,0,6,0.6,cover: follow-on,0.743941,1533
+proposed,0,6,0.6,cover: isolated,0.447639,13782
+proposed,0,6,0.6,cover: unknown,0.371276,5916
+proposed,0,6,0.6,"cover: follow-on, previous peak covers",0.818881,1336
+proposed,0,6,0.6,"cover: follow-on, previous peak short",0.235715,197
+proposed,0,6,0.6,cover: size q1,0.680756,7738
+proposed,0,6,0.6,cover: size q2,0.369757,7221
+proposed,0,6,0.6,cover: size q3,0.32461,6689
+proposed,0,6,0.6,cover: size q4,0.32579,6332
+proposed,0,6,0.6,throttle core-hours: all,1758.1,
+proposed,0,6,0.6,throttle core-hours: after spike,459.129,
+proposed,0,6,0.6,throttle core-hours: run-up,1003.92,
+proposed,0,6,0.6,throttle core-hours: other,295.053,
+proposed,0,,0.8,slack share: after spike,0.29344,
+proposed,0,,0.8,slack share: run-up,0.112707,
+proposed,0,,0.8,slack share: other,0.593853,
+proposed,0,1,0.8,cover: all,0.707212,27980
+proposed,0,1,0.8,cover: seasonal,0.895405,6749
+proposed,0,1,0.8,cover: follow-on,0.931848,1533
+proposed,0,1,0.8,cover: isolated,0.627311,13782
+proposed,0,1,0.8,cover: unknown,0.620448,5916
+proposed,0,1,0.8,"cover: follow-on, previous peak covers",1,1336
+proposed,0,1,0.8,"cover: follow-on, previous peak short",0.46966,197
+proposed,0,1,0.8,cover: size q1,0.913621,7738
+proposed,0,1,0.8,cover: size q2,0.787181,7221
+proposed,0,1,0.8,cover: size q3,0.603415,6689
+proposed,0,1,0.8,cover: size q4,0.473422,6332
+proposed,0,1,0.8,throttle core-hours: all,842.726,
+proposed,0,1,0.8,throttle core-hours: after spike,76.563,
+proposed,0,1,0.8,throttle core-hours: run-up,683.326,
+proposed,0,1,0.8,throttle core-hours: other,82.8368,
+proposed,0,3,0.8,cover: all,0.723165,27980
+proposed,0,3,0.8,cover: seasonal,0.914131,6749
+proposed,0,3,0.8,cover: follow-on,0.923368,1533
+proposed,0,3,0.8,cover: isolated,0.644296,13782
+proposed,0,3,0.8,cover: unknown,0.637166,5916
+proposed,0,3,0.8,"cover: follow-on, previous peak covers",0.989,1336
+proposed,0,3,0.8,"cover: follow-on, previous peak short",0.478266,197
+proposed,0,3,0.8,cover: size q1,0.923768,7738
+proposed,0,3,0.8,cover: size q2,0.805562,7221
+proposed,0,3,0.8,cover: size q3,0.623382,6689
+proposed,0,3,0.8,cover: size q4,0.489462,6332
+proposed,0,3,0.8,throttle core-hours: all,968.606,
+proposed,0,3,0.8,throttle core-hours: after spike,215.196,
+proposed,0,3,0.8,throttle core-hours: run-up,658.74,
+proposed,0,3,0.8,throttle core-hours: other,94.6696,
+proposed,0,6,0.8,cover: all,0.560283,27980
+proposed,0,6,0.8,cover: seasonal,0.524023,6749
+proposed,0,6,0.8,cover: follow-on,0.808054,1533
+proposed,0,6,0.8,cover: isolated,0.579379,13782
+proposed,0,6,0.8,cover: unknown,0.492955,5916
+proposed,0,6,0.8,"cover: follow-on, previous peak covers",0.878454,1336
+proposed,0,6,0.8,"cover: follow-on, previous peak short",0.33062,197
+proposed,0,6,0.8,cover: size q1,0.820775,7738
+proposed,0,6,0.8,cover: size q2,0.523372,7221
+proposed,0,6,0.8,cover: size q3,0.426926,6689
+proposed,0,6,0.8,cover: size q4,0.424917,6332
+proposed,0,6,0.8,throttle core-hours: all,1251.15,
+proposed,0,6,0.8,throttle core-hours: after spike,320.527,
+proposed,0,6,0.8,throttle core-hours: run-up,806.648,
+proposed,0,6,0.8,throttle core-hours: other,123.973,
+proposed,0,,1,slack share: after spike,0.254988,
+proposed,0,,1,slack share: run-up,0.117149,
+proposed,0,,1,slack share: other,0.627863,
+proposed,0,1,1,cover: all,0.779167,27980
+proposed,0,1,1,cover: seasonal,0.940537,6749
+proposed,0,1,1,cover: follow-on,0.940729,1533
+proposed,0,1,1,cover: isolated,0.717064,13782
+proposed,0,1,1,cover: unknown,0.697889,5916
+proposed,0,1,1,"cover: follow-on, previous peak covers",1,1336
+proposed,0,1,1,"cover: follow-on, previous peak short",0.538768,197
+proposed,0,1,1,cover: size q1,0.950802,7738
+proposed,0,1,1,cover: size q2,0.85463,7221
+proposed,0,1,1,cover: size q3,0.700571,6689
+proposed,0,1,1,cover: size q4,0.566393,6332
+proposed,0,1,1,throttle core-hours: all,639.454,
+proposed,0,1,1,throttle core-hours: after spike,63.3601,
+proposed,0,1,1,throttle core-hours: run-up,535.546,
+proposed,0,1,1,throttle core-hours: other,40.5473,
+proposed,0,3,1,cover: all,0.790479,27980
+proposed,0,3,1,cover: seasonal,0.952733,6749
+proposed,0,3,1,cover: follow-on,0.93506,1533
+proposed,0,3,1,cover: isolated,0.730246,13782
+proposed,0,3,1,cover: unknown,0.708235,5916
+proposed,0,3,1,"cover: follow-on, previous peak covers",0.992592,1336
+proposed,0,3,1,"cover: follow-on, previous peak short",0.544894,197
+proposed,0,3,1,cover: size q1,0.956424,7738
+proposed,0,3,1,cover: size q2,0.870398,7221
+proposed,0,3,1,cover: size q3,0.711114,6689
+proposed,0,3,1,cover: size q4,0.580388,6332
+proposed,0,3,1,throttle core-hours: all,734.634,
+proposed,0,3,1,throttle core-hours: after spike,168.557,
+proposed,0,3,1,throttle core-hours: run-up,517.924,
+proposed,0,3,1,throttle core-hours: other,48.1537,
+proposed,0,6,1,cover: all,0.656141,27980
+proposed,0,6,1,cover: seasonal,0.623185,6749
+proposed,0,6,1,cover: follow-on,0.853565,1533
+proposed,0,6,1,cover: isolated,0.675148,13782
+proposed,0,6,1,cover: unknown,0.598298,5916
+proposed,0,6,1,"cover: follow-on, previous peak covers",0.915509,1336
+proposed,0,6,1,"cover: follow-on, previous peak short",0.433482,197
+proposed,0,6,1,cover: size q1,0.892918,7738
+proposed,0,6,1,cover: size q2,0.655345,7221
+proposed,0,6,1,cover: size q3,0.524198,6689
+proposed,0,6,1,cover: size q4,0.507077,6332
+proposed,0,6,1,throttle core-hours: all,970.926,
+proposed,0,6,1,throttle core-hours: after spike,244.428,
+proposed,0,6,1,throttle core-hours: run-up,660.93,
+proposed,0,6,1,throttle core-hours: other,65.5685,
+proposed,1,,0.6,slack share: after spike,0.341657,
+proposed,1,,0.6,slack share: run-up,0.0978671,
+proposed,1,,0.6,slack share: other,0.560476,
+proposed,1,1,0.6,cover: all,0.567708,27980
+proposed,1,1,0.6,cover: seasonal,0.743475,6749
+proposed,1,1,0.6,cover: follow-on,0.915483,1533
+proposed,1,1,0.6,cover: isolated,0.478902,13782
+proposed,1,1,0.6,cover: unknown,0.483956,5916
+proposed,1,1,0.6,"cover: follow-on, previous peak covers",0.998666,1336
+proposed,1,1,0.6,"cover: follow-on, previous peak short",0.35136,197
+proposed,1,1,0.6,cover: size q1,0.783667,7738
+proposed,1,1,0.6,cover: size q2,0.602576,7221
+proposed,1,1,0.6,cover: size q3,0.50142,6689
+proposed,1,1,0.6,cover: size q4,0.334057,6332
+proposed,1,1,0.6,throttle core-hours: all,1242.44,
+proposed,1,1,0.6,throttle core-hours: after spike,107.044,
+proposed,1,1,0.6,throttle core-hours: run-up,911.814,
+proposed,1,1,0.6,throttle core-hours: other,223.579,
+proposed,1,3,0.6,cover: all,0.599807,27980
+proposed,1,3,0.6,cover: seasonal,0.793039,6749
+proposed,1,3,0.6,cover: follow-on,0.901105,1533
+proposed,1,3,0.6,cover: isolated,0.50872,13782
+proposed,1,3,0.6,cover: unknown,0.513491,5916
+proposed,1,3,0.6,"cover: follow-on, previous peak covers",0.981451,1336
+proposed,1,3,0.6,"cover: follow-on, previous peak short",0.35622,197
+proposed,1,3,0.6,cover: size q1,0.818861,7738
+proposed,1,3,0.6,cover: size q2,0.658407,7221
+proposed,1,3,0.6,cover: size q3,0.512171,6689
+proposed,1,3,0.6,cover: size q4,0.357863,6332
+proposed,1,3,0.6,throttle core-hours: all,1429.91,
+proposed,1,3,0.6,throttle core-hours: after spike,297.803,
+proposed,1,3,0.6,throttle core-hours: run-up,883.38,
+proposed,1,3,0.6,throttle core-hours: other,248.722,
+proposed,1,6,0.6,cover: all,0.433827,27980
+proposed,1,6,0.6,cover: seasonal,0.391084,6749
+proposed,1,6,0.6,cover: follow-on,0.753202,1533
+proposed,1,6,0.6,cover: isolated,0.447049,13782
+proposed,1,6,0.6,cover: unknown,0.369026,5916
+proposed,1,6,0.6,"cover: follow-on, previous peak covers",0.828596,1336
+proposed,1,6,0.6,"cover: follow-on, previous peak short",0.241898,197
+proposed,1,6,0.6,cover: size q1,0.649056,7738
+proposed,1,6,0.6,cover: size q2,0.369188,7221
+proposed,1,6,0.6,cover: size q3,0.356026,6689
+proposed,1,6,0.6,cover: size q4,0.326709,6332
+proposed,1,6,0.6,throttle core-hours: all,1740.97,
+proposed,1,6,0.6,throttle core-hours: after spike,454.514,
+proposed,1,6,0.6,throttle core-hours: run-up,997.36,
+proposed,1,6,0.6,throttle core-hours: other,289.093,
+proposed,1,,0.8,slack share: after spike,0.288905,
+proposed,1,,0.8,slack share: run-up,0.111216,
+proposed,1,,0.8,slack share: other,0.599878,
+proposed,1,1,0.8,cover: all,0.706361,27980
+proposed,1,1,0.8,cover: seasonal,0.886234,6749
+proposed,1,1,0.8,cover: follow-on,0.931916,1533
+proposed,1,1,0.8,cover: isolated,0.632664,13782
+proposed,1,1,0.8,cover: unknown,0.614401,5916
+proposed,1,1,0.8,"cover: follow-on, previous peak covers",1,1336
+proposed,1,1,0.8,"cover: follow-on, previous peak short",0.470189,197
+proposed,1,1,0.8,cover: size q1,0.896801,7738
+proposed,1,1,0.8,cover: size q2,0.767298,7221
+proposed,1,1,0.8,cover: size q3,0.644115,6689
+proposed,1,1,0.8,cover: size q4,0.469899,6332
+proposed,1,1,0.8,throttle core-hours: all,844.241,
+proposed,1,1,0.8,throttle core-hours: after spike,76.8874,
+proposed,1,1,0.8,throttle core-hours: run-up,685.515,
+proposed,1,1,0.8,throttle core-hours: other,81.8387,
+proposed,1,3,0.8,cover: all,0.72213,27980
+proposed,1,3,0.8,cover: seasonal,0.905462,6749
+proposed,1,3,0.8,cover: follow-on,0.924143,1533
+proposed,1,3,0.8,cover: isolated,0.648098,13782
+proposed,1,3,0.8,cover: unknown,0.633105,5916
+proposed,1,3,0.8,"cover: follow-on, previous peak covers",0.989927,1336
+proposed,1,3,0.8,"cover: follow-on, previous peak short",0.478018,197
+proposed,1,3,0.8,cover: size q1,0.913373,7738
+proposed,1,3,0.8,cover: size q2,0.790279,7221
+proposed,1,3,0.8,cover: size q3,0.654245,6689
+proposed,1,3,0.8,cover: size q4,0.482417,6332
+proposed,1,3,0.8,throttle core-hours: all,970.691,
+proposed,1,3,0.8,throttle core-hours: after spike,215.446,
+proposed,1,3,0.8,throttle core-hours: run-up,663.615,
+proposed,1,3,0.8,throttle core-hours: other,91.6296,
+proposed,1,6,0.8,cover: all,0.557372,27980
+proposed,1,6,0.8,cover: seasonal,0.526837,6749
+proposed,1,6,0.8,cover: follow-on,0.814484,1533
+proposed,1,6,0.8,cover: isolated,0.572379,13782
+proposed,1,6,0.8,cover: unknown,0.490618,5916
+proposed,1,6,0.8,"cover: follow-on, previous peak covers",0.880358,1336
+proposed,1,6,0.8,"cover: follow-on, previous peak short",0.367748,197
+proposed,1,6,0.8,cover: size q1,0.790596,7738
+proposed,1,6,0.8,cover: size q2,0.505896,7221
+proposed,1,6,0.8,cover: size q3,0.466892,6689
+proposed,1,6,0.8,cover: size q4,0.426644,6332
+proposed,1,6,0.8,throttle core-hours: all,1237.26,
+proposed,1,6,0.8,throttle core-hours: after spike,319.222,
+proposed,1,6,0.8,throttle core-hours: run-up,800.718,
+proposed,1,6,0.8,throttle core-hours: other,117.325,
+proposed,1,,1,slack share: after spike,0.251936,
+proposed,1,,1,slack share: run-up,0.116062,
+proposed,1,,1,slack share: other,0.632002,
+proposed,1,1,1,cover: all,0.778066,27980
+proposed,1,1,1,cover: seasonal,0.933858,6749
+proposed,1,1,1,cover: follow-on,0.944419,1533
+proposed,1,1,1,cover: isolated,0.719571,13782
+proposed,1,1,1,cover: unknown,0.693504,5916
+proposed,1,1,1,"cover: follow-on, previous peak covers",1,1336
+proposed,1,1,1,"cover: follow-on, previous peak short",0.567487,197
+proposed,1,1,1,cover: size q1,0.941756,7738
+proposed,1,1,1,cover: size q2,0.840458,7221
+proposed,1,1,1,cover: size q3,0.727146,6689
+proposed,1,1,1,cover: size q4,0.56067,6332
+proposed,1,1,1,throttle core-hours: all,646.284,
+proposed,1,1,1,throttle core-hours: after spike,63.3042,
+proposed,1,1,1,throttle core-hours: run-up,543.709,
+proposed,1,1,1,throttle core-hours: other,39.2708,
+proposed,1,3,1,cover: all,0.788586,27980
+proposed,1,3,1,cover: seasonal,0.947279,6749
+proposed,1,3,1,cover: follow-on,0.940823,1533
+proposed,1,3,1,cover: isolated,0.729146,13782
+proposed,1,3,1,cover: unknown,0.706574,5916
+proposed,1,3,1,"cover: follow-on, previous peak covers",0.993327,1336
+proposed,1,3,1,"cover: follow-on, previous peak short",0.584754,197
+proposed,1,3,1,cover: size q1,0.95059,7738
+proposed,1,3,1,cover: size q2,0.856414,7221
+proposed,1,3,1,cover: size q3,0.729722,6689
+proposed,1,3,1,cover: size q4,0.575444,6332
+proposed,1,3,1,throttle core-hours: all,743.191,
+proposed,1,3,1,throttle core-hours: after spike,170.571,
+proposed,1,3,1,throttle core-hours: run-up,526.352,
+proposed,1,3,1,throttle core-hours: other,46.2681,
+proposed,1,6,1,cover: all,0.656256,27980
+proposed,1,6,1,cover: seasonal,0.639054,6749
+proposed,1,6,1,cover: follow-on,0.865595,1533
+proposed,1,6,1,cover: isolated,0.666459,13782
+proposed,1,6,1,cover: unknown,0.597867,5916
+proposed,1,6,1,"cover: follow-on, previous peak covers",0.920716,1336
+proposed,1,6,1,"cover: follow-on, previous peak short",0.491778,197
+proposed,1,6,1,cover: size q1,0.871742,7738
+proposed,1,6,1,cover: size q2,0.639418,7221
+proposed,1,6,1,cover: size q3,0.559935,6689
+proposed,1,6,1,cover: size q4,0.513877,6332
+proposed,1,6,1,throttle core-hours: all,954.119,
+proposed,1,6,1,throttle core-hours: after spike,241.445,
+proposed,1,6,1,throttle core-hours: run-up,650.53,
+proposed,1,6,1,throttle core-hours: other,62.1437,
+proposed,2,,0.6,slack share: after spike,0.347804,
+proposed,2,,0.6,slack share: run-up,0.099009,
+proposed,2,,0.6,slack share: other,0.553187,
+proposed,2,1,0.6,cover: all,0.576501,27980
+proposed,2,1,0.6,cover: seasonal,0.761331,6749
+proposed,2,1,0.6,cover: follow-on,0.917544,1533
+proposed,2,1,0.6,cover: isolated,0.487973,13782
+proposed,2,1,0.6,cover: unknown,0.483509,5916
+proposed,2,1,0.6,"cover: follow-on, previous peak covers",0.999251,1336
+proposed,2,1,0.6,"cover: follow-on, previous peak short",0.363424,197
+proposed,2,1,0.6,cover: size q1,0.790959,7738
+proposed,2,1,0.6,cover: size q2,0.630761,7221
+proposed,2,1,0.6,cover: size q3,0.486689,6689
+proposed,2,1,0.6,cover: size q4,0.34742,6332
+proposed,2,1,0.6,throttle core-hours: all,1216.56,
+proposed,2,1,0.6,throttle core-hours: after spike,99.0138,
+proposed,2,1,0.6,throttle core-hours: run-up,916.352,
+proposed,2,1,0.6,throttle core-hours: other,201.19,
+proposed,2,3,0.6,cover: all,0.606159,27980
+proposed,2,3,0.6,cover: seasonal,0.801642,6749
+proposed,2,3,0.6,cover: follow-on,0.904518,1533
+proposed,2,3,0.6,cover: isolated,0.515004,13782
+proposed,2,3,0.6,cover: unknown,0.518197,5916
+proposed,2,3,0.6,"cover: follow-on, previous peak covers",0.98344,1336
+proposed,2,3,0.6,"cover: follow-on, previous peak short",0.369295,197
+proposed,2,3,0.6,cover: size q1,0.817423,7738
+proposed,2,3,0.6,cover: size q2,0.668183,7221
+proposed,2,3,0.6,cover: size q3,0.516772,6689
+proposed,2,3,0.6,cover: size q4,0.371682,6332
+proposed,2,3,0.6,throttle core-hours: all,1394.97,
+proposed,2,3,0.6,throttle core-hours: after spike,291.026,
+proposed,2,3,0.6,throttle core-hours: run-up,875.319,
+proposed,2,3,0.6,throttle core-hours: other,228.627,
+proposed,2,6,0.6,cover: all,0.421002,27980
+proposed,2,6,0.6,cover: seasonal,0.364173,6749
+proposed,2,6,0.6,cover: follow-on,0.750878,1533
+proposed,2,6,0.6,cover: isolated,0.439793,13782
+proposed,2,6,0.6,cover: unknown,0.356577,5916
+proposed,2,6,0.6,"cover: follow-on, previous peak covers",0.825882,1336
+proposed,2,6,0.6,"cover: follow-on, previous peak short",0.242228,197
+proposed,2,6,0.6,cover: size q1,0.617782,7738
+proposed,2,6,0.6,cover: size q2,0.352278,7221
+proposed,2,6,0.6,cover: size q3,0.343701,6689
+proposed,2,6,0.6,cover: size q4,0.340559,6332
+proposed,2,6,0.6,throttle core-hours: all,1731.66,
+proposed,2,6,0.6,throttle core-hours: after spike,450.092,
+proposed,2,6,0.6,throttle core-hours: run-up,1005.23,
+proposed,2,6,0.6,throttle core-hours: other,276.342,
+proposed,2,,0.8,slack share: after spike,0.294151,
+proposed,2,,0.8,slack share: run-up,0.116461,
+proposed,2,,0.8,slack share: other,0.589388,
+proposed,2,1,0.8,cover: all,0.71373,27980
+proposed,2,1,0.8,cover: seasonal,0.898835,6749
+proposed,2,1,0.8,cover: follow-on,0.93424,1533
+proposed,2,1,0.8,cover: isolated,0.636411,13782
+proposed,2,1,0.8,cover: unknown,0.625545,5916
+proposed,2,1,0.8,"cover: follow-on, previous peak covers",1,1336
+proposed,2,1,0.8,"cover: follow-on, previous peak short",0.488276,197
+proposed,2,1,0.8,cover: size q1,0.891752,7738
+proposed,2,1,0.8,cover: size q2,0.786726,7221
+proposed,2,1,0.8,cover: size q3,0.641619,6689
+proposed,2,1,0.8,cover: size q4,0.489112,6332
+proposed,2,1,0.8,throttle core-hours: all,823.522,
+proposed,2,1,0.8,throttle core-hours: after spike,72.544,
+proposed,2,1,0.8,throttle core-hours: run-up,677.534,
+proposed,2,1,0.8,throttle core-hours: other,73.4439,
+proposed,2,3,0.8,cover: all,0.730314,27980
+proposed,2,3,0.8,cover: seasonal,0.922107,6749
+proposed,2,3,0.8,cover: follow-on,0.927065,1533
+proposed,2,3,0.8,cover: isolated,0.651829,13782
+proposed,2,3,0.8,cover: unknown,0.643369,5916
+proposed,2,3,0.8,"cover: follow-on, previous peak covers",0.991541,1336
+proposed,2,3,0.8,"cover: follow-on, previous peak short",0.489807,197
+proposed,2,3,0.8,cover: size q1,0.907603,7738
+proposed,2,3,0.8,cover: size q2,0.80798,7221
+proposed,2,3,0.8,cover: size q3,0.655188,6689
+proposed,2,3,0.8,cover: size q4,0.504449,6332
+proposed,2,3,0.8,throttle core-hours: all,943.027,
+proposed,2,3,0.8,throttle core-hours: after spike,208.418,
+proposed,2,3,0.8,throttle core-hours: run-up,649.048,
+proposed,2,3,0.8,throttle core-hours: other,85.5609,
+proposed,2,6,0.8,cover: all,0.548795,27980
+proposed,2,6,0.8,cover: seasonal,0.499793,6749
+proposed,2,6,0.8,cover: follow-on,0.820002,1533
+proposed,2,6,0.8,cover: isolated,0.572358,13782
+proposed,2,6,0.8,cover: unknown,0.479527,5916
+proposed,2,6,0.8,"cover: follow-on, previous peak covers",0.886881,1336
+proposed,2,6,0.8,"cover: follow-on, previous peak short",0.366448,197
+proposed,2,6,0.8,cover: size q1,0.751368,7738
+proposed,2,6,0.8,cover: size q2,0.505208,7221
+proposed,2,6,0.8,cover: size q3,0.462047,6689
+proposed,2,6,0.8,cover: size q4,0.442589,6332
+proposed,2,6,0.8,throttle core-hours: all,1232.92,
+proposed,2,6,0.8,throttle core-hours: after spike,310.953,
+proposed,2,6,0.8,throttle core-hours: run-up,806.659,
+proposed,2,6,0.8,throttle core-hours: other,115.308,
+proposed,2,,1,slack share: after spike,0.257623,
+proposed,2,,1,slack share: run-up,0.121247,
+proposed,2,,1,slack share: other,0.62113,
+proposed,2,1,1,cover: all,0.77971,27980
+proposed,2,1,1,cover: seasonal,0.938988,6749
+proposed,2,1,1,cover: follow-on,0.945491,1533
+proposed,2,1,1,cover: isolated,0.71752,13782
+proposed,2,1,1,cover: unknown,0.699924,5916
+proposed,2,1,1,"cover: follow-on, previous peak covers",1,1336
+proposed,2,1,1,"cover: follow-on, previous peak short",0.575826,197
+proposed,2,1,1,cover: size q1,0.929828,7738
+proposed,2,1,1,cover: size q2,0.849358,7221
+proposed,2,1,1,cover: size q3,0.722324,6689
+proposed,2,1,1,cover: size q4,0.577453,6332
+proposed,2,1,1,throttle core-hours: all,632.215,
+proposed,2,1,1,throttle core-hours: after spike,59.5138,
+proposed,2,1,1,throttle core-hours: run-up,536.026,
+proposed,2,1,1,throttle core-hours: other,36.6752,
+proposed,2,3,1,cover: all,0.792018,27980
+proposed,2,3,1,cover: seasonal,0.954893,6749
+proposed,2,3,1,cover: follow-on,0.940845,1533
+proposed,2,3,1,cover: isolated,0.729379,13782
+proposed,2,3,1,cover: unknown,0.713567,5916
+proposed,2,3,1,"cover: follow-on, previous peak covers",0.993172,1336
+proposed,2,3,1,"cover: follow-on, previous peak short",0.585979,197
+proposed,2,3,1,cover: size q1,0.937841,7738
+proposed,2,3,1,cover: size q2,0.862941,7221
+proposed,2,3,1,cover: size q3,0.733814,6689
+proposed,2,3,1,cover: size q4,0.594421,6332
+proposed,2,3,1,throttle core-hours: all,722.947,
+proposed,2,3,1,throttle core-hours: after spike,163.949,
+proposed,2,3,1,throttle core-hours: run-up,515.484,
+proposed,2,3,1,throttle core-hours: other,43.5146,
+proposed,2,6,1,cover: all,0.64568,27980
+proposed,2,6,1,cover: seasonal,0.605011,6749
+proposed,2,6,1,cover: follow-on,0.862868,1533
+proposed,2,6,1,cover: isolated,0.665801,13782
+proposed,2,6,1,cover: unknown,0.588921,5916
+proposed,2,6,1,"cover: follow-on, previous peak covers",0.921405,1336
+proposed,2,6,1,"cover: follow-on, previous peak short",0.465882,197
+proposed,2,6,1,cover: size q1,0.831243,7738
+proposed,2,6,1,cover: size q2,0.636759,7221
+proposed,2,6,1,cover: size q3,0.557148,6689
+proposed,2,6,1,cover: size q4,0.522609,6332
+proposed,2,6,1,throttle core-hours: all,957.737,
+proposed,2,6,1,throttle core-hours: after spike,238.063,
+proposed,2,6,1,throttle core-hours: run-up,658.305,
+proposed,2,6,1,throttle core-hours: other,61.3698,
+fwdmax,0,,0.6,slack share: after spike,0.153247,
+fwdmax,0,,0.6,slack share: run-up,0.141393,
+fwdmax,0,,0.6,slack share: other,0.705359,
+fwdmax,0,1,0.6,cover: all,0.668721,27980
+fwdmax,0,1,0.6,cover: seasonal,0.875415,6749
+fwdmax,0,1,0.6,cover: follow-on,0.776746,1533
+fwdmax,0,1,0.6,cover: isolated,0.599315,13782
+fwdmax,0,1,0.6,cover: unknown,0.566619,5916
+fwdmax,0,1,0.6,"cover: follow-on, previous peak covers",0.847902,1336
+fwdmax,0,1,0.6,"cover: follow-on, previous peak short",0.294184,197
+fwdmax,0,1,0.6,cover: size q1,0.847912,7738
+fwdmax,0,1,0.6,cover: size q2,0.747259,7221
+fwdmax,0,1,0.6,cover: size q3,0.59454,6689
+fwdmax,0,1,0.6,cover: size q4,0.438538,6332
+fwdmax,0,1,0.6,throttle core-hours: all,1079.38,
+fwdmax,0,1,0.6,throttle core-hours: after spike,246.175,
+fwdmax,0,1,0.6,throttle core-hours: run-up,728.896,
+fwdmax,0,1,0.6,throttle core-hours: other,104.307,
+fwdmax,0,3,0.6,cover: all,0.675563,27980
+fwdmax,0,3,0.6,cover: seasonal,0.897509,6749
+fwdmax,0,3,0.6,cover: follow-on,0.756545,1533
+fwdmax,0,3,0.6,cover: isolated,0.600349,13782
+fwdmax,0,3,0.6,cover: unknown,0.576599,5916
+fwdmax,0,3,0.6,"cover: follow-on, previous peak covers",0.827706,1336
+fwdmax,0,3,0.6,"cover: follow-on, previous peak short",0.273957,197
+fwdmax,0,3,0.6,cover: size q1,0.858268,7738
+fwdmax,0,3,0.6,cover: size q2,0.760299,7221
+fwdmax,0,3,0.6,cover: size q3,0.603963,6689
+fwdmax,0,3,0.6,cover: size q4,0.43129,6332
+fwdmax,0,3,0.6,throttle core-hours: all,1169.69,
+fwdmax,0,3,0.6,throttle core-hours: after spike,331.302,
+fwdmax,0,3,0.6,throttle core-hours: run-up,723.771,
+fwdmax,0,3,0.6,throttle core-hours: other,114.618,
+fwdmax,0,6,0.6,cover: all,0.479669,27980
+fwdmax,0,6,0.6,cover: seasonal,0.457078,6749
+fwdmax,0,6,0.6,cover: follow-on,0.727805,1533
+fwdmax,0,6,0.6,cover: isolated,0.50526,13782
+fwdmax,0,6,0.6,cover: unknown,0.381526,5916
+fwdmax,0,6,0.6,"cover: follow-on, previous peak covers",0.800718,1336
+fwdmax,0,6,0.6,"cover: follow-on, previous peak short",0.233335,197
+fwdmax,0,6,0.6,cover: size q1,0.677267,7738
+fwdmax,0,6,0.6,cover: size q2,0.449746,7221
+fwdmax,0,6,0.6,cover: size q3,0.395702,6689
+fwdmax,0,6,0.6,cover: size q4,0.361021,6332
+fwdmax,0,6,0.6,throttle core-hours: all,1479.88,
+fwdmax,0,6,0.6,throttle core-hours: after spike,398.108,
+fwdmax,0,6,0.6,throttle core-hours: run-up,926.176,
+fwdmax,0,6,0.6,throttle core-hours: other,155.591,
+fwdmax,0,,0.8,slack share: after spike,0.159401,
+fwdmax,0,,0.8,slack share: run-up,0.136468,
+fwdmax,0,,0.8,slack share: other,0.704131,
+fwdmax,0,1,0.8,cover: all,0.745923,27980
+fwdmax,0,1,0.8,cover: seasonal,0.927704,6749
+fwdmax,0,1,0.8,cover: follow-on,0.850973,1533
+fwdmax,0,1,0.8,cover: isolated,0.688117,13782
+fwdmax,0,1,0.8,cover: unknown,0.645989,5916
+fwdmax,0,1,0.8,"cover: follow-on, previous peak covers",0.9181,1336
+fwdmax,0,1,0.8,"cover: follow-on, previous peak short",0.395733,197
+fwdmax,0,1,0.8,cover: size q1,0.901202,7738
+fwdmax,0,1,0.8,cover: size q2,0.818181,7221
+fwdmax,0,1,0.8,cover: size q3,0.689484,6689
+fwdmax,0,1,0.8,cover: size q4,0.533381,6332
+fwdmax,0,1,0.8,throttle core-hours: all,793.908,
+fwdmax,0,1,0.8,throttle core-hours: after spike,159.159,
+fwdmax,0,1,0.8,throttle core-hours: run-up,583.718,
+fwdmax,0,1,0.8,throttle core-hours: other,51.0306,
+fwdmax,0,3,0.8,cover: all,0.751518,27980
+fwdmax,0,3,0.8,cover: seasonal,0.944413,6749
+fwdmax,0,3,0.8,cover: follow-on,0.838131,1533
+fwdmax,0,3,0.8,cover: isolated,0.690277,13782
+fwdmax,0,3,0.8,cover: unknown,0.651687,5916
+fwdmax,0,3,0.8,"cover: follow-on, previous peak covers",0.901825,1336
+fwdmax,0,3,0.8,"cover: follow-on, previous peak short",0.406181,197
+fwdmax,0,3,0.8,cover: size q1,0.906912,7738
+fwdmax,0,3,0.8,cover: size q2,0.827981,7221
+fwdmax,0,3,0.8,cover: size q3,0.691712,6689
+fwdmax,0,3,0.8,cover: size q4,0.537599,6332
+fwdmax,0,3,0.8,throttle core-hours: all,873.32,
+fwdmax,0,3,0.8,throttle core-hours: after spike,238.4,
+fwdmax,0,3,0.8,throttle core-hours: run-up,577.947,
+fwdmax,0,3,0.8,throttle core-hours: other,56.9728,
+fwdmax,0,6,0.8,cover: all,0.59075,27980
+fwdmax,0,6,0.8,cover: seasonal,0.574622,6749
+fwdmax,0,6,0.8,cover: follow-on,0.822756,1533
+fwdmax,0,6,0.8,cover: isolated,0.614039,13782
+fwdmax,0,6,0.8,cover: unknown,0.494775,5916
+fwdmax,0,6,0.8,"cover: follow-on, previous peak covers",0.885797,1336
+fwdmax,0,6,0.8,"cover: follow-on, previous peak short",0.395232,197
+fwdmax,0,6,0.8,cover: size q1,0.777453,7738
+fwdmax,0,6,0.8,cover: size q2,0.587626,7221
+fwdmax,0,6,0.8,cover: size q3,0.506607,6689
+fwdmax,0,6,0.8,cover: size q4,0.45504,6332
+fwdmax,0,6,0.8,throttle core-hours: all,1128.68,
+fwdmax,0,6,0.8,throttle core-hours: after spike,293.27,
+fwdmax,0,6,0.8,throttle core-hours: run-up,755.611,
+fwdmax,0,6,0.8,throttle core-hours: other,79.7962,
+fwdmax,0,,1,slack share: after spike,0.160851,
+fwdmax,0,,1,slack share: run-up,0.131766,
+fwdmax,0,,1,slack share: other,0.707384,
+fwdmax,0,1,1,cover: all,0.798299,27980
+fwdmax,0,1,1,cover: seasonal,0.952609,6749
+fwdmax,0,1,1,cover: follow-on,0.893093,1533
+fwdmax,0,1,1,cover: isolated,0.750512,13782
+fwdmax,0,1,1,cover: unknown,0.709024,5916
+fwdmax,0,1,1,"cover: follow-on, previous peak covers",0.951361,1336
+fwdmax,0,1,1,"cover: follow-on, previous peak short",0.497934,197
+fwdmax,0,1,1,cover: size q1,0.933589,7738
+fwdmax,0,1,1,cover: size q2,0.862435,7221
+fwdmax,0,1,1,cover: size q3,0.754726,6689
+fwdmax,0,1,1,cover: size q4,0.605858,6332
+fwdmax,0,1,1,throttle core-hours: all,628.79,
+fwdmax,0,1,1,throttle core-hours: after spike,115.801,
+fwdmax,0,1,1,throttle core-hours: run-up,482.226,
+fwdmax,0,1,1,throttle core-hours: other,30.7631,
+fwdmax,0,3,1,cover: all,0.80209,27980
+fwdmax,0,3,1,cover: seasonal,0.962879,6749
+fwdmax,0,3,1,cover: follow-on,0.880808,1533
+fwdmax,0,3,1,cover: isolated,0.75261,13782
+fwdmax,0,3,1,cover: unknown,0.713532,5916
+fwdmax,0,3,1,"cover: follow-on, previous peak covers",0.937204,1336
+fwdmax,0,3,1,"cover: follow-on, previous peak short",0.498349,197
+fwdmax,0,3,1,cover: size q1,0.93795,7738
+fwdmax,0,3,1,cover: size q2,0.870016,7221
+fwdmax,0,3,1,cover: size q3,0.755311,6689
+fwdmax,0,3,1,cover: size q4,0.608015,6332
+fwdmax,0,3,1,throttle core-hours: all,698.68,
+fwdmax,0,3,1,throttle core-hours: after spike,187.278,
+fwdmax,0,3,1,throttle core-hours: run-up,476.104,
+fwdmax,0,3,1,throttle core-hours: other,35.2984,
+fwdmax,0,6,1,cover: all,0.676651,27980
+fwdmax,0,6,1,cover: seasonal,0.672861,6749
+fwdmax,0,6,1,cover: follow-on,0.866457,1533
+fwdmax,0,6,1,cover: isolated,0.691039,13782
+fwdmax,0,6,1,cover: unknown,0.598271,5916
+fwdmax,0,6,1,"cover: follow-on, previous peak covers",0.920923,1336
+fwdmax,0,6,1,"cover: follow-on, previous peak short",0.497084,197
+fwdmax,0,6,1,cover: size q1,0.849035,7738
+fwdmax,0,6,1,cover: size q2,0.693246,7221
+fwdmax,0,6,1,cover: size q3,0.594961,6689
+fwdmax,0,6,1,cover: size q4,0.533359,6332
+fwdmax,0,6,1,throttle core-hours: all,904.875,
+fwdmax,0,6,1,throttle core-hours: after spike,231.336,
+fwdmax,0,6,1,throttle core-hours: run-up,623.945,
+fwdmax,0,6,1,throttle core-hours: other,49.5945,
+fwdmax,1,,0.6,slack share: after spike,0.153559,
+fwdmax,1,,0.6,slack share: run-up,0.146403,
+fwdmax,1,,0.6,slack share: other,0.700039,
+fwdmax,1,1,0.6,cover: all,0.67348,27980
+fwdmax,1,1,0.6,cover: seasonal,0.87066,6749
+fwdmax,1,1,0.6,cover: follow-on,0.76651,1533
+fwdmax,1,1,0.6,cover: isolated,0.598764,13782
+fwdmax,1,1,0.6,cover: unknown,0.598489,5916
+fwdmax,1,1,0.6,"cover: follow-on, previous peak covers",0.836962,1336
+fwdmax,1,1,0.6,"cover: follow-on, previous peak short",0.288727,197
+fwdmax,1,1,0.6,cover: size q1,0.874751,7738
+fwdmax,1,1,0.6,cover: size q2,0.748864,7221
+fwdmax,1,1,0.6,cover: size q3,0.603939,6689
+fwdmax,1,1,0.6,cover: size q4,0.415011,6332
+fwdmax,1,1,0.6,throttle core-hours: all,1054.1,
+fwdmax,1,1,0.6,throttle core-hours: after spike,233.414,
+fwdmax,1,1,0.6,throttle core-hours: run-up,706.601,
+fwdmax,1,1,0.6,throttle core-hours: other,114.084,
+fwdmax,1,3,0.6,cover: all,0.683653,27980
+fwdmax,1,3,0.6,cover: seasonal,0.903739,6749
+fwdmax,1,3,0.6,cover: follow-on,0.753096,1533
+fwdmax,1,3,0.6,cover: isolated,0.603063,13782
+fwdmax,1,3,0.6,cover: unknown,0.602324,5916
+fwdmax,1,3,0.6,"cover: follow-on, previous peak covers",0.818656,1336
+fwdmax,1,3,0.6,"cover: follow-on, previous peak short",0.308486,197
+fwdmax,1,3,0.6,cover: size q1,0.885896,7738
+fwdmax,1,3,0.6,cover: size q2,0.776444,7221
+fwdmax,1,3,0.6,cover: size q3,0.611017,6689
+fwdmax,1,3,0.6,cover: size q4,0.407414,6332
+fwdmax,1,3,0.6,throttle core-hours: all,1147.59,
+fwdmax,1,3,0.6,throttle core-hours: after spike,321.979,
+fwdmax,1,3,0.6,throttle core-hours: run-up,698.561,
+fwdmax,1,3,0.6,throttle core-hours: other,127.051,
+fwdmax,1,6,0.6,cover: all,0.467353,27980
+fwdmax,1,6,0.6,cover: seasonal,0.43082,6749
+fwdmax,1,6,0.6,cover: follow-on,0.705044,1533
+fwdmax,1,6,0.6,cover: isolated,0.48609,13782
+fwdmax,1,6,0.6,cover: unknown,0.403789,5916
+fwdmax,1,6,0.6,"cover: follow-on, previous peak covers",0.776494,1336
+fwdmax,1,6,0.6,"cover: follow-on, previous peak short",0.220488,197
+fwdmax,1,6,0.6,cover: size q1,0.702967,7738
+fwdmax,1,6,0.6,cover: size q2,0.416653,7221
+fwdmax,1,6,0.6,cover: size q3,0.381026,6689
+fwdmax,1,6,0.6,cover: size q4,0.328436,6332
+fwdmax,1,6,0.6,throttle core-hours: all,1482.79,
+fwdmax,1,6,0.6,throttle core-hours: after spike,393.425,
+fwdmax,1,6,0.6,throttle core-hours: run-up,917.302,
+fwdmax,1,6,0.6,throttle core-hours: other,172.066,
+fwdmax,1,,0.8,slack share: after spike,0.156314,
+fwdmax,1,,0.8,slack share: run-up,0.141115,
+fwdmax,1,,0.8,slack share: other,0.70257,
+fwdmax,1,1,0.8,cover: all,0.752119,27980
+fwdmax,1,1,0.8,cover: seasonal,0.916168,6749
+fwdmax,1,1,0.8,cover: follow-on,0.843603,1533
+fwdmax,1,1,0.8,cover: isolated,0.690263,13782
+fwdmax,1,1,0.8,cover: unknown,0.685364,5916
+fwdmax,1,1,0.8,"cover: follow-on, previous peak covers",0.90622,1336
+fwdmax,1,1,0.8,"cover: follow-on, previous peak short",0.418955,197
+fwdmax,1,1,0.8,cover: size q1,0.928106,7738
+fwdmax,1,1,0.8,cover: size q2,0.820793,7221
+fwdmax,1,1,0.8,cover: size q3,0.698898,6689
+fwdmax,1,1,0.8,cover: size q4,0.514959,6332
+fwdmax,1,1,0.8,throttle core-hours: all,772.882,
+fwdmax,1,1,0.8,throttle core-hours: after spike,161.97,
+fwdmax,1,1,0.8,throttle core-hours: run-up,555.699,
+fwdmax,1,1,0.8,throttle core-hours: other,55.2133,
+fwdmax,1,3,0.8,cover: all,0.759204,27980
+fwdmax,1,3,0.8,cover: seasonal,0.941066,6749
+fwdmax,1,3,0.8,cover: follow-on,0.833242,1533
+fwdmax,1,3,0.8,cover: isolated,0.693035,13782
+fwdmax,1,3,0.8,cover: unknown,0.686697,5916
+fwdmax,1,3,0.8,"cover: follow-on, previous peak covers",0.8984,1336
+fwdmax,1,3,0.8,"cover: follow-on, previous peak short",0.391356,197
+fwdmax,1,3,0.8,cover: size q1,0.935131,7738
+fwdmax,1,3,0.8,cover: size q2,0.839538,7221
+fwdmax,1,3,0.8,cover: size q3,0.701792,6689
+fwdmax,1,3,0.8,cover: size q4,0.513248,6332
+fwdmax,1,3,0.8,throttle core-hours: all,847.473,
+fwdmax,1,3,0.8,throttle core-hours: after spike,236,
+fwdmax,1,3,0.8,throttle core-hours: run-up,548.955,
+fwdmax,1,3,0.8,throttle core-hours: other,62.5173,
+fwdmax,1,6,0.8,cover: all,0.581107,27980
+fwdmax,1,6,0.8,cover: seasonal,0.545432,6749
+fwdmax,1,6,0.8,cover: follow-on,0.791266,1533
+fwdmax,1,6,0.8,cover: isolated,0.59502,13782
+fwdmax,1,6,0.8,cover: unknown,0.534937,5916
+fwdmax,1,6,0.8,"cover: follow-on, previous peak covers",0.855648,1336
+fwdmax,1,6,0.8,"cover: follow-on, previous peak short",0.354641,197
+fwdmax,1,6,0.8,cover: size q1,0.814488,7738
+fwdmax,1,6,0.8,cover: size q2,0.547997,7221
+fwdmax,1,6,0.8,cover: size q3,0.493775,6689
+fwdmax,1,6,0.8,cover: size q4,0.42592,6332
+fwdmax,1,6,0.8,throttle core-hours: all,1125.06,
+fwdmax,1,6,0.8,throttle core-hours: after spike,293.255,
+fwdmax,1,6,0.8,throttle core-hours: run-up,742.75,
+fwdmax,1,6,0.8,throttle core-hours: other,89.0548,
+fwdmax,1,,1,slack share: after spike,0.155715,
+fwdmax,1,,1,slack share: run-up,0.136158,
+fwdmax,1,,1,slack share: other,0.708127,
+fwdmax,1,1,1,cover: all,0.803894,27980
+fwdmax,1,1,1,cover: seasonal,0.940469,6749
+fwdmax,1,1,1,cover: follow-on,0.882957,1533
+fwdmax,1,1,1,cover: isolated,0.752961,13782
+fwdmax,1,1,1,cover: unknown,0.746254,5916
+fwdmax,1,1,1,"cover: follow-on, previous peak covers",0.939334,1336
+fwdmax,1,1,1,"cover: follow-on, previous peak short",0.500622,197
+fwdmax,1,1,1,cover: size q1,0.954469,7738
+fwdmax,1,1,1,cover: size q2,0.866995,7221
+fwdmax,1,1,1,cover: size q3,0.763773,6689
+fwdmax,1,1,1,cover: size q4,0.590306,6332
+fwdmax,1,1,1,throttle core-hours: all,611.852,
+fwdmax,1,1,1,throttle core-hours: after spike,123.723,
+fwdmax,1,1,1,throttle core-hours: run-up,454.95,
+fwdmax,1,1,1,throttle core-hours: other,33.1792,
+fwdmax,1,3,1,cover: all,0.810204,27980
+fwdmax,1,3,1,cover: seasonal,0.959871,6749
+fwdmax,1,3,1,cover: follow-on,0.874784,1533
+fwdmax,1,3,1,cover: isolated,0.754938,13782
+fwdmax,1,3,1,cover: unknown,0.751477,5916
+fwdmax,1,3,1,"cover: follow-on, previous peak covers",0.934191,1336
+fwdmax,1,3,1,"cover: follow-on, previous peak short",0.471897,197
+fwdmax,1,3,1,cover: size q1,0.959415,7738
+fwdmax,1,3,1,cover: size q2,0.881283,7221
+fwdmax,1,3,1,cover: size q3,0.766735,6689
+fwdmax,1,3,1,cover: size q4,0.592723,6332
+fwdmax,1,3,1,throttle core-hours: all,673.59,
+fwdmax,1,3,1,throttle core-hours: after spike,187.674,
+fwdmax,1,3,1,throttle core-hours: run-up,447.899,
+fwdmax,1,3,1,throttle core-hours: other,38.0173,
+fwdmax,1,6,1,cover: all,0.668959,27980
+fwdmax,1,6,1,cover: seasonal,0.64301,6749
+fwdmax,1,6,1,cover: follow-on,0.841116,1533
+fwdmax,1,6,1,cover: isolated,0.677858,13782
+fwdmax,1,6,1,cover: unknown,0.63322,5916
+fwdmax,1,6,1,"cover: follow-on, previous peak covers",0.89696,1336
+fwdmax,1,6,1,"cover: follow-on, previous peak short",0.4624,197
+fwdmax,1,6,1,cover: size q1,0.881916,7738
+fwdmax,1,6,1,cover: size q2,0.664605,7221
+fwdmax,1,6,1,cover: size q3,0.580335,6689
+fwdmax,1,6,1,cover: size q4,0.507302,6332
+fwdmax,1,6,1,throttle core-hours: all,903.293,
+fwdmax,1,6,1,throttle core-hours: after spike,235.056,
+fwdmax,1,6,1,throttle core-hours: run-up,612.896,
+fwdmax,1,6,1,throttle core-hours: other,55.3405,
+fwdmax,2,,0.6,slack share: after spike,0.156844,
+fwdmax,2,,0.6,slack share: run-up,0.140916,
+fwdmax,2,,0.6,slack share: other,0.70224,
+fwdmax,2,1,0.6,cover: all,0.679949,27980
+fwdmax,2,1,0.6,cover: seasonal,0.889846,6749
+fwdmax,2,1,0.6,cover: follow-on,0.779111,1533
+fwdmax,2,1,0.6,cover: isolated,0.60847,13782
+fwdmax,2,1,0.6,cover: unknown,0.58132,5916
+fwdmax,2,1,0.6,"cover: follow-on, previous peak covers",0.852193,1336
+fwdmax,2,1,0.6,"cover: follow-on, previous peak short",0.283492,197
+fwdmax,2,1,0.6,cover: size q1,0.886721,7738
+fwdmax,2,1,0.6,cover: size q2,0.770533,7221
+fwdmax,2,1,0.6,cover: size q3,0.583609,6689
+fwdmax,2,1,0.6,cover: size q4,0.425733,6332
+fwdmax,2,1,0.6,throttle core-hours: all,1051.24,
+fwdmax,2,1,0.6,throttle core-hours: after spike,225.704,
+fwdmax,2,1,0.6,throttle core-hours: run-up,719.826,
+fwdmax,2,1,0.6,throttle core-hours: other,105.706,
+fwdmax,2,3,0.6,cover: all,0.684968,27980
+fwdmax,2,3,0.6,cover: seasonal,0.904775,6749
+fwdmax,2,3,0.6,cover: follow-on,0.765984,1533
+fwdmax,2,3,0.6,cover: isolated,0.610416,13782
+fwdmax,2,3,0.6,cover: unknown,0.586896,5916
+fwdmax,2,3,0.6,"cover: follow-on, previous peak covers",0.839468,1336
+fwdmax,2,3,0.6,"cover: follow-on, previous peak short",0.267638,197
+fwdmax,2,3,0.6,cover: size q1,0.894385,7738
+fwdmax,2,3,0.6,cover: size q2,0.784372,7221
+fwdmax,2,3,0.6,cover: size q3,0.592866,6689
+fwdmax,2,3,0.6,cover: size q4,0.412986,6332
+fwdmax,2,3,0.6,throttle core-hours: all,1163.11,
+fwdmax,2,3,0.6,throttle core-hours: after spike,322.727,
+fwdmax,2,3,0.6,throttle core-hours: run-up,721.992,
+fwdmax,2,3,0.6,throttle core-hours: other,118.395,
+fwdmax,2,6,0.6,cover: all,0.484095,27980
+fwdmax,2,6,0.6,cover: seasonal,0.456364,6749
+fwdmax,2,6,0.6,cover: follow-on,0.727167,1533
+fwdmax,2,6,0.6,cover: isolated,0.505856,13782
+fwdmax,2,6,0.6,cover: unknown,0.402051,5916
+fwdmax,2,6,0.6,"cover: follow-on, previous peak covers",0.799326,1336
+fwdmax,2,6,0.6,"cover: follow-on, previous peak short",0.237807,197
+fwdmax,2,6,0.6,cover: size q1,0.724831,7738
+fwdmax,2,6,0.6,cover: size q2,0.460756,7221
+fwdmax,2,6,0.6,cover: size q3,0.371327,6689
+fwdmax,2,6,0.6,cover: size q4,0.335647,6332
+fwdmax,2,6,0.6,throttle core-hours: all,1486.02,
+fwdmax,2,6,0.6,throttle core-hours: after spike,398.367,
+fwdmax,2,6,0.6,throttle core-hours: run-up,928.251,
+fwdmax,2,6,0.6,throttle core-hours: other,159.405,
+fwdmax,2,,0.8,slack share: after spike,0.163223,
+fwdmax,2,,0.8,slack share: run-up,0.136348,
+fwdmax,2,,0.8,slack share: other,0.700429,
+fwdmax,2,1,0.8,cover: all,0.75577,27980
+fwdmax,2,1,0.8,cover: seasonal,0.935347,6749
+fwdmax,2,1,0.8,cover: follow-on,0.859371,1533
+fwdmax,2,1,0.8,cover: isolated,0.694907,13782
+fwdmax,2,1,0.8,cover: unknown,0.66585,5916
+fwdmax,2,1,0.8,"cover: follow-on, previous peak covers",0.923051,1336
+fwdmax,2,1,0.8,"cover: follow-on, previous peak short",0.427512,197
+fwdmax,2,1,0.8,cover: size q1,0.927932,7738
+fwdmax,2,1,0.8,cover: size q2,0.842887,7221
+fwdmax,2,1,0.8,cover: size q3,0.684677,6689
+fwdmax,2,1,0.8,cover: size q4,0.521134,6332
+fwdmax,2,1,0.8,throttle core-hours: all,765.435,
+fwdmax,2,1,0.8,throttle core-hours: after spike,145.589,
+fwdmax,2,1,0.8,throttle core-hours: run-up,570.243,
+fwdmax,2,1,0.8,throttle core-hours: other,49.6028,
+fwdmax,2,3,0.8,cover: all,0.75963,27980
+fwdmax,2,3,0.8,cover: seasonal,0.94751,6749
+fwdmax,2,3,0.8,cover: follow-on,0.851188,1533
+fwdmax,2,3,0.8,cover: isolated,0.695347,13782
+fwdmax,2,3,0.8,cover: unknown,0.671325,5916
+fwdmax,2,3,0.8,"cover: follow-on, previous peak covers",0.912858,1336
+fwdmax,2,3,0.8,"cover: follow-on, previous peak short",0.43296,197
+fwdmax,2,3,0.8,cover: size q1,0.931541,7738
+fwdmax,2,3,0.8,cover: size q2,0.849558,7221
+fwdmax,2,3,0.8,cover: size q3,0.688382,6689
+fwdmax,2,3,0.8,cover: size q4,0.522259,6332
+fwdmax,2,3,0.8,throttle core-hours: all,859.954,
+fwdmax,2,3,0.8,throttle core-hours: after spike,233.159,
+fwdmax,2,3,0.8,throttle core-hours: run-up,570.887,
+fwdmax,2,3,0.8,throttle core-hours: other,55.9068,
+fwdmax,2,6,0.8,cover: all,0.598166,27980
+fwdmax,2,6,0.8,cover: seasonal,0.582565,6749
+fwdmax,2,6,0.8,cover: follow-on,0.817417,1533
+fwdmax,2,6,0.8,cover: isolated,0.613197,13782
+fwdmax,2,6,0.8,cover: unknown,0.524132,5916
+fwdmax,2,6,0.8,"cover: follow-on, previous peak covers",0.879115,1336
+fwdmax,2,6,0.8,"cover: follow-on, previous peak short",0.398995,197
+fwdmax,2,6,0.8,cover: size q1,0.822796,7738
+fwdmax,2,6,0.8,cover: size q2,0.607599,7221
+fwdmax,2,6,0.8,cover: size q3,0.482775,6689
+fwdmax,2,6,0.8,cover: size q4,0.434796,6332
+fwdmax,2,6,0.8,throttle core-hours: all,1127.97,
+fwdmax,2,6,0.8,throttle core-hours: after spike,293.641,
+fwdmax,2,6,0.8,throttle core-hours: run-up,754.63,
+fwdmax,2,6,0.8,throttle core-hours: other,79.6984,
+fwdmax,2,,1,slack share: after spike,0.164469,
+fwdmax,2,,1,slack share: run-up,0.13183,
+fwdmax,2,,1,slack share: other,0.703701,
+fwdmax,2,1,1,cover: all,0.807708,27980
+fwdmax,2,1,1,cover: seasonal,0.955955,6749
+fwdmax,2,1,1,cover: follow-on,0.901163,1533
+fwdmax,2,1,1,cover: isolated,0.757784,13782
+fwdmax,2,1,1,cover: unknown,0.730676,5916
+fwdmax,2,1,1,"cover: follow-on, previous peak covers",0.95702,1336
+fwdmax,2,1,1,"cover: follow-on, previous peak short",0.522355,197
+fwdmax,2,1,1,cover: size q1,0.952645,7738
+fwdmax,2,1,1,cover: size q2,0.886426,7221
+fwdmax,2,1,1,cover: size q3,0.753908,6689
+fwdmax,2,1,1,cover: size q4,0.597652,6332
+fwdmax,2,1,1,throttle core-hours: all,604.138,
+fwdmax,2,1,1,throttle core-hours: after spike,105.942,
+fwdmax,2,1,1,throttle core-hours: run-up,468.514,
+fwdmax,2,1,1,throttle core-hours: other,29.6827,
+fwdmax,2,3,1,cover: all,0.809446,27980
+fwdmax,2,3,1,cover: seasonal,0.964911,6749
+fwdmax,2,3,1,cover: follow-on,0.891567,1533
+fwdmax,2,3,1,cover: isolated,0.755552,13782
+fwdmax,2,3,1,cover: unknown,0.736364,5916
+fwdmax,2,3,1,"cover: follow-on, previous peak covers",0.946099,1336
+fwdmax,2,3,1,"cover: follow-on, previous peak short",0.521743,197
+fwdmax,2,3,1,cover: size q1,0.954079,7738
+fwdmax,2,3,1,cover: size q2,0.891051,7221
+fwdmax,2,3,1,cover: size q3,0.754343,6689
+fwdmax,2,3,1,cover: size q4,0.597844,6332
+fwdmax,2,3,1,throttle core-hours: all,687.216,
+fwdmax,2,3,1,throttle core-hours: after spike,184.484,
+fwdmax,2,3,1,throttle core-hours: run-up,468.025,
+fwdmax,2,3,1,throttle core-hours: other,34.7068,
+fwdmax,2,6,1,cover: all,0.684133,27980
+fwdmax,2,6,1,cover: seasonal,0.677641,6749
+fwdmax,2,6,1,cover: follow-on,0.864869,1533
+fwdmax,2,6,1,cover: isolated,0.693406,13782
+fwdmax,2,6,1,cover: unknown,0.623103,5916
+fwdmax,2,6,1,"cover: follow-on, previous peak covers",0.916736,1336
+fwdmax,2,6,1,"cover: follow-on, previous peak short",0.513121,197
+fwdmax,2,6,1,cover: size q1,0.884614,7738
+fwdmax,2,6,1,cover: size q2,0.721901,7221
+fwdmax,2,6,1,cover: size q3,0.572863,6689
+fwdmax,2,6,1,cover: size q4,0.51361,6332
+fwdmax,2,6,1,throttle core-hours: all,906.646,
+fwdmax,2,6,1,throttle core-hours: after spike,233.159,
+fwdmax,2,6,1,throttle core-hours: run-up,623.581,
+fwdmax,2,6,1,throttle core-hours: other,49.9066,
+fwdmax6,0,,0.6,slack share: after spike,0.15201,
+fwdmax6,0,,0.6,slack share: run-up,0.155229,
+fwdmax6,0,,0.6,slack share: other,0.692761,
+fwdmax6,0,1,0.6,cover: all,0.677547,27980
+fwdmax6,0,1,0.6,cover: seasonal,0.882309,6749
+fwdmax6,0,1,0.6,cover: follow-on,0.776796,1533
+fwdmax6,0,1,0.6,cover: isolated,0.609369,13782
+fwdmax6,0,1,0.6,cover: unknown,0.577065,5916
+fwdmax6,0,1,0.6,"cover: follow-on, previous peak covers",0.847773,1336
+fwdmax6,0,1,0.6,"cover: follow-on, previous peak short",0.295451,197
+fwdmax6,0,1,0.6,cover: size q1,0.878411,7738
+fwdmax6,0,1,0.6,cover: size q2,0.757605,7221
+fwdmax6,0,1,0.6,cover: size q3,0.598885,6689
+fwdmax6,0,1,0.6,cover: size q4,0.42388,6332
+fwdmax6,0,1,0.6,throttle core-hours: all,1086.93,
+fwdmax6,0,1,0.6,throttle core-hours: after spike,242.268,
+fwdmax6,0,1,0.6,throttle core-hours: run-up,722.539,
+fwdmax6,0,1,0.6,throttle core-hours: other,122.122,
+fwdmax6,0,3,0.6,cover: all,0.689202,27980
+fwdmax6,0,3,0.6,cover: seasonal,0.90859,6749
+fwdmax6,0,3,0.6,cover: follow-on,0.76473,1533
+fwdmax6,0,3,0.6,cover: isolated,0.61785,13782
+fwdmax6,0,3,0.6,cover: unknown,0.585573,5916
+fwdmax6,0,3,0.6,"cover: follow-on, previous peak covers",0.833628,1336
+fwdmax6,0,3,0.6,"cover: follow-on, previous peak short",0.297488,197
+fwdmax6,0,3,0.6,cover: size q1,0.89473,7738
+fwdmax6,0,3,0.6,cover: size q2,0.78454,7221
+fwdmax6,0,3,0.6,cover: size q3,0.601642,6689
+fwdmax6,0,3,0.6,cover: size q4,0.42181,6332
+fwdmax6,0,3,0.6,throttle core-hours: all,1187.46,
+fwdmax6,0,3,0.6,throttle core-hours: after spike,330.589,
+fwdmax6,0,3,0.6,throttle core-hours: run-up,720.026,
+fwdmax6,0,3,0.6,throttle core-hours: other,136.849,
+fwdmax6,0,6,0.6,cover: all,0.665326,27980
+fwdmax6,0,6,0.6,cover: seasonal,0.8749,6749
+fwdmax6,0,6,0.6,cover: follow-on,0.736352,1533
+fwdmax6,0,6,0.6,cover: isolated,0.604367,13782
+fwdmax6,0,6,0.6,cover: unknown,0.549851,5916
+fwdmax6,0,6,0.6,"cover: follow-on, previous peak covers",0.802751,1336
+fwdmax6,0,6,0.6,"cover: follow-on, previous peak short",0.286059,197
+fwdmax6,0,6,0.6,cover: size q1,0.86881,7738
+fwdmax6,0,6,0.6,cover: size q2,0.744278,7221
+fwdmax6,0,6,0.6,cover: size q3,0.58342,6689
+fwdmax6,0,6,0.6,cover: size q4,0.413148,6332
+fwdmax6,0,6,0.6,throttle core-hours: all,1262.58,
+fwdmax6,0,6,0.6,throttle core-hours: after spike,376.726,
+fwdmax6,0,6,0.6,throttle core-hours: run-up,741.601,
+fwdmax6,0,6,0.6,throttle core-hours: other,144.251,
+fwdmax6,0,,0.8,slack share: after spike,0.157439,
+fwdmax6,0,,0.8,slack share: run-up,0.148434,
+fwdmax6,0,,0.8,slack share: other,0.694127,
+fwdmax6,0,1,0.8,cover: all,0.753687,27980
+fwdmax6,0,1,0.8,cover: seasonal,0.929696,6749
+fwdmax6,0,1,0.8,cover: follow-on,0.857475,1533
+fwdmax6,0,1,0.8,cover: isolated,0.69529,13782
+fwdmax6,0,1,0.8,cover: unknown,0.662042,5916
+fwdmax6,0,1,0.8,"cover: follow-on, previous peak covers",0.921487,1336
+fwdmax6,0,1,0.8,"cover: follow-on, previous peak short",0.42336,197
+fwdmax6,0,1,0.8,cover: size q1,0.922056,7738
+fwdmax6,0,1,0.8,cover: size q2,0.829572,7221
+fwdmax6,0,1,0.8,cover: size q3,0.68676,6689
+fwdmax6,0,1,0.8,cover: size q4,0.532092,6332
+fwdmax6,0,1,0.8,throttle core-hours: all,793.332,
+fwdmax6,0,1,0.8,throttle core-hours: after spike,160.169,
+fwdmax6,0,1,0.8,throttle core-hours: run-up,575.86,
+fwdmax6,0,1,0.8,throttle core-hours: other,57.3036,
+fwdmax6,0,3,0.8,cover: all,0.76119,27980
+fwdmax6,0,3,0.8,cover: seasonal,0.947565,6749
+fwdmax6,0,3,0.8,cover: follow-on,0.843188,1533
+fwdmax6,0,3,0.8,cover: isolated,0.69985,13782
+fwdmax6,0,3,0.8,cover: unknown,0.670223,5916
+fwdmax6,0,3,0.8,"cover: follow-on, previous peak covers",0.904271,1336
+fwdmax6,0,3,0.8,"cover: follow-on, previous peak short",0.42894,197
+fwdmax6,0,3,0.8,cover: size q1,0.930417,7738
+fwdmax6,0,3,0.8,cover: size q2,0.848952,7221
+fwdmax6,0,3,0.8,cover: size q3,0.686388,6689
+fwdmax6,0,3,0.8,cover: size q4,0.533323,6332
+fwdmax6,0,3,0.8,throttle core-hours: all,877.768,
+fwdmax6,0,3,0.8,throttle core-hours: after spike,242.611,
+fwdmax6,0,3,0.8,throttle core-hours: run-up,570.422,
+fwdmax6,0,3,0.8,throttle core-hours: other,64.7347,
+fwdmax6,0,6,0.8,cover: all,0.745943,27980
+fwdmax6,0,6,0.8,cover: seasonal,0.926156,6749
+fwdmax6,0,6,0.8,cover: follow-on,0.822152,1533
+fwdmax6,0,6,0.8,cover: isolated,0.69179,13782
+fwdmax6,0,6,0.8,cover: unknown,0.646762,5916
+fwdmax6,0,6,0.8,"cover: follow-on, previous peak covers",0.881517,1336
+fwdmax6,0,6,0.8,"cover: follow-on, previous peak short",0.419556,197
+fwdmax6,0,6,0.8,cover: size q1,0.91471,7738
+fwdmax6,0,6,0.8,cover: size q2,0.819608,7221
+fwdmax6,0,6,0.8,cover: size q3,0.678233,6689
+fwdmax6,0,6,0.8,cover: size q4,0.52722,6332
+fwdmax6,0,6,0.8,throttle core-hours: all,933.315,
+fwdmax6,0,6,0.8,throttle core-hours: after spike,275.952,
+fwdmax6,0,6,0.8,throttle core-hours: run-up,586.499,
+fwdmax6,0,6,0.8,throttle core-hours: other,70.8636,
+fwdmax6,0,,1,slack share: after spike,0.158638,
+fwdmax6,0,,1,slack share: run-up,0.142501,
+fwdmax6,0,,1,slack share: other,0.698861,
+fwdmax6,0,1,1,cover: all,0.804645,27980
+fwdmax6,0,1,1,cover: seasonal,0.95131,6749
+fwdmax6,0,1,1,cover: follow-on,0.897731,1533
+fwdmax6,0,1,1,cover: isolated,0.755145,13782
+fwdmax6,0,1,1,cover: unknown,0.728526,5916
+fwdmax6,0,1,1,"cover: follow-on, previous peak covers",0.952139,1336
+fwdmax6,0,1,1,"cover: follow-on, previous peak short",0.528753,197
+fwdmax6,0,1,1,cover: size q1,0.946577,7738
+fwdmax6,0,1,1,cover: size q2,0.874383,7221
+fwdmax6,0,1,1,cover: size q3,0.749438,6689
+fwdmax6,0,1,1,cover: size q4,0.609989,6332
+fwdmax6,0,1,1,throttle core-hours: all,625.033,
+fwdmax6,0,1,1,throttle core-hours: after spike,118.129,
+fwdmax6,0,1,1,throttle core-hours: run-up,473.192,
+fwdmax6,0,1,1,throttle core-hours: other,33.712,
+fwdmax6,0,3,1,cover: all,0.809941,27980
+fwdmax6,0,3,1,cover: seasonal,0.964521,6749
+fwdmax6,0,3,1,cover: follow-on,0.884473,1533
+fwdmax6,0,3,1,cover: isolated,0.758533,13782
+fwdmax6,0,3,1,cover: unknown,0.734044,5916
+fwdmax6,0,3,1,"cover: follow-on, previous peak covers",0.938019,1336
+fwdmax6,0,3,1,"cover: follow-on, previous peak short",0.521344,197
+fwdmax6,0,3,1,cover: size q1,0.950736,7738
+fwdmax6,0,3,1,cover: size q2,0.886865,7221
+fwdmax6,0,3,1,cover: size q3,0.751955,6689
+fwdmax6,0,3,1,cover: size q4,0.611415,6332
+fwdmax6,0,3,1,throttle core-hours: all,696.445,
+fwdmax6,0,3,1,throttle core-hours: after spike,190.556,
+fwdmax6,0,3,1,throttle core-hours: run-up,466.578,
+fwdmax6,0,3,1,throttle core-hours: other,39.3112,
+fwdmax6,0,6,1,cover: all,0.799268,27980
+fwdmax6,0,6,1,cover: seasonal,0.952119,6749
+fwdmax6,0,6,1,cover: follow-on,0.870758,1533
+fwdmax6,0,6,1,cover: isolated,0.752381,13782
+fwdmax6,0,6,1,cover: unknown,0.715597,5916
+fwdmax6,0,6,1,"cover: follow-on, previous peak covers",0.919064,1336
+fwdmax6,0,6,1,"cover: follow-on, previous peak short",0.543159,197
+fwdmax6,0,6,1,cover: size q1,0.940989,7738
+fwdmax6,0,6,1,cover: size q2,0.867216,7221
+fwdmax6,0,6,1,cover: size q3,0.744771,6689
+fwdmax6,0,6,1,cover: size q4,0.606161,6332
+fwdmax6,0,6,1,throttle core-hours: all,739.041,
+fwdmax6,0,6,1,throttle core-hours: after spike,216.928,
+fwdmax6,0,6,1,throttle core-hours: run-up,479.242,
+fwdmax6,0,6,1,throttle core-hours: other,42.8712,
+fwdmax6,1,,0.6,slack share: after spike,0.151676,
+fwdmax6,1,,0.6,slack share: run-up,0.149312,
+fwdmax6,1,,0.6,slack share: other,0.699012,
+fwdmax6,1,1,0.6,cover: all,0.670816,27980
+fwdmax6,1,1,0.6,cover: seasonal,0.872052,6749
+fwdmax6,1,1,0.6,cover: follow-on,0.773751,1533
+fwdmax6,1,1,0.6,cover: isolated,0.599209,13782
+fwdmax6,1,1,0.6,cover: unknown,0.581389,5916
+fwdmax6,1,1,0.6,"cover: follow-on, previous peak covers",0.842077,1336
+fwdmax6,1,1,0.6,"cover: follow-on, previous peak short",0.310385,197
+fwdmax6,1,1,0.6,cover: size q1,0.865384,7738
+fwdmax6,1,1,0.6,cover: size q2,0.744011,7221
+fwdmax6,1,1,0.6,cover: size q3,0.599013,6689
+fwdmax6,1,1,0.6,cover: size q4,0.425425,6332
+fwdmax6,1,1,0.6,throttle core-hours: all,1088.79,
+fwdmax6,1,1,0.6,throttle core-hours: after spike,252.843,
+fwdmax6,1,1,0.6,throttle core-hours: run-up,725.07,
+fwdmax6,1,1,0.6,throttle core-hours: other,110.876,
+fwdmax6,1,3,0.6,cover: all,0.681671,27980
+fwdmax6,1,3,0.6,cover: seasonal,0.900352,6749
+fwdmax6,1,3,0.6,cover: follow-on,0.759028,1533
+fwdmax6,1,3,0.6,cover: isolated,0.606113,13782
+fwdmax6,1,3,0.6,cover: unknown,0.588173,5916
+fwdmax6,1,3,0.6,"cover: follow-on, previous peak covers",0.82807,1336
+fwdmax6,1,3,0.6,"cover: follow-on, previous peak short",0.290808,197
+fwdmax6,1,3,0.6,cover: size q1,0.877882,7738
+fwdmax6,1,3,0.6,cover: size q2,0.765238,7221
+fwdmax6,1,3,0.6,cover: size q3,0.600294,6689
+fwdmax6,1,3,0.6,cover: size q4,0.432556,6332
+fwdmax6,1,3,0.6,throttle core-hours: all,1176.64,
+fwdmax6,1,3,0.6,throttle core-hours: after spike,336.248,
+fwdmax6,1,3,0.6,throttle core-hours: run-up,717.008,
+fwdmax6,1,3,0.6,throttle core-hours: other,123.386,
+fwdmax6,1,6,0.6,cover: all,0.649813,27980
+fwdmax6,1,6,0.6,cover: seasonal,0.850676,6749
+fwdmax6,1,6,0.6,cover: follow-on,0.728649,1533
+fwdmax6,1,6,0.6,cover: isolated,0.584937,13782
+fwdmax6,1,6,0.6,cover: unknown,0.551374,5916
+fwdmax6,1,6,0.6,"cover: follow-on, previous peak covers",0.791286,1336
+fwdmax6,1,6,0.6,"cover: follow-on, previous peak short",0.303859,197
+fwdmax6,1,6,0.6,cover: size q1,0.841442,7738
+fwdmax6,1,6,0.6,cover: size q2,0.720232,7221
+fwdmax6,1,6,0.6,cover: size q3,0.573578,6689
+fwdmax6,1,6,0.6,cover: size q4,0.41586,6332
+fwdmax6,1,6,0.6,throttle core-hours: all,1262.35,
+fwdmax6,1,6,0.6,throttle core-hours: after spike,384.336,
+fwdmax6,1,6,0.6,throttle core-hours: run-up,745.893,
+fwdmax6,1,6,0.6,throttle core-hours: other,132.116,
+fwdmax6,1,,0.8,slack share: after spike,0.156083,
+fwdmax6,1,,0.8,slack share: run-up,0.142995,
+fwdmax6,1,,0.8,slack share: other,0.700922,
+fwdmax6,1,1,0.8,cover: all,0.750844,27980
+fwdmax6,1,1,0.8,cover: seasonal,0.924945,6749
+fwdmax6,1,1,0.8,cover: follow-on,0.843346,1533
+fwdmax6,1,1,0.8,cover: isolated,0.689228,13782
+fwdmax6,1,1,0.8,cover: unknown,0.671799,5916
+fwdmax6,1,1,0.8,"cover: follow-on, previous peak covers",0.908737,1336
+fwdmax6,1,1,0.8,"cover: follow-on, previous peak short",0.399879,197
+fwdmax6,1,1,0.8,cover: size q1,0.917688,7738
+fwdmax6,1,1,0.8,cover: size q2,0.821249,7221
+fwdmax6,1,1,0.8,cover: size q3,0.691203,6689
+fwdmax6,1,1,0.8,cover: size q4,0.529665,6332
+fwdmax6,1,1,0.8,throttle core-hours: all,791.496,
+fwdmax6,1,1,0.8,throttle core-hours: after spike,169.734,
+fwdmax6,1,1,0.8,throttle core-hours: run-up,571.451,
+fwdmax6,1,1,0.8,throttle core-hours: other,50.3118,
+fwdmax6,1,3,0.8,cover: all,0.757408,27980
+fwdmax6,1,3,0.8,cover: seasonal,0.946652,6749
+fwdmax6,1,3,0.8,cover: follow-on,0.833096,1533
+fwdmax6,1,3,0.8,cover: isolated,0.692553,13782
+fwdmax6,1,3,0.8,cover: unknown,0.672991,5916
+fwdmax6,1,3,0.8,"cover: follow-on, previous peak covers",0.896634,1336
+fwdmax6,1,3,0.8,"cover: follow-on, previous peak short",0.402201,197
+fwdmax6,1,3,0.8,cover: size q1,0.924792,7738
+fwdmax6,1,3,0.8,cover: size q2,0.834629,7221
+fwdmax6,1,3,0.8,cover: size q3,0.690192,6689
+fwdmax6,1,3,0.8,cover: size q4,0.535801,6332
+fwdmax6,1,3,0.8,throttle core-hours: all,866.743,
+fwdmax6,1,3,0.8,throttle core-hours: after spike,246.348,
+fwdmax6,1,3,0.8,throttle core-hours: run-up,562.888,
+fwdmax6,1,3,0.8,throttle core-hours: other,57.5066,
+fwdmax6,1,6,0.8,cover: all,0.739197,27980
+fwdmax6,1,6,0.8,cover: seasonal,0.918703,6749
+fwdmax6,1,6,0.8,cover: follow-on,0.820869,1533
+fwdmax6,1,6,0.8,cover: isolated,0.68016,13782
+fwdmax6,1,6,0.8,cover: unknown,0.650787,5916
+fwdmax6,1,6,0.8,"cover: follow-on, previous peak covers",0.878925,1336
+fwdmax6,1,6,0.8,"cover: follow-on, previous peak short",0.42715,197
+fwdmax6,1,6,0.8,cover: size q1,0.906596,7738
+fwdmax6,1,6,0.8,cover: size q2,0.809575,7221
+fwdmax6,1,6,0.8,cover: size q3,0.672056,6689
+fwdmax6,1,6,0.8,cover: size q4,0.525297,6332
+fwdmax6,1,6,0.8,throttle core-hours: all,926.83,
+fwdmax6,1,6,0.8,throttle core-hours: after spike,281.365,
+fwdmax6,1,6,0.8,throttle core-hours: run-up,582.716,
+fwdmax6,1,6,0.8,throttle core-hours: other,62.7496,
+fwdmax6,1,,1,slack share: after spike,0.15648,
+fwdmax6,1,,1,slack share: run-up,0.136897,
+fwdmax6,1,,1,slack share: other,0.706623,
+fwdmax6,1,1,1,cover: all,0.804417,27980
+fwdmax6,1,1,1,cover: seasonal,0.950037,6749
+fwdmax6,1,1,1,cover: follow-on,0.889344,1533
+fwdmax6,1,1,1,cover: isolated,0.752379,13782
+fwdmax6,1,1,1,cover: unknown,0.737516,5916
+fwdmax6,1,1,1,"cover: follow-on, previous peak covers",0.946719,1336
+fwdmax6,1,1,1,"cover: follow-on, previous peak short",0.500242,197
+fwdmax6,1,1,1,cover: size q1,0.948333,7738
+fwdmax6,1,1,1,cover: size q2,0.870367,7221
+fwdmax6,1,1,1,cover: size q3,0.755204,6689
+fwdmax6,1,1,1,cover: size q4,0.605326,6332
+fwdmax6,1,1,1,throttle core-hours: all,620.258,
+fwdmax6,1,1,1,throttle core-hours: after spike,125.798,
+fwdmax6,1,1,1,throttle core-hours: run-up,466.218,
+fwdmax6,1,1,1,throttle core-hours: other,28.2424,
+fwdmax6,1,3,1,cover: all,0.809787,27980
+fwdmax6,1,3,1,cover: seasonal,0.964888,6749
+fwdmax6,1,3,1,cover: follow-on,0.881072,1533
+fwdmax6,1,3,1,cover: isolated,0.756071,13782
+fwdmax6,1,3,1,cover: unknown,0.739515,5916
+fwdmax6,1,3,1,"cover: follow-on, previous peak covers",0.937436,1336
+fwdmax6,1,3,1,"cover: follow-on, previous peak short",0.498828,197
+fwdmax6,1,3,1,cover: size q1,0.953674,7738
+fwdmax6,1,3,1,cover: size q2,0.879652,7221
+fwdmax6,1,3,1,cover: size q3,0.757325,6689
+fwdmax6,1,3,1,cover: size q4,0.609697,6332
+fwdmax6,1,3,1,throttle core-hours: all,683.627,
+fwdmax6,1,3,1,throttle core-hours: after spike,193.929,
+fwdmax6,1,3,1,throttle core-hours: run-up,456.721,
+fwdmax6,1,3,1,throttle core-hours: other,32.977,
+fwdmax6,1,6,1,cover: all,0.797291,27980
+fwdmax6,1,6,1,cover: seasonal,0.948194,6749
+fwdmax6,1,6,1,cover: follow-on,0.86547,1533
+fwdmax6,1,6,1,cover: isolated,0.747352,13782
+fwdmax6,1,6,1,cover: unknown,0.723811,5916
+fwdmax6,1,6,1,"cover: follow-on, previous peak covers",0.91576,1336
+fwdmax6,1,6,1,"cover: follow-on, previous peak short",0.524417,197
+fwdmax6,1,6,1,cover: size q1,0.945038,7738
+fwdmax6,1,6,1,cover: size q2,0.864343,7221
+fwdmax6,1,6,1,cover: size q3,0.741256,6689
+fwdmax6,1,6,1,cover: size q4,0.599465,6332
+fwdmax6,1,6,1,throttle core-hours: all,728.325,
+fwdmax6,1,6,1,throttle core-hours: after spike,220.996,
+fwdmax6,1,6,1,throttle core-hours: run-up,470.195,
+fwdmax6,1,6,1,throttle core-hours: other,37.1346,
+fwdmax6,2,,0.6,slack share: after spike,0.153648,
+fwdmax6,2,,0.6,slack share: run-up,0.155061,
+fwdmax6,2,,0.6,slack share: other,0.691292,
+fwdmax6,2,1,0.6,cover: all,0.678337,27980
+fwdmax6,2,1,0.6,cover: seasonal,0.881195,6749
+fwdmax6,2,1,0.6,cover: follow-on,0.778144,1533
+fwdmax6,2,1,0.6,cover: isolated,0.610116,13782
+fwdmax6,2,1,0.6,cover: unknown,0.579982,5916
+fwdmax6,2,1,0.6,"cover: follow-on, previous peak covers",0.848149,1336
+fwdmax6,2,1,0.6,"cover: follow-on, previous peak short",0.303385,197
+fwdmax6,2,1,0.6,cover: size q1,0.870588,7738
+fwdmax6,2,1,0.6,cover: size q2,0.745634,7221
+fwdmax6,2,1,0.6,cover: size q3,0.616184,6689
+fwdmax6,2,1,0.6,cover: size q4,0.432308,6332
+fwdmax6,2,1,0.6,throttle core-hours: all,1070.73,
+fwdmax6,2,1,0.6,throttle core-hours: after spike,233.39,
+fwdmax6,2,1,0.6,throttle core-hours: run-up,716.468,
+fwdmax6,2,1,0.6,throttle core-hours: other,120.87,
+fwdmax6,2,3,0.6,cover: all,0.69041,27980
+fwdmax6,2,3,0.6,cover: seasonal,0.905644,6749
+fwdmax6,2,3,0.6,cover: follow-on,0.76616,1533
+fwdmax6,2,3,0.6,cover: isolated,0.61974,13782
+fwdmax6,2,3,0.6,cover: unknown,0.589875,5916
+fwdmax6,2,3,0.6,"cover: follow-on, previous peak covers",0.83296,1336
+fwdmax6,2,3,0.6,"cover: follow-on, previous peak short",0.313143,197
+fwdmax6,2,3,0.6,cover: size q1,0.885439,7738
+fwdmax6,2,3,0.6,cover: size q2,0.771811,7221
+fwdmax6,2,3,0.6,cover: size q3,0.623588,6689
+fwdmax6,2,3,0.6,cover: size q4,0.429836,6332
+fwdmax6,2,3,0.6,throttle core-hours: all,1165.68,
+fwdmax6,2,3,0.6,throttle core-hours: after spike,323.961,
+fwdmax6,2,3,0.6,throttle core-hours: run-up,708.018,
+fwdmax6,2,3,0.6,throttle core-hours: other,133.7,
+fwdmax6,2,6,0.6,cover: all,0.663043,27980
+fwdmax6,2,6,0.6,cover: seasonal,0.87872,6749
+fwdmax6,2,6,0.6,cover: follow-on,0.734658,1533
+fwdmax6,2,6,0.6,cover: isolated,0.593303,13782
+fwdmax6,2,6,0.6,cover: unknown,0.560905,5916
+fwdmax6,2,6,0.6,"cover: follow-on, previous peak covers",0.800497,1336
+fwdmax6,2,6,0.6,"cover: follow-on, previous peak short",0.288157,197
+fwdmax6,2,6,0.6,cover: size q1,0.851248,7738
+fwdmax6,2,6,0.6,cover: size q2,0.722109,7221
+fwdmax6,2,6,0.6,cover: size q3,0.601718,6689
+fwdmax6,2,6,0.6,cover: size q4,0.43047,6332
+fwdmax6,2,6,0.6,throttle core-hours: all,1244.57,
+fwdmax6,2,6,0.6,throttle core-hours: after spike,370.077,
+fwdmax6,2,6,0.6,throttle core-hours: run-up,730.074,
+fwdmax6,2,6,0.6,throttle core-hours: other,144.418,
+fwdmax6,2,,0.8,slack share: after spike,0.159473,
+fwdmax6,2,,0.8,slack share: run-up,0.149159,
+fwdmax6,2,,0.8,slack share: other,0.691368,
+fwdmax6,2,1,0.8,cover: all,0.759756,27980
+fwdmax6,2,1,0.8,cover: seasonal,0.929542,6749
+fwdmax6,2,1,0.8,cover: follow-on,0.852196,1533
+fwdmax6,2,1,0.8,cover: isolated,0.699698,13782
+fwdmax6,2,1,0.8,cover: unknown,0.682023,5916
+fwdmax6,2,1,0.8,"cover: follow-on, previous peak covers",0.916234,1336
+fwdmax6,2,1,0.8,"cover: follow-on, previous peak short",0.417905,197
+fwdmax6,2,1,0.8,cover: size q1,0.919319,7738
+fwdmax6,2,1,0.8,cover: size q2,0.823582,7221
+fwdmax6,2,1,0.8,cover: size q3,0.713086,6689
+fwdmax6,2,1,0.8,cover: size q4,0.541279,6332
+fwdmax6,2,1,0.8,throttle core-hours: all,774.65,
+fwdmax6,2,1,0.8,throttle core-hours: after spike,155.485,
+fwdmax6,2,1,0.8,throttle core-hours: run-up,560.889,
+fwdmax6,2,1,0.8,throttle core-hours: other,58.2753,
+fwdmax6,2,3,0.8,cover: all,0.76654,27980
+fwdmax6,2,3,0.8,cover: seasonal,0.944345,6749
+fwdmax6,2,3,0.8,cover: follow-on,0.849076,1533
+fwdmax6,2,3,0.8,cover: isolated,0.70539,13782
+fwdmax6,2,3,0.8,cover: unknown,0.684765,5916
+fwdmax6,2,3,0.8,"cover: follow-on, previous peak covers",0.906253,1336
+fwdmax6,2,3,0.8,"cover: follow-on, previous peak short",0.461314,197
+fwdmax6,2,3,0.8,cover: size q1,0.925337,7738
+fwdmax6,2,3,0.8,cover: size q2,0.83791,7221
+fwdmax6,2,3,0.8,cover: size q3,0.713253,6689
+fwdmax6,2,3,0.8,cover: size q4,0.547382,6332
+fwdmax6,2,3,0.8,throttle core-hours: all,853.011,
+fwdmax6,2,3,0.8,throttle core-hours: after spike,233.03,
+fwdmax6,2,3,0.8,throttle core-hours: run-up,553.698,
+fwdmax6,2,3,0.8,throttle core-hours: other,66.2834,
+fwdmax6,2,6,0.8,cover: all,0.748343,27980
+fwdmax6,2,6,0.8,cover: seasonal,0.931716,6749
+fwdmax6,2,6,0.8,cover: follow-on,0.822115,1533
+fwdmax6,2,6,0.8,cover: isolated,0.687604,13782
+fwdmax6,2,6,0.8,cover: unknown,0.661531,5916
+fwdmax6,2,6,0.8,"cover: follow-on, previous peak covers",0.881302,1336
+fwdmax6,2,6,0.8,"cover: follow-on, previous peak short",0.420723,197
+fwdmax6,2,6,0.8,cover: size q1,0.906494,7738
+fwdmax6,2,6,0.8,cover: size q2,0.809933,7221
+fwdmax6,2,6,0.8,cover: size q3,0.695296,6689
+fwdmax6,2,6,0.8,cover: size q4,0.540874,6332
+fwdmax6,2,6,0.8,throttle core-hours: all,908.833,
+fwdmax6,2,6,0.8,throttle core-hours: after spike,269.452,
+fwdmax6,2,6,0.8,throttle core-hours: run-up,568.635,
+fwdmax6,2,6,0.8,throttle core-hours: other,70.7463,
+fwdmax6,2,,1,slack share: after spike,0.160205,
+fwdmax6,2,,1,slack share: run-up,0.143201,
+fwdmax6,2,,1,slack share: other,0.696593,
+fwdmax6,2,1,1,cover: all,0.811787,27980
+fwdmax6,2,1,1,cover: seasonal,0.952618,6749
+fwdmax6,2,1,1,cover: follow-on,0.8932,1533
+fwdmax6,2,1,1,cover: isolated,0.760564,13782
+fwdmax6,2,1,1,cover: unknown,0.749363,5916
+fwdmax6,2,1,1,"cover: follow-on, previous peak covers",0.9487,1336
+fwdmax6,2,1,1,"cover: follow-on, previous peak short",0.51681,197
+fwdmax6,2,1,1,cover: size q1,0.946097,7738
+fwdmax6,2,1,1,cover: size q2,0.870205,7221
+fwdmax6,2,1,1,cover: size q3,0.775355,6689
+fwdmax6,2,1,1,cover: size q4,0.619522,6332
+fwdmax6,2,1,1,throttle core-hours: all,605.017,
+fwdmax6,2,1,1,throttle core-hours: after spike,114.459,
+fwdmax6,2,1,1,throttle core-hours: run-up,455.883,
+fwdmax6,2,1,1,throttle core-hours: other,34.6741,
+fwdmax6,2,3,1,cover: all,0.81711,27980
+fwdmax6,2,3,1,cover: seasonal,0.961476,6749
+fwdmax6,2,3,1,cover: follow-on,0.894835,1533
+fwdmax6,2,3,1,cover: isolated,0.765243,13782
+fwdmax6,2,3,1,cover: unknown,0.753106,5916
+fwdmax6,2,3,1,"cover: follow-on, previous peak covers",0.943385,1336
+fwdmax6,2,3,1,"cover: follow-on, previous peak short",0.565585,197
+fwdmax6,2,3,1,cover: size q1,0.9495,7738
+fwdmax6,2,3,1,cover: size q2,0.88005,7221
+fwdmax6,2,3,1,cover: size q3,0.775719,6689
+fwdmax6,2,3,1,cover: size q4,0.627272,6332
+fwdmax6,2,3,1,throttle core-hours: all,673.84,
+fwdmax6,2,3,1,throttle core-hours: after spike,183.007,
+fwdmax6,2,3,1,throttle core-hours: run-up,450.192,
+fwdmax6,2,3,1,throttle core-hours: other,40.6403,
+fwdmax6,2,6,1,cover: all,0.803458,27980
+fwdmax6,2,6,1,cover: seasonal,0.955255,6749
+fwdmax6,2,6,1,cover: follow-on,0.871049,1533
+fwdmax6,2,6,1,cover: isolated,0.751186,13782
+fwdmax6,2,6,1,cover: unknown,0.734549,5916
+fwdmax6,2,6,1,"cover: follow-on, previous peak covers",0.920561,1336
+fwdmax6,2,6,1,"cover: follow-on, previous peak short",0.535276,197
+fwdmax6,2,6,1,cover: size q1,0.937109,7738
+fwdmax6,2,6,1,cover: size q2,0.859052,7221
+fwdmax6,2,6,1,cover: size q3,0.761213,6689
+fwdmax6,2,6,1,cover: size q4,0.62136,6332
+fwdmax6,2,6,1,throttle core-hours: all,714.387,
+fwdmax6,2,6,1,throttle core-hours: after spike,211.383,
+fwdmax6,2,6,1,throttle core-hours: run-up,460.046,
+fwdmax6,2,6,1,throttle core-hours: other,42.9576,
+fwdmax + encoded hold,0,,0.6,slack share: after spike,0.34506,
+fwdmax + encoded hold,0,,0.6,slack share: run-up,0.0998408,
+fwdmax + encoded hold,0,,0.6,slack share: other,0.5551,
+fwdmax + encoded hold,0,1,0.6,cover: all,0.57328,27980
+fwdmax + encoded hold,0,1,0.6,cover: seasonal,0.760402,6749
+fwdmax + encoded hold,0,1,0.6,cover: follow-on,0.913174,1533
+fwdmax + encoded hold,0,1,0.6,cover: isolated,0.481237,13782
+fwdmax + encoded hold,0,1,0.6,cover: unknown,0.486157,5916
+fwdmax + encoded hold,0,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,0,1,0.6,"cover: follow-on, previous peak short",0.324344,197
+fwdmax + encoded hold,0,1,0.6,cover: size q1,0.772916,7738
+fwdmax + encoded hold,0,1,0.6,cover: size q2,0.643673,7221
+fwdmax + encoded hold,0,1,0.6,cover: size q3,0.479549,6689
+fwdmax + encoded hold,0,1,0.6,cover: size q4,0.348054,6332
+fwdmax + encoded hold,0,1,0.6,throttle core-hours: all,1188.87,
+fwdmax + encoded hold,0,1,0.6,throttle core-hours: after spike,100.177,
+fwdmax + encoded hold,0,1,0.6,throttle core-hours: run-up,906.89,
+fwdmax + encoded hold,0,1,0.6,throttle core-hours: other,181.806,
+fwdmax + encoded hold,0,3,0.6,cover: all,0.600068,27980
+fwdmax + encoded hold,0,3,0.6,cover: seasonal,0.799122,6749
+fwdmax + encoded hold,0,3,0.6,cover: follow-on,0.898687,1533
+fwdmax + encoded hold,0,3,0.6,cover: isolated,0.505179,13782
+fwdmax + encoded hold,0,3,0.6,cover: unknown,0.516662,5916
+fwdmax + encoded hold,0,3,0.6,"cover: follow-on, previous peak covers",0.981958,1336
+fwdmax + encoded hold,0,3,0.6,"cover: follow-on, previous peak short",0.333968,197
+fwdmax + encoded hold,0,3,0.6,cover: size q1,0.803231,7738
+fwdmax + encoded hold,0,3,0.6,cover: size q2,0.674372,7221
+fwdmax + encoded hold,0,3,0.6,cover: size q3,0.504144,6689
+fwdmax + encoded hold,0,3,0.6,cover: size q4,0.368392,6332
+fwdmax + encoded hold,0,3,0.6,throttle core-hours: all,1369.04,
+fwdmax + encoded hold,0,3,0.6,throttle core-hours: after spike,291.239,
+fwdmax + encoded hold,0,3,0.6,throttle core-hours: run-up,871.406,
+fwdmax + encoded hold,0,3,0.6,throttle core-hours: other,206.396,
+fwdmax + encoded hold,0,6,0.6,cover: all,0.431724,27980
+fwdmax + encoded hold,0,6,0.6,cover: seasonal,0.393895,6749
+fwdmax + encoded hold,0,6,0.6,cover: follow-on,0.751678,1533
+fwdmax + encoded hold,0,6,0.6,cover: isolated,0.445176,13782
+fwdmax + encoded hold,0,6,0.6,cover: unknown,0.360636,5916
+fwdmax + encoded hold,0,6,0.6,"cover: follow-on, previous peak covers",0.828125,1336
+fwdmax + encoded hold,0,6,0.6,"cover: follow-on, previous peak short",0.233238,197
+fwdmax + encoded hold,0,6,0.6,cover: size q1,0.627033,7738
+fwdmax + encoded hold,0,6,0.6,cover: size q2,0.384716,7221
+fwdmax + encoded hold,0,6,0.6,cover: size q3,0.350088,6689
+fwdmax + encoded hold,0,6,0.6,cover: size q4,0.332896,6332
+fwdmax + encoded hold,0,6,0.6,throttle core-hours: all,1673.18,
+fwdmax + encoded hold,0,6,0.6,throttle core-hours: after spike,437.846,
+fwdmax + encoded hold,0,6,0.6,throttle core-hours: run-up,988.993,
+fwdmax + encoded hold,0,6,0.6,throttle core-hours: other,246.338,
+fwdmax + encoded hold,0,,0.8,slack share: after spike,0.270605,
+fwdmax + encoded hold,0,,0.8,slack share: run-up,0.117943,
+fwdmax + encoded hold,0,,0.8,slack share: other,0.611451,
+fwdmax + encoded hold,0,1,0.8,cover: all,0.714148,27980
+fwdmax + encoded hold,0,1,0.8,cover: seasonal,0.901148,6749
+fwdmax + encoded hold,0,1,0.8,cover: follow-on,0.92991,1533
+fwdmax + encoded hold,0,1,0.8,cover: isolated,0.639358,13782
+fwdmax + encoded hold,0,1,0.8,cover: unknown,0.619141,5916
+fwdmax + encoded hold,0,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,0,1,0.8,"cover: follow-on, previous peak short",0.454578,197
+fwdmax + encoded hold,0,1,0.8,cover: size q1,0.883295,7738
+fwdmax + encoded hold,0,1,0.8,cover: size q2,0.790291,7221
+fwdmax + encoded hold,0,1,0.8,cover: size q3,0.644599,6689
+fwdmax + encoded hold,0,1,0.8,cover: size q4,0.49408,6332
+fwdmax + encoded hold,0,1,0.8,throttle core-hours: all,805.89,
+fwdmax + encoded hold,0,1,0.8,throttle core-hours: after spike,83.6245,
+fwdmax + encoded hold,0,1,0.8,throttle core-hours: run-up,659.168,
+fwdmax + encoded hold,0,1,0.8,throttle core-hours: other,63.0977,
+fwdmax + encoded hold,0,3,0.8,cover: all,0.729012,27980
+fwdmax + encoded hold,0,3,0.8,cover: seasonal,0.922065,6749
+fwdmax + encoded hold,0,3,0.8,cover: follow-on,0.915559,1533
+fwdmax + encoded hold,0,3,0.8,cover: isolated,0.653751,13782
+fwdmax + encoded hold,0,3,0.8,cover: unknown,0.635767,5916
+fwdmax + encoded hold,0,3,0.8,"cover: follow-on, previous peak covers",0.990204,1336
+fwdmax + encoded hold,0,3,0.8,"cover: follow-on, previous peak short",0.40934,197
+fwdmax + encoded hold,0,3,0.8,cover: size q1,0.898871,7738
+fwdmax + encoded hold,0,3,0.8,cover: size q2,0.80565,7221
+fwdmax + encoded hold,0,3,0.8,cover: size q3,0.659098,6689
+fwdmax + encoded hold,0,3,0.8,cover: size q4,0.507896,6332
+fwdmax + encoded hold,0,3,0.8,throttle core-hours: all,919.047,
+fwdmax + encoded hold,0,3,0.8,throttle core-hours: after spike,213.049,
+fwdmax + encoded hold,0,3,0.8,throttle core-hours: run-up,634.483,
+fwdmax + encoded hold,0,3,0.8,throttle core-hours: other,71.5152,
+fwdmax + encoded hold,0,6,0.8,cover: all,0.564808,27980
+fwdmax + encoded hold,0,6,0.8,cover: seasonal,0.53444,6749
+fwdmax + encoded hold,0,6,0.8,cover: follow-on,0.83261,1533
+fwdmax + encoded hold,0,6,0.8,cover: isolated,0.58663,13782
+fwdmax + encoded hold,0,6,0.8,cover: unknown,0.479219,5916
+fwdmax + encoded hold,0,6,0.8,"cover: follow-on, previous peak covers",0.899646,1336
+fwdmax + encoded hold,0,6,0.8,"cover: follow-on, previous peak short",0.377989,197
+fwdmax + encoded hold,0,6,0.8,cover: size q1,0.754965,7738
+fwdmax + encoded hold,0,6,0.8,cover: size q2,0.546107,7221
+fwdmax + encoded hold,0,6,0.8,cover: size q3,0.478629,6689
+fwdmax + encoded hold,0,6,0.8,cover: size q4,0.444791,6332
+fwdmax + encoded hold,0,6,0.8,throttle core-hours: all,1183.27,
+fwdmax + encoded hold,0,6,0.8,throttle core-hours: after spike,303.593,
+fwdmax + encoded hold,0,6,0.8,throttle core-hours: run-up,781.448,
+fwdmax + encoded hold,0,6,0.8,throttle core-hours: other,98.2339,
+fwdmax + encoded hold,0,,1,slack share: after spike,0.232185,
+fwdmax + encoded hold,0,,1,slack share: run-up,0.121264,
+fwdmax + encoded hold,0,,1,slack share: other,0.646551,
+fwdmax + encoded hold,0,1,1,cover: all,0.782362,27980
+fwdmax + encoded hold,0,1,1,cover: seasonal,0.942767,6749
+fwdmax + encoded hold,0,1,1,cover: follow-on,0.939239,1533
+fwdmax + encoded hold,0,1,1,cover: isolated,0.724849,13782
+fwdmax + encoded hold,0,1,1,cover: unknown,0.692702,5916
+fwdmax + encoded hold,0,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,0,1,1,"cover: follow-on, previous peak short",0.527176,197
+fwdmax + encoded hold,0,1,1,cover: size q1,0.926423,7738
+fwdmax + encoded hold,0,1,1,cover: size q2,0.850892,7221
+fwdmax + encoded hold,0,1,1,cover: size q3,0.73147,6689
+fwdmax + encoded hold,0,1,1,cover: size q4,0.581921,6332
+fwdmax + encoded hold,0,1,1,throttle core-hours: all,624.108,
+fwdmax + encoded hold,0,1,1,throttle core-hours: after spike,69.8906,
+fwdmax + encoded hold,0,1,1,throttle core-hours: run-up,522.412,
+fwdmax + encoded hold,0,1,1,throttle core-hours: other,31.8054,
+fwdmax + encoded hold,0,3,1,cover: all,0.791789,27980
+fwdmax + encoded hold,0,3,1,cover: seasonal,0.956823,6749
+fwdmax + encoded hold,0,3,1,cover: follow-on,0.931592,1533
+fwdmax + encoded hold,0,3,1,cover: isolated,0.733471,13782
+fwdmax + encoded hold,0,3,1,cover: unknown,0.703149,5916
+fwdmax + encoded hold,0,3,1,"cover: follow-on, previous peak covers",0.991783,1336
+fwdmax + encoded hold,0,3,1,"cover: follow-on, previous peak short",0.523396,197
+fwdmax + encoded hold,0,3,1,cover: size q1,0.934259,7738
+fwdmax + encoded hold,0,3,1,cover: size q2,0.861051,7221
+fwdmax + encoded hold,0,3,1,cover: size q3,0.737765,6689
+fwdmax + encoded hold,0,3,1,cover: size q4,0.595767,6332
+fwdmax + encoded hold,0,3,1,throttle core-hours: all,710.924,
+fwdmax + encoded hold,0,3,1,throttle core-hours: after spike,169.001,
+fwdmax + encoded hold,0,3,1,throttle core-hours: run-up,504.221,
+fwdmax + encoded hold,0,3,1,throttle core-hours: other,37.7019,
+fwdmax + encoded hold,0,6,1,cover: all,0.661227,27980
+fwdmax + encoded hold,0,6,1,cover: seasonal,0.645598,6749
+fwdmax + encoded hold,0,6,1,cover: follow-on,0.87415,1533
+fwdmax + encoded hold,0,6,1,cover: isolated,0.679461,13782
+fwdmax + encoded hold,0,6,1,cover: unknown,0.581406,5916
+fwdmax + encoded hold,0,6,1,"cover: follow-on, previous peak covers",0.930154,1336
+fwdmax + encoded hold,0,6,1,"cover: follow-on, previous peak short",0.494347,197
+fwdmax + encoded hold,0,6,1,cover: size q1,0.837132,7738
+fwdmax + encoded hold,0,6,1,cover: size q2,0.669455,7221
+fwdmax + encoded hold,0,6,1,cover: size q3,0.576218,6689
+fwdmax + encoded hold,0,6,1,cover: size q4,0.526683,6332
+fwdmax + encoded hold,0,6,1,throttle core-hours: all,920.839,
+fwdmax + encoded hold,0,6,1,throttle core-hours: after spike,232.044,
+fwdmax + encoded hold,0,6,1,throttle core-hours: run-up,636.4,
+fwdmax + encoded hold,0,6,1,throttle core-hours: other,52.3955,
+fwdmax + encoded hold,1,,0.6,slack share: after spike,0.345183,
+fwdmax + encoded hold,1,,0.6,slack share: run-up,0.101852,
+fwdmax + encoded hold,1,,0.6,slack share: other,0.552965,
+fwdmax + encoded hold,1,1,0.6,cover: all,0.574461,27980
+fwdmax + encoded hold,1,1,0.6,cover: seasonal,0.767155,6749
+fwdmax + encoded hold,1,1,0.6,cover: follow-on,0.912755,1533
+fwdmax + encoded hold,1,1,0.6,cover: isolated,0.47405,13782
+fwdmax + encoded hold,1,1,0.6,cover: unknown,0.500892,5916
+fwdmax + encoded hold,1,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,1,1,0.6,"cover: follow-on, previous peak short",0.321086,197
+fwdmax + encoded hold,1,1,0.6,cover: size q1,0.789294,7738
+fwdmax + encoded hold,1,1,0.6,cover: size q2,0.637892,7221
+fwdmax + encoded hold,1,1,0.6,cover: size q3,0.480085,6689
+fwdmax + encoded hold,1,1,0.6,cover: size q4,0.339285,6332
+fwdmax + encoded hold,1,1,0.6,throttle core-hours: all,1191.79,
+fwdmax + encoded hold,1,1,0.6,throttle core-hours: after spike,99.6331,
+fwdmax + encoded hold,1,1,0.6,throttle core-hours: run-up,903.914,
+fwdmax + encoded hold,1,1,0.6,throttle core-hours: other,188.242,
+fwdmax + encoded hold,1,3,0.6,cover: all,0.608401,27980
+fwdmax + encoded hold,1,3,0.6,cover: seasonal,0.815197,6749
+fwdmax + encoded hold,1,3,0.6,cover: follow-on,0.89759,1533
+fwdmax + encoded hold,1,3,0.6,cover: isolated,0.51056,13782
+fwdmax + encoded hold,1,3,0.6,cover: unknown,0.525481,5916
+fwdmax + encoded hold,1,3,0.6,"cover: follow-on, previous peak covers",0.982131,1336
+fwdmax + encoded hold,1,3,0.6,"cover: follow-on, previous peak short",0.324255,197
+fwdmax + encoded hold,1,3,0.6,cover: size q1,0.831289,7738
+fwdmax + encoded hold,1,3,0.6,cover: size q2,0.686738,7221
+fwdmax + encoded hold,1,3,0.6,cover: size q3,0.507983,6689
+fwdmax + encoded hold,1,3,0.6,cover: size q4,0.352766,6332
+fwdmax + encoded hold,1,3,0.6,throttle core-hours: all,1367.64,
+fwdmax + encoded hold,1,3,0.6,throttle core-hours: after spike,292.697,
+fwdmax + encoded hold,1,3,0.6,throttle core-hours: run-up,863.414,
+fwdmax + encoded hold,1,3,0.6,throttle core-hours: other,211.53,
+fwdmax + encoded hold,1,6,0.6,cover: all,0.424093,27980
+fwdmax + encoded hold,1,6,0.6,cover: seasonal,0.378109,6749
+fwdmax + encoded hold,1,6,0.6,cover: follow-on,0.748624,1533
+fwdmax + encoded hold,1,6,0.6,cover: isolated,0.437296,13782
+fwdmax + encoded hold,1,6,0.6,cover: unknown,0.361701,5916
+fwdmax + encoded hold,1,6,0.6,"cover: follow-on, previous peak covers",0.824953,1336
+fwdmax + encoded hold,1,6,0.6,"cover: follow-on, previous peak short",0.230978,197
+fwdmax + encoded hold,1,6,0.6,cover: size q1,0.629993,7738
+fwdmax + encoded hold,1,6,0.6,cover: size q2,0.367727,7221
+fwdmax + encoded hold,1,6,0.6,cover: size q3,0.341376,6689
+fwdmax + encoded hold,1,6,0.6,cover: size q4,0.324136,6332
+fwdmax + encoded hold,1,6,0.6,throttle core-hours: all,1701.47,
+fwdmax + encoded hold,1,6,0.6,throttle core-hours: after spike,444.438,
+fwdmax + encoded hold,1,6,0.6,throttle core-hours: run-up,996.458,
+fwdmax + encoded hold,1,6,0.6,throttle core-hours: other,260.577,
+fwdmax + encoded hold,1,,0.8,slack share: after spike,0.26993,
+fwdmax + encoded hold,1,,0.8,slack share: run-up,0.121667,
+fwdmax + encoded hold,1,,0.8,slack share: other,0.608403,
+fwdmax + encoded hold,1,1,0.8,cover: all,0.719987,27980
+fwdmax + encoded hold,1,1,0.8,cover: seasonal,0.892746,6749
+fwdmax + encoded hold,1,1,0.8,cover: follow-on,0.925949,1533
+fwdmax + encoded hold,1,1,0.8,cover: isolated,0.640317,13782
+fwdmax + encoded hold,1,1,0.8,cover: unknown,0.655134,5916
+fwdmax + encoded hold,1,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,1,1,0.8,"cover: follow-on, previous peak short",0.423755,197
+fwdmax + encoded hold,1,1,0.8,cover: size q1,0.905736,7738
+fwdmax + encoded hold,1,1,0.8,cover: size q2,0.79346,7221
+fwdmax + encoded hold,1,1,0.8,cover: size q3,0.653467,6689
+fwdmax + encoded hold,1,1,0.8,cover: size q4,0.479476,6332
+fwdmax + encoded hold,1,1,0.8,throttle core-hours: all,781.97,
+fwdmax + encoded hold,1,1,0.8,throttle core-hours: after spike,82.3563,
+fwdmax + encoded hold,1,1,0.8,throttle core-hours: run-up,636.728,
+fwdmax + encoded hold,1,1,0.8,throttle core-hours: other,62.8854,
+fwdmax + encoded hold,1,3,0.8,cover: all,0.734318,27980
+fwdmax + encoded hold,1,3,0.8,cover: seasonal,0.9235,6749
+fwdmax + encoded hold,1,3,0.8,cover: follow-on,0.918011,1533
+fwdmax + encoded hold,1,3,0.8,cover: isolated,0.652497,13782
+fwdmax + encoded hold,1,3,0.8,cover: unknown,0.661511,5916
+fwdmax + encoded hold,1,3,0.8,"cover: follow-on, previous peak covers",0.98989,1336
+fwdmax + encoded hold,1,3,0.8,"cover: follow-on, previous peak short",0.430546,197
+fwdmax + encoded hold,1,3,0.8,cover: size q1,0.920175,7738
+fwdmax + encoded hold,1,3,0.8,cover: size q2,0.818939,7221
+fwdmax + encoded hold,1,3,0.8,cover: size q3,0.664862,6689
+fwdmax + encoded hold,1,3,0.8,cover: size q4,0.484064,6332
+fwdmax + encoded hold,1,3,0.8,throttle core-hours: all,891.976,
+fwdmax + encoded hold,1,3,0.8,throttle core-hours: after spike,208.878,
+fwdmax + encoded hold,1,3,0.8,throttle core-hours: run-up,610.757,
+fwdmax + encoded hold,1,3,0.8,throttle core-hours: other,72.3407,
+fwdmax + encoded hold,1,6,0.8,cover: all,0.555685,27980
+fwdmax + encoded hold,1,6,0.8,cover: seasonal,0.5098,6749
+fwdmax + encoded hold,1,6,0.8,cover: follow-on,0.820992,1533
+fwdmax + encoded hold,1,6,0.8,cover: isolated,0.571978,13782
+fwdmax + encoded hold,1,6,0.8,cover: unknown,0.501324,5916
+fwdmax + encoded hold,1,6,0.8,"cover: follow-on, previous peak covers",0.890542,1336
+fwdmax + encoded hold,1,6,0.8,"cover: follow-on, previous peak short",0.349328,197
+fwdmax + encoded hold,1,6,0.8,cover: size q1,0.777816,7738
+fwdmax + encoded hold,1,6,0.8,cover: size q2,0.514221,7221
+fwdmax + encoded hold,1,6,0.8,cover: size q3,0.471788,6689
+fwdmax + encoded hold,1,6,0.8,cover: size q4,0.420141,6332
+fwdmax + encoded hold,1,6,0.8,throttle core-hours: all,1174.5,
+fwdmax + encoded hold,1,6,0.8,throttle core-hours: after spike,295.693,
+fwdmax + encoded hold,1,6,0.8,throttle core-hours: run-up,777.149,
+fwdmax + encoded hold,1,6,0.8,throttle core-hours: other,101.662,
+fwdmax + encoded hold,1,,1,slack share: after spike,0.23004,
+fwdmax + encoded hold,1,,1,slack share: run-up,0.124993,
+fwdmax + encoded hold,1,,1,slack share: other,0.644967,
+fwdmax + encoded hold,1,1,1,cover: all,0.788579,27980
+fwdmax + encoded hold,1,1,1,cover: seasonal,0.932302,6749
+fwdmax + encoded hold,1,1,1,cover: follow-on,0.938426,1533
+fwdmax + encoded hold,1,1,1,cover: isolated,0.726914,13782
+fwdmax + encoded hold,1,1,1,cover: unknown,0.729443,5916
+fwdmax + encoded hold,1,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,1,1,1,"cover: follow-on, previous peak short",0.520847,197
+fwdmax + encoded hold,1,1,1,cover: size q1,0.947976,7738
+fwdmax + encoded hold,1,1,1,cover: size q2,0.854047,7221
+fwdmax + encoded hold,1,1,1,cover: size q3,0.741107,6689
+fwdmax + encoded hold,1,1,1,cover: size q4,0.569276,6332
+fwdmax + encoded hold,1,1,1,throttle core-hours: all,596.364,
+fwdmax + encoded hold,1,1,1,throttle core-hours: after spike,69.3168,
+fwdmax + encoded hold,1,1,1,throttle core-hours: run-up,495.297,
+fwdmax + encoded hold,1,1,1,throttle core-hours: other,31.7509,
+fwdmax + encoded hold,1,3,1,cover: all,0.799121,27980
+fwdmax + encoded hold,1,3,1,cover: seasonal,0.954351,6749
+fwdmax + encoded hold,1,3,1,cover: follow-on,0.930496,1533
+fwdmax + encoded hold,1,3,1,cover: isolated,0.735654,13782
+fwdmax + encoded hold,1,3,1,cover: unknown,0.735843,5916
+fwdmax + encoded hold,1,3,1,"cover: follow-on, previous peak covers",0.992867,1336
+fwdmax + encoded hold,1,3,1,"cover: follow-on, previous peak short",0.507511,197
+fwdmax + encoded hold,1,3,1,cover: size q1,0.955925,7738
+fwdmax + encoded hold,1,3,1,cover: size q2,0.872491,7221
+fwdmax + encoded hold,1,3,1,cover: size q3,0.748151,6689
+fwdmax + encoded hold,1,3,1,cover: size q4,0.577671,6332
+fwdmax + encoded hold,1,3,1,throttle core-hours: all,680.699,
+fwdmax + encoded hold,1,3,1,throttle core-hours: after spike,165.869,
+fwdmax + encoded hold,1,3,1,throttle core-hours: run-up,477.567,
+fwdmax + encoded hold,1,3,1,throttle core-hours: other,37.2624,
+fwdmax + encoded hold,1,6,1,cover: all,0.654637,27980
+fwdmax + encoded hold,1,6,1,cover: seasonal,0.61738,6749
+fwdmax + encoded hold,1,6,1,cover: follow-on,0.867117,1533
+fwdmax + encoded hold,1,6,1,cover: isolated,0.665529,13782
+fwdmax + encoded hold,1,6,1,cover: unknown,0.616706,5916
+fwdmax + encoded hold,1,6,1,"cover: follow-on, previous peak covers",0.923813,1336
+fwdmax + encoded hold,1,6,1,"cover: follow-on, previous peak short",0.482626,197
+fwdmax + encoded hold,1,6,1,cover: size q1,0.868711,7738
+fwdmax + encoded hold,1,6,1,cover: size q2,0.638326,7221
+fwdmax + encoded hold,1,6,1,cover: size q3,0.566907,6689
+fwdmax + encoded hold,1,6,1,cover: size q4,0.504305,6332
+fwdmax + encoded hold,1,6,1,throttle core-hours: all,910.297,
+fwdmax + encoded hold,1,6,1,throttle core-hours: after spike,227.779,
+fwdmax + encoded hold,1,6,1,throttle core-hours: run-up,627.644,
+fwdmax + encoded hold,1,6,1,throttle core-hours: other,54.8749,
+fwdmax + encoded hold,2,,0.6,slack share: after spike,0.344597,
+fwdmax + encoded hold,2,,0.6,slack share: run-up,0.100027,
+fwdmax + encoded hold,2,,0.6,slack share: other,0.555376,
+fwdmax + encoded hold,2,1,0.6,cover: all,0.58424,27980
+fwdmax + encoded hold,2,1,0.6,cover: seasonal,0.777621,6749
+fwdmax + encoded hold,2,1,0.6,cover: follow-on,0.914101,1533
+fwdmax + encoded hold,2,1,0.6,cover: isolated,0.488999,13782
+fwdmax + encoded hold,2,1,0.6,cover: unknown,0.500026,5916
+fwdmax + encoded hold,2,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,2,1,0.6,"cover: follow-on, previous peak short",0.331558,197
+fwdmax + encoded hold,2,1,0.6,cover: size q1,0.816942,7738
+fwdmax + encoded hold,2,1,0.6,cover: size q2,0.649354,7221
+fwdmax + encoded hold,2,1,0.6,cover: size q3,0.473144,6689
+fwdmax + encoded hold,2,1,0.6,cover: size q4,0.342969,6332
+fwdmax + encoded hold,2,1,0.6,throttle core-hours: all,1182.92,
+fwdmax + encoded hold,2,1,0.6,throttle core-hours: after spike,100.245,
+fwdmax + encoded hold,2,1,0.6,throttle core-hours: run-up,902.534,
+fwdmax + encoded hold,2,1,0.6,throttle core-hours: other,180.136,
+fwdmax + encoded hold,2,3,0.6,cover: all,0.610198,27980
+fwdmax + encoded hold,2,3,0.6,cover: seasonal,0.816248,6749
+fwdmax + encoded hold,2,3,0.6,cover: follow-on,0.897348,1533
+fwdmax + encoded hold,2,3,0.6,cover: isolated,0.514054,13782
+fwdmax + encoded hold,2,3,0.6,cover: unknown,0.524705,5916
+fwdmax + encoded hold,2,3,0.6,"cover: follow-on, previous peak covers",0.982155,1336
+fwdmax + encoded hold,2,3,0.6,"cover: follow-on, previous peak short",0.32221,197
+fwdmax + encoded hold,2,3,0.6,cover: size q1,0.844956,7738
+fwdmax + encoded hold,2,3,0.6,cover: size q2,0.679804,7221
+fwdmax + encoded hold,2,3,0.6,cover: size q3,0.503201,6689
+fwdmax + encoded hold,2,3,0.6,cover: size q4,0.356965,6332
+fwdmax + encoded hold,2,3,0.6,throttle core-hours: all,1361.55,
+fwdmax + encoded hold,2,3,0.6,throttle core-hours: after spike,291.081,
+fwdmax + encoded hold,2,3,0.6,throttle core-hours: run-up,866.662,
+fwdmax + encoded hold,2,3,0.6,throttle core-hours: other,203.805,
+fwdmax + encoded hold,2,6,0.6,cover: all,0.429871,27980
+fwdmax + encoded hold,2,6,0.6,cover: seasonal,0.385647,6749
+fwdmax + encoded hold,2,6,0.6,cover: follow-on,0.750345,1533
+fwdmax + encoded hold,2,6,0.6,cover: isolated,0.445274,13782
+fwdmax + encoded hold,2,6,0.6,cover: unknown,0.361395,5916
+fwdmax + encoded hold,2,6,0.6,"cover: follow-on, previous peak covers",0.826711,1336
+fwdmax + encoded hold,2,6,0.6,"cover: follow-on, previous peak short",0.232448,197
+fwdmax + encoded hold,2,6,0.6,cover: size q1,0.642513,7738
+fwdmax + encoded hold,2,6,0.6,cover: size q2,0.372912,7221
+fwdmax + encoded hold,2,6,0.6,cover: size q3,0.340751,6689
+fwdmax + encoded hold,2,6,0.6,cover: size q4,0.329113,6332
+fwdmax + encoded hold,2,6,0.6,throttle core-hours: all,1685.18,
+fwdmax + encoded hold,2,6,0.6,throttle core-hours: after spike,445.449,
+fwdmax + encoded hold,2,6,0.6,throttle core-hours: run-up,994.624,
+fwdmax + encoded hold,2,6,0.6,throttle core-hours: other,245.106,
+fwdmax + encoded hold,2,,0.8,slack share: after spike,0.26973,
+fwdmax + encoded hold,2,,0.8,slack share: run-up,0.118443,
+fwdmax + encoded hold,2,,0.8,slack share: other,0.611828,
+fwdmax + encoded hold,2,1,0.8,cover: all,0.726732,27980
+fwdmax + encoded hold,2,1,0.8,cover: seasonal,0.913864,6749
+fwdmax + encoded hold,2,1,0.8,cover: follow-on,0.928876,1533
+fwdmax + encoded hold,2,1,0.8,cover: isolated,0.65106,13782
+fwdmax + encoded hold,2,1,0.8,cover: unknown,0.637157,5916
+fwdmax + encoded hold,2,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,2,1,0.8,"cover: follow-on, previous peak short",0.446533,197
+fwdmax + encoded hold,2,1,0.8,cover: size q1,0.915791,7738
+fwdmax + encoded hold,2,1,0.8,cover: size q2,0.813108,7221
+fwdmax + encoded hold,2,1,0.8,cover: size q3,0.642492,6689
+fwdmax + encoded hold,2,1,0.8,cover: size q4,0.486179,6332
+fwdmax + encoded hold,2,1,0.8,throttle core-hours: all,786.359,
+fwdmax + encoded hold,2,1,0.8,throttle core-hours: after spike,82.1002,
+fwdmax + encoded hold,2,1,0.8,throttle core-hours: run-up,645.851,
+fwdmax + encoded hold,2,1,0.8,throttle core-hours: other,58.4075,
+fwdmax + encoded hold,2,3,0.8,cover: all,0.736937,27980
+fwdmax + encoded hold,2,3,0.8,cover: seasonal,0.927632,6749
+fwdmax + encoded hold,2,3,0.8,cover: follow-on,0.918289,1533
+fwdmax + encoded hold,2,3,0.8,cover: isolated,0.660681,13782
+fwdmax + encoded hold,2,3,0.8,cover: unknown,0.650042,5916
+fwdmax + encoded hold,2,3,0.8,"cover: follow-on, previous peak covers",0.989435,1336
+fwdmax + encoded hold,2,3,0.8,"cover: follow-on, previous peak short",0.435798,197
+fwdmax + encoded hold,2,3,0.8,cover: size q1,0.923473,7738
+fwdmax + encoded hold,2,3,0.8,cover: size q2,0.82584,7221
+fwdmax + encoded hold,2,3,0.8,cover: size q3,0.655117,6689
+fwdmax + encoded hold,2,3,0.8,cover: size q4,0.494029,6332
+fwdmax + encoded hold,2,3,0.8,throttle core-hours: all,905.913,
+fwdmax + encoded hold,2,3,0.8,throttle core-hours: after spike,210.457,
+fwdmax + encoded hold,2,3,0.8,throttle core-hours: run-up,629.107,
+fwdmax + encoded hold,2,3,0.8,throttle core-hours: other,66.3494,
+fwdmax + encoded hold,2,6,0.8,cover: all,0.570893,27980
+fwdmax + encoded hold,2,6,0.8,cover: seasonal,0.541614,6749
+fwdmax + encoded hold,2,6,0.8,cover: follow-on,0.826601,1533
+fwdmax + encoded hold,2,6,0.8,cover: isolated,0.587856,13782
+fwdmax + encoded hold,2,6,0.8,cover: unknown,0.498516,5916
+fwdmax + encoded hold,2,6,0.8,"cover: follow-on, previous peak covers",0.892718,1336
+fwdmax + encoded hold,2,6,0.8,"cover: follow-on, previous peak short",0.378212,197
+fwdmax + encoded hold,2,6,0.8,cover: size q1,0.797379,7738
+fwdmax + encoded hold,2,6,0.8,cover: size q2,0.555139,7221
+fwdmax + encoded hold,2,6,0.8,cover: size q3,0.459564,6689
+fwdmax + encoded hold,2,6,0.8,cover: size q4,0.429688,6332
+fwdmax + encoded hold,2,6,0.8,throttle core-hours: all,1176.02,
+fwdmax + encoded hold,2,6,0.8,throttle core-hours: after spike,303.15,
+fwdmax + encoded hold,2,6,0.8,throttle core-hours: run-up,782.392,
+fwdmax + encoded hold,2,6,0.8,throttle core-hours: other,90.4825,
+fwdmax + encoded hold,2,,1,slack share: after spike,0.231888,
+fwdmax + encoded hold,2,,1,slack share: run-up,0.121831,
+fwdmax + encoded hold,2,,1,slack share: other,0.646281,
+fwdmax + encoded hold,2,1,1,cover: all,0.792516,27980
+fwdmax + encoded hold,2,1,1,cover: seasonal,0.948667,6749
+fwdmax + encoded hold,2,1,1,cover: follow-on,0.940916,1533
+fwdmax + encoded hold,2,1,1,cover: isolated,0.732935,13782
+fwdmax + encoded hold,2,1,1,cover: unknown,0.714724,5916
+fwdmax + encoded hold,2,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax + encoded hold,2,1,1,"cover: follow-on, previous peak short",0.540223,197
+fwdmax + encoded hold,2,1,1,cover: size q1,0.947187,7738
+fwdmax + encoded hold,2,1,1,cover: size q2,0.873899,7221
+fwdmax + encoded hold,2,1,1,cover: size q3,0.731213,6689
+fwdmax + encoded hold,2,1,1,cover: size q4,0.575451,6332
+fwdmax + encoded hold,2,1,1,throttle core-hours: all,604.244,
+fwdmax + encoded hold,2,1,1,throttle core-hours: after spike,68.2282,
+fwdmax + encoded hold,2,1,1,throttle core-hours: run-up,507.373,
+fwdmax + encoded hold,2,1,1,throttle core-hours: other,28.6427,
+fwdmax + encoded hold,2,3,1,cover: all,0.799041,27980
+fwdmax + encoded hold,2,3,1,cover: seasonal,0.958873,6749
+fwdmax + encoded hold,2,3,1,cover: follow-on,0.934553,1533
+fwdmax + encoded hold,2,3,1,cover: isolated,0.73828,13782
+fwdmax + encoded hold,2,3,1,cover: unknown,0.723139,5916
+fwdmax + encoded hold,2,3,1,"cover: follow-on, previous peak covers",0.991572,1336
+fwdmax + encoded hold,2,3,1,"cover: follow-on, previous peak short",0.547872,197
+fwdmax + encoded hold,2,3,1,cover: size q1,0.951537,7738
+fwdmax + encoded hold,2,3,1,cover: size q2,0.881146,7221
+fwdmax + encoded hold,2,3,1,cover: size q3,0.737105,6689
+fwdmax + encoded hold,2,3,1,cover: size q4,0.584479,6332
+fwdmax + encoded hold,2,3,1,throttle core-hours: all,697.165,
+fwdmax + encoded hold,2,3,1,throttle core-hours: after spike,167.15,
+fwdmax + encoded hold,2,3,1,throttle core-hours: run-up,496.383,
+fwdmax + encoded hold,2,3,1,throttle core-hours: other,33.6317,
+fwdmax + encoded hold,2,6,1,cover: all,0.668833,27980
+fwdmax + encoded hold,2,6,1,cover: seasonal,0.653726,6749
+fwdmax + encoded hold,2,6,1,cover: follow-on,0.872976,1533
+fwdmax + encoded hold,2,6,1,cover: isolated,0.68053,13782
+fwdmax + encoded hold,2,6,1,cover: unknown,0.605916,5916
+fwdmax + encoded hold,2,6,1,"cover: follow-on, previous peak covers",0.926174,1336
+fwdmax + encoded hold,2,6,1,"cover: follow-on, previous peak short",0.512199,197
+fwdmax + encoded hold,2,6,1,cover: size q1,0.871922,7738
+fwdmax + encoded hold,2,6,1,cover: size q2,0.690869,7221
+fwdmax + encoded hold,2,6,1,cover: size q3,0.560298,6689
+fwdmax + encoded hold,2,6,1,cover: size q4,0.510171,6332
+fwdmax + encoded hold,2,6,1,throttle core-hours: all,915.531,
+fwdmax + encoded hold,2,6,1,throttle core-hours: after spike,232.172,
+fwdmax + encoded hold,2,6,1,throttle core-hours: run-up,635.646,
+fwdmax + encoded hold,2,6,1,throttle core-hours: other,47.7125,
+fwdmax + exact hold,0,,0.6,slack share: after spike,0.317128,
+fwdmax + exact hold,0,,0.6,slack share: run-up,0.111057,
+fwdmax + exact hold,0,,0.6,slack share: other,0.571815,
+fwdmax + exact hold,0,1,0.6,cover: all,0.6034,27980
+fwdmax + exact hold,0,1,0.6,cover: seasonal,0.802959,6749
+fwdmax + exact hold,0,1,0.6,cover: follow-on,0.895163,1533
+fwdmax + exact hold,0,1,0.6,cover: isolated,0.510659,13782
+fwdmax + exact hold,0,1,0.6,cover: unknown,0.516185,5916
+fwdmax + exact hold,0,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,0,1,0.6,"cover: follow-on, previous peak short",0.184187,197
+fwdmax + exact hold,0,1,0.6,cover: size q1,0.791608,7738
+fwdmax + exact hold,0,1,0.6,cover: size q2,0.675355,7221
+fwdmax + exact hold,0,1,0.6,cover: size q3,0.519054,6689
+fwdmax + exact hold,0,1,0.6,cover: size q4,0.380443,6332
+fwdmax + exact hold,0,1,0.6,throttle core-hours: all,1119.8,
+fwdmax + exact hold,0,1,0.6,throttle core-hours: after spike,111.423,
+fwdmax + exact hold,0,1,0.6,throttle core-hours: run-up,854.824,
+fwdmax + exact hold,0,1,0.6,throttle core-hours: other,153.554,
+fwdmax + exact hold,0,3,0.6,cover: all,0.628952,27980
+fwdmax + exact hold,0,3,0.6,cover: seasonal,0.839252,6749
+fwdmax + exact hold,0,3,0.6,cover: follow-on,0.881231,1533
+fwdmax + exact hold,0,3,0.6,cover: isolated,0.536003,13782
+fwdmax + exact hold,0,3,0.6,cover: unknown,0.540201,5916
+fwdmax + exact hold,0,3,0.6,"cover: follow-on, previous peak covers",0.982517,1336
+fwdmax + exact hold,0,3,0.6,"cover: follow-on, previous peak short",0.194339,197
+fwdmax + exact hold,0,3,0.6,cover: size q1,0.82136,7738
+fwdmax + exact hold,0,3,0.6,cover: size q2,0.70606,7221
+fwdmax + exact hold,0,3,0.6,cover: size q3,0.54054,6689
+fwdmax + exact hold,0,3,0.6,cover: size q4,0.399282,6332
+fwdmax + exact hold,0,3,0.6,throttle core-hours: all,1274.63,
+fwdmax + exact hold,0,3,0.6,throttle core-hours: after spike,283.998,
+fwdmax + exact hold,0,3,0.6,throttle core-hours: run-up,821.579,
+fwdmax + exact hold,0,3,0.6,throttle core-hours: other,169.049,
+fwdmax + exact hold,0,6,0.6,cover: all,0.438422,27980
+fwdmax + exact hold,0,6,0.6,cover: seasonal,0.398477,6749
+fwdmax + exact hold,0,6,0.6,cover: follow-on,0.743264,1533
+fwdmax + exact hold,0,6,0.6,cover: isolated,0.454039,13782
+fwdmax + exact hold,0,6,0.6,cover: unknown,0.36862,5916
+fwdmax + exact hold,0,6,0.6,"cover: follow-on, previous peak covers",0.828537,1336
+fwdmax + exact hold,0,6,0.6,"cover: follow-on, previous peak short",0.164969,197
+fwdmax + exact hold,0,6,0.6,cover: size q1,0.620356,7738
+fwdmax + exact hold,0,6,0.6,cover: size q2,0.389215,7221
+fwdmax + exact hold,0,6,0.6,cover: size q3,0.363758,6689
+fwdmax + exact hold,0,6,0.6,cover: size q4,0.351081,6332
+fwdmax + exact hold,0,6,0.6,throttle core-hours: all,1590.64,
+fwdmax + exact hold,0,6,0.6,throttle core-hours: after spike,414.092,
+fwdmax + exact hold,0,6,0.6,throttle core-hours: run-up,964.558,
+fwdmax + exact hold,0,6,0.6,throttle core-hours: other,211.99,
+fwdmax + exact hold,0,,0.8,slack share: after spike,0.253299,
+fwdmax + exact hold,0,,0.8,slack share: run-up,0.121873,
+fwdmax + exact hold,0,,0.8,slack share: other,0.624828,
+fwdmax + exact hold,0,1,0.8,cover: all,0.719877,27980
+fwdmax + exact hold,0,1,0.8,cover: seasonal,0.907936,6749
+fwdmax + exact hold,0,1,0.8,cover: follow-on,0.91569,1533
+fwdmax + exact hold,0,1,0.8,cover: isolated,0.64786,13782
+fwdmax + exact hold,0,1,0.8,cover: unknown,0.622369,5916
+fwdmax + exact hold,0,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,0,1,0.8,"cover: follow-on, previous peak short",0.343925,197
+fwdmax + exact hold,0,1,0.8,cover: size q1,0.88336,7738
+fwdmax + exact hold,0,1,0.8,cover: size q2,0.793939,7221
+fwdmax + exact hold,0,1,0.8,cover: size q3,0.654961,6689
+fwdmax + exact hold,0,1,0.8,cover: size q4,0.504208,6332
+fwdmax + exact hold,0,1,0.8,throttle core-hours: all,793.152,
+fwdmax + exact hold,0,1,0.8,throttle core-hours: after spike,90.7773,
+fwdmax + exact hold,0,1,0.8,throttle core-hours: run-up,643.104,
+fwdmax + exact hold,0,1,0.8,throttle core-hours: other,59.2703,
+fwdmax + exact hold,0,3,0.8,cover: all,0.734208,27980
+fwdmax + exact hold,0,3,0.8,cover: seasonal,0.928021,6749
+fwdmax + exact hold,0,3,0.8,cover: follow-on,0.905518,1533
+fwdmax + exact hold,0,3,0.8,cover: isolated,0.661381,13782
+fwdmax + exact hold,0,3,0.8,cover: unknown,0.638371,5916
+fwdmax + exact hold,0,3,0.8,"cover: follow-on, previous peak covers",0.990313,1336
+fwdmax + exact hold,0,3,0.8,"cover: follow-on, previous peak short",0.330462,197
+fwdmax + exact hold,0,3,0.8,cover: size q1,0.897247,7738
+fwdmax + exact hold,0,3,0.8,cover: size q2,0.810309,7221
+fwdmax + exact hold,0,3,0.8,cover: size q3,0.667058,6689
+fwdmax + exact hold,0,3,0.8,cover: size q4,0.519117,6332
+fwdmax + exact hold,0,3,0.8,throttle core-hours: all,900.081,
+fwdmax + exact hold,0,3,0.8,throttle core-hours: after spike,212.752,
+fwdmax + exact hold,0,3,0.8,throttle core-hours: run-up,620.3,
+fwdmax + exact hold,0,3,0.8,throttle core-hours: other,67.0291,
+fwdmax + exact hold,0,6,0.8,cover: all,0.567147,27980
+fwdmax + exact hold,0,6,0.8,cover: seasonal,0.536445,6749
+fwdmax + exact hold,0,6,0.8,cover: follow-on,0.827533,1533
+fwdmax + exact hold,0,6,0.8,cover: isolated,0.589932,13782
+fwdmax + exact hold,0,6,0.8,cover: unknown,0.48162,5916
+fwdmax + exact hold,0,6,0.8,"cover: follow-on, previous peak covers",0.900828,1336
+fwdmax + exact hold,0,6,0.8,"cover: follow-on, previous peak short",0.330462,197
+fwdmax + exact hold,0,6,0.8,cover: size q1,0.749803,7738
+fwdmax + exact hold,0,6,0.8,cover: size q2,0.548362,7221
+fwdmax + exact hold,0,6,0.8,cover: size q3,0.485864,6689
+fwdmax + exact hold,0,6,0.8,cover: size q4,0.451222,6332
+fwdmax + exact hold,0,6,0.8,throttle core-hours: all,1161.44,
+fwdmax + exact hold,0,6,0.8,throttle core-hours: after spike,297.722,
+fwdmax + exact hold,0,6,0.8,throttle core-hours: run-up,771.45,
+fwdmax + exact hold,0,6,0.8,throttle core-hours: other,92.2731,
+fwdmax + exact hold,0,,1,slack share: after spike,0.221009,
+fwdmax + exact hold,0,,1,slack share: run-up,0.123259,
+fwdmax + exact hold,0,,1,slack share: other,0.655732,
+fwdmax + exact hold,0,1,1,cover: all,0.784696,27980
+fwdmax + exact hold,0,1,1,cover: seasonal,0.944598,6749
+fwdmax + exact hold,0,1,1,cover: follow-on,0.930222,1533
+fwdmax + exact hold,0,1,1,cover: isolated,0.728693,13782
+fwdmax + exact hold,0,1,1,cover: unknown,0.695036,5916
+fwdmax + exact hold,0,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,0,1,1,"cover: follow-on, previous peak short",0.457005,197
+fwdmax + exact hold,0,1,1,cover: size q1,0.925612,7738
+fwdmax + exact hold,0,1,1,cover: size q2,0.85183,7221
+fwdmax + exact hold,0,1,1,cover: size q3,0.735881,6689
+fwdmax + exact hold,0,1,1,cover: size q4,0.587499,6332
+fwdmax + exact hold,0,1,1,throttle core-hours: all,621.234,
+fwdmax + exact hold,0,1,1,throttle core-hours: after spike,74.5375,
+fwdmax + exact hold,0,1,1,throttle core-hours: run-up,515.204,
+fwdmax + exact hold,0,1,1,throttle core-hours: other,31.4922,
+fwdmax + exact hold,0,3,1,cover: all,0.793768,27980
+fwdmax + exact hold,0,3,1,cover: seasonal,0.957837,6749
+fwdmax + exact hold,0,3,1,cover: follow-on,0.92414,1533
+fwdmax + exact hold,0,3,1,cover: isolated,0.736899,13782
+fwdmax + exact hold,0,3,1,cover: unknown,0.705297,5916
+fwdmax + exact hold,0,3,1,"cover: follow-on, previous peak covers",0.991987,1336
+fwdmax + exact hold,0,3,1,"cover: follow-on, previous peak short",0.464022,197
+fwdmax + exact hold,0,3,1,cover: size q1,0.933013,7738
+fwdmax + exact hold,0,3,1,cover: size q2,0.862677,7221
+fwdmax + exact hold,0,3,1,cover: size q3,0.741408,6689
+fwdmax + exact hold,0,3,1,cover: size q4,0.600333,6332
+fwdmax + exact hold,0,3,1,throttle core-hours: all,705.178,
+fwdmax + exact hold,0,3,1,throttle core-hours: after spike,169.95,
+fwdmax + exact hold,0,3,1,throttle core-hours: run-up,498.162,
+fwdmax + exact hold,0,3,1,throttle core-hours: other,37.0668,
+fwdmax + exact hold,0,6,1,cover: all,0.662476,27980
+fwdmax + exact hold,0,6,1,cover: seasonal,0.647336,6749
+fwdmax + exact hold,0,6,1,cover: follow-on,0.869538,1533
+fwdmax + exact hold,0,6,1,cover: isolated,0.68006,13782
+fwdmax + exact hold,0,6,1,cover: unknown,0.585126,5916
+fwdmax + exact hold,0,6,1,"cover: follow-on, previous peak covers",0.928849,1336
+fwdmax + exact hold,0,6,1,"cover: follow-on, previous peak short",0.467307,197
+fwdmax + exact hold,0,6,1,cover: size q1,0.8333,7738
+fwdmax + exact hold,0,6,1,cover: size q2,0.670755,7221
+fwdmax + exact hold,0,6,1,cover: size q3,0.580622,6689
+fwdmax + exact hold,0,6,1,cover: size q4,0.530747,6332
+fwdmax + exact hold,0,6,1,throttle core-hours: all,913.142,
+fwdmax + exact hold,0,6,1,throttle core-hours: after spike,230.304,
+fwdmax + exact hold,0,6,1,throttle core-hours: run-up,631.428,
+fwdmax + exact hold,0,6,1,throttle core-hours: other,51.4093,
+fwdmax + exact hold,1,,0.6,slack share: after spike,0.31715,
+fwdmax + exact hold,1,,0.6,slack share: run-up,0.114477,
+fwdmax + exact hold,1,,0.6,slack share: other,0.568373,
+fwdmax + exact hold,1,1,0.6,cover: all,0.609401,27980
+fwdmax + exact hold,1,1,0.6,cover: seasonal,0.808338,6749
+fwdmax + exact hold,1,1,0.6,cover: follow-on,0.899055,1533
+fwdmax + exact hold,1,1,0.6,cover: isolated,0.511593,13782
+fwdmax + exact hold,1,1,0.6,cover: unknown,0.535249,5916
+fwdmax + exact hold,1,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,1,1,0.6,"cover: follow-on, previous peak short",0.214472,197
+fwdmax + exact hold,1,1,0.6,cover: size q1,0.818545,7738
+fwdmax + exact hold,1,1,0.6,cover: size q2,0.677976,7221
+fwdmax + exact hold,1,1,0.6,cover: size q3,0.52168,6689
+fwdmax + exact hold,1,1,0.6,cover: size q4,0.368283,6332
+fwdmax + exact hold,1,1,0.6,throttle core-hours: all,1112.09,
+fwdmax + exact hold,1,1,0.6,throttle core-hours: after spike,110.036,
+fwdmax + exact hold,1,1,0.6,throttle core-hours: run-up,843.842,
+fwdmax + exact hold,1,1,0.6,throttle core-hours: other,158.211,
+fwdmax + exact hold,1,3,0.6,cover: all,0.63733,27980
+fwdmax + exact hold,1,3,0.6,cover: seasonal,0.852254,6749
+fwdmax + exact hold,1,3,0.6,cover: follow-on,0.882351,1533
+fwdmax + exact hold,1,3,0.6,cover: isolated,0.539839,13782
+fwdmax + exact hold,1,3,0.6,cover: unknown,0.555769,5916
+fwdmax + exact hold,1,3,0.6,"cover: follow-on, previous peak covers",0.98249,1336
+fwdmax + exact hold,1,3,0.6,"cover: follow-on, previous peak short",0.203231,197
+fwdmax + exact hold,1,3,0.6,cover: size q1,0.85261,7738
+fwdmax + exact hold,1,3,0.6,cover: size q2,0.721899,7221
+fwdmax + exact hold,1,3,0.6,cover: size q3,0.542721,6689
+fwdmax + exact hold,1,3,0.6,cover: size q4,0.377747,6332
+fwdmax + exact hold,1,3,0.6,throttle core-hours: all,1263,
+fwdmax + exact hold,1,3,0.6,throttle core-hours: after spike,281.917,
+fwdmax + exact hold,1,3,0.6,throttle core-hours: run-up,806.83,
+fwdmax + exact hold,1,3,0.6,throttle core-hours: other,174.255,
+fwdmax + exact hold,1,6,0.6,cover: all,0.431994,27980
+fwdmax + exact hold,1,6,0.6,cover: seasonal,0.383983,6749
+fwdmax + exact hold,1,6,0.6,cover: follow-on,0.742922,1533
+fwdmax + exact hold,1,6,0.6,cover: isolated,0.446702,13782
+fwdmax + exact hold,1,6,0.6,cover: unknown,0.371933,5916
+fwdmax + exact hold,1,6,0.6,"cover: follow-on, previous peak covers",0.829987,1336
+fwdmax + exact hold,1,6,0.6,"cover: follow-on, previous peak short",0.152469,197
+fwdmax + exact hold,1,6,0.6,cover: size q1,0.639066,7738
+fwdmax + exact hold,1,6,0.6,cover: size q2,0.367189,7221
+fwdmax + exact hold,1,6,0.6,cover: size q3,0.355183,6689
+fwdmax + exact hold,1,6,0.6,cover: size q4,0.333988,6332
+fwdmax + exact hold,1,6,0.6,throttle core-hours: all,1606.83,
+fwdmax + exact hold,1,6,0.6,throttle core-hours: after spike,414.484,
+fwdmax + exact hold,1,6,0.6,throttle core-hours: run-up,968.465,
+fwdmax + exact hold,1,6,0.6,throttle core-hours: other,223.882,
+fwdmax + exact hold,1,,0.8,slack share: after spike,0.25235,
+fwdmax + exact hold,1,,0.8,slack share: run-up,0.125826,
+fwdmax + exact hold,1,,0.8,slack share: other,0.621825,
+fwdmax + exact hold,1,1,0.8,cover: all,0.726831,27980
+fwdmax + exact hold,1,1,0.8,cover: seasonal,0.89818,6749
+fwdmax + exact hold,1,1,0.8,cover: follow-on,0.916505,1533
+fwdmax + exact hold,1,1,0.8,cover: isolated,0.649397,13782
+fwdmax + exact hold,1,1,0.8,cover: unknown,0.662598,5916
+fwdmax + exact hold,1,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,1,1,0.8,"cover: follow-on, previous peak short",0.350263,197
+fwdmax + exact hold,1,1,0.8,cover: size q1,0.910032,7738
+fwdmax + exact hold,1,1,0.8,cover: size q2,0.796888,7221
+fwdmax + exact hold,1,1,0.8,cover: size q3,0.663678,6689
+fwdmax + exact hold,1,1,0.8,cover: size q4,0.489772,6332
+fwdmax + exact hold,1,1,0.8,throttle core-hours: all,768.823,
+fwdmax + exact hold,1,1,0.8,throttle core-hours: after spike,89.2616,
+fwdmax + exact hold,1,1,0.8,throttle core-hours: run-up,619.711,
+fwdmax + exact hold,1,1,0.8,throttle core-hours: other,59.8496,
+fwdmax + exact hold,1,3,0.8,cover: all,0.739862,27980
+fwdmax + exact hold,1,3,0.8,cover: seasonal,0.927873,6749
+fwdmax + exact hold,1,3,0.8,cover: follow-on,0.907764,1533
+fwdmax + exact hold,1,3,0.8,cover: isolated,0.660382,13782
+fwdmax + exact hold,1,3,0.8,cover: unknown,0.667027,5916
+fwdmax + exact hold,1,3,0.8,"cover: follow-on, previous peak covers",0.990494,1336
+fwdmax + exact hold,1,3,0.8,"cover: follow-on, previous peak short",0.346707,197
+fwdmax + exact hold,1,3,0.8,cover: size q1,0.922502,7738
+fwdmax + exact hold,1,3,0.8,cover: size q2,0.821718,7221
+fwdmax + exact hold,1,3,0.8,cover: size q3,0.67326,6689
+fwdmax + exact hold,1,3,0.8,cover: size q4,0.493674,6332
+fwdmax + exact hold,1,3,0.8,throttle core-hours: all,872.741,
+fwdmax + exact hold,1,3,0.8,throttle core-hours: after spike,209.068,
+fwdmax + exact hold,1,3,0.8,throttle core-hours: run-up,595.255,
+fwdmax + exact hold,1,3,0.8,throttle core-hours: other,68.4182,
+fwdmax + exact hold,1,6,0.8,cover: all,0.559389,27980
+fwdmax + exact hold,1,6,0.8,cover: seasonal,0.51195,6749
+fwdmax + exact hold,1,6,0.8,cover: follow-on,0.81318,1533
+fwdmax + exact hold,1,6,0.8,cover: isolated,0.575402,13782
+fwdmax + exact hold,1,6,0.8,cover: unknown,0.510438,5916
+fwdmax + exact hold,1,6,0.8,"cover: follow-on, previous peak covers",0.890272,1336
+fwdmax + exact hold,1,6,0.8,"cover: follow-on, previous peak short",0.290366,197
+fwdmax + exact hold,1,6,0.8,cover: size q1,0.781643,7738
+fwdmax + exact hold,1,6,0.8,cover: size q2,0.513054,7221
+fwdmax + exact hold,1,6,0.8,cover: size q3,0.478269,6689
+fwdmax + exact hold,1,6,0.8,cover: size q4,0.426317,6332
+fwdmax + exact hold,1,6,0.8,throttle core-hours: all,1153.63,
+fwdmax + exact hold,1,6,0.8,throttle core-hours: after spike,290.676,
+fwdmax + exact hold,1,6,0.8,throttle core-hours: run-up,766.044,
+fwdmax + exact hold,1,6,0.8,throttle core-hours: other,96.9091,
+fwdmax + exact hold,1,,1,slack share: after spike,0.218473,
+fwdmax + exact hold,1,,1,slack share: run-up,0.127123,
+fwdmax + exact hold,1,,1,slack share: other,0.654404,
+fwdmax + exact hold,1,1,1,cover: all,0.791375,27980
+fwdmax + exact hold,1,1,1,cover: seasonal,0.933854,6749
+fwdmax + exact hold,1,1,1,cover: follow-on,0.931924,1533
+fwdmax + exact hold,1,1,1,cover: isolated,0.731243,13782
+fwdmax + exact hold,1,1,1,cover: unknown,0.732499,5916
+fwdmax + exact hold,1,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,1,1,1,"cover: follow-on, previous peak short",0.470254,197
+fwdmax + exact hold,1,1,1,cover: size q1,0.949189,7738
+fwdmax + exact hold,1,1,1,cover: size q2,0.85455,7221
+fwdmax + exact hold,1,1,1,cover: size q3,0.745654,6689
+fwdmax + exact hold,1,1,1,cover: size q4,0.574773,6332
+fwdmax + exact hold,1,1,1,throttle core-hours: all,593.945,
+fwdmax + exact hold,1,1,1,throttle core-hours: after spike,74.1984,
+fwdmax + exact hold,1,1,1,throttle core-hours: run-up,487.908,
+fwdmax + exact hold,1,1,1,throttle core-hours: other,31.8394,
+fwdmax + exact hold,1,3,1,cover: all,0.801211,27980
+fwdmax + exact hold,1,3,1,cover: seasonal,0.955324,6749
+fwdmax + exact hold,1,3,1,cover: follow-on,0.921684,1533
+fwdmax + exact hold,1,3,1,cover: isolated,0.739239,13782
+fwdmax + exact hold,1,3,1,cover: unknown,0.738552,5916
+fwdmax + exact hold,1,3,1,"cover: follow-on, previous peak covers",0.993002,1336
+fwdmax + exact hold,1,3,1,"cover: follow-on, previous peak short",0.438024,197
+fwdmax + exact hold,1,3,1,cover: size q1,0.956636,7738
+fwdmax + exact hold,1,3,1,cover: size q2,0.872756,7221
+fwdmax + exact hold,1,3,1,cover: size q3,0.751075,6689
+fwdmax + exact hold,1,3,1,cover: size q4,0.582649,6332
+fwdmax + exact hold,1,3,1,throttle core-hours: all,675.322,
+fwdmax + exact hold,1,3,1,throttle core-hours: after spike,167.349,
+fwdmax + exact hold,1,3,1,throttle core-hours: run-up,470.951,
+fwdmax + exact hold,1,3,1,throttle core-hours: other,37.022,
+fwdmax + exact hold,1,6,1,cover: all,0.656563,27980
+fwdmax + exact hold,1,6,1,cover: seasonal,0.619539,6749
+fwdmax + exact hold,1,6,1,cover: follow-on,0.858081,1533
+fwdmax + exact hold,1,6,1,cover: isolated,0.667332,13782
+fwdmax + exact hold,1,6,1,cover: unknown,0.621494,5916
+fwdmax + exact hold,1,6,1,"cover: follow-on, previous peak covers",0.921454,1336
+fwdmax + exact hold,1,6,1,"cover: follow-on, previous peak short",0.428302,197
+fwdmax + exact hold,1,6,1,cover: size q1,0.870161,7738
+fwdmax + exact hold,1,6,1,cover: size q2,0.638175,7221
+fwdmax + exact hold,1,6,1,cover: size q3,0.569769,6689
+fwdmax + exact hold,1,6,1,cover: size q4,0.508195,6332
+fwdmax + exact hold,1,6,1,throttle core-hours: all,903.611,
+fwdmax + exact hold,1,6,1,throttle core-hours: after spike,226.974,
+fwdmax + exact hold,1,6,1,throttle core-hours: run-up,622.415,
+fwdmax + exact hold,1,6,1,throttle core-hours: other,54.2217,
+fwdmax + exact hold,2,,0.6,slack share: after spike,0.316547,
+fwdmax + exact hold,2,,0.6,slack share: run-up,0.11109,
+fwdmax + exact hold,2,,0.6,slack share: other,0.572363,
+fwdmax + exact hold,2,1,0.6,cover: all,0.616475,27980
+fwdmax + exact hold,2,1,0.6,cover: seasonal,0.821334,6749
+fwdmax + exact hold,2,1,0.6,cover: follow-on,0.897829,1533
+fwdmax + exact hold,2,1,0.6,cover: isolated,0.522519,13782
+fwdmax + exact hold,2,1,0.6,cover: unknown,0.528747,5916
+fwdmax + exact hold,2,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,2,1,0.6,"cover: follow-on, previous peak short",0.204934,197
+fwdmax + exact hold,2,1,0.6,cover: size q1,0.839355,7738
+fwdmax + exact hold,2,1,0.6,cover: size q2,0.694086,7221
+fwdmax + exact hold,2,1,0.6,cover: size q3,0.505651,6689
+fwdmax + exact hold,2,1,0.6,cover: size q4,0.372673,6332
+fwdmax + exact hold,2,1,0.6,throttle core-hours: all,1112.21,
+fwdmax + exact hold,2,1,0.6,throttle core-hours: after spike,110.762,
+fwdmax + exact hold,2,1,0.6,throttle core-hours: run-up,850.682,
+fwdmax + exact hold,2,1,0.6,throttle core-hours: other,150.763,
+fwdmax + exact hold,2,3,0.6,cover: all,0.638571,27980
+fwdmax + exact hold,2,3,0.6,cover: seasonal,0.851151,6749
+fwdmax + exact hold,2,3,0.6,cover: follow-on,0.881112,1533
+fwdmax + exact hold,2,3,0.6,cover: isolated,0.544569,13782
+fwdmax + exact hold,2,3,0.6,cover: unknown,0.552199,5916
+fwdmax + exact hold,2,3,0.6,"cover: follow-on, previous peak covers",0.983063,1336
+fwdmax + exact hold,2,3,0.6,"cover: follow-on, previous peak short",0.189706,197
+fwdmax + exact hold,2,3,0.6,cover: size q1,0.860366,7738
+fwdmax + exact hold,2,3,0.6,cover: size q2,0.721226,7221
+fwdmax + exact hold,2,3,0.6,cover: size q3,0.533002,6689
+fwdmax + exact hold,2,3,0.6,cover: size q4,0.384789,6332
+fwdmax + exact hold,2,3,0.6,throttle core-hours: all,1270.19,
+fwdmax + exact hold,2,3,0.6,throttle core-hours: after spike,283.817,
+fwdmax + exact hold,2,3,0.6,throttle core-hours: run-up,819.094,
+fwdmax + exact hold,2,3,0.6,throttle core-hours: other,167.275,
+fwdmax + exact hold,2,6,0.6,cover: all,0.439952,27980
+fwdmax + exact hold,2,6,0.6,cover: seasonal,0.3946,6749
+fwdmax + exact hold,2,6,0.6,cover: follow-on,0.744337,1533
+fwdmax + exact hold,2,6,0.6,cover: isolated,0.45772,13782
+fwdmax + exact hold,2,6,0.6,cover: unknown,0.371424,5916
+fwdmax + exact hold,2,6,0.6,"cover: follow-on, previous peak covers",0.829567,1336
+fwdmax + exact hold,2,6,0.6,"cover: follow-on, previous peak short",0.166332,197
+fwdmax + exact hold,2,6,0.6,cover: size q1,0.652244,7738
+fwdmax + exact hold,2,6,0.6,cover: size q2,0.383567,7221
+fwdmax + exact hold,2,6,0.6,cover: size q3,0.350433,6689
+fwdmax + exact hold,2,6,0.6,cover: size q4,0.339391,6332
+fwdmax + exact hold,2,6,0.6,throttle core-hours: all,1602.56,
+fwdmax + exact hold,2,6,0.6,throttle core-hours: after spike,421.709,
+fwdmax + exact hold,2,6,0.6,throttle core-hours: run-up,970.085,
+fwdmax + exact hold,2,6,0.6,throttle core-hours: other,210.765,
+fwdmax + exact hold,2,,0.8,slack share: after spike,0.252997,
+fwdmax + exact hold,2,,0.8,slack share: run-up,0.122147,
+fwdmax + exact hold,2,,0.8,slack share: other,0.624856,
+fwdmax + exact hold,2,1,0.8,cover: all,0.732123,27980
+fwdmax + exact hold,2,1,0.8,cover: seasonal,0.918171,6749
+fwdmax + exact hold,2,1,0.8,cover: follow-on,0.918126,1533
+fwdmax + exact hold,2,1,0.8,cover: isolated,0.658843,13782
+fwdmax + exact hold,2,1,0.8,cover: unknown,0.642393,5916
+fwdmax + exact hold,2,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,2,1,0.8,"cover: follow-on, previous peak short",0.362882,197
+fwdmax + exact hold,2,1,0.8,cover: size q1,0.915426,7738
+fwdmax + exact hold,2,1,0.8,cover: size q2,0.817212,7221
+fwdmax + exact hold,2,1,0.8,cover: size q3,0.652029,6689
+fwdmax + exact hold,2,1,0.8,cover: size q4,0.495692,6332
+fwdmax + exact hold,2,1,0.8,throttle core-hours: all,774.189,
+fwdmax + exact hold,2,1,0.8,throttle core-hours: after spike,88.5109,
+fwdmax + exact hold,2,1,0.8,throttle core-hours: run-up,630.177,
+fwdmax + exact hold,2,1,0.8,throttle core-hours: other,55.5016,
+fwdmax + exact hold,2,3,0.8,cover: all,0.74141,27980
+fwdmax + exact hold,2,3,0.8,cover: seasonal,0.932134,6749
+fwdmax + exact hold,2,3,0.8,cover: follow-on,0.907668,1533
+fwdmax + exact hold,2,3,0.8,cover: isolated,0.667184,13782
+fwdmax + exact hold,2,3,0.8,cover: unknown,0.653665,5916
+fwdmax + exact hold,2,3,0.8,"cover: follow-on, previous peak covers",0.989728,1336
+fwdmax + exact hold,2,3,0.8,"cover: follow-on, previous peak short",0.351161,197
+fwdmax + exact hold,2,3,0.8,cover: size q1,0.922489,7738
+fwdmax + exact hold,2,3,0.8,cover: size q2,0.829756,7221
+fwdmax + exact hold,2,3,0.8,cover: size q3,0.661637,6689
+fwdmax + exact hold,2,3,0.8,cover: size q4,0.503644,6332
+fwdmax + exact hold,2,3,0.8,throttle core-hours: all,888.562,
+fwdmax + exact hold,2,3,0.8,throttle core-hours: after spike,210.483,
+fwdmax + exact hold,2,3,0.8,throttle core-hours: run-up,615.311,
+fwdmax + exact hold,2,3,0.8,throttle core-hours: other,62.7685,
+fwdmax + exact hold,2,6,0.8,cover: all,0.574722,27980
+fwdmax + exact hold,2,6,0.8,cover: seasonal,0.546452,6749
+fwdmax + exact hold,2,6,0.8,cover: follow-on,0.82231,1533
+fwdmax + exact hold,2,6,0.8,cover: isolated,0.591992,13782
+fwdmax + exact hold,2,6,0.8,cover: unknown,0.502585,5916
+fwdmax + exact hold,2,6,0.8,"cover: follow-on, previous peak covers",0.894236,1336
+fwdmax + exact hold,2,6,0.8,"cover: follow-on, previous peak short",0.33453,197
+fwdmax + exact hold,2,6,0.8,cover: size q1,0.797784,7738
+fwdmax + exact hold,2,6,0.8,cover: size q2,0.56025,7221
+fwdmax + exact hold,2,6,0.8,cover: size q3,0.464539,6689
+fwdmax + exact hold,2,6,0.8,cover: size q4,0.43503,6332
+fwdmax + exact hold,2,6,0.8,throttle core-hours: all,1156.3,
+fwdmax + exact hold,2,6,0.8,throttle core-hours: after spike,297.613,
+fwdmax + exact hold,2,6,0.8,throttle core-hours: run-up,772.564,
+fwdmax + exact hold,2,6,0.8,throttle core-hours: other,86.1237,
+fwdmax + exact hold,2,,1,slack share: after spike,0.221128,
+fwdmax + exact hold,2,,1,slack share: run-up,0.123745,
+fwdmax + exact hold,2,,1,slack share: other,0.655126,
+fwdmax + exact hold,2,1,1,cover: all,0.795105,27980
+fwdmax + exact hold,2,1,1,cover: seasonal,0.950164,6749
+fwdmax + exact hold,2,1,1,cover: follow-on,0.934219,1533
+fwdmax + exact hold,2,1,1,cover: isolated,0.736904,13782
+fwdmax + exact hold,2,1,1,cover: unknown,0.71775,5916
+fwdmax + exact hold,2,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax + exact hold,2,1,1,"cover: follow-on, previous peak short",0.488107,197
+fwdmax + exact hold,2,1,1,cover: size q1,0.946996,7738
+fwdmax + exact hold,2,1,1,cover: size q2,0.875108,7221
+fwdmax + exact hold,2,1,1,cover: size q3,0.735909,6689
+fwdmax + exact hold,2,1,1,cover: size q4,0.580783,6332
+fwdmax + exact hold,2,1,1,throttle core-hours: all,600.957,
+fwdmax + exact hold,2,1,1,throttle core-hours: after spike,72.2366,
+fwdmax + exact hold,2,1,1,throttle core-hours: run-up,500.226,
+fwdmax + exact hold,2,1,1,throttle core-hours: other,28.4935,
+fwdmax + exact hold,2,3,1,cover: all,0.800829,27980
+fwdmax + exact hold,2,3,1,cover: seasonal,0.9599,6749
+fwdmax + exact hold,2,3,1,cover: follow-on,0.927496,1533
+fwdmax + exact hold,2,3,1,cover: isolated,0.741278,13782
+fwdmax + exact hold,2,3,1,cover: unknown,0.725267,5916
+fwdmax + exact hold,2,3,1,"cover: follow-on, previous peak covers",0.991703,1336
+fwdmax + exact hold,2,3,1,"cover: follow-on, previous peak short",0.492062,197
+fwdmax + exact hold,2,3,1,cover: size q1,0.950627,7738
+fwdmax + exact hold,2,3,1,cover: size q2,0.882649,7221
+fwdmax + exact hold,2,3,1,cover: size q3,0.73994,6689
+fwdmax + exact hold,2,3,1,cover: size q4,0.588783,6332
+fwdmax + exact hold,2,3,1,throttle core-hours: all,691.647,
+fwdmax + exact hold,2,3,1,throttle core-hours: after spike,168.081,
+fwdmax + exact hold,2,3,1,throttle core-hours: run-up,490.262,
+fwdmax + exact hold,2,3,1,throttle core-hours: other,33.3032,
+fwdmax + exact hold,2,6,1,cover: all,0.67089,27980
+fwdmax + exact hold,2,6,1,cover: seasonal,0.656941,6749
+fwdmax + exact hold,2,6,1,cover: follow-on,0.868361,1533
+fwdmax + exact hold,2,6,1,cover: isolated,0.682084,13782
+fwdmax + exact hold,2,6,1,cover: unknown,0.609553,5916
+fwdmax + exact hold,2,6,1,"cover: follow-on, previous peak covers",0.925763,1336
+fwdmax + exact hold,2,6,1,"cover: follow-on, previous peak short",0.479077,197
+fwdmax + exact hold,2,6,1,cover: size q1,0.871277,7738
+fwdmax + exact hold,2,6,1,cover: size q2,0.694308,7221
+fwdmax + exact hold,2,6,1,cover: size q3,0.563019,6689
+fwdmax + exact hold,2,6,1,cover: size q4,0.513253,6332
+fwdmax + exact hold,2,6,1,throttle core-hours: all,908.635,
+fwdmax + exact hold,2,6,1,throttle core-hours: after spike,230.54,
+fwdmax + exact hold,2,6,1,throttle core-hours: run-up,630.795,
+fwdmax + exact hold,2,6,1,throttle core-hours: other,47.3006,
+fwdmax6 + encoded hold,0,,0.6,slack share: after spike,0.344935,
+fwdmax6 + encoded hold,0,,0.6,slack share: run-up,0.107829,
+fwdmax6 + encoded hold,0,,0.6,slack share: other,0.547236,
+fwdmax6 + encoded hold,0,1,0.6,cover: all,0.578244,27980
+fwdmax6 + encoded hold,0,1,0.6,cover: seasonal,0.764318,6749
+fwdmax6 + encoded hold,0,1,0.6,cover: follow-on,0.913539,1533
+fwdmax6 + encoded hold,0,1,0.6,cover: isolated,0.487235,13782
+fwdmax6 + encoded hold,0,1,0.6,cover: unknown,0.491103,5916
+fwdmax6 + encoded hold,0,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,0,1,0.6,"cover: follow-on, previous peak short",0.327183,197
+fwdmax6 + encoded hold,0,1,0.6,cover: size q1,0.801316,7738
+fwdmax6 + encoded hold,0,1,0.6,cover: size q2,0.646522,7221
+fwdmax6 + encoded hold,0,1,0.6,cover: size q3,0.482888,6689
+fwdmax6 + encoded hold,0,1,0.6,cover: size q4,0.328509,6332
+fwdmax6 + encoded hold,0,1,0.6,throttle core-hours: all,1215.28,
+fwdmax6 + encoded hold,0,1,0.6,throttle core-hours: after spike,100.812,
+fwdmax6 + encoded hold,0,1,0.6,throttle core-hours: run-up,912.183,
+fwdmax6 + encoded hold,0,1,0.6,throttle core-hours: other,202.281,
+fwdmax6 + encoded hold,0,3,0.6,cover: all,0.612902,27980
+fwdmax6 + encoded hold,0,3,0.6,cover: seasonal,0.815372,6749
+fwdmax6 + encoded hold,0,3,0.6,cover: follow-on,0.898477,1533
+fwdmax6 + encoded hold,0,3,0.6,cover: isolated,0.521438,13782
+fwdmax6 + encoded hold,0,3,0.6,cover: unknown,0.521,5916
+fwdmax6 + encoded hold,0,3,0.6,"cover: follow-on, previous peak covers",0.982377,1336
+fwdmax6 + encoded hold,0,3,0.6,"cover: follow-on, previous peak short",0.329493,197
+fwdmax6 + encoded hold,0,3,0.6,cover: size q1,0.839795,7738
+fwdmax6 + encoded hold,0,3,0.6,cover: size q2,0.691621,7221
+fwdmax6 + encoded hold,0,3,0.6,cover: size q3,0.513226,6689
+fwdmax6 + encoded hold,0,3,0.6,cover: size q4,0.351154,6332
+fwdmax6 + encoded hold,0,3,0.6,throttle core-hours: all,1393.56,
+fwdmax6 + encoded hold,0,3,0.6,throttle core-hours: after spike,294.833,
+fwdmax6 + encoded hold,0,3,0.6,throttle core-hours: run-up,871.272,
+fwdmax6 + encoded hold,0,3,0.6,throttle core-hours: other,227.455,
+fwdmax6 + encoded hold,0,6,0.6,cover: all,0.589031,27980
+fwdmax6 + encoded hold,0,6,0.6,cover: seasonal,0.763231,6749
+fwdmax6 + encoded hold,0,6,0.6,cover: follow-on,0.758092,1533
+fwdmax6 + encoded hold,0,6,0.6,cover: isolated,0.523701,13782
+fwdmax6 + encoded hold,0,6,0.6,cover: unknown,0.498688,5916
+fwdmax6 + encoded hold,0,6,0.6,"cover: follow-on, previous peak covers",0.831,1336
+fwdmax6 + encoded hold,0,6,0.6,"cover: follow-on, previous peak short",0.263655,197
+fwdmax6 + encoded hold,0,6,0.6,cover: size q1,0.802002,7738
+fwdmax6 + encoded hold,0,6,0.6,cover: size q2,0.641947,7221
+fwdmax6 + encoded hold,0,6,0.6,cover: size q3,0.506033,6689
+fwdmax6 + encoded hold,0,6,0.6,cover: size q4,0.356102,6332
+fwdmax6 + encoded hold,0,6,0.6,throttle core-hours: all,1528.41,
+fwdmax6 + encoded hold,0,6,0.6,throttle core-hours: after spike,432.488,
+fwdmax6 + encoded hold,0,6,0.6,throttle core-hours: run-up,850.853,
+fwdmax6 + encoded hold,0,6,0.6,throttle core-hours: other,245.069,
+fwdmax6 + encoded hold,0,,0.8,slack share: after spike,0.269882,
+fwdmax6 + encoded hold,0,,0.8,slack share: run-up,0.12829,
+fwdmax6 + encoded hold,0,,0.8,slack share: other,0.601828,
+fwdmax6 + encoded hold,0,1,0.8,cover: all,0.72298,27980
+fwdmax6 + encoded hold,0,1,0.8,cover: seasonal,0.906008,6749
+fwdmax6 + encoded hold,0,1,0.8,cover: follow-on,0.928348,1533
+fwdmax6 + encoded hold,0,1,0.8,cover: isolated,0.649864,13782
+fwdmax6 + encoded hold,0,1,0.8,cover: unknown,0.631296,5916
+fwdmax6 + encoded hold,0,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,0,1,0.8,"cover: follow-on, previous peak short",0.442426,197
+fwdmax6 + encoded hold,0,1,0.8,cover: size q1,0.908397,7738
+fwdmax6 + encoded hold,0,1,0.8,cover: size q2,0.798232,7221
+fwdmax6 + encoded hold,0,1,0.8,cover: size q3,0.648814,6689
+fwdmax6 + encoded hold,0,1,0.8,cover: size q4,0.488922,6332
+fwdmax6 + encoded hold,0,1,0.8,throttle core-hours: all,806.362,
+fwdmax6 + encoded hold,0,1,0.8,throttle core-hours: after spike,82.8756,
+fwdmax6 + encoded hold,0,1,0.8,throttle core-hours: run-up,653.038,
+fwdmax6 + encoded hold,0,1,0.8,throttle core-hours: other,70.4475,
+fwdmax6 + encoded hold,0,3,0.8,cover: all,0.73977,27980
+fwdmax6 + encoded hold,0,3,0.8,cover: seasonal,0.92959,6749
+fwdmax6 + encoded hold,0,3,0.8,cover: follow-on,0.919522,1533
+fwdmax6 + encoded hold,0,3,0.8,cover: isolated,0.666749,13782
+fwdmax6 + encoded hold,0,3,0.8,cover: unknown,0.646757,5916
+fwdmax6 + encoded hold,0,3,0.8,"cover: follow-on, previous peak covers",0.989521,1336
+fwdmax6 + encoded hold,0,3,0.8,"cover: follow-on, previous peak short",0.444807,197
+fwdmax6 + encoded hold,0,3,0.8,cover: size q1,0.92516,7738
+fwdmax6 + encoded hold,0,3,0.8,cover: size q2,0.826556,7221
+fwdmax6 + encoded hold,0,3,0.8,cover: size q3,0.656287,6689
+fwdmax6 + encoded hold,0,3,0.8,cover: size q4,0.502435,6332
+fwdmax6 + encoded hold,0,3,0.8,throttle core-hours: all,918.352,
+fwdmax6 + encoded hold,0,3,0.8,throttle core-hours: after spike,211.276,
+fwdmax6 + encoded hold,0,3,0.8,throttle core-hours: run-up,628.749,
+fwdmax6 + encoded hold,0,3,0.8,throttle core-hours: other,78.3264,
+fwdmax6 + encoded hold,0,6,0.8,cover: all,0.726954,27980
+fwdmax6 + encoded hold,0,6,0.8,cover: seasonal,0.905563,6749
+fwdmax6 + encoded hold,0,6,0.8,cover: follow-on,0.833132,1533
+fwdmax6 + encoded hold,0,6,0.8,cover: isolated,0.670783,13782
+fwdmax6 + encoded hold,0,6,0.8,cover: unknown,0.626537,5916
+fwdmax6 + encoded hold,0,6,0.8,"cover: follow-on, previous peak covers",0.896334,1336
+fwdmax6 + encoded hold,0,6,0.8,"cover: follow-on, previous peak short",0.404513,197
+fwdmax6 + encoded hold,0,6,0.8,cover: size q1,0.906362,7738
+fwdmax6 + encoded hold,0,6,0.8,cover: size q2,0.797713,7221
+fwdmax6 + encoded hold,0,6,0.8,cover: size q3,0.658199,6689
+fwdmax6 + encoded hold,0,6,0.8,cover: size q4,0.499646,6332
+fwdmax6 + encoded hold,0,6,0.8,throttle core-hours: all,990.276,
+fwdmax6 + encoded hold,0,6,0.8,throttle core-hours: after spike,284.793,
+fwdmax6 + encoded hold,0,6,0.8,throttle core-hours: run-up,618.969,
+fwdmax6 + encoded hold,0,6,0.8,throttle core-hours: other,86.5141,
+fwdmax6 + encoded hold,0,,1,slack share: after spike,0.230667,
+fwdmax6 + encoded hold,0,,1,slack share: run-up,0.131295,
+fwdmax6 + encoded hold,0,,1,slack share: other,0.638038,
+fwdmax6 + encoded hold,0,1,1,cover: all,0.78977,27980
+fwdmax6 + encoded hold,0,1,1,cover: seasonal,0.943647,6749
+fwdmax6 + encoded hold,0,1,1,cover: follow-on,0.942198,1533
+fwdmax6 + encoded hold,0,1,1,cover: isolated,0.730771,13782
+fwdmax6 + encoded hold,0,1,1,cover: unknown,0.712171,5916
+fwdmax6 + encoded hold,0,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,0,1,1,"cover: follow-on, previous peak short",0.550199,197
+fwdmax6 + encoded hold,0,1,1,cover: size q1,0.943102,7738
+fwdmax6 + encoded hold,0,1,1,cover: size q2,0.861802,7221
+fwdmax6 + encoded hold,0,1,1,cover: size q3,0.727797,6689
+fwdmax6 + encoded hold,0,1,1,cover: size q4,0.585712,6332
+fwdmax6 + encoded hold,0,1,1,throttle core-hours: all,615.982,
+fwdmax6 + encoded hold,0,1,1,throttle core-hours: after spike,68.9552,
+fwdmax6 + encoded hold,0,1,1,throttle core-hours: run-up,512.905,
+fwdmax6 + encoded hold,0,1,1,throttle core-hours: other,34.1222,
+fwdmax6 + encoded hold,0,3,1,cover: all,0.800613,27980
+fwdmax6 + encoded hold,0,3,1,cover: seasonal,0.95987,6749
+fwdmax6 + encoded hold,0,3,1,cover: follow-on,0.933331,1533
+fwdmax6 + encoded hold,0,3,1,cover: isolated,0.741762,13782
+fwdmax6 + encoded hold,0,3,1,cover: unknown,0.72164,5916
+fwdmax6 + encoded hold,0,3,1,"cover: follow-on, previous peak covers",0.992718,1336
+fwdmax6 + encoded hold,0,3,1,"cover: follow-on, previous peak short",0.530582,197
+fwdmax6 + encoded hold,0,3,1,cover: size q1,0.951907,7738
+fwdmax6 + encoded hold,0,3,1,cover: size q2,0.878226,7221
+fwdmax6 + encoded hold,0,3,1,cover: size q3,0.735166,6689
+fwdmax6 + encoded hold,0,3,1,cover: size q4,0.596352,6332
+fwdmax6 + encoded hold,0,3,1,throttle core-hours: all,702.839,
+fwdmax6 + encoded hold,0,3,1,throttle core-hours: after spike,168.245,
+fwdmax6 + encoded hold,0,3,1,throttle core-hours: run-up,495.378,
+fwdmax6 + encoded hold,0,3,1,throttle core-hours: other,39.2157,
+fwdmax6 + encoded hold,0,6,1,cover: all,0.793051,27980
+fwdmax6 + encoded hold,0,6,1,cover: seasonal,0.946231,6749
+fwdmax6 + encoded hold,0,6,1,cover: follow-on,0.876202,1533
+fwdmax6 + encoded hold,0,6,1,cover: isolated,0.745606,13782
+fwdmax6 + encoded hold,0,6,1,cover: unknown,0.707287,5916
+fwdmax6 + encoded hold,0,6,1,"cover: follow-on, previous peak covers",0.927509,1336
+fwdmax6 + encoded hold,0,6,1,"cover: follow-on, previous peak short",0.528259,197
+fwdmax6 + encoded hold,0,6,1,cover: size q1,0.941875,7738
+fwdmax6 + encoded hold,0,6,1,cover: size q2,0.860398,7221
+fwdmax6 + encoded hold,0,6,1,cover: size q3,0.736775,6689
+fwdmax6 + encoded hold,0,6,1,cover: size q4,0.593828,6332
+fwdmax6 + encoded hold,0,6,1,throttle core-hours: all,750.554,
+fwdmax6 + encoded hold,0,6,1,throttle core-hours: after spike,215.945,
+fwdmax6 + encoded hold,0,6,1,throttle core-hours: run-up,489.575,
+fwdmax6 + encoded hold,0,6,1,throttle core-hours: other,45.0341,
+fwdmax6 + encoded hold,1,,0.6,slack share: after spike,0.344889,
+fwdmax6 + encoded hold,1,,0.6,slack share: run-up,0.104665,
+fwdmax6 + encoded hold,1,,0.6,slack share: other,0.550446,
+fwdmax6 + encoded hold,1,1,0.6,cover: all,0.5723,27980
+fwdmax6 + encoded hold,1,1,0.6,cover: seasonal,0.762428,6749
+fwdmax6 + encoded hold,1,1,0.6,cover: follow-on,0.914178,1533
+fwdmax6 + encoded hold,1,1,0.6,cover: isolated,0.480297,13782
+fwdmax6 + encoded hold,1,1,0.6,cover: unknown,0.481141,5916
+fwdmax6 + encoded hold,1,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,1,1,0.6,"cover: follow-on, previous peak short",0.332158,197
+fwdmax6 + encoded hold,1,1,0.6,cover: size q1,0.787722,7738
+fwdmax6 + encoded hold,1,1,0.6,cover: size q2,0.636332,7221
+fwdmax6 + encoded hold,1,1,0.6,cover: size q3,0.476728,6689
+fwdmax6 + encoded hold,1,1,0.6,cover: size q4,0.336981,6332
+fwdmax6 + encoded hold,1,1,0.6,throttle core-hours: all,1206.42,
+fwdmax6 + encoded hold,1,1,0.6,throttle core-hours: after spike,100.921,
+fwdmax6 + encoded hold,1,1,0.6,throttle core-hours: run-up,916.713,
+fwdmax6 + encoded hold,1,1,0.6,throttle core-hours: other,188.782,
+fwdmax6 + encoded hold,1,3,0.6,cover: all,0.6026,27980
+fwdmax6 + encoded hold,1,3,0.6,cover: seasonal,0.800024,6749
+fwdmax6 + encoded hold,1,3,0.6,cover: follow-on,0.898807,1533
+fwdmax6 + encoded hold,1,3,0.6,cover: isolated,0.510834,13782
+fwdmax6 + encoded hold,1,3,0.6,cover: unknown,0.514403,5916
+fwdmax6 + encoded hold,1,3,0.6,"cover: follow-on, previous peak covers",0.982784,1336
+fwdmax6 + encoded hold,1,3,0.6,"cover: follow-on, previous peak short",0.329292,197
+fwdmax6 + encoded hold,1,3,0.6,cover: size q1,0.815086,7738
+fwdmax6 + encoded hold,1,3,0.6,cover: size q2,0.673974,7221
+fwdmax6 + encoded hold,1,3,0.6,cover: size q3,0.504631,6689
+fwdmax6 + encoded hold,1,3,0.6,cover: size q4,0.365029,6332
+fwdmax6 + encoded hold,1,3,0.6,throttle core-hours: all,1385.4,
+fwdmax6 + encoded hold,1,3,0.6,throttle core-hours: after spike,296.59,
+fwdmax6 + encoded hold,1,3,0.6,throttle core-hours: run-up,874.375,
+fwdmax6 + encoded hold,1,3,0.6,throttle core-hours: other,214.435,
+fwdmax6 + encoded hold,1,6,0.6,cover: all,0.56734,27980
+fwdmax6 + encoded hold,1,6,0.6,cover: seasonal,0.727171,6749
+fwdmax6 + encoded hold,1,6,0.6,cover: follow-on,0.753685,1533
+fwdmax6 + encoded hold,1,6,0.6,cover: isolated,0.504441,13782
+fwdmax6 + encoded hold,1,6,0.6,cover: unknown,0.48325,5916
+fwdmax6 + encoded hold,1,6,0.6,"cover: follow-on, previous peak covers",0.828011,1336
+fwdmax6 + encoded hold,1,6,0.6,"cover: follow-on, previous peak short",0.249625,197
+fwdmax6 + encoded hold,1,6,0.6,cover: size q1,0.757056,7738
+fwdmax6 + encoded hold,1,6,0.6,cover: size q2,0.610298,7221
+fwdmax6 + encoded hold,1,6,0.6,cover: size q3,0.48847,6689
+fwdmax6 + encoded hold,1,6,0.6,cover: size q4,0.369827,6332
+fwdmax6 + encoded hold,1,6,0.6,throttle core-hours: all,1523.63,
+fwdmax6 + encoded hold,1,6,0.6,throttle core-hours: after spike,434.551,
+fwdmax6 + encoded hold,1,6,0.6,throttle core-hours: run-up,858.989,
+fwdmax6 + encoded hold,1,6,0.6,throttle core-hours: other,230.094,
+fwdmax6 + encoded hold,1,,0.8,slack share: after spike,0.269628,
+fwdmax6 + encoded hold,1,,0.8,slack share: run-up,0.12384,
+fwdmax6 + encoded hold,1,,0.8,slack share: other,0.606532,
+fwdmax6 + encoded hold,1,1,0.8,cover: all,0.716945,27980
+fwdmax6 + encoded hold,1,1,0.8,cover: seasonal,0.897436,6749
+fwdmax6 + encoded hold,1,1,0.8,cover: follow-on,0.928772,1533
+fwdmax6 + encoded hold,1,1,0.8,cover: isolated,0.639637,13782
+fwdmax6 + encoded hold,1,1,0.8,cover: unknown,0.636247,5916
+fwdmax6 + encoded hold,1,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,1,1,0.8,"cover: follow-on, previous peak short",0.445727,197
+fwdmax6 + encoded hold,1,1,0.8,cover: size q1,0.896046,7738
+fwdmax6 + encoded hold,1,1,0.8,cover: size q2,0.790473,7221
+fwdmax6 + encoded hold,1,1,0.8,cover: size q3,0.6495,6689
+fwdmax6 + encoded hold,1,1,0.8,cover: size q4,0.485472,6332
+fwdmax6 + encoded hold,1,1,0.8,throttle core-hours: all,799.919,
+fwdmax6 + encoded hold,1,1,0.8,throttle core-hours: after spike,83.1007,
+fwdmax6 + encoded hold,1,1,0.8,throttle core-hours: run-up,654.065,
+fwdmax6 + encoded hold,1,1,0.8,throttle core-hours: other,62.7535,
+fwdmax6 + encoded hold,1,3,0.8,cover: all,0.733146,27980
+fwdmax6 + encoded hold,1,3,0.8,cover: seasonal,0.924739,6749
+fwdmax6 + encoded hold,1,3,0.8,cover: follow-on,0.919038,1533
+fwdmax6 + encoded hold,1,3,0.8,cover: isolated,0.656213,13782
+fwdmax6 + encoded hold,1,3,0.8,cover: unknown,0.645628,5916
+fwdmax6 + encoded hold,1,3,0.8,"cover: follow-on, previous peak covers",0.990471,1336
+fwdmax6 + encoded hold,1,3,0.8,"cover: follow-on, previous peak short",0.434601,197
+fwdmax6 + encoded hold,1,3,0.8,cover: size q1,0.910535,7738
+fwdmax6 + encoded hold,1,3,0.8,cover: size q2,0.812097,7221
+fwdmax6 + encoded hold,1,3,0.8,cover: size q3,0.657204,6689
+fwdmax6 + encoded hold,1,3,0.8,cover: size q4,0.506555,6332
+fwdmax6 + encoded hold,1,3,0.8,throttle core-hours: all,912.05,
+fwdmax6 + encoded hold,1,3,0.8,throttle core-hours: after spike,214.299,
+fwdmax6 + encoded hold,1,3,0.8,throttle core-hours: run-up,626.985,
+fwdmax6 + encoded hold,1,3,0.8,throttle core-hours: other,70.7659,
+fwdmax6 + encoded hold,1,6,0.8,cover: all,0.714676,27980
+fwdmax6 + encoded hold,1,6,0.8,cover: seasonal,0.889094,6749
+fwdmax6 + encoded hold,1,6,0.8,cover: follow-on,0.833814,1533
+fwdmax6 + encoded hold,1,6,0.8,cover: isolated,0.653621,13782
+fwdmax6 + encoded hold,1,6,0.8,cover: unknown,0.627061,5916
+fwdmax6 + encoded hold,1,6,0.8,"cover: follow-on, previous peak covers",0.894724,1336
+fwdmax6 + encoded hold,1,6,0.8,"cover: follow-on, previous peak short",0.42074,197
+fwdmax6 + encoded hold,1,6,0.8,cover: size q1,0.883894,7738
+fwdmax6 + encoded hold,1,6,0.8,cover: size q2,0.781105,7221
+fwdmax6 + encoded hold,1,6,0.8,cover: size q3,0.648649,6689
+fwdmax6 + encoded hold,1,6,0.8,cover: size q4,0.501878,6332
+fwdmax6 + encoded hold,1,6,0.8,throttle core-hours: all,987.74,
+fwdmax6 + encoded hold,1,6,0.8,throttle core-hours: after spike,288.377,
+fwdmax6 + encoded hold,1,6,0.8,throttle core-hours: run-up,622.05,
+fwdmax6 + encoded hold,1,6,0.8,throttle core-hours: other,77.314,
+fwdmax6 + encoded hold,1,,1,slack share: after spike,0.228748,
+fwdmax6 + encoded hold,1,,1,slack share: run-up,0.126753,
+fwdmax6 + encoded hold,1,,1,slack share: other,0.644499,
+fwdmax6 + encoded hold,1,1,1,cover: all,0.789281,27980
+fwdmax6 + encoded hold,1,1,1,cover: seasonal,0.942241,6749
+fwdmax6 + encoded hold,1,1,1,cover: follow-on,0.939646,1533
+fwdmax6 + encoded hold,1,1,1,cover: isolated,0.726919,13782
+fwdmax6 + encoded hold,1,1,1,cover: unknown,0.721096,5916
+fwdmax6 + encoded hold,1,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,1,1,1,"cover: follow-on, previous peak short",0.530339,197
+fwdmax6 + encoded hold,1,1,1,cover: size q1,0.9407,7738
+fwdmax6 + encoded hold,1,1,1,cover: size q2,0.857549,7221
+fwdmax6 + encoded hold,1,1,1,cover: size q3,0.735882,6689
+fwdmax6 + encoded hold,1,1,1,cover: size q4,0.582795,6332
+fwdmax6 + encoded hold,1,1,1,throttle core-hours: all,604.386,
+fwdmax6 + encoded hold,1,1,1,throttle core-hours: after spike,70.3001,
+fwdmax6 + encoded hold,1,1,1,throttle core-hours: run-up,505.594,
+fwdmax6 + encoded hold,1,1,1,throttle core-hours: other,28.4919,
+fwdmax6 + encoded hold,1,3,1,cover: all,0.798591,27980
+fwdmax6 + encoded hold,1,3,1,cover: seasonal,0.959822,6749
+fwdmax6 + encoded hold,1,3,1,cover: follow-on,0.93247,1533
+fwdmax6 + encoded hold,1,3,1,cover: isolated,0.736091,13782
+fwdmax6 + encoded hold,1,3,1,cover: unknown,0.725568,5916
+fwdmax6 + encoded hold,1,3,1,"cover: follow-on, previous peak covers",0.992546,1336
+fwdmax6 + encoded hold,1,3,1,"cover: follow-on, previous peak short",0.525052,197
+fwdmax6 + encoded hold,1,3,1,cover: size q1,0.949512,7738
+fwdmax6 + encoded hold,1,3,1,cover: size q2,0.868268,7221
+fwdmax6 + encoded hold,1,3,1,cover: size q3,0.740456,6689
+fwdmax6 + encoded hold,1,3,1,cover: size q4,0.596111,6332
+fwdmax6 + encoded hold,1,3,1,throttle core-hours: all,689.036,
+fwdmax6 + encoded hold,1,3,1,throttle core-hours: after spike,169.663,
+fwdmax6 + encoded hold,1,3,1,throttle core-hours: run-up,486.121,
+fwdmax6 + encoded hold,1,3,1,throttle core-hours: other,33.2522,
+fwdmax6 + encoded hold,1,6,1,cover: all,0.789043,27980
+fwdmax6 + encoded hold,1,6,1,cover: seasonal,0.943251,6749
+fwdmax6 + encoded hold,1,6,1,cover: follow-on,0.877456,1533
+fwdmax6 + encoded hold,1,6,1,cover: isolated,0.737181,13782
+fwdmax6 + encoded hold,1,6,1,cover: unknown,0.711031,5916
+fwdmax6 + encoded hold,1,6,1,"cover: follow-on, previous peak covers",0.930153,1336
+fwdmax6 + encoded hold,1,6,1,"cover: follow-on, previous peak short",0.520081,197
+fwdmax6 + encoded hold,1,6,1,cover: size q1,0.937921,7738
+fwdmax6 + encoded hold,1,6,1,cover: size q2,0.854661,7221
+fwdmax6 + encoded hold,1,6,1,cover: size q3,0.732751,6689
+fwdmax6 + encoded hold,1,6,1,cover: size q4,0.591742,6332
+fwdmax6 + encoded hold,1,6,1,throttle core-hours: all,736.635,
+fwdmax6 + encoded hold,1,6,1,throttle core-hours: after spike,215.502,
+fwdmax6 + encoded hold,1,6,1,throttle core-hours: run-up,483.538,
+fwdmax6 + encoded hold,1,6,1,throttle core-hours: other,37.5958,
+fwdmax6 + encoded hold,2,,0.6,slack share: after spike,0.344877,
+fwdmax6 + encoded hold,2,,0.6,slack share: run-up,0.107177,
+fwdmax6 + encoded hold,2,,0.6,slack share: other,0.547946,
+fwdmax6 + encoded hold,2,1,0.6,cover: all,0.571034,27980
+fwdmax6 + encoded hold,2,1,0.6,cover: seasonal,0.763227,6749
+fwdmax6 + encoded hold,2,1,0.6,cover: follow-on,0.912499,1533
+fwdmax6 + encoded hold,2,1,0.6,cover: isolated,0.476591,13782
+fwdmax6 + encoded hold,2,1,0.6,cover: unknown,0.48331,5916
+fwdmax6 + encoded hold,2,1,0.6,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,2,1,0.6,"cover: follow-on, previous peak short",0.319095,197
+fwdmax6 + encoded hold,2,1,0.6,cover: size q1,0.782892,7738
+fwdmax6 + encoded hold,2,1,0.6,cover: size q2,0.615458,7221
+fwdmax6 + encoded hold,2,1,0.6,cover: size q3,0.497883,6689
+fwdmax6 + encoded hold,2,1,0.6,cover: size q4,0.338745,6332
+fwdmax6 + encoded hold,2,1,0.6,throttle core-hours: all,1206.06,
+fwdmax6 + encoded hold,2,1,0.6,throttle core-hours: after spike,100.424,
+fwdmax6 + encoded hold,2,1,0.6,throttle core-hours: run-up,912.568,
+fwdmax6 + encoded hold,2,1,0.6,throttle core-hours: other,193.073,
+fwdmax6 + encoded hold,2,3,0.6,cover: all,0.604894,27980
+fwdmax6 + encoded hold,2,3,0.6,cover: seasonal,0.809866,6749
+fwdmax6 + encoded hold,2,3,0.6,cover: follow-on,0.898801,1533
+fwdmax6 + encoded hold,2,3,0.6,cover: isolated,0.512129,13782
+fwdmax6 + encoded hold,2,3,0.6,cover: unknown,0.51101,5916
+fwdmax6 + encoded hold,2,3,0.6,"cover: follow-on, previous peak covers",0.98161,1336
+fwdmax6 + encoded hold,2,3,0.6,"cover: follow-on, previous peak short",0.337212,197
+fwdmax6 + encoded hold,2,3,0.6,cover: size q1,0.817463,7738
+fwdmax6 + encoded hold,2,3,0.6,cover: size q2,0.657937,7221
+fwdmax6 + encoded hold,2,3,0.6,cover: size q3,0.529093,6689
+fwdmax6 + encoded hold,2,3,0.6,cover: size q4,0.364711,6332
+fwdmax6 + encoded hold,2,3,0.6,throttle core-hours: all,1378.67,
+fwdmax6 + encoded hold,2,3,0.6,throttle core-hours: after spike,292.361,
+fwdmax6 + encoded hold,2,3,0.6,throttle core-hours: run-up,870.052,
+fwdmax6 + encoded hold,2,3,0.6,throttle core-hours: other,216.257,
+fwdmax6 + encoded hold,2,6,0.6,cover: all,0.575247,27980
+fwdmax6 + encoded hold,2,6,0.6,cover: seasonal,0.756644,6749
+fwdmax6 + encoded hold,2,6,0.6,cover: follow-on,0.756898,1533
+fwdmax6 + encoded hold,2,6,0.6,cover: isolated,0.500893,13782
+fwdmax6 + encoded hold,2,6,0.6,cover: unknown,0.494455,5916
+fwdmax6 + encoded hold,2,6,0.6,"cover: follow-on, previous peak covers",0.832037,1336
+fwdmax6 + encoded hold,2,6,0.6,"cover: follow-on, previous peak short",0.247327,197
+fwdmax6 + encoded hold,2,6,0.6,cover: size q1,0.767891,7738
+fwdmax6 + encoded hold,2,6,0.6,cover: size q2,0.604413,7221
+fwdmax6 + encoded hold,2,6,0.6,cover: size q3,0.513189,6689
+fwdmax6 + encoded hold,2,6,0.6,cover: size q4,0.372124,6332
+fwdmax6 + encoded hold,2,6,0.6,throttle core-hours: all,1508.32,
+fwdmax6 + encoded hold,2,6,0.6,throttle core-hours: after spike,429.869,
+fwdmax6 + encoded hold,2,6,0.6,throttle core-hours: run-up,847.9,
+fwdmax6 + encoded hold,2,6,0.6,throttle core-hours: other,230.555,
+fwdmax6 + encoded hold,2,,0.8,slack share: after spike,0.270098,
+fwdmax6 + encoded hold,2,,0.8,slack share: run-up,0.1288,
+fwdmax6 + encoded hold,2,,0.8,slack share: other,0.601102,
+fwdmax6 + encoded hold,2,1,0.8,cover: all,0.725357,27980
+fwdmax6 + encoded hold,2,1,0.8,cover: seasonal,0.905532,6749
+fwdmax6 + encoded hold,2,1,0.8,cover: follow-on,0.929006,1533
+fwdmax6 + encoded hold,2,1,0.8,cover: isolated,0.650894,13782
+fwdmax6 + encoded hold,2,1,0.8,cover: unknown,0.640513,5916
+fwdmax6 + encoded hold,2,1,0.8,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,2,1,0.8,"cover: follow-on, previous peak short",0.44754,197
+fwdmax6 + encoded hold,2,1,0.8,cover: size q1,0.901285,7738
+fwdmax6 + encoded hold,2,1,0.8,cover: size q2,0.792801,7221
+fwdmax6 + encoded hold,2,1,0.8,cover: size q3,0.666078,6689
+fwdmax6 + encoded hold,2,1,0.8,cover: size q4,0.496074,6332
+fwdmax6 + encoded hold,2,1,0.8,throttle core-hours: all,789.829,
+fwdmax6 + encoded hold,2,1,0.8,throttle core-hours: after spike,81.2887,
+fwdmax6 + encoded hold,2,1,0.8,throttle core-hours: run-up,643.503,
+fwdmax6 + encoded hold,2,1,0.8,throttle core-hours: other,65.037,
+fwdmax6 + encoded hold,2,3,0.8,cover: all,0.741115,27980
+fwdmax6 + encoded hold,2,3,0.8,cover: seasonal,0.926554,6749
+fwdmax6 + encoded hold,2,3,0.8,cover: follow-on,0.921436,1533
+fwdmax6 + encoded hold,2,3,0.8,cover: isolated,0.668545,13782
+fwdmax6 + encoded hold,2,3,0.8,cover: unknown,0.651899,5916
+fwdmax6 + encoded hold,2,3,0.8,"cover: follow-on, previous peak covers",0.990566,1336
+fwdmax6 + encoded hold,2,3,0.8,"cover: follow-on, previous peak short",0.452616,197
+fwdmax6 + encoded hold,2,3,0.8,cover: size q1,0.914543,7738
+fwdmax6 + encoded hold,2,3,0.8,cover: size q2,0.816004,7221
+fwdmax6 + encoded hold,2,3,0.8,cover: size q3,0.677761,6689
+fwdmax6 + encoded hold,2,3,0.8,cover: size q4,0.510699,6332
+fwdmax6 + encoded hold,2,3,0.8,throttle core-hours: all,898.226,
+fwdmax6 + encoded hold,2,3,0.8,throttle core-hours: after spike,209.362,
+fwdmax6 + encoded hold,2,3,0.8,throttle core-hours: run-up,616.53,
+fwdmax6 + encoded hold,2,3,0.8,throttle core-hours: other,72.3345,
+fwdmax6 + encoded hold,2,6,0.8,cover: all,0.726032,27980
+fwdmax6 + encoded hold,2,6,0.8,cover: seasonal,0.911147,6749
+fwdmax6 + encoded hold,2,6,0.8,cover: follow-on,0.835804,1533
+fwdmax6 + encoded hold,2,6,0.8,cover: isolated,0.661169,13782
+fwdmax6 + encoded hold,2,6,0.8,cover: unknown,0.637514,5916
+fwdmax6 + encoded hold,2,6,0.8,"cover: follow-on, previous peak covers",0.899652,1336
+fwdmax6 + encoded hold,2,6,0.8,"cover: follow-on, previous peak short",0.402805,197
+fwdmax6 + encoded hold,2,6,0.8,cover: size q1,0.890812,7738
+fwdmax6 + encoded hold,2,6,0.8,cover: size q2,0.784532,7221
+fwdmax6 + encoded hold,2,6,0.8,cover: size q3,0.67143,6689
+fwdmax6 + encoded hold,2,6,0.8,cover: size q4,0.515633,6332
+fwdmax6 + encoded hold,2,6,0.8,throttle core-hours: all,968.321,
+fwdmax6 + encoded hold,2,6,0.8,throttle core-hours: after spike,278.374,
+fwdmax6 + encoded hold,2,6,0.8,throttle core-hours: run-up,609.126,
+fwdmax6 + encoded hold,2,6,0.8,throttle core-hours: other,80.8203,
+fwdmax6 + encoded hold,2,,1,slack share: after spike,0.230612,
+fwdmax6 + encoded hold,2,,1,slack share: run-up,0.13233,
+fwdmax6 + encoded hold,2,,1,slack share: other,0.637058,
+fwdmax6 + encoded hold,2,1,1,cover: all,0.797211,27980
+fwdmax6 + encoded hold,2,1,1,cover: seasonal,0.945967,6749
+fwdmax6 + encoded hold,2,1,1,cover: follow-on,0.94067,1533
+fwdmax6 + encoded hold,2,1,1,cover: isolated,0.736431,13782
+fwdmax6 + encoded hold,2,1,1,cover: unknown,0.731929,5916
+fwdmax6 + encoded hold,2,1,1,"cover: follow-on, previous peak covers",1,1336
+fwdmax6 + encoded hold,2,1,1,"cover: follow-on, previous peak short",0.53831,197
+fwdmax6 + encoded hold,2,1,1,cover: size q1,0.940257,7738
+fwdmax6 + encoded hold,2,1,1,cover: size q2,0.860008,7221
+fwdmax6 + encoded hold,2,1,1,cover: size q3,0.756184,6689
+fwdmax6 + encoded hold,2,1,1,cover: size q4,0.59413,6332
+fwdmax6 + encoded hold,2,1,1,throttle core-hours: all,593.452,
+fwdmax6 + encoded hold,2,1,1,throttle core-hours: after spike,67.5631,
+fwdmax6 + encoded hold,2,1,1,throttle core-hours: run-up,494.952,
+fwdmax6 + encoded hold,2,1,1,throttle core-hours: other,30.9365,
+fwdmax6 + encoded hold,2,3,1,cover: all,0.80583,27980
+fwdmax6 + encoded hold,2,3,1,cover: seasonal,0.957658,6749
+fwdmax6 + encoded hold,2,3,1,cover: follow-on,0.939915,1533
+fwdmax6 + encoded hold,2,3,1,cover: isolated,0.746166,13782
+fwdmax6 + encoded hold,2,3,1,cover: unknown,0.736871,5916
+fwdmax6 + encoded hold,2,3,1,"cover: follow-on, previous peak covers",0.992751,1336
+fwdmax6 + encoded hold,2,3,1,"cover: follow-on, previous peak short",0.581598,197
+fwdmax6 + encoded hold,2,3,1,cover: size q1,0.945737,7738
+fwdmax6 + encoded hold,2,3,1,cover: size q2,0.870697,7221
+fwdmax6 + encoded hold,2,3,1,cover: size q3,0.758776,6689
+fwdmax6 + encoded hold,2,3,1,cover: size q4,0.610589,6332
+fwdmax6 + encoded hold,2,3,1,throttle core-hours: all,677.275,
+fwdmax6 + encoded hold,2,3,1,throttle core-hours: after spike,163.084,
+fwdmax6 + encoded hold,2,3,1,throttle core-hours: run-up,478.246,
+fwdmax6 + encoded hold,2,3,1,throttle core-hours: other,35.9454,
+fwdmax6 + encoded hold,2,6,1,cover: all,0.794778,27980
+fwdmax6 + encoded hold,2,6,1,cover: seasonal,0.949378,6749
+fwdmax6 + encoded hold,2,6,1,cover: follow-on,0.879758,1533
+fwdmax6 + encoded hold,2,6,1,cover: isolated,0.740918,13782
+fwdmax6 + encoded hold,2,6,1,cover: unknown,0.721862,5916
+fwdmax6 + encoded hold,2,6,1,"cover: follow-on, previous peak covers",0.932629,1336
+fwdmax6 + encoded hold,2,6,1,"cover: follow-on, previous peak short",0.521203,197
+fwdmax6 + encoded hold,2,6,1,cover: size q1,0.932706,7738
+fwdmax6 + encoded hold,2,6,1,cover: size q2,0.851501,7221
+fwdmax6 + encoded hold,2,6,1,cover: size q3,0.752017,6689
+fwdmax6 + encoded hold,2,6,1,cover: size q4,0.606707,6332
+fwdmax6 + encoded hold,2,6,1,throttle core-hours: all,723.009,
+fwdmax6 + encoded hold,2,6,1,throttle core-hours: after spike,208.971,
+fwdmax6 + encoded hold,2,6,1,throttle core-hours: run-up,474.317,
+fwdmax6 + encoded hold,2,6,1,throttle core-hours: other,39.7207,

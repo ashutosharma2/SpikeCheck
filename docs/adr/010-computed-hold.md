@@ -107,3 +107,34 @@ What it costs:
 - Validation covers one seed. The trained `fwdmax` models for seeds 1 and 2 weren't kept, only their test predictions, so the dry run can't show seed spread. The test run uses all three.
 - `scripts/val_probs.py` regenerates the validation predictions. To confirm a saved model is the right one, it compares its output with the saved test predictions on three test traces. That compares probabilities only and scores nothing.
 - The first-version figures above came from exploration scripts outside the repo, and they're recorded here as history. The Result table regenerates with `scripts/score_hold.py val`.
+
+## Test result
+
+Added 2026-11-03 after the single test run at commit `189569d`. Nothing above changed. The check against the published tables passed before any computed hold was scored. Results are in `results/computed_hold/`.
+
+Test set, three seeds, slack 0.8, computed minus learned:
+
+| Check | 5 min | 15 min |
+|---|---|---|
+| Overall coverage, lower bound above 0 | +0.0112 [+0.0076, +0.0146], passes | +0.0082 [+0.0057, +0.0108], passes |
+| Follow-on coverage, lower bound above -0.01 | -0.0044 [-0.0095, +0.0003], passes | -0.0076 [-0.0140, -0.0011], fails |
+| Throttled core-hours, upper bound below 0 | -45.4 [-58.4, -33.2], -5.4%, reduction | -55.1 [-71.9, -41.5], -5.7%, reduction |
+
+The share of slack after spikes is 27.0% for the computed hold and 29.2% for the learned hold, a difference of -0.022 [-0.024, -0.020]. All three seeds agree in sign on every row of the table.
+
+By the rule above, the complete hypothesis is not supported and the conclusion is delay-specific. Both claims hold at 5 minutes. At 15 minutes I won't claim the computed hold is an acceptable replacement for the learned hold. Both parts of the prediction are supported.
+
+Three limits on that reading:
+
+- The failed check means a loss above 1 point can't be ruled out. The estimate of -0.76 points is itself inside the margin, about 12 of 1,533 follow-on spikes.
+- Validation split the other way, with 5 minutes failing and 15 minutes passing, so this isn't a stable difference between the delays. All four results show a small follow-on loss close to the margin.
+- These bounds cover trace sampling only, on one trace and one time window.
+
+Reported, not judged:
+
+- At 15 minutes, no hold, computed and learned score 0.757, 0.733 and 0.725 overall, 0.841, 0.917 and 0.925 on follow-on spikes, and 860, 906 and 961 throttled core-hours.
+- The follow-on loss at 15 minutes sits almost entirely on the 197 spikes where the previous peak falls short: -0.0568 [-0.1001, -0.0125], against -0.0003 [-0.0034, +0.0025] where it covers. At 5 minutes the short group is -0.0344 [-0.0724, +0.0027].
+- The exact hold scores +0.0172 and +0.0133 overall but fails follow-on at both delays, at -0.0159 [-0.0240, -0.0082] and -0.0179 [-0.0265, -0.0097].
+- Slack 1.0 gives the same pattern as slack 0.8. At slack 0.6 the overall gain isn't shown at either delay.
+- At 30 minutes, `fwdmax6` with the encoded hold beats the paper's target by 0.167 overall and 0.020 on follow-on, with 20.8% less throttling, mostly from the longer look-ahead. Against plain `fwdmax6` the hold costs 0.022 overall and gains 0.0125 on follow-on.
+- The size pattern seen on validation didn't replicate. At 15 minutes the four size groups are -0.0007, +0.0155, +0.0154 and +0.0032, smallest to largest.
