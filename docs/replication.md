@@ -2,6 +2,36 @@
 
 Run on 2026-10-22 as a follow-up to the [critical review](review.md). It tests opportunities #2 and #3 and audit items D1 to D6 and C3 to C4. Every result was regenerated from the committed scripts on 2026-10-28 (see [Rebuild](#rebuild-every-result-regenerated-from-the-committed-scripts-28-october-2026)).
 
+## Scope: one part of the paper, and why
+
+I replicated Strategy 1 with the TempInc model on Alibaba. I didn't run the paper's Google data, its other five models or Strategy 2, so nothing here tests them.
+
+### Why this scope
+
+I had two main reasons:
+
+1. I wasn't setting out to perform a complete replication. My goal was an adversarial [review](review.md) of the paper: identify specific weaknesses in its claims and investigate whether its results held up under scrutiny.
+2. I wanted to start with the cheapest and most informative checks on Alibaba: reconstruct the setup, fix the metric issues, and run the rolling-max baseline and the quantile-readout check. I then followed the questions each result raised, rather than committing up front to every model and strategy.
+
+### Practical constraints
+
+Hardware, network and training constraints later influenced how far the investigation could go, but they weren't the original reasons for this scope. I didn't attempt a wider replication, so I can't say they would have prevented one.
+
+| Constraint | Detail |
+|---|---|
+| Hardware | One 8 GB M1 laptop with 18 GB of free disk, against a 29 GB trace |
+| Network | About 4 MB/s, so streaming the trace takes about 2.3 hours |
+| Training time | About 30 minutes per model and up to 2.5 GB of memory, with runs going one at a time. Six models on two datasets is 12 model and dataset pairs before any repeat seeds or Strategy 2, and this work covers one pair |
+| Missing author materials | The authors publish neither their preprocessing nor trained models, so each dataset needs its own reconstruction. The paper's Google set also goes through a PCA step with no public script |
+
+### What I don't claim as a decision
+
+- Google: I didn't deliberately reject it. I started on Alibaba, and the follow-up questions never sent me back. I checked its size afterwards: about 2.4 TiB compressed, offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), so adding it would need a different setup.
+- TempInc with Strategy 1: this is the pair behind the paper's headline result, 0.27 to 0.64 on Alibaba, and it's what the first run used. I don't claim it as an original research decision.
+- Strategy 2: it's unfinished and in the [backlog](../BACKLOG.md), not formally rejected. The review flagged its evidence as contradicting itself (item C4), but that isn't a test of it.
+
+None of this says whether the paper's other results are right.
+
 ## What was run
 
 | Step | What | Notes |
@@ -81,7 +111,7 @@ Each model's softmax was read at 15 quantiles (q from 0.1 to 0.995), giving one 
 
 The files are in [`results/horizon/`](../results/horizon/): `matched_slack_summary.csv`, `paired_vs_proposed.json`, `all_runs.csv` and the `seeds_*.png` plots.
 
-### Result: the horizon explains Strategy 1's advantage, and the hold makes it worse
+### Result: the horizon explains Strategy 1's advantage, and overall the hold makes it worse
 
 Mean over 3 seeds (± sd), at matched over-provisioning:
 
@@ -107,7 +137,7 @@ Differences paired by seed, fwdmax minus proposed. All three seeds have the same
 
 What this shows:
 1. The look-ahead is what helps. At equal over-provisioning, the look-ahead-only target covers more spikes than Strategy 1 at a 15-minute delay, at a 30-minute delay and with no delay, and it throttles 6 to 18% less CPU. That holds in all three seeds at every budget tested.
-2. The hold costs more than it gives. Keeping the allocation high after a spike spends over-provisioning on time that has already passed. The gap is widest when the budget is tight: +8 points of coverage and 18% less throttling at slack 0.6.
+2. Overall, the hold costs more than it gives. Keeping the allocation high after a spike spends over-provisioning on time that has already passed. The gap is widest when the budget is tight: +8 points of coverage and 18% less throttling at slack 0.6. The hold still leads on one group, follow-on spikes at 5 and 15 minutes (see [spike types](#follow-up-which-spikes-does-each-method-gain-on-3-seeds-run-28-october-2026)).
 3. Looking ahead costs nothing when there's no delay. With no actuation delay fwdmax matches or slightly beats cbase (0.674 against 0.658 at slack 0.6, 0.751 against 0.731 at 0.8). At a 15-minute delay it's far better, with 0.19 to 0.22 more coverage at slack 0.6 to 0.8.
 4. The single-seed result for cbase against proposed holds across seeds only in part. At a 15-minute delay cbase loses in every seed (0.12 to 0.16 less coverage at slack 0.6 to 1.2). With no delay it wins only when the budget is tight: 0.09 more coverage at slack 0.6 and 0.02 at 0.8, in every seed. From slack 1.0 up the seeds disagree and the mean difference is within 0.01.
 5. The look-ahead has to match the delay. At a 30-minute delay, every model trained on a 25-minute look-ahead loses most of its edge (fwdmax beats proposed by only 0.02 to 0.05), and coverage at slack 0.8 stays below 0.6 for all of them. A target whose look-ahead matches the delay was tested next, and it brings the gain back (see the 30-minute follow-up below).
@@ -126,7 +156,7 @@ Run notes:
 
 ## Follow-up: a look-ahead that matches a 30-minute delay (3 seeds, run 23 October 2026)
 
-With a 30-minute delay, the allocation in force during a spike was decided 6 steps earlier. The 25-minute target (fwdmax) only reaches 5 steps ahead, so it misses every such spike by one step. A new target, fwdmax6 = max(x[t … t+5]), reaches 6 steps ahead. I trained it with seeds 0, 1 and 2 on the same data, inputs, model and settings, and evaluated it together with the nine earlier models, at matched over-provisioning.
+With a 30-minute delay, the allocation in force at spike step k is the forecast for step k−5. The window of the 25-minute target (fwdmax) for that forecast runs from k−5 to k−1, so it stops one step short of the spike. Nearby values can still reach 80% of the spike, which is why fwdmax still covers 0.59 of spikes at slack 0.8. A new target, fwdmax6 = max(x[t … t+5]), reaches the spike itself. I trained it with seeds 0, 1 and 2 on the same data, inputs, model and settings, and evaluated it together with the nine earlier models, at matched over-provisioning.
 
 The files are in [`results/horizon30/`](../results/horizon30/).
 
@@ -157,7 +187,7 @@ Differences paired by seed. All three seeds have the same sign unless the range 
 What this shows:
 1. The gain comes back. At a 30-minute delay and slack 0.8, fwdmax6 covers 0.74 of spikes, close to what the 25-minute target covers at a 15-minute delay (0.76). Across slack 0.6 to 1.0 it throttles 15 to 20% less CPU than fwdmax at that delay, and 24 to 28% less than Strategy 1.
 2. It costs nothing at shorter delays. I expected the longer look-ahead to waste some over-provisioning when the delay is short, but it doesn't measurably: at 5 and 15 minutes its coverage differs from fwdmax's by at most 0.006, and those seed ranges cross zero.
-3. So the rule holds: the look-ahead has to be at least as long as the actuation delay, and none of the delays tested needs the hold after a spike.
+3. So the rule holds: the look-ahead has to be at least as long as the actuation delay. Overall coverage doesn't need the hold after a spike at any delay tested, though the hold still leads on follow-on spikes at 5 and 15 minutes (see [spike types](#follow-up-which-spikes-does-each-method-gain-on-3-seeds-run-28-october-2026)).
 4. The paper's recall window points the wrong way again. It scores fwdmax6 slightly below fwdmax (0.731 against 0.745 at slack 0.8); only delay-aware coverage and throttling show the gain.
 
 Training: 16, 16 and 20 epochs, with best validation loss between 1.156 and 1.174. Seeds 0 and 1 stopped early; seed 2 was still improving when it reached the 60-minute cap.
@@ -183,13 +213,97 @@ What changed:
 
 The earlier numbers are in the Git history, up to commit b5c2e2a.
 
+## Follow-up: which spikes does each method gain on? (3 seeds, run 28 October 2026)
+
+An overall coverage score can't say where a method gains. So I split the test spikes into four exclusive types, with the definitions fixed before any method was scored per type ([ADR-009](adr/009-spike-types.md)):
+
+| Label | Rule, checked in this order | Spikes |
+|---|---|---|
+| Unknown | Before step 1,051, so a full day of detected history isn't there | 5,916 (21.1%) |
+| Seasonal | Another spike starts within ±1 step of 288 steps (24 hours) earlier | 6,749 (24.1%) |
+| Follow-on | The previous spike started at most 6 steps (30 minutes) earlier | 1,533 (5.5%) |
+| Isolated | None of the above | 13,782 (49.3%) |
+
+Over-provisioning is spent across the whole trace, so it's matched overall, and each forecaster's coverage at that budget is then split by type. The saved test predictions were enough, so nothing was retrained. Rolling max and seasonal max are read along a frontier chosen per delay on the validation traces and then frozen, so no baseline setting was picked with test scores.
+
+Differences show the three-seed mean and a 95% paired bootstrap over whole test traces (500 resamples). The interval measures variation across sampled test traces with the models held fixed, and the seeds show training randomness. Neither shows that a result carries over to other clusters or later days. I fixed the labels first but didn't write down predictions, so this section describes the results and doesn't test a prediction.
+
+The files are in [`results/spike_types/`](../results/spike_types/). Summed over types, coverage matches `results/horizon30/` and `results/replication/` (largest difference 2.2e-15).
+
+### Result: the look-ahead leads on seasonal and isolated spikes, the hold leads on follow-on spikes
+
+Spikes covered at slack 0.8. Learned models are the mean of 3 seeds, and baselines are one run:
+
+| Delay | Type | cbase | proposed | fwdmax | fwdmax6 | rolling max | seasonal max |
+|---|---|---|---|---|---|---|---|
+| 5 min | Seasonal | 0.927 | 0.893 | 0.926 | 0.928 | 0.318 | 0.899 |
+| 5 min | Follow-on | 0.851 | 0.933 | 0.851 | 0.851 | 0.901 | 0.900 |
+| 5 min | Isolated | 0.668 | 0.632 | 0.691 | 0.695 | 0.417 | 0.505 |
+| 15 min | Seasonal | 0.543 | 0.914 | 0.944 | 0.946 | 0.324 | 0.899 |
+| 15 min | Follow-on | 0.816 | 0.925 | 0.841 | 0.842 | 0.888 | 0.884 |
+| 15 min | Isolated | 0.597 | 0.648 | 0.693 | 0.699 | 0.425 | 0.514 |
+| 30 min | Seasonal | 0.498 | 0.517 | 0.568 | 0.926 | 0.328 | 0.897 |
+| 30 min | Follow-on | 0.818 | 0.814 | 0.810 | 0.822 | 0.746 | 0.780 |
+| 30 min | Isolated | 0.567 | 0.575 | 0.607 | 0.687 | 0.448 | 0.506 |
+
+fwdmax minus proposed at slack 0.8, with 95% trace intervals:
+
+| Type | 5 min | 15 min | 30 min |
+|---|---|---|---|
+| Seasonal | +0.033 [+0.025, +0.044] | +0.030 [+0.023, +0.040] | +0.051 [+0.042, +0.059] |
+| Follow-on | −0.081 [−0.103, −0.062] | −0.084 [−0.107, −0.064] | −0.004 [−0.021, +0.011] |
+| Isolated | +0.059 [+0.050, +0.070] | +0.045 [+0.037, +0.054] | +0.033 [+0.025, +0.041] |
+
+What this shows:
+1. The hold leads on follow-on spikes at 5 and 15 minutes. The paper's target covers about 0.08 more of them than fwdmax, in all three seeds. At 30 minutes the lead is gone, and the seed range crosses zero.
+2. The look-ahead leads on the other two types. fwdmax beats the paper's target on seasonal and isolated spikes at all three delays, in all three seeds.
+3. At a 30-minute delay, fwdmax6's gain over fwdmax is largest on seasonal spikes: +0.358 [+0.335, +0.385], against +0.079 [+0.072, +0.087] on isolated and +0.011 [+0.003, +0.019] on follow-on. A daily baseline already does well there. The paper's target trails seasonal max by 0.380 [0.351, 0.413] on seasonal spikes, and fwdmax6 beats it by 0.029 [0.018, 0.038].
+4. At 15 minutes, isolated spikes are fwdmax's lowest type (0.693), but the learned models still cover far more of them than the baselines: fwdmax minus seasonal max is +0.179 [+0.165, +0.192]. That doesn't show the models foresee these spikes, because at slack 0.8 part of the coverage is headroom.
+5. The 543 seasonal spikes that also came within 6 steps of an earlier spike behave differently from the other 6,206. At 15 minutes, fwdmax minus proposed is −0.005 [−0.019, +0.007] on the 543 and +0.034 [+0.026, +0.044] on the rest, so the look-ahead's seasonal lead comes from spikes outside the hold's window.
+
+![coverage by type, 15-min delay](../results/spike_types/cover_by_type_at_3.png)
+
+### Does the old peak explain the hold's lead?
+
+A hold could lead on follow-on spikes simply because the previous peak is already high enough. To check, I split follow-on spikes by whether the previous peak, the highest CPU from the previous spike's start up to the spike, reaches 80% of the spike.
+
+| Group, slack 0.8 | Spikes | proposed, 15 min | fwdmax, 15 min | fwdmax minus proposed, 15 min | fwdmax minus proposed, 5 min |
+|---|---|---|---|---|---|
+| Previous peak covers | 1,336 | 0.990 | 0.904 | −0.086 [−0.109, −0.067] | −0.084 [−0.107, −0.065] |
+| Previous peak too low | 197 | 0.482 | 0.410 | −0.072 [−0.130, −0.016] | −0.062 [−0.116, −0.003] |
+
+The paper's target still leads where holding the old peak can't cover the spike, so the old peak can't be the whole explanation. The split can't say how much the old peak accounts for: 87% of follow-on spikes are in the first group, so most of any lead lands there by size alone.
+
+My reading of why [inference, not tested]: the paper's target also includes the climb to the previous peak and the steps after it, so training may teach the model to expect renewed activity after a burst. At matched slack that extra allocation has to be paid for with budget elsewhere, and the seasonal and isolated deficits above fit that.
+
+### How much depends on the labels
+
+ADR-009 fixed six label settings before any scores: the base, a seasonal tolerance of ±2 or ±3 steps, a follow-on window of 8 or 12 steps, and seasonal history taken from a detection run starting at step 250.
+
+fwdmax minus proposed on follow-on spikes, slack 0.8. Negative means the paper's target is ahead:
+
+| Follow-on window | Spikes | 5 min | 15 min | 30 min |
+|---|---|---|---|---|
+| 6 steps (base) | 1,533 | −0.081 [−0.103, −0.062] | −0.084 [−0.107, −0.064] | −0.004 [−0.021, +0.011] |
+| 8 steps | 2,371 | −0.035 [−0.051, −0.022] | −0.097 [−0.119, −0.079] | −0.049 [−0.068, −0.033] |
+| 12 steps | 4,029 | +0.019 [+0.007, +0.032] | −0.032 [−0.046, −0.017] | −0.086 [−0.102, −0.071] |
+
+- On seasonal and isolated spikes, fwdmax stays ahead in all six settings at all three delays, with every interval above zero (smallest lower bound +0.017).
+- On follow-on spikes, the wider seasonal tolerances and the step-250 history stay close to the base.
+- The follow-on window matters. At 12 steps the 5-minute result changes sign, and at 30 minutes the paper's target gains a lead it doesn't have at 6 steps. Widening the window moves 838 (8 steps) or 2,496 (12 steps) isolated spikes into follow-on. What this means is still open, so the follow-on result belongs to the 6-step definition, not to every spike that comes soon after another.
+
+Limits of this section:
+- The labels are operational choices. Between a fifth and a third of seasonal labels could be chance matches, 332 of the 2,536 close pairs (13%) are one plateau counted twice, and the 21% of spikes labelled unknown are left out of the type comparisons ([ADR-009](adr/009-spike-types.md)).
+- The scores describe the groups as defined. They don't show that the groups come from distinct workload mechanisms.
+
 ## Limitations (read before citing)
 - The first run used one seed per model (the horizon follow-up uses three), a 60-minute training cap and early stopping. The paper's learning rate of 0.01 made validation loss noisy, and cbase stopped after 7 epochs. The confidence intervals cover the sampling of test traces, not training variance.
 - The preprocessing is a reconstruction. The trace count, the gap and variance filters, the target (max CPU per 5-minute bin) and the bins (40 of 2.5 CPU points each) approximate the authors' pipeline but aren't it.
 - The corrected spike detector (a 4-step refractory period, a minimum rise of 2 CPU points) changes which events count as spikes, so recall here can't be compared number for number with the paper's tables. Only the rows from the authors' evaluator can.
 - The throttling measure is crude. It treats the 5-minute maximum CPU as demand, ignores what happens inside each bin and any contention, and has no SLO signal.
 - Training and test traces cover the same time window, as in the paper. Generalisation across time and clusters is untested.
-- Not done yet: Strategy 2 (the altered loss), conformal calibration, and splitting spikes by type (#3).
+- This is a partial replication (see [Scope](#scope-one-part-of-the-paper-and-why)). Nothing here tests the paper's Google results, its other five models or Strategy 2.
+- Not done yet: Strategy 2 (the altered loss) and conformal calibration.
 
 ## Reproduce
 From the repo root:
@@ -199,5 +313,6 @@ From the repo root:
 3. `scripts/run_all.sh` runs the first replication (three targets, seed 0) and writes `results/replication/`.
 4. `RUNS="fwdmax:0 fwdmax:1 fwdmax:2 cbase:1 proposed:1 cbase:2 proposed:2" scripts/overnight.sh` runs the horizon follow-up and writes `results/horizon/`.
 5. `RUNS="fwdmax6:0 fwdmax6:1 fwdmax6:2" RES=horizon30 scripts/overnight.sh` runs the 30-minute follow-up and writes `results/horizon30/`.
+6. `python scripts/spike_types.py data/data.npz results/spike_types` labels the test spikes and writes the counts. Then `python scripts/score_types.py data/data.npz data/models_seeds results/spike_types results/horizon30 results/replication` scores coverage per type from the saved predictions and checks the totals against the published results. `python scripts/test_spike_types.py` tests the labelling rules on synthetic traces.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).

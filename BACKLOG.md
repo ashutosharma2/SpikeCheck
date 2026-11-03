@@ -9,7 +9,8 @@
 ## Experiments
 - [ ] Strategy 2 from the paper (the altered loss) under the corrected metrics
 - [ ] Calibrate the quantile readout (conformal prediction) so the over-provisioning setting maps to a target miss rate
-- [ ] Split spikes by type (isolated, follow-on, seasonal) and see where each method gains
+- [x] Split spikes by type (isolated, follow-on, seasonal) and see where each method gains
+- [ ] Flag spikes that follow a slow ramp: first define how many rising steps and how big a rise count, then sensitivity-test it (deferred in [ADR-009](docs/adr/009-spike-types.md))
 - [ ] Hold out time and clusters (later days, other Google 2019 clusters), not just traces
 - [ ] Sweep look-ahead length against delay instead of testing two points
 - [ ] Replace the throttling proxy with a closed-loop autoscaler simulation and a latency signal

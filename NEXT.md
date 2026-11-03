@@ -1,22 +1,17 @@
 # Next session: one task
 
-**Split spikes by type and see where each method gains**
-The look-ahead beats the paper's target overall, but nobody knows which spikes it gains on. Spikes come in at least three kinds: isolated ones that arrive out of nowhere, follow-on ones that come soon after an earlier spike, and seasonal ones that repeat at about the same time each day. If the gains sit mostly in follow-on and seasonal spikes, a simple heuristic might match them, and isolated spikes may be close to unpredictable from CPU history alone (opportunity #3 in [the review](docs/review.md)).
+**Test whether the hold needs to be learned**
+The spike types show the hold leading on follow-on spikes at 5 and 15 minutes while costing coverage on the other types. The paper's target splits exactly into a part already in the model's input and the look-ahead target, so the hold could be computed instead of learned, with no retraining.
 
-Work on a branch, `spike-types` (one branch and PR per task; merge with a merge commit, never squash).
+Work on a branch, `computed-hold` (one branch and PR per task; merge with a merge commit, never squash).
 
-1. Decide the definitions before looking at any results:
-   - how close an earlier spike has to be for a spike to count as follow-on;
-   - how close to the same time yesterday counts as seasonal;
-   - what happens when a spike fits both, and whether a spike preceded by a slow ramp is its own type.
-
-   Write the choices down in an ADR.
-2. Label every real spike on the test traces with its type, using `find_spikes` in `scripts/metrics.py`. Count how many fall into each type.
-3. Score spike coverage per type for cbase, proposed, fwdmax and fwdmax6 (three seeds each), plus the rolling-max and seasonal-max baselines, at matched over-provisioning and at 5, 15 and 30-minute delays. The saved test predictions are enough, so nothing needs retraining. If `data/` was wiped, rerun `scripts/get_data.sh` and the runners first.
-4. Write the result up in `docs/replication.md`, update the README findings and the diagrams if anything changes, add a LOG line, and set the next task here.
+1. Fix the rule before opening the test set: what counts as better overall, how much follow-on loss is acceptable, and what each mixed outcome means. Record it in an ADR and push it before the run.
+2. Dry-run the scorer on the validation traces.
+3. Run the test once, and report it whichever way it goes.
+4. Write the result up in `docs/replication.md`, update the README findings and the diagrams, add a LOG line, and set the next task here.
 5. Open the PR with a SOART description.
 
-Done when: every test spike has a type, coverage is reported per type for every method across three seeds, and the write-up says which types each method gains on.
+Done when: the test has run once at the frozen commit, and the write-up says which claims held at which delay.
 
 ## End of every milestone
 - Update README.md (status, findings) and docs/architecture.md (all diagrams; solid = done, dashed = planned).
