@@ -1,17 +1,19 @@
 # Next session: one task
 
-**Test whether the hold needs to be learned**
-The spike types show the hold leading on follow-on spikes at 5 and 15 minutes while costing coverage on the other types. The paper's target splits exactly into a part already in the model's input and the look-ahead target, so the hold could be computed instead of learned, with no retraining.
+**Build a trace-driven autoscaler simulation**
+Build a small autoscaler simulation using the existing Alibaba traces, with explicit resource-allocation and actuation delays. Compare no hold, computed hold and learned hold using allocated CPU, throttling and workload demand. This would help establish whether the improvements observed in offline coverage and throttling proxies translate into better provisioning decisions, addressing the biggest limitation of the current investigation.
 
-Work on a branch, `computed-hold` (one branch and PR per task; merge with a merge commit, never squash).
+Work on a branch, `autoscaler-sim` (one branch and PR per task; merge with a merge commit, never squash).
 
-1. Fix the rule before opening the test set: what counts as better overall, how much follow-on loss is acceptable, and what each mixed outcome means. Record it in an ADR and push it before the run.
-2. Dry-run the scorer on the validation traces.
-3. Run the test once, and report it whichever way it goes.
+1. Decide the simulator's rules and the comparison before running anything, and record them in an ADR with a written prediction. Any tuning uses the validation traces, because the test set has already been used for these comparisons.
+2. Test the simulator on synthetic traces.
+3. Run no hold, computed hold and learned hold from the saved predictions, so nothing needs retraining.
 4. Write the result up in `docs/replication.md`, update the README findings and the diagrams, add a LOG line, and set the next task here.
 5. Open the PR with a SOART description.
 
-Done when: the test has run once at the frozen commit, and the write-up says which claims held at which delay.
+A limit to keep in view: the traces record what containers used under the allocation they had. Replaying them can't show how a workload would respond to throttling, and it adds no latency signal, so this improves on the proxy without measuring customer impact.
+
+Done when: the three methods have been compared in the simulator, and the write-up says what that does and doesn't show about provisioning.
 
 ## End of every milestone
 - Update README.md (status, findings) and docs/architecture.md (all diagrams; solid = done, dashed = planned).

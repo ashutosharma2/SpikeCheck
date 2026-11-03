@@ -296,6 +296,93 @@ Limits of this section:
 - The labels are operational choices. Between a fifth and a third of seasonal labels could be chance matches, 332 of the 2,536 close pairs (13%) are one plateau counted twice, and the 21% of spikes labelled unknown are left out of the type comparisons ([ADR-009](adr/009-spike-types.md)).
 - The scores describe the groups as defined. They don't show that the groups come from distinct workload mechanisms.
 
+## Follow-up: does the hold need to be learned? (3 seeds, run 3 November 2026)
+
+The results above leave a tension. The hold costs coverage overall but leads on follow-on spikes, and the paper bundles it into the training target, so one can't change without retraining the other.
+
+A forecast for step t sees everything up to t−1, so the paper's window splits exactly at the present:
+
+max x[t−6 … t+4] = max( max x[t−6 … t−1], max x[t … t+4] )
+
+The first part is already in the model's input. The second is fwdmax's target. For a known value a and an unknown F, the q quantile of max(a, F) is max(a, q quantile of F), so a perfect model of the paper's target would output the larger of the past peak and fwdmax's forecast at every quantile. That gives a question the earlier ablation couldn't ask: does the hold need to be learned?
+
+The computed hold takes fwdmax's output at each quantile and raises it to the highest CPU in the last six steps. That peak is encoded into the model's own bins, as a model's output would be, so 55 becomes 57.5. It needs no retraining, no spike detector and no tuned setting. Holds themselves aren't new, since autoscalers already use them. The question here is how a computed hold compares with a learned one at the same budget.
+
+I fixed the rule before opening the test set and pushed it first, then ran the test once at commit `189569d` ([ADR-010](adr/010-computed-hold.md)). The test wasn't fully blind: I had already seen plain fwdmax against the paper's target on test, and I saw validation results before setting the follow-on margin. The computed hold itself was unseen on test.
+
+The claim was combined: better on overall coverage and not meaningfully worse on follow-on spikes, with a margin of 1 point. All four coverage checks had to pass. Throttling was a separate written prediction: at matched slack the computed hold would spend less slack after spikes, leaving budget for other steps where it can prevent throttling.
+
+The files are in [`results/computed_hold/`](../results/computed_hold/).
+
+### Result: three of four checks pass, so the complete hypothesis isn't supported
+
+Computed minus learned, slack 0.8, mean of 3 seeds, with 95% trace intervals:
+
+| Check | 5 min | 15 min |
+|---|---|---|
+| Overall coverage, lower bound above 0 | +0.0112 [+0.0076, +0.0146], passes | +0.0082 [+0.0057, +0.0108], passes |
+| Follow-on coverage, lower bound above −0.01 | −0.0044 [−0.0095, +0.0003], passes | −0.0076 [−0.0140, −0.0011], fails |
+| Throttled core-hours, upper bound below 0 | −45.4 [−58.4, −33.2], −5.4% | −55.1 [−71.9, −41.5], −5.7% |
+
+The share of slack after spikes is 27.0% for the computed hold and 29.2% for the learned hold, a difference of −0.022 [−0.024, −0.020]. All three seeds agree in sign on every row.
+
+What this shows:
+1. By the rule, the conclusion is delay-specific. Both claims hold at 5 minutes. At 15 minutes I don't claim the computed hold is an acceptable replacement for the learned hold.
+2. The throttling prediction holds at both delays. Throttled CPU is a proxy, not measured customer impact.
+3. The failed check means a loss above 1 point can't be ruled out. The estimate of −0.76 points is itself inside the margin, about 12 of 1,533 follow-on spikes.
+4. This isn't a stable difference between the delays. The validation dry run split the other way, with 5 minutes failing at −0.0057 [−0.0107, −0.0012] and 15 minutes passing at −0.0026 [−0.0098, +0.0047]. All four results show a small follow-on loss close to the margin.
+
+### What computing the hold keeps and saves
+
+15-minute delay, slack 0.8, mean of 3 seeds. These numbers were reported, not judged by the rule:
+
+| | All spikes | Follow-on | Throttled core-hours | Slack after spikes |
+|---|---|---|---|---|
+| No hold (fwdmax) | 0.757 | 0.841 | 860 | 16.0% |
+| Computed hold | 0.733 | 0.917 | 906 | 27.0% |
+| Learned hold (proposed) | 0.725 | 0.925 | 961 | 29.2% |
+
+Of what the learned hold changes compared with no hold, the computed hold accounts for 91% of the follow-on gain, 74% of the coverage loss and 45% of the added throttling. A hold is still a trade: no hold has the best overall coverage, and this project has no customer data showing that follow-on spikes matter more.
+
+Also reported, not judged:
+- The follow-on loss at 15 minutes sits almost entirely on the 197 spikes where the previous peak is too low: −0.0568 [−0.1001, −0.0125], against −0.0003 [−0.0034, +0.0025] where it covers. On validation (seed 0, 198 spikes) the too-low group is −0.0392 [−0.0868, +0.0112].
+- The plain comparison on that too-low group is less steady than the test result suggests. fwdmax minus proposed at 15 minutes is −0.072 [−0.130, −0.016] on test but −0.010 [−0.060, +0.039] on validation, so the renewed-activity reading in the spike-type section stays untested.
+- The exact, unrounded hold scores +0.0172 and +0.0133 overall but fails follow-on at both delays, at −0.0159 [−0.0240, −0.0082] and −0.0179 [−0.0265, −0.0097]. Rounding matters.
+- Slack 1.0 gives the same pattern as slack 0.8. At slack 0.6 the overall gain isn't shown at either delay.
+- At 30 minutes, fwdmax6 with the computed hold beats the paper's target by 0.167 overall and 0.020 on follow-on spikes, with 20.8% less throttling, mostly from the longer look-ahead. Against plain fwdmax6 the hold costs 0.022 overall and gains 0.0125 on follow-on spikes.
+- A pattern by spike size seen on validation didn't replicate on test, so I don't use it.
+
+Limits of this section:
+- The intervals cover trace sampling with the models held fixed, on one trace and one time window. They don't rule out shared time effects and aren't significance tests.
+- A full pass wouldn't have shown that a hold is worthwhile, only that computing it can stand in for learning it.
+- I searched for this comparison at a matched budget and didn't find it, but that search wasn't exhaustive, so I don't claim it's new.
+
+## Conclusion
+
+### Does the paper's result hold?
+
+I directionally reproduced the paper's spike-detection improvement using TempInc with Strategy 1 on Alibaba public data. On the authors' own evaluator, F1 increased from 0.41 to 0.68, compared with the paper's reported improvement from 0.27 to 0.64. However, this was a partial reproduction using reconstructed preprocessing, 5,946 traces instead of 5,168, eight input features instead of 18, and one seed. Google data, the other five models and Strategy 2 were not tested.
+
+The scope reflected my original goal of conducting an adversarial review rather than a full replication. I started with the cheapest, most informative checks on Alibaba, then followed the questions raised by each result. TempInc with Strategy 1 was the pair used in the first run and associated with the paper's headline result, not a winner selected through a comparison of all models.
+
+Hardware, storage, network and training limits led me to stream the Alibaba trace rather than store it, reduce training memory from 3.9 GB to 2.5 GB and cap training at 60 minutes. These constraints shaped how I executed the investigation, but were not the original reasons for setting its scope.
+
+### Does a better spike score help provisioning?
+
+The paper's spike-detection score alone does not establish provisioning value. Its recall doesn't consistently distinguish strategies: fwdmax and the proposed target have similar recall at slack 0.8 and above, while fwdmax6 scores slightly below fwdmax despite better coverage at a 30-minute delay (0.744 versus 0.590). The preferred approach also changes with actuation delay and spike type. The paper's over-provisioning metric produces values of 10¹⁵ to 10¹⁷ because its denominator is about 1e-10, so it cannot support reliable conclusions about resource efficiency.
+
+Actuation-delay-aware coverage and the throttling proxy usually moved together, though not always: at 15 minutes and slack 0.5, cbase covers 0.064 fewer spikes than the proposed target but throttles 9.3% less. These are offline comparisons using a proxy, not evidence of improved real-world provisioning. I have no autoscaler simulation, latency measurements or customer-impact data, and throttling is estimated from five-minute CPU maxima. Therefore, I cannot establish that better spike prediction leads to better real-world provisioning.
+
+### Does the hold need to be learned?
+
+At both 5- and 15-minute actuation delays, the computed hold achieved higher overall coverage than the learned hold (+1.12 and +0.82 percentage points, with 95% trace bootstrap intervals above zero) while reducing throttled core-hours by 5.4% and 5.7%. Follow-on coverage met my predefined 1-point non-inferiority margin at 5 minutes (−0.44 points, [−0.95, +0.03]) but failed it at 15 minutes (−0.76 points, [−1.40, −0.11]). So three of four checks passed and, by my rule, the complete hypothesis is not supported. The failure means I cannot establish non-inferiority at 15 minutes, although it does not prove that the loss exceeds my 1-point tolerance. Validation split the other way, failing at 5 minutes and passing at 15, so I don't read this as a stable difference between the delays.
+
+Against no hold, the computed hold improved follow-on coverage at 15 minutes (0.917 versus 0.841), but reduced all-spike coverage (0.733 versus 0.757) and increased throttling (906 versus 860 core-hours). Therefore, the experiment identifies a trade-off rather than establishing that a hold is universally worthwhile. It is limited to one trace and one time window, and I had already seen related test results. My literature search wasn't exhaustive, so I don't claim the comparison is new.
+
+### Overall
+
+The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold.
+
 ## Limitations (read before citing)
 - The first run used one seed per model (the horizon follow-up uses three), a 60-minute training cap and early stopping. The paper's learning rate of 0.01 made validation loss noisy, and cbase stopped after 7 epochs. The confidence intervals cover the sampling of test traces, not training variance.
 - The preprocessing is a reconstruction. The trace count, the gap and variance filters, the target (max CPU per 5-minute bin) and the bins (40 of 2.5 CPU points each) approximate the authors' pipeline but aren't it.
@@ -314,5 +401,6 @@ From the repo root:
 4. `RUNS="fwdmax:0 fwdmax:1 fwdmax:2 cbase:1 proposed:1 cbase:2 proposed:2" scripts/overnight.sh` runs the horizon follow-up and writes `results/horizon/`.
 5. `RUNS="fwdmax6:0 fwdmax6:1 fwdmax6:2" RES=horizon30 scripts/overnight.sh` runs the 30-minute follow-up and writes `results/horizon30/`.
 6. `python scripts/spike_types.py data/data.npz results/spike_types` labels the test spikes and writes the counts. Then `python scripts/score_types.py data/data.npz data/models_seeds results/spike_types results/horizon30 results/replication` scores coverage per type from the saved predictions and checks the totals against the published results. `python scripts/test_spike_types.py` tests the labelling rules on synthetic traces.
+7. `python scripts/val_probs.py fwdmax_s0 proposed_s0 fwdmax6_s0` writes validation predictions, and `python scripts/score_hold.py val data/data.npz data/novelty_val <out_dir>` regenerates the dry run in [ADR-010](adr/010-computed-hold.md). `python scripts/test_score_hold.py` tests the scorer. `results/computed_hold/` holds the single test run, and `score_hold.py test` won't start if that folder exists.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).

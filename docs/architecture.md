@@ -43,6 +43,8 @@ flowchart TD
     R3["results/horizon30/"]
     EVAL3["spike_types.py, score_types.py<br/>spike labels, coverage per type"]
     R4["results/spike_types/"]
+    EVAL4["score_hold.py<br/>computed hold against learned hold,<br/>rule frozen, test run once"]
+    R5["results/computed_hold/"]
 
     OSS --> META
     OSS --> STREAM
@@ -66,10 +68,13 @@ flowchart TD
     BASE --> EVAL3
     M --> EVAL3
     EVAL3 --> R4
+    PROBS --> EVAL4
+    M --> EVAL4
+    EVAL4 --> R5
 
 ```
 
-`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py` and `score_types.py` read the saved predictions, so they need no retraining.
+`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining.
 
 ## 2. From forecast to score
 
@@ -135,8 +140,9 @@ Each target answers "what should the model predict for step t?" differently. The
 | proposed (Strategy 1): hold + look-ahead | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | ■ | |
 | fwdmax: 25-min look-ahead | | | | | | | ■ | ■ | ■ | ■ | ■ | |
 | fwdmax6: 30-min look-ahead | | | | | | | ■ | ■ | ■ | ■ | ■ | ■ |
+| fwdmax + computed hold: □ computed, ■ learned | □ | □ | □ | □ | □ | □ | ■ | ■ | ■ | ■ | ■ | |
 
-Steps t−6 to t−1 are already known when the forecast is made, so the paper's target spends part of its prediction on keeping the allocation high after a spike has passed. fwdmax keeps only the look-ahead. With a 15-minute delay (3 steps), the allocation in force during a spike was forecast 3 steps earlier, so a target has to reach at least 2 steps ahead to cover it. With a 30-minute delay (6 steps) it has to reach 5 steps ahead, and only fwdmax6 does. The results agree: at a 30-minute delay and slack 0.8, fwdmax6 covers 0.74 of spikes, against 0.59 for fwdmax and 0.56 for the paper's target.
+Steps t−6 to t−1 are already known when the forecast is made, so the paper's target spends part of its prediction on keeping the allocation high after a spike has passed. Its window splits exactly at the present, which is what the computed hold uses: the known steps are calculated and only the future is forecast ([ADR-010](adr/010-computed-hold.md)). fwdmax keeps only the look-ahead. With a 15-minute delay (3 steps), the allocation in force during a spike was forecast 3 steps earlier, so a target has to reach at least 2 steps ahead to cover it. With a 30-minute delay (6 steps) it has to reach 5 steps ahead, and only fwdmax6 does. The results agree: at a 30-minute delay and slack 0.8, fwdmax6 covers 0.74 of spikes, against 0.59 for fwdmax and 0.56 for the paper's target.
 
 This one is a table rather than a Mermaid chart because Mermaid has no grid layout for time steps.
 
@@ -158,6 +164,7 @@ flowchart LR
         S["seed: 0, 1, 2"]
         Q["readout: argmax, or<br/>quantile 0.1 … 0.995"]
         B["training-free baselines:<br/>persistence, rolling max,<br/>seasonal max, rolling percentile"]
+        H["hold: learned in the target,<br/>or computed after training"]
     end
     subgraph SCORE["Scored"]
         direction TB

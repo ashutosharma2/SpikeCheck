@@ -2,7 +2,7 @@
 
 Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was planned and done, the decisions behind it, and what went wrong along the way. The reasoning behind each decision is in the [ADRs](adr/).
 
-**Status:** in progress. The review, the replication, both three-seed horizon experiments and the spike-type split are done, and every result has been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
+**Status:** in progress. The review, the replication, both three-seed horizon experiments, the spike-type split and the computed-hold test are done, and the earlier results have been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
 
 ---
 
@@ -48,6 +48,9 @@ macOS cleared the temporary folder that held the working data, along with severa
 ### Spike types (28 October)
 An overall score can't say where a method gains. I sorted every test spike into unknown, seasonal, follow-on or isolated, and fixed the definitions before scoring any method per type ([ADR-009](adr/009-spike-types.md)). I matched over-provisioning overall, split coverage by type at six label settings, and added a 95% bootstrap over whole test traces on top of the seed ranges. Then I split follow-on spikes by whether the previous peak alone would cover them. The [write-up](replication.md#follow-up-which-spikes-does-each-method-gain-on-3-seeds-run-28-october-2026) has the tables.
 
+### Computed hold (3 November)
+The hold costs coverage overall but leads on follow-on spikes, and the paper's target splits exactly into a part already in the model's input and fwdmax's target. So I tested computing the hold instead of learning it. I chose this route because it separates deterministic historical information from uncertain future predictions. Before opening the test set I wrote down the rule: better overall, no more than 1 point worse on follow-on spikes, at 5 and 15 minutes, with all four checks required and every mixed outcome defined. I pushed the rule and the scorer, dry-ran it on validation, and ran the test once ([ADR-010](adr/010-computed-hold.md)).
+
 ## R: Results
 
 - **The paper's result reproduces.** On the authors' evaluator, spike F1 goes from 0.41 to 0.68 (the paper reports 0.27 to 0.64). The over-provisioning artefact reproduces too: every forecaster scores between 10¹⁵ and 10¹⁷.
@@ -56,6 +59,7 @@ An overall score can't say where a method gains. I sorted every test spike into 
 - **The paper's metric can't see this.** On its recall window the two targets look the same. The difference only shows once delay or throttled CPU is measured.
 - **The look-ahead has to match the delay.** Even a perfect forecaster of the paper's 25-minute target covers only 28% of spikes when the delay is 30 minutes. A 30-minute look-ahead brings it back: 0.74 coverage at slack 0.8 against 0.59 for the 25-minute target, in all three seeds, with no measurable cost at 5 or 15-minute delays.
 - **One overall score hides where each method gains.** At a 15-minute delay and slack 0.8, the look-ahead beats the paper's target on seasonal (+0.030) and isolated (+0.045) spikes and trails it on follow-on spikes (−0.084). That follow-on result belongs to the 6-step definition: at 12 steps the 5-minute sign flips, and what that means is still open.
+- **Computing the hold passes three of four pre-set checks.** Compared with the learned hold at slack 0.8, it covers more spikes overall (+0.011 and +0.008) with less throttled CPU (−5.4% and −5.7%) at 5 and 15 minutes. Follow-on coverage passes at 5 minutes and fails the 1-point margin at 15, so the complete hypothesis isn't supported and the conclusion is delay-specific. Validation split the other way, so this isn't a stable difference between the delays. No hold still has the best overall coverage.
 
 ## T: Troubleshooting
 
@@ -81,3 +85,9 @@ An overall score can't say where a method gains. I sorted every test spike into 
 | I didn't write predictions before scoring per type | I fixed the labels first and stopped there | Report these results as description, and write the prediction first in the next test | Fixing a definition isn't fixing a prediction |
 | The docs said the 25-minute look-ahead "misses every spike" at a 30-minute delay | I reasoned from the window instead of checking the score: it still covers 0.59 of spikes. An outside review caught it | Say the window stops one step short and nearby values can still pass | Check a claim against the number it implies |
 | The docs said the hold hurts, without saying overall | The first experiments only had overall scores, and the per-type split later showed the hold leading on follow-on spikes | Add "overall" and point to the follow-on result | A conclusion holds for the slice it was measured on |
+| The first computed-hold comparison showed +0.027 overall at 15 minutes | It used fwdmax6, which looks one step further, so it changed the look-ahead as well as the hold | Compare fwdmax with and without the hold, which gave +0.013 | Change one thing, even in a quick check |
+| The exact hold wasn't a fair comparison with a model's output | Models output bin edges. Rounding up left 22% of hold values sitting on an edge, where a model's encoding sends them to the next bin | Encode the hold exactly as the target is encoded, which took the gain to +0.0070 on validation | Compare like with like, down to the output's resolution |
+| I first picked the follow-on margin having seen only the 15-minute validation row | The 5-minute row, which fails narrowly, was shown afterwards | Look at both rows, keep the margin for its stated reason, and record the timing in ADR-010 | See every slice before setting a threshold, and write down what you had seen |
+| Absolute core-hours in the exploration scripts were 100 times too high | The CPU request wasn't divided by 100 | `score_hold.py` uses the repo's unit, and the percentages weren't affected | Reuse the committed metric instead of rewriting it |
+| A pattern by spike size on validation didn't replicate on test | It was an exploratory reading with no prior reason behind it | Report it as not replicated and don't use it | A pattern found while looking needs a second look |
+| The validation dry run could only use seed 0 | The trained fwdmax models for seeds 1 and 2 weren't kept, only their test predictions | Say so in ADR-010, and use all three seeds on test | Keep model files while a question is still open |

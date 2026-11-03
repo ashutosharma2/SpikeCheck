@@ -1,0 +1,31 @@
+{
+  "split": "test",
+  "frozen_commit": "189569d427c648351c2b98968c9a9ec60998f9f5",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "traces": 893,
+  "n_boot": 500,
+  "budget": 0.8,
+  "margin": 0.01,
+  "n_spikes": {
+    "all": 27980,
+    "seasonal": 6749,
+    "follow-on": 1533,
+    "isolated": 13782,
+    "unknown": 5916,
+    "follow-on, previous peak covers": 1336,
+    "follow-on, previous peak short": 197,
+    "size q1": 7738,
+    "size q2": 7221,
+    "size q3": 6689,
+    "size q4": 6332
+  },
+  "per_delay": {
+    "5 min": "both claims hold at this delay",
+    "15 min": "not an acceptable replacement at this delay"
+  },
+  "conclusion": "complete hypothesis not supported; the conclusion is delay-specific"
+}

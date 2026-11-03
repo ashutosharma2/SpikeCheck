@@ -14,6 +14,9 @@
 - [ ] Hold out time and clusters (later days, other Google 2019 clusters), not just traces
 - [ ] Sweep look-ahead length against delay instead of testing two points
 - [ ] Replace the throttling proxy with a closed-loop autoscaler simulation and a latency signal
+- [ ] Score spikes by size, with the cuts and a prediction fixed in advance
+- [ ] Work out why the follow-on result changes with the window: at 12 steps the 5-minute sign flips
+- [ ] Test the renewed-activity reading of the hold's lead on follow-on spikes where the previous peak is too low
 
 ## Repo
 - [ ] Reread docs/review.md before making the repo public
