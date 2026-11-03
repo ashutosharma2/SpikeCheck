@@ -47,6 +47,7 @@ The [full conclusion](docs/replication.md#conclusion) covers what was reproduced
 | Rebuild: every result regenerated from the committed scripts | Done |
 | Spike types: definitions fixed before any scores, three seeds, six label settings ([ADR-009](docs/adr/009-spike-types.md)) | Done |
 | Computed hold: rule fixed first, test run once ([ADR-010](docs/adr/010-computed-hold.md)) | Done |
+| Trace-driven autoscaler simulation | [Next](NEXT.md) |
 | Strategy 2 (altered loss), calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
