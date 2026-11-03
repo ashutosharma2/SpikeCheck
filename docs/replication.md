@@ -6,19 +6,28 @@ Run on 2026-10-22 as a follow-up to the [critical review](review.md). It tests o
 
 I replicated Strategy 1 with the TempInc model on Alibaba. I didn't run the paper's Google data, its other five models or Strategy 2, so nothing here tests them.
 
-What limited it:
+### How the scope was set
+
+A full replication was never the plan. The project began with the [review](review.md), which looked for questions the paper left open. The first run was the review's cheapest checks: fix the metrics, then try a rolling-max baseline and the quantile readout, on Alibaba first. Each result raised the next question, so the work followed those questions and never went back to widen coverage.
+
+### Practical constraints
+
+These shaped how the work ran. They would also make a wider replication slower, though I didn't attempt one and hit a limit.
 
 | Constraint | Detail |
 |---|---|
-| Hardware | One 8 GB M1 laptop with 18 GB of free disk and a 4 MB/s connection. Training one model takes about 30 minutes and up to 2.5 GB of memory, and the runs went one at a time. |
-| Google's trace | About 2.4 TiB compressed and offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), against 29 GB for Alibaba, which could be streamed. The paper also filters it with a PCA step whose scripts aren't public. |
-| Size of the grid | Six models on two datasets is 12 model and dataset pairs, before adding Strategy 2 or repeat seeds. This work covers one pair. |
-| Missing materials | The authors publish neither their preprocessing nor trained models, so each dataset needs its own reconstruction. |
-| Experience | I was new to Python, PyTorch and this kind of evaluation, and every step had to be something I could explain. |
+| Hardware | One 8 GB M1 laptop with 18 GB of free disk, against a 29 GB trace |
+| Network | About 4 MB/s, so streaming the trace takes about 2.3 hours |
+| Training time | About 30 minutes per model and up to 2.5 GB of memory, with runs going one at a time. Six models on two datasets is 12 model and dataset pairs before any repeat seeds or Strategy 2, and this work covers one pair |
+| Missing author materials | The authors publish neither their preprocessing nor trained models, so each dataset needs its own reconstruction. The paper's Google set also goes through a PCA step with no public script |
 
-TempInc is the paper's best model and Strategy 1 is its largest reported gain, so I started with that pair. Strategy 2 is parked in the [backlog](../BACKLOG.md): the [review](review.md) found that its evidence contradicts itself (item C4), and the quantile readout tested below reaches an upper quantile directly.
+### Research choices
 
-These limits explain the scope. They say nothing about whether the paper's other results are right.
+- I chose to start on Alibaba. I didn't decide against Google at the start, and the follow-up questions never sent me back to it. I checked its size afterwards: about 2.4 TiB compressed, offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), so adding it would need a different setup.
+- TempInc with Strategy 1 is the pair behind the paper's headline result, 0.27 to 0.64 on Alibaba, so that's the claim I checked.
+- Strategy 2 wasn't run and stays in the [backlog](../BACKLOG.md). The review had already flagged its evidence as contradicting itself (item C4), and the quantile readout tests a similar idea more directly, but that isn't a test of Strategy 2.
+
+None of this says whether the paper's other results are right.
 
 ## What was run
 

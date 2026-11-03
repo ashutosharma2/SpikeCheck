@@ -12,7 +12,7 @@ Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was 
 
 Cloud platforms forecast how much CPU each workload will need, so they can lend spare capacity to other work without starving anyone. Most forecasters are trained to be right on average, which makes them late or too low exactly when a workload spikes. Agulló et al. (2025) propose changing what the forecaster is trained to predict so that it sees spikes coming, and report that this roughly doubles spike-prediction scores.
 
-I wanted to find a question the paper left open, and to check its claims on real data before building on them. Two constraints shaped the work. I had one laptop: an 8 GB M1 MacBook with 18 GB of free disk and a 4 MB/s connection, against a 29 GB trace. And I'm new to Python, PyTorch and this kind of evaluation, so every step had to be something I could explain. Those limits set the scope too: I replicated Strategy 1 with TempInc on Alibaba, not the paper's Google data (about 2.4 TiB), its other five models or Strategy 2 ([why](replication.md#scope-one-part-of-the-paper-and-why)).
+I wanted to find a question the paper left open, and to check its claims on real data before building on them. Two constraints shaped the work. I had one laptop: an 8 GB M1 MacBook with 18 GB of free disk and a 4 MB/s connection, against a 29 GB trace. And I'm new to Python, PyTorch and this kind of evaluation, so every step had to be something I could explain. The replication covers Strategy 1 with TempInc on Alibaba, not the paper's Google data, its other five models or Strategy 2 ([scope and why](replication.md#scope-one-part-of-the-paper-and-why)).
 
 ## O: Obstacles
 
