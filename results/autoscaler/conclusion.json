@@ -1,0 +1,28 @@
+{
+  "split": "test",
+  "frozen_commit": "9cb6071d6a7ad59f02fd2cd78592a83250195933",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "traces": 893,
+  "n_boot": 500,
+  "budget": 0.8,
+  "settings": {
+    "replay": {
+      "window_steps": 0,
+      "tolerance": 0.0
+    },
+    "controller": {
+      "window_steps": 1,
+      "tolerance": 0.1
+    }
+  },
+  "judged": "controller",
+  "per_delay": {
+    "5 min": "the throttling gain carries over at this delay",
+    "15 min": "the throttling gain carries over at this delay"
+  },
+  "conclusion": "the replay's throttling gain carries over to the simulated autoscaler"
+}

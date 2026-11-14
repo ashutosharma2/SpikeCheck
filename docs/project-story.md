@@ -2,7 +2,7 @@
 
 Scenario, Obstacle, Action, Result, Troubleshooting. This is how SpikeCheck was planned and done, the decisions behind it, and what went wrong along the way. The reasoning behind each decision is in the [ADRs](adr/).
 
-**Status:** in progress. The review, the replication, both three-seed horizon experiments, the spike-type split and the computed-hold test are done, and the earlier results have been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
+**Status:** in progress. The review, the replication, both three-seed horizon experiments, the spike-type split, the computed-hold test, the per-trace selection checks and the simulated autoscaler are done, and the earlier results have been regenerated from the committed scripts. The next steps are in [NEXT.md](../NEXT.md).
 
 ---
 
@@ -54,6 +54,9 @@ The hold costs coverage overall but leads on follow-on spikes, and the paper's t
 ### Per-trace policy selection (13 November)
 Spike types prefer different policies, so the next idea was a selector that picks one policy per workload from a fixed library: a rule, a trained classifier or a large language model. Before building one I ran two checks on the validation traces, each with its rule and a prediction written down first ([ADR-011](adr/011-per-trace-policy-selection.md)). The first measured how much a per-trace choice could gain with hindsight, and how much of that carries over from the first half of a trace to the second. The second trained a small decision tree to make the choice from the first 43 hours of each trace.
 
+### Simulated autoscaler (14 November)
+Every comparison so far set the allocation to the forecast from a few steps earlier. A real autoscaler also waits before scaling down and ignores small changes, and that wait is itself a hold. So I tested whether the computed hold still throttles less than the learned hold in a simulated autoscaler with a 5-minute scale-down window and a 10% tolerance. The rule and a prediction were written down and pushed first, the simulator had to reproduce the published replay with both switched off, and the test ran once ([ADR-012](adr/012-autoscaler-simulation.md)).
+
 ## R: Results
 
 - **The paper's result reproduces.** On the authors' evaluator, spike F1 goes from 0.41 to 0.68 (the paper reports 0.27 to 0.64). The over-provisioning artefact reproduces too: every forecaster scores between 10¹⁵ and 10¹⁷.
@@ -64,6 +67,7 @@ Spike types prefer different policies, so the next idea was a selector that pick
 - **One overall score hides where each method gains.** At a 15-minute delay and slack 0.8, the look-ahead beats the paper's target on seasonal (+0.030) and isolated (+0.045) spikes and trails it on follow-on spikes (−0.084). That follow-on result belongs to the 6-step definition: at 12 steps the 5-minute sign flips, and what that means is still open.
 - **Computing the hold passes three of four pre-set checks.** Compared with the learned hold at slack 0.8, it covers more spikes overall (+0.011 and +0.008) with less throttled CPU (−5.4% and −5.7%) at 5 and 15 minutes. Follow-on coverage passes at 5 minutes and fails the 1-point margin at 15, so the complete hypothesis isn't supported and the conclusion is delay-specific. Validation split the other way, so this isn't a stable difference between the delays. No hold still has the best overall coverage.
 - **Choosing a policy per trace showed no usable signal.** On validation at a 15-minute delay and slack 0.8, a per-trace choice made with hindsight gains 0.027 of coverage over the best fixed policy. The choice made on the first half of a trace loses 0.010 on the second half, and a small trained decision tree loses 0.018. Both pre-set rules said stop, so I dropped the idea for this library. One naive rule and one small tree were tested, so this doesn't show that no selector could work.
+- **The computed hold's throttling gain carries over to a simulated autoscaler.** With a 5-minute scale-down window and a 10% tolerance, at slack 0.8, the computed hold throttles 49.3 core-hours less than the learned hold at a 5-minute delay (5.8%) and 61.6 less at 15 (6.3%), with both intervals wholly below zero and all three seeds agreeing. The test wasn't blind, it is still a replay of recorded usage, and no hold still throttles least.
 
 ## T: Troubleshooting
 
@@ -97,3 +101,5 @@ Spike types prefer different policies, so the next idea was a selector that pick
 | The validation dry run could only use seed 0 | The trained fwdmax models for seeds 1 and 2 weren't kept, only their test predictions | Say so in ADR-010, and use all three seeds on test | Keep model files while a question is still open |
 | With hindsight, choosing a policy per trace gained up to 4 points of coverage | Most of it didn't last: the policy that won on the first half of a trace wasn't the winner on the second half | Score the first-half choice on the second half before trusting the gain | A gain found with hindsight isn't a signal until it carries over |
 | The prediction for the trained selector was wrong | It said the gain would be near zero. The tree fitted labels that were mostly noise and moved traces to weaker policies, so it lost 0.018 | Report the miss in ADR-011 and keep the rule's verdict | A selector trained on noise can do worse than no selector |
+| The prediction for the simulated autoscaler was half wrong | It said the computed hold's gain would shrink once the controller had its own window. The gain was slightly larger as a share: 5.8% and 6.3% against 5.4% and 5.7% | Report both parts in ADR-012 as they came out | A prediction written down first shows where the reasoning was off |
+| The simulator's replay numbers differed slightly from the published ones at 15 minutes | The published replay matches budgets on the forecast before the delay. The simulator matches them on the allocation it produces, because the window adds slack | Check the reproduction under the published convention, report results under the simulator's, and say so | State which budget a comparison is matched on |

@@ -15,6 +15,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 5. Split the spikes by type: seasonal, follow-on, isolated, or unknown when there isn't a day of history ([ADR-009](docs/adr/009-spike-types.md)).
 6. Test whether the hold needs to be learned, against a rule fixed before a single test run ([ADR-010](docs/adr/010-computed-hold.md)).
 7. Check whether choosing a policy per trace could help, on validation traces, before building any selector ([ADR-011](docs/adr/011-per-trace-policy-selection.md)).
+8. Test whether the computed hold's gain survives a simulated autoscaler with a scale-down window and a tolerance, against a rule fixed before a single test run ([ADR-012](docs/adr/012-autoscaler-simulation.md)).
 
 ## Findings
 
@@ -29,6 +30,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | One overall score hides where each method gains | At a 15-minute delay and slack 0.8, the look-ahead beats the paper's target on seasonal (+0.030) and isolated (+0.045) spikes and trails it on follow-on spikes (−0.084). The follow-on result depends on the 6-step definition |
 | Computing the hold instead of learning it passes three of four pre-set checks, so the complete hypothesis isn't supported | Computed minus learned at slack 0.8: overall +0.011 and +0.008 and throttled CPU −5.4% and −5.7% at 5 and 15 minutes. Follow-on −0.004 passes at 5 minutes, and −0.008 fails the 1-point margin at 15. No hold still has the best overall coverage |
 | Choosing a policy per trace showed no usable signal in two pre-set checks | Validation traces, seed 0, 15-minute delay, slack 0.8, against the best fixed policy: hindsight gains +0.027, but the choice made on the first half of a trace loses 0.010 on the second half, and a trained decision tree loses 0.018 |
+| The computed hold's throttling gain over the learned hold carries over to a simulated autoscaler | With a 5-minute scale-down window and a 10% tolerance, at slack 0.8: −49.3 core-hours (−5.8%) at a 5-minute delay and −61.6 (−6.3%) at 15, both intervals wholly below zero, three seeds. The test wasn't blind, it is still a replay, and no hold still throttles least |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
 
@@ -50,7 +52,8 @@ The [full conclusion](docs/replication.md#conclusion) covers what was reproduced
 | Spike types: definitions fixed before any scores, three seeds, six label settings ([ADR-009](docs/adr/009-spike-types.md)) | Done |
 | Computed hold: rule fixed first, test run once ([ADR-010](docs/adr/010-computed-hold.md)) | Done |
 | Per-trace policy selection: two checks on validation, rules fixed first, idea dropped ([ADR-011](docs/adr/011-per-trace-policy-selection.md)) | Done |
-| Trace-driven autoscaler simulation | [Next](NEXT.md) |
+| Simulated autoscaler: rule fixed first, test run once ([ADR-012](docs/adr/012-autoscaler-simulation.md)) | Done |
+| Next task | [NEXT.md](NEXT.md) |
 | Strategy 2 (altered loss), calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
@@ -80,13 +83,15 @@ flowchart LR
 | [009](docs/adr/009-spike-types.md) | Define mutually exclusive spike types |
 | [010](docs/adr/010-computed-hold.md) | Compute the hold instead of learning it, tested against a rule fixed first |
 | [011](docs/adr/011-per-trace-policy-selection.md) | Check for headroom before building a per-trace policy selector |
+| [012](docs/adr/012-autoscaler-simulation.md) | Test the computed hold in a simulated autoscaler, against a rule fixed first |
 
 ## Repository layout
 
 ```
 scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, spike types, computed hold, runners
 selection/    per-trace policy selection: the headroom check, the trained selector and their tests
-results/      replication/, horizon/, horizon30/, spike_types/, computed_hold/, oracle_headroom/, trained_selector/: CSV, JSON, plots
+simulator/    the simulated autoscaler and its tests
+results/      replication/, horizon/, horizon30/, spike_types/, computed_hold/, oracle_headroom/, trained_selector/, autoscaler/: CSV, JSON, plots
 docs/         review, replication write-up, architecture diagrams, project story, ADRs
 data/         downloaded and generated data, models (not committed)
 upstream/     the authors' code at a pinned commit (not committed)

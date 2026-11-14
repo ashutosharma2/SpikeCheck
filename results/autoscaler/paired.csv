@@ -1,0 +1,541 @@
+pair,setting,d,budget,measure,relative,mean,seed_0,seed_1,seed_2,seed_min,seed_max,ci_lo,ci_hi
+fwdmax + encoded hold - proposed,replay,1,0.6,cover: all,0.00660425,0.00378779,-0.00312831,0.00675312,0.00773857,-0.00312831,0.00773857,-0.0105255,0.00944244
+fwdmax + encoded hold - proposed,replay,1,0.6,cover: follow-on,-0.0017893,-0.00163717,0.00125909,-0.002728,-0.00344261,-0.00344261,0.00125909,-0.00574641,0.00230771
+fwdmax + encoded hold - proposed,replay,1,0.6,throttled core-hours,-0.0351498,-43.274,-45.5339,-50.648,-33.6401,-50.648,-33.6401,-62.7347,-15.3531
+fwdmax + encoded hold - proposed,replay,1,0.6,allocated core-hours,0.0002638,22.23,8.01654,20.3516,38.322,8.01654,38.322,-67.447,116.381
+fwdmax + encoded hold - proposed,replay,1,0.6,allocation changes,-0.169239,-51589.8,-53279.9,-67239.5,-34250.1,-67239.5,-34250.1,-63787.8,-42064.4
+fwdmax + encoded hold - proposed,replay,1,0.6,queued core-hours,-0.208665,-369.563,-70.3318,-997.35,-41.0061,-997.35,-41.0061,-1743.21,-35.9639
+fwdmax + encoded hold - proposed,replay,1,0.8,cover: all,0.0157778,0.0111881,0.00693665,0.0136259,0.0130017,0.00693665,0.0136259,0.00764402,0.0146207
+fwdmax + encoded hold - proposed,replay,1,0.8,cover: follow-on,-0.0047424,-0.00442309,-0.00193808,-0.00596697,-0.00536422,-0.00596697,-0.00193808,-0.00951026,0.000333168
+fwdmax + encoded hold - proposed,replay,1,0.8,throttled core-hours,-0.0542802,-45.4233,-36.8356,-62.2715,-37.1629,-62.2715,-36.8356,-58.3595,-33.1809
+fwdmax + encoded hold - proposed,replay,1,0.8,allocated core-hours,0.00199425,190.556,-62.8284,444.649,189.847,-62.8284,444.649,78.8315,334.154
+fwdmax + encoded hold - proposed,replay,1,0.8,allocation changes,-0.0517208,-23030.8,-40869.3,-22610.8,-5612.47,-40869.3,-5612.47,-27722.3,-18139.4
+fwdmax + encoded hold - proposed,replay,1,0.8,queued core-hours,-0.0389003,-36.5294,-10.869,-77.5206,-21.1985,-77.5206,-10.869,-77.6147,-9.97136
+fwdmax + encoded hold - proposed,replay,1,1,cover: all,0.011345,0.00883758,0.00319431,0.0105122,0.0128062,0.00319431,0.0128062,0.00641657,0.012518
+fwdmax + encoded hold - proposed,replay,1,1,cover: follow-on,-0.00425999,-0.00401949,-0.00148972,-0.0059935,-0.00457527,-0.0059935,-0.00148972,-0.00958167,0.00121332
+fwdmax + encoded hold - proposed,replay,1,1,throttled core-hours,-0.0486123,-31.0787,-15.3453,-49.92,-27.9709,-49.92,-15.3453,-41.7573,-22.2251
+fwdmax + encoded hold - proposed,replay,1,1,allocated core-hours,0.00525596,561.406,87.8538,1180.59,415.772,87.8538,1180.59,260.07,755.076
+fwdmax + encoded hold - proposed,replay,1,1,allocation changes,-0.0128556,-7411.75,-40324,8561.56,9527.15,-40324,9527.15,-12301.5,-3424.2
+fwdmax + encoded hold - proposed,replay,1,1,queued core-hours,-0.0185461,-12.9106,12.4336,-38.7786,-12.3868,-38.7786,12.4336,-26.7068,-0.225182
+fwdmax + encoded hold - proposed,replay,3,0.6,cover: all,0.00393116,0.00235904,-0.0052927,0.00837126,0.00399858,-0.0052927,0.00837126,-0.0124031,0.0075076
+fwdmax + encoded hold - proposed,replay,3,0.6,cover: follow-on,-0.00326299,-0.00293781,0.00121282,-0.00343743,-0.00658882,-0.00658882,0.00121282,-0.00767808,0.00212092
+fwdmax + encoded hold - proposed,replay,3,0.6,throttled core-hours,-0.0364467,-52.1376,-61.5774,-61.9739,-32.8613,-61.9739,-32.8613,-76.4278,-12.0283
+fwdmax + encoded hold - proposed,replay,3,0.6,allocated core-hours,0.00030051,25.272,21.986,24.6285,29.2016,21.986,29.2016,-62.5707,121.19
+fwdmax + encoded hold - proposed,replay,3,0.6,allocation changes,-0.174446,-52824.3,-54775.2,-68097.8,-35599.9,-68097.8,-35599.9,-65698.5,-42611.7
+fwdmax + encoded hold - proposed,replay,3,0.6,queued core-hours,-0.137315,-546.383,-193.597,-1352.28,-93.2748,-1352.28,-93.2748,-2239.42,-95.415
+fwdmax + encoded hold - proposed,replay,3,0.8,cover: all,0.0113807,0.00824401,0.00587174,0.0123057,0.00655454,0.00587174,0.0123057,0.00583005,0.0109201
+fwdmax + encoded hold - proposed,replay,3,0.8,cover: follow-on,-0.00819406,-0.00757695,-0.00788255,-0.00598692,-0.00886138,-0.00886138,-0.00598692,-0.0139912,-0.00107676
+fwdmax + encoded hold - proposed,replay,3,0.8,throttled core-hours,-0.0573736,-55.2978,-49.9512,-78.9673,-36.9748,-78.9673,-36.9748,-72.5188,-41.9948
+fwdmax + encoded hold - proposed,replay,3,0.8,allocated core-hours,0.00208336,198.843,-49.3608,459.34,186.55,-49.3608,459.34,82.1296,331.162
+fwdmax + encoded hold - proposed,replay,3,0.8,allocation changes,-0.0519814,-23060.8,-40664.1,-22809,-5709.38,-40664.1,-5709.38,-27779.6,-18240.3
+fwdmax + encoded hold - proposed,replay,3,0.8,queued core-hours,-0.0536688,-116.907,-44.5192,-212.33,-93.8725,-212.33,-44.5192,-206.904,-61.8341
+fwdmax + encoded hold - proposed,replay,3,1,cover: all,0.00798302,0.00630648,0.00133271,0.0105845,0.00700222,0.00133271,0.0105845,0.00418619,0.00897187
+fwdmax + encoded hold - proposed,replay,3,1,cover: follow-on,-0.00712122,-0.00668557,-0.00345061,-0.0103278,-0.00627829,-0.0103278,-0.00345061,-0.0122465,-0.000499465
+fwdmax + encoded hold - proposed,replay,3,1,throttled core-hours,-0.0509682,-37.4526,-23.8136,-62.7466,-25.7975,-62.7466,-23.8136,-52.0167,-27.3103
+fwdmax + encoded hold - proposed,replay,3,1,allocated core-hours,0.00528779,564.328,100.789,1185.22,406.974,100.789,1185.22,255.819,756.92
+fwdmax + encoded hold - proposed,replay,3,1,allocation changes,-0.0129921,-7475.58,-40333.8,8570.27,9336.75,-40333.8,9336.75,-12349.6,-3520.21
+fwdmax + encoded hold - proposed,replay,3,1,queued core-hours,-0.0349522,-54.3308,29.7683,-132.209,-60.552,-132.209,29.7683,-94.8046,-24.3376
+fwdmax + encoded hold - proposed,replay,6,0.6,cover: all,-0.00559799,-0.00236942,-0.00399138,-0.0105234,0.0074065,-0.0105234,0.0074065,-0.00735854,0.000959637
+fwdmax + encoded hold - proposed,replay,6,0.6,cover: follow-on,0.00258418,0.00192211,0.00972806,-0.00376679,-0.000194922,-0.00376679,0.00972806,-0.00329011,0.00852288
+fwdmax + encoded hold - proposed,replay,6,0.6,throttled core-hours,-0.0297458,-52.8948,-82.2286,-35.6977,-40.7582,-82.2286,-35.6977,-77.862,-17.4053
+fwdmax + encoded hold - proposed,replay,6,0.6,allocated core-hours,0.000245713,20.5756,44.6531,-15.8923,32.966,-15.8923,44.6531,-60.6828,118.73
+fwdmax + encoded hold - proposed,replay,6,0.6,allocation changes,-0.185229,-55390.1,-57611.1,-70458,-38101.3,-70458,-38101.3,-68724.1,-44333.1
+fwdmax + encoded hold - proposed,replay,6,0.6,queued core-hours,-0.125974,-933.268,-628.269,-1957.15,-214.387,-1957.15,-214.387,-3331.58,-252.901
+fwdmax + encoded hold - proposed,replay,6,0.8,cover: all,0.0149031,0.00821469,0.00456495,-0.00184871,0.0219278,-0.00184871,0.0219278,0.00503996,0.0111642
+fwdmax + encoded hold - proposed,replay,6,0.8,cover: follow-on,0.0146694,0.0119128,0.0240077,0.00626084,0.00546993,0.00546993,0.0240077,0.00321019,0.0204334
+fwdmax + encoded hold - proposed,replay,6,0.8,throttled core-hours,-0.0501849,-62.9452,-69.2328,-62.0738,-57.5291,-69.2328,-57.5291,-82.521,-47.9262
+fwdmax + encoded hold - proposed,replay,6,0.8,allocated core-hours,0.0022467,213.726,-12.5213,447.984,205.716,-12.5213,447.984,82.0623,343.342
+fwdmax + encoded hold - proposed,replay,6,0.8,allocation changes,-0.0531083,-23334,-40224,-24128.7,-5649.24,-40224,-5649.24,-28137.7,-18661.9
+fwdmax + encoded hold - proposed,replay,6,0.8,queued core-hours,-0.0621213,-241.392,-149.886,-359.715,-214.575,-359.715,-149.886,-379.68,-160.154
+fwdmax + encoded hold - proposed,replay,6,1,cover: all,0.0136563,0.00887898,0.00511759,-0.00176622,0.0232856,-0.00176622,0.0232856,0.00622996,0.0121644
+fwdmax + encoded hold - proposed,replay,6,1,cover: follow-on,0.0126499,0.0108746,0.0207529,0.00151973,0.0103512,0.00151973,0.0207529,0.00383186,0.0193488
+fwdmax + encoded hold - proposed,replay,6,1,throttled core-hours,-0.0473225,-45.7736,-50.4458,-44.0638,-42.8112,-50.4458,-42.8112,-63.4908,-34.5615
+fwdmax + encoded hold - proposed,replay,6,1,allocated core-hours,0.0053752,572.155,151.871,1147.73,416.859,151.871,1147.73,252.455,760.026
+fwdmax + encoded hold - proposed,replay,6,1,allocation changes,-0.0133705,-7652.93,-40254.6,8038.26,9257.58,-40254.6,9257.58,-12652.6,-3665.12
+fwdmax + encoded hold - proposed,replay,6,1,queued core-hours,-0.0445342,-120.171,2.74629,-211.268,-151.99,-211.268,2.74629,-202.8,-66.7279
+fwdmax + encoded hold - proposed,controller,1,0.6,cover: all,-0.0287599,-0.0160548,-0.029707,-0.0104456,-0.00801185,-0.029707,-0.00801185,-0.0562885,0.00247179
+fwdmax + encoded hold - proposed,controller,1,0.6,cover: follow-on,0.00227416,0.00206542,0.0064238,0.00210589,-0.00233343,-0.00233343,0.0064238,-0.00377493,0.00713356
+fwdmax + encoded hold - proposed,controller,1,0.6,throttled core-hours,-0.0157769,-20.5394,-13.865,-46.0374,-1.71595,-46.0374,-1.71595,-58.4678,32.1815
+fwdmax + encoded hold - proposed,controller,1,0.6,allocated core-hours,-0.000406852,-34.248,-47.4795,-42.9339,-12.3307,-47.4795,-12.3307,-105.914,56.7773
+fwdmax + encoded hold - proposed,controller,1,0.6,allocation changes,-0.102785,-18400.3,-19974.1,-21268.1,-13958.6,-21268.1,-13958.6,-21163.6,-14995
+fwdmax + encoded hold - proposed,controller,1,0.6,queued core-hours,-0.597665,-2465.82,-243.283,-6672.3,-481.891,-6672.3,-243.283,-11614.1,-566.396
+fwdmax + encoded hold - proposed,controller,1,0.8,cover: all,0.020278,0.0144048,0.0116159,0.0189604,0.0126382,0.0116159,0.0189604,0.0109021,0.017316
+fwdmax + encoded hold - proposed,controller,1,0.8,cover: follow-on,-0.00607079,-0.00565408,-0.00411499,-0.00581922,-0.00702803,-0.00702803,-0.00411499,-0.0111894,-0.000539181
+fwdmax + encoded hold - proposed,controller,1,0.8,throttled core-hours,-0.0581151,-49.314,-44.3686,-66.8204,-36.7529,-66.8204,-36.7529,-59.8594,-36.1279
+fwdmax + encoded hold - proposed,controller,1,0.8,allocated core-hours,0.00123323,117.843,-84.3623,291.647,146.244,-84.3623,291.647,17.7137,257.147
+fwdmax + encoded hold - proposed,controller,1,0.8,allocation changes,-0.0189174,-4458.55,-14356.7,-4036.96,5018.02,-14356.7,5018.02,-6308.93,-2068.72
+fwdmax + encoded hold - proposed,controller,1,0.8,queued core-hours,-0.0518145,-52.3732,-39.7381,-111.704,-5.67688,-111.704,-5.67688,-95.0127,-20.0785
+fwdmax + encoded hold - proposed,controller,1,1,cover: all,0.0143877,0.0112587,0.00744822,0.0139137,0.0124141,0.00744822,0.0139137,0.00877751,0.0138639
+fwdmax + encoded hold - proposed,controller,1,1,cover: follow-on,-0.00377186,-0.00355745,-0.00193916,-0.00454954,-0.00418364,-0.00454954,-0.00193916,-0.00889315,0.00166388
+fwdmax + encoded hold - proposed,controller,1,1,throttled core-hours,-0.051757,-32.8681,-21.6844,-52.8077,-24.1121,-52.8077,-21.6844,-40.1625,-24.4847
+fwdmax + encoded hold - proposed,controller,1,1,allocated core-hours,0.00263755,281.416,-277.719,820.109,301.858,-277.719,820.109,117.217,499.841
+fwdmax + encoded hold - proposed,controller,1,1,allocation changes,0.0112151,3347.89,-16661,14968.9,11735.7,-16661,14968.9,1233.84,5365.92
+fwdmax + encoded hold - proposed,controller,1,1,queued core-hours,-0.0216754,-15.4835,9.755,-40.1072,-16.0984,-40.1072,9.755,-35.8048,7.25723
+fwdmax + encoded hold - proposed,controller,3,0.6,cover: all,-0.0361569,-0.0206314,-0.0344317,-0.0186411,-0.00882154,-0.0344317,-0.00882154,-0.0568735,0.0019306
+fwdmax + encoded hold - proposed,controller,3,0.6,cover: follow-on,0.00160051,0.00142696,0.00550252,-0.00143433,0.000212697,-0.00143433,0.00550252,-0.00409356,0.00631528
+fwdmax + encoded hold - proposed,controller,3,0.6,throttled core-hours,-0.00335263,-5.09834,-6.19052,-28.2067,19.1022,-28.2067,19.1022,-62.1748,55.1706
+fwdmax + encoded hold - proposed,controller,3,0.6,allocated core-hours,-0.000593503,-49.8444,-55.7647,-59.01,-34.7586,-59.01,-34.7586,-129.189,52.8012
+fwdmax + encoded hold - proposed,controller,3,0.6,allocation changes,-0.106076,-18906.3,-20510.2,-21517.3,-14691.3,-21517.3,-14691.3,-21408.1,-15272.5
+fwdmax + encoded hold - proposed,controller,3,0.6,queued core-hours,-0.473405,-3691.83,-312.351,-10224.3,-538.81,-10224.3,-312.351,-13730.5,-650.431
+fwdmax + encoded hold - proposed,controller,3,0.8,cover: all,0.0163326,0.011746,0.00920676,0.0154021,0.0106292,0.00920676,0.0154021,0.00878842,0.0144519
+fwdmax + encoded hold - proposed,controller,3,0.8,cover: follow-on,-0.00554165,-0.00510032,-0.000908147,-0.00467423,-0.0097186,-0.0097186,-0.000908147,-0.0105746,0.000269653
+fwdmax + encoded hold - proposed,controller,3,0.8,throttled core-hours,-0.0625451,-61.5878,-59.3086,-82.5381,-42.9165,-82.5381,-42.9165,-79.0127,-45.8594
+fwdmax + encoded hold - proposed,controller,3,0.8,allocated core-hours,0.00136002,129.794,-68.6829,306.608,151.455,-68.6829,306.608,29.9545,264.347
+fwdmax + encoded hold - proposed,controller,3,0.8,allocation changes,-0.018951,-4449.42,-14238,-4150.89,5040.66,-14238,5040.66,-6387.45,-2091.3
+fwdmax + encoded hold - proposed,controller,3,0.8,queued core-hours,-0.0639397,-148.239,-99.4958,-250.432,-94.7887,-250.432,-94.7887,-234.104,-84.6455
+fwdmax + encoded hold - proposed,controller,3,1,cover: all,0.0104499,0.0082454,0.00479995,0.0113001,0.00863615,0.00479995,0.0113001,0.00594945,0.0103637
+fwdmax + encoded hold - proposed,controller,3,1,cover: follow-on,-0.00662923,-0.00621694,-0.00366942,-0.00935322,-0.00562818,-0.00935322,-0.00366942,-0.0118827,0.000330374
+fwdmax + encoded hold - proposed,controller,3,1,throttled core-hours,-0.0585567,-43.097,-32.3508,-67.1097,-29.8305,-67.1097,-29.8305,-55.2151,-32.0901
+fwdmax + encoded hold - proposed,controller,3,1,allocated core-hours,0.00271469,289.407,-264.111,828.535,303.797,-264.111,828.535,127.221,505.701
+fwdmax + encoded hold - proposed,controller,3,1,allocation changes,0.0112205,3342.7,-16607.1,14973.3,11661.8,-16607.1,14973.3,1237.81,5367.65
+fwdmax + encoded hold - proposed,controller,3,1,queued core-hours,-0.0454998,-72.8519,5.96104,-145.832,-78.6844,-145.832,5.96104,-112.203,-39.4501
+fwdmax + encoded hold - proposed,controller,6,0.6,cover: all,-0.0203463,-0.00873094,-0.0106669,-0.012313,-0.00321288,-0.012313,-0.00321288,-0.0108975,-0.00318105
+fwdmax + encoded hold - proposed,controller,6,0.6,cover: follow-on,-0.00117693,-0.00086291,0.00134755,-0.00397794,4.16641e-05,-0.00397794,0.00134755,-0.00703211,0.00611331
+fwdmax + encoded hold - proposed,controller,6,0.6,throttled core-hours,-0.0115554,-20.9414,-36.8093,-29.2566,3.24171,-36.8093,3.24171,-63.7696,11.3776
+fwdmax + encoded hold - proposed,controller,6,0.6,allocated core-hours,-0.00036372,-30.4372,-18.8642,-50.5926,-21.8547,-50.5926,-18.8642,-93.909,57.5646
+fwdmax + encoded hold - proposed,controller,6,0.6,allocation changes,-0.109479,-19416.4,-20863,-21666.2,-15720.1,-21666.2,-15720.1,-21304,-15859.8
+fwdmax + encoded hold - proposed,controller,6,0.6,queued core-hours,-0.417318,-5621.3,-924.899,-15155.5,-783.528,-15155.5,-783.528,-15685.2,-812.183
+fwdmax + encoded hold - proposed,controller,6,0.8,cover: all,0.0114589,0.00631828,0.00378109,-0.00277451,0.0179483,-0.00277451,0.0179483,0.00362092,0.00920965
+fwdmax + encoded hold - proposed,controller,6,0.8,cover: follow-on,0.00981988,0.00794691,0.0136857,0.0110125,-0.00085742,-0.00085742,0.0136857,0.000880972,0.015135
+fwdmax + encoded hold - proposed,controller,6,0.8,throttled core-hours,-0.046692,-58.5958,-70.3569,-54.9546,-50.4758,-70.3569,-50.4758,-74.2818,-45.363
+fwdmax + encoded hold - proposed,controller,6,0.8,allocated core-hours,0.00142209,135.305,-44.345,288.512,161.748,-44.345,288.512,31.007,260.453
+fwdmax + encoded hold - proposed,controller,6,0.8,allocation changes,-0.0200067,-4660.98,-14074.3,-4815.38,4906.76,-14074.3,4906.76,-6711.92,-2434.15
+fwdmax + encoded hold - proposed,controller,6,0.8,queued core-hours,-0.0630815,-261.692,-269.998,-324.186,-190.892,-324.186,-190.892,-375.583,-169.983
+fwdmax + encoded hold - proposed,controller,6,1,cover: all,0.0145799,0.00945492,0.00447262,-0.000681257,0.0245734,-0.000681257,0.0245734,0.00644921,0.0121263
+fwdmax + encoded hold - proposed,controller,6,1,cover: follow-on,0.0147112,0.0126272,0.0237801,0.00434336,0.00975805,0.00434336,0.0237801,0.00461964,0.0205012
+fwdmax + encoded hold - proposed,controller,6,1,throttled core-hours,-0.0455524,-43.6781,-50.0693,-42.3545,-38.6106,-50.0693,-38.6106,-56.6451,-32.5791
+fwdmax + encoded hold - proposed,controller,6,1,allocated core-hours,0.00277985,295.688,-226.871,801.04,312.894,-226.871,801.04,132.235,498.954
+fwdmax + encoded hold - proposed,controller,6,1,allocation changes,0.0107846,3197.98,-16566,14646.2,11513.8,-16566,14646.2,1071.28,5289.56
+fwdmax + encoded hold - proposed,controller,6,1,queued core-hours,-0.0487214,-136.257,-40.6934,-202.61,-165.469,-202.61,-40.6934,-196.491,-74.112
+fwdmax + encoded hold - fwdmax,replay,1,0.6,cover: all,-0.143496,-0.0967233,-0.0954409,-0.0990194,-0.0957095,-0.0990194,-0.0954409,-0.134187,-0.0731807
+fwdmax + encoded hold - fwdmax,replay,1,0.6,cover: follow-on,0.179844,0.139221,0.136428,0.146245,0.13499,0.13499,0.146245,0.113791,0.168738
+fwdmax + encoded hold - fwdmax,replay,1,0.6,throttled core-hours,0.118963,126.288,109.493,137.69,131.679,109.493,137.69,75.0601,204.683
+fwdmax + encoded hold - fwdmax,replay,1,0.6,allocated core-hours,-0.00608546,-516.089,-285.77,-770.441,-492.055,-770.441,-285.77,-786.181,-308.369
+fwdmax + encoded hold - fwdmax,replay,1,0.6,allocation changes,-0.411174,-176838,-164091,-185174,-181251,-185174,-164091,-193987,-162095
+fwdmax + encoded hold - fwdmax,replay,1,0.6,queued core-hours,-0.555192,-1749.32,-2257.11,-1489.88,-1500.97,-2257.11,-1489.88,-2300.74,-1446.08
+fwdmax + encoded hold - fwdmax,replay,1,0.8,cover: all,-0.0412386,-0.0309813,-0.0317743,-0.0321313,-0.0290384,-0.0321313,-0.0290384,-0.0384648,-0.025971
+fwdmax + encoded hold - fwdmax,replay,1,0.8,cover: follow-on,0.0903651,0.0769292,0.078937,0.082346,0.0695047,0.0695047,0.082346,0.0591419,0.0962479
+fwdmax + encoded hold - fwdmax,replay,1,0.8,throttled core-hours,0.018006,13.998,11.9823,9.08755,20.9241,9.08755,20.9241,-0.832896,33.6909
+fwdmax + encoded hold - fwdmax,replay,1,0.8,allocated core-hours,-0.00462962,-445.316,-214.157,-750.681,-371.109,-750.681,-214.157,-644.3,-233.997
+fwdmax + encoded hold - fwdmax,replay,1,0.8,allocation changes,-0.243191,-135688,-126541,-138688,-141835,-141835,-126541,-148389,-124865
+fwdmax + encoded hold - fwdmax,replay,1,0.8,queued core-hours,-0.425357,-668.054,-793.313,-681.806,-529.044,-793.313,-529.044,-859.823,-522.81
+fwdmax + encoded hold - fwdmax,replay,1,1,cover: all,-0.0192725,-0.0154816,-0.0159375,-0.0153151,-0.0151922,-0.0159375,-0.0151922,-0.0187632,-0.0131164
+fwdmax + encoded hold - fwdmax,replay,1,1,cover: follow-on,0.0528041,0.0471226,0.0461462,0.0554688,0.0397527,0.0397527,0.0554688,0.0355312,0.059996
+fwdmax + encoded hold - fwdmax,replay,1,1,throttled core-hours,-0.0108758,-6.68782,-4.68187,-15.4875,0.105945,-15.4875,0.105945,-15.9926,1.88394
+fwdmax + encoded hold - fwdmax,replay,1,1,allocated core-hours,-0.00674283,-728.924,-458.82,-1119.73,-608.218,-1119.73,-458.82,-1035.1,-446.998
+fwdmax + encoded hold - fwdmax,replay,1,1,allocation changes,-0.155477,-104776,-99291.5,-107065,-107971,-107971,-99291.5,-115250,-96031.1
+fwdmax + encoded hold - fwdmax,replay,1,1,queued core-hours,-0.340794,-353.211,-380.54,-407.436,-271.658,-407.436,-271.658,-440.479,-282.99
+fwdmax + encoded hold - fwdmax,replay,3,0.6,cover: all,-0.115037,-0.0783123,-0.0792339,-0.0780956,-0.0776075,-0.0792339,-0.0776075,-0.119768,-0.0565898
+fwdmax + encoded hold - fwdmax,replay,3,0.6,cover: follow-on,0.184229,0.139608,0.142244,0.14465,0.131929,0.131929,0.14465,0.114061,0.169394
+fwdmax + encoded hold - fwdmax,replay,3,0.6,throttled core-hours,0.18523,215.415,209.46,230.177,206.608,206.608,230.177,144.338,325.201
+fwdmax + encoded hold - fwdmax,replay,3,0.6,allocated core-hours,-0.00710334,-601.825,-382.293,-859.614,-563.568,-859.614,-382.293,-882.902,-380.569
+fwdmax + encoded hold - fwdmax,replay,3,0.6,allocation changes,-0.417143,-178913,-166471,-187269,-182999,-187269,-166471,-196597,-163543
+fwdmax + encoded hold - fwdmax,replay,3,0.6,queued core-hours,-0.165048,-678.545,-1166.52,-351.816,-517.301,-1166.52,-351.816,-1005.61,-448.396
+fwdmax + encoded hold - fwdmax,replay,3,0.8,cover: all,-0.0314303,-0.0237739,-0.0229605,-0.0252891,-0.023072,-0.0252891,-0.0229605,-0.0297712,-0.0190623
+fwdmax + encoded hold - fwdmax,replay,3,0.8,cover: follow-on,0.0911905,0.0766427,0.0776293,0.0849243,0.0673744,0.0673744,0.0849243,0.0588725,0.0969964
+fwdmax + encoded hold - fwdmax,replay,3,0.8,throttled core-hours,0.0543339,46.8196,47.0777,46.0882,47.293,46.0882,47.293,29.1697,69.9802
+fwdmax + encoded hold - fwdmax,replay,3,0.8,allocated core-hours,-0.0049904,-479.687,-249.063,-790.987,-399.012,-790.987,-249.063,-684.166,-269.641
+fwdmax + encoded hold - fwdmax,replay,3,0.8,allocation changes,-0.24494,-136433,-127290,-139529,-142481,-142481,-127290,-149248,-125518
+fwdmax + encoded hold - fwdmax,replay,3,0.8,queued core-hours,-0.117603,-274.737,-395.718,-249.115,-179.379,-395.718,-179.379,-381.442,-190.866
+fwdmax + encoded hold - fwdmax,replay,3,1,cover: all,-0.0132707,-0.0107095,-0.010413,-0.0112178,-0.0104977,-0.0112178,-0.010413,-0.0134056,-0.00878616
+fwdmax + encoded hold - fwdmax,replay,3,1,cover: follow-on,0.0566116,0.0499425,0.0508984,0.0558124,0.0431165,0.0431165,0.0558124,0.0366933,0.0639864
+fwdmax + encoded hold - fwdmax,replay,3,1,throttled core-hours,0.0146283,10.0542,12.5284,7.46556,10.1687,7.46556,12.5284,1.00098,19.5069
+fwdmax + encoded hold - fwdmax,replay,3,1,allocated core-hours,-0.00697262,-753.326,-480.68,-1152.77,-626.527,-1152.77,-480.68,-1059.25,-467.217
+fwdmax + encoded hold - fwdmax,replay,3,1,allocation changes,-0.156298,-105209,-99694.3,-107522,-108409,-108409,-99694.3,-115716,-96409
+fwdmax + encoded hold - fwdmax,replay,3,1,queued core-hours,-0.0975381,-162.131,-195.021,-179.784,-111.588,-195.021,-111.588,-216.679,-114.074
+fwdmax + encoded hold - fwdmax,replay,6,0.6,cover: all,-0.108311,-0.0511249,-0.0508873,-0.0456442,-0.0568433,-0.0568433,-0.0456442,-0.0624507,-0.0421382
+fwdmax + encoded hold - fwdmax,replay,6,0.6,cover: follow-on,0.042254,0.0302323,0.0250217,0.0425261,0.023149,0.023149,0.0425261,0.00918704,0.0526873
+fwdmax + encoded hold - fwdmax,replay,6,0.6,throttled core-hours,0.149569,224.481,213.077,240.951,219.415,213.077,240.951,159.765,306.83
+fwdmax + encoded hold - fwdmax,replay,6,0.6,allocated core-hours,-0.00713475,-601.893,-409.72,-846.117,-549.842,-846.117,-409.72,-891.801,-374.23
+fwdmax + encoded hold - fwdmax,replay,6,0.6,allocation changes,-0.42598,-180810,-168926,-189160,-184344,-189160,-168926,-198773,-165090
+fwdmax + encoded hold - fwdmax,replay,6,0.6,queued core-hours,0.0834087,498.502,-102.129,976.83,620.805,-102.129,976.83,57.6677,995.48
+fwdmax + encoded hold - fwdmax,replay,6,0.8,cover: all,-0.0466195,-0.0273552,-0.027062,-0.0265117,-0.028492,-0.028492,-0.0265117,-0.0333839,-0.0215783
+fwdmax + encoded hold - fwdmax,replay,6,0.8,cover: follow-on,0.0196454,0.0158759,0.00933708,0.029582,0.00870876,0.00870876,0.029582,0.00302116,0.0284448
+fwdmax + encoded hold - fwdmax,replay,6,0.8,throttled core-hours,0.0479255,54.4835,58.1386,53.5143,51.7977,51.7977,58.1386,35.0737,77.2928
+fwdmax + encoded hold - fwdmax,replay,6,0.8,allocated core-hours,-0.00522399,-500.684,-274.611,-809.04,-418.402,-809.04,-274.611,-704.75,-280.792
+fwdmax + encoded hold - fwdmax,replay,6,0.8,allocation changes,-0.248621,-137659,-128424,-141032,-143522,-143522,-128424,-150732,-126667
+fwdmax + encoded hold - fwdmax,replay,6,0.8,queued core-hours,0.00251408,9.13942,-98.5115,50.1259,75.8038,-98.5115,75.8038,-85.2342,104.614
+fwdmax + encoded hold - fwdmax,replay,6,1,cover: all,-0.0227073,-0.015313,-0.0157494,-0.0146279,-0.0155617,-0.0157494,-0.0146279,-0.0187755,-0.0123876
+fwdmax + encoded hold - fwdmax,replay,6,1,cover: follow-on,0.0165549,0.0141769,0.00784588,0.0262951,0.00838966,0.00784588,0.0262951,0.00585791,0.0225229
+fwdmax + encoded hold - fwdmax,replay,6,1,throttled core-hours,0.0121445,11.0568,16.5131,7.46858,9.18876,7.46858,16.5131,0.17845,23.4072
+fwdmax + encoded hold - fwdmax,replay,6,1,allocated core-hours,-0.00719945,-776.04,-506.364,-1175.58,-646.179,-1175.58,-506.364,-1054.92,-486.116
+fwdmax + encoded hold - fwdmax,replay,6,1,allocation changes,-0.157901,-105890,-100327,-108164,-109178,-109178,-100327,-116542,-97058.8
+fwdmax + encoded hold - fwdmax,replay,6,1,queued core-hours,-0.0237017,-62.5916,-84.4685,-72.5263,-30.7801,-84.4685,-30.7801,-126.684,-10.2425
+fwdmax + encoded hold - fwdmax,controller,1,0.6,cover: all,-0.205289,-0.140056,-0.145189,-0.13857,-0.136408,-0.145189,-0.136408,-0.204902,-0.0932423
+fwdmax + encoded hold - fwdmax,controller,1,0.6,cover: follow-on,0.174028,0.134932,0.131268,0.138133,0.135394,0.131268,0.138133,0.108857,0.159637
+fwdmax + encoded hold - fwdmax,controller,1,0.6,throttled core-hours,0.205204,218.165,205.818,228.983,219.695,205.818,228.983,128.955,337.396
+fwdmax + encoded hold - fwdmax,controller,1,0.6,allocated core-hours,-0.00907334,-770.458,-552.188,-995.91,-763.275,-995.91,-552.188,-1103.09,-451.525
+fwdmax + encoded hold - fwdmax,controller,1,0.6,allocation changes,-0.320895,-75896.2,-66988.3,-81981.1,-78719.2,-81981.1,-66988.3,-82025.3,-69748.9
+fwdmax + encoded hold - fwdmax,controller,1,0.6,queued core-hours,-0.509047,-1721.12,-2302.65,-1466.78,-1393.93,-2302.65,-1393.93,-2112.03,-1375.39
+fwdmax + encoded hold - fwdmax,controller,1,0.8,cover: all,-0.043477,-0.0329433,-0.0336635,-0.0334058,-0.0317607,-0.0336635,-0.0317607,-0.0430753,-0.0262141
+fwdmax + encoded hold - fwdmax,controller,1,0.8,cover: follow-on,0.0885006,0.0752644,0.0778408,0.0781122,0.0698403,0.0698403,0.0781122,0.0583873,0.0942538
+fwdmax + encoded hold - fwdmax,controller,1,0.8,throttled core-hours,0.032387,25.073,19.578,22.7794,32.8617,19.578,32.8617,7.61224,52.618
+fwdmax + encoded hold - fwdmax,controller,1,0.8,allocated core-hours,-0.00565085,-543.712,-298.174,-848.638,-484.323,-848.638,-298.174,-737.215,-314.769
+fwdmax + encoded hold - fwdmax,controller,1,0.8,allocation changes,-0.230728,-69351.9,-63624.6,-72193.5,-72237.5,-72237.5,-63624.6,-75930,-64007.5
+fwdmax + encoded hold - fwdmax,controller,1,0.8,queued core-hours,-0.419867,-693.643,-838.128,-726.049,-516.752,-838.128,-516.752,-851.173,-571.179
+fwdmax + encoded hold - fwdmax,controller,1,1,cover: all,-0.0187044,-0.0151302,-0.0143383,-0.016748,-0.0143043,-0.016748,-0.0143043,-0.0203807,-0.0114973
+fwdmax + encoded hold - fwdmax,controller,1,1,cover: follow-on,0.0499282,0.0446816,0.0458872,0.0489374,0.0392201,0.0392201,0.0489374,0.0330754,0.0571547
+fwdmax + encoded hold - fwdmax,controller,1,1,throttled core-hours,-0.00304597,-1.83982,-2.79946,-6.50653,3.78653,-6.50653,3.78653,-11.8355,11.4047
+fwdmax + encoded hold - fwdmax,controller,1,1,allocated core-hours,-0.007785,-839.355,-726.364,-983.11,-808.591,-983.11,-726.364,-1089.32,-408.666
+fwdmax + encoded hold - fwdmax,controller,1,1,allocation changes,-0.151294,-53811.9,-50632.6,-54711.4,-56091.9,-56091.9,-50632.6,-59767.2,-49293.8
+fwdmax + encoded hold - fwdmax,controller,1,1,queued core-hours,-0.328531,-341.93,-360.224,-404.682,-260.883,-404.682,-260.883,-392.859,-293.095
+fwdmax + encoded hold - fwdmax,controller,3,0.6,cover: all,-0.191695,-0.13043,-0.135363,-0.130166,-0.125763,-0.135363,-0.125763,-0.186017,-0.0810234
+fwdmax + encoded hold - fwdmax,controller,3,0.6,cover: follow-on,0.167347,0.128017,0.127729,0.136331,0.119992,0.119992,0.136331,0.101176,0.151958
+fwdmax + encoded hold - fwdmax,controller,3,0.6,throttled core-hours,0.29783,347.805,337.378,365.006,341.03,337.378,365.006,220.312,473.323
+fwdmax + encoded hold - fwdmax,controller,3,0.6,allocated core-hours,-0.0105108,-891.583,-678.101,-1120.92,-875.73,-1120.92,-678.101,-1239.35,-554.588
+fwdmax + encoded hold - fwdmax,controller,3,0.6,allocation changes,-0.324577,-76564.8,-67774.8,-82665,-79254.6,-82665,-67774.8,-82626.3,-70218.2
+fwdmax + encoded hold - fwdmax,controller,3,0.6,queued core-hours,-0.0699357,-308.795,-907.693,32.3552,-51.0489,-907.693,32.3552,-732.278,204.199
+fwdmax + encoded hold - fwdmax,controller,3,0.8,cover: all,-0.0329399,-0.0248967,-0.0241919,-0.0258171,-0.024681,-0.0258171,-0.0241919,-0.0331827,-0.019302
+fwdmax + encoded hold - fwdmax,controller,3,0.8,cover: follow-on,0.0812221,0.068755,0.0714109,0.0791115,0.0557428,0.0557428,0.0791115,0.0520325,0.0880057
+fwdmax + encoded hold - fwdmax,controller,3,0.8,throttled core-hours,0.0744883,63.9938,63.0492,67.2301,61.7021,61.7021,67.2301,39.9874,96.6756
+fwdmax + encoded hold - fwdmax,controller,3,0.8,allocated core-hours,-0.00596925,-573.878,-330.707,-885.913,-505.014,-885.913,-330.707,-765.966,-349.643
+fwdmax + encoded hold - fwdmax,controller,3,0.8,allocation changes,-0.232439,-69752.3,-63997.4,-72718.1,-72541.5,-72718.1,-63997.4,-76460,-64378
+fwdmax + encoded hold - fwdmax,controller,3,0.8,queued core-hours,-0.11143,-272.148,-414.317,-260.885,-141.244,-414.317,-141.244,-368.909,-179.059
+fwdmax + encoded hold - fwdmax,controller,3,1,cover: all,-0.0132909,-0.0107395,-0.00967293,-0.0120689,-0.0104765,-0.0120689,-0.00967293,-0.0157774,-0.00737206
+fwdmax + encoded hold - fwdmax,controller,3,1,cover: follow-on,0.0420131,0.037561,0.0389853,0.0440036,0.0296941,0.0296941,0.0440036,0.0268718,0.0477144
+fwdmax + encoded hold - fwdmax,controller,3,1,throttled core-hours,0.0253009,17.0982,18.6141,17.5629,15.1174,15.1174,18.6141,4.94897,34.559
+fwdmax + encoded hold - fwdmax,controller,3,1,allocated core-hours,-0.0078757,-848.572,-735.977,-1000.18,-809.558,-1000.18,-735.977,-1104.66,-426.87
+fwdmax + encoded hold - fwdmax,controller,3,1,allocation changes,-0.152172,-54070.3,-50864.6,-55009.2,-56337.1,-56337.1,-50864.6,-60073.6,-49510.3
+fwdmax + encoded hold - fwdmax,controller,3,1,queued core-hours,-0.0863105,-144.368,-173.728,-162.047,-97.3302,-173.728,-97.3302,-196.819,-97.3844
+fwdmax + encoded hold - fwdmax,controller,6,0.6,cover: all,-0.0955411,-0.0444068,-0.0465429,-0.0352721,-0.0514054,-0.0514054,-0.0352721,-0.0565431,-0.0288988
+fwdmax + encoded hold - fwdmax,controller,6,0.6,cover: follow-on,0.0209684,0.0150403,0.00918969,0.0248466,0.0110848,0.00918969,0.0248466,-0.0073005,0.0388703
+fwdmax + encoded hold - fwdmax,controller,6,0.6,throttled core-hours,0.176599,268.863,263.689,280.318,262.582,262.582,280.318,182.768,332.836
+fwdmax + encoded hold - fwdmax,controller,6,0.6,allocated core-hours,-0.00942487,-795.917,-591.168,-1013.35,-783.228,-1013.35,-591.168,-1114.17,-500.482
+fwdmax + encoded hold - fwdmax,controller,6,0.6,allocation changes,-0.32361,-75562.9,-67027,-81521.1,-78140.6,-81521.1,-67027,-81120.5,-69644.8
+fwdmax + encoded hold - fwdmax,controller,6,0.6,queued core-hours,0.212733,1376.8,773.915,1834.63,1521.84,773.915,1834.63,528.398,2310.14
+fwdmax + encoded hold - fwdmax,controller,6,0.8,cover: all,-0.0356642,-0.0206256,-0.0176911,-0.0182813,-0.0259045,-0.0259045,-0.0176911,-0.0288425,-0.0115445
+fwdmax + encoded hold - fwdmax,controller,6,0.8,cover: follow-on,0.0122155,0.0098622,0.00472105,0.022403,0.00246256,0.00246256,0.022403,-0.00371267,0.0245213
+fwdmax + encoded hold - fwdmax,controller,6,0.8,throttled core-hours,0.0423754,48.6348,47.1723,50.1396,48.5926,47.1723,50.1396,22.2658,76.9374
+fwdmax + encoded hold - fwdmax,controller,6,0.8,allocated core-hours,-0.00556283,-532.997,-297.139,-832.716,-469.135,-832.716,-297.139,-738.543,-312.995
+fwdmax + encoded hold - fwdmax,controller,6,0.8,allocation changes,-0.234541,-69955.4,-64115.5,-73048.5,-72702.2,-73048.5,-64115.5,-76641,-64724.7
+fwdmax + encoded hold - fwdmax,controller,6,0.8,queued core-hours,0.01663,63.5799,-83.8963,106.88,167.756,-83.8963,167.756,-70.9772,245.933
+fwdmax + encoded hold - fwdmax,controller,6,1,cover: all,-0.0138628,-0.00924921,-0.0078271,-0.0089587,-0.0109619,-0.0109619,-0.0078271,-0.0152257,-0.00243141
+fwdmax + encoded hold - fwdmax,controller,6,1,cover: follow-on,0.012937,0.0111237,0.00959183,0.01818,0.00559927,0.00559927,0.01818,0.00188133,0.0191953
+fwdmax + encoded hold - fwdmax,controller,6,1,throttled core-hours,0.0044842,4.08551,4.49617,5.01917,2.74119,2.74119,5.01917,-14.0607,20.9736
+fwdmax + encoded hold - fwdmax,controller,6,1,allocated core-hours,-0.00739201,-794.334,-688.48,-937.76,-756.762,-937.76,-688.48,-1079.04,-385.652
+fwdmax + encoded hold - fwdmax,controller,6,1,allocation changes,-0.153441,-54327.1,-51093.1,-55256.3,-56632,-56632,-51093.1,-60300.8,-49701.3
+fwdmax + encoded hold - fwdmax,controller,6,1,queued core-hours,-0.0133912,-36.1095,-70.196,-28.677,-9.45557,-70.196,-9.45557,-111.433,47.4552
+proposed - fwdmax,replay,1,0.6,cover: all,-0.149115,-0.100511,-0.0923126,-0.105773,-0.103448,-0.105773,-0.0923126,-0.125517,-0.0796607
+proposed - fwdmax,replay,1,0.6,cover: follow-on,0.181959,0.140858,0.135169,0.148973,0.138432,0.135169,0.148973,0.1152,0.169568
+proposed - fwdmax,replay,1,0.6,throttled core-hours,0.159727,169.562,155.027,188.338,165.319,155.027,188.338,119.081,226.9
+proposed - fwdmax,replay,1,0.6,allocated core-hours,-0.00634758,-538.319,-293.787,-790.792,-530.377,-790.792,-293.787,-836.148,-312.421
+proposed - fwdmax,replay,1,0.6,allocation changes,-0.29122,-125249,-110811,-117934,-147001,-147001,-110811,-134335,-116012
+proposed - fwdmax,replay,1,0.6,queued core-hours,-0.437902,-1379.76,-2186.78,-492.531,-1459.96,-2186.78,-492.531,-1968.71,-297.454
+proposed - fwdmax,replay,1,0.8,cover: all,-0.0561308,-0.0421694,-0.038711,-0.0457571,-0.0420401,-0.0457571,-0.038711,-0.0510419,-0.0353487
+proposed - fwdmax,replay,1,0.8,cover: follow-on,0.0955607,0.0813523,0.0808751,0.0883129,0.0748689,0.0748689,0.0883129,0.062217,0.102816
+proposed - fwdmax,replay,1,0.8,throttled core-hours,0.0764351,59.4213,48.818,71.359,58.0869,48.818,71.359,39.9041,84.2834
+proposed - fwdmax,replay,1,0.8,allocated core-hours,-0.00661068,-635.872,-151.329,-1195.33,-560.956,-1195.33,-151.329,-932.726,-384.662
+proposed - fwdmax,replay,1,0.8,allocation changes,-0.201913,-112657,-85671.7,-116077,-136223,-136223,-85671.7,-123038,-103189
+proposed - fwdmax,replay,1,0.8,queued core-hours,-0.402098,-631.525,-782.444,-604.286,-507.846,-782.444,-507.846,-816.698,-499.781
+proposed - fwdmax,replay,1,1,cover: all,-0.0302741,-0.0243192,-0.0191318,-0.0258273,-0.0279984,-0.0279984,-0.0191318,-0.0301646,-0.020458
+proposed - fwdmax,replay,1,1,cover: follow-on,0.0573082,0.0511421,0.047636,0.0614623,0.044328,0.044328,0.0614623,0.0376582,0.0649798
+proposed - fwdmax,replay,1,1,throttled core-hours,0.0396647,24.3909,10.6634,34.4324,28.0768,10.6634,34.4324,13.8745,37.2903
+proposed - fwdmax,replay,1,1,allocated core-hours,-0.0119361,-1290.33,-546.674,-2300.33,-1023.99,-2300.33,-546.674,-1607.12,-871.299
+proposed - fwdmax,replay,1,1,allocation changes,-0.144478,-97364.1,-58967.5,-115627,-117498,-117498,-58967.5,-106034,-89774.6
+proposed - fwdmax,replay,1,1,queued core-hours,-0.328338,-340.301,-392.973,-368.658,-259.271,-392.973,-259.271,-424.619,-270.537
+proposed - fwdmax,replay,3,0.6,cover: all,-0.118502,-0.0806714,-0.0739411,-0.0864669,-0.081606,-0.0864669,-0.0739411,-0.105864,-0.0626394
+proposed - fwdmax,replay,3,0.6,cover: follow-on,0.188105,0.142545,0.141031,0.148088,0.138517,0.138517,0.148088,0.117566,0.17022
+proposed - fwdmax,replay,3,0.6,throttled core-hours,0.230062,267.553,271.038,292.151,239.47,239.47,292.151,200.972,350.456
+proposed - fwdmax,replay,3,0.6,allocated core-hours,-0.00740163,-627.097,-404.279,-884.243,-592.77,-884.243,-404.279,-928.72,-396.366
+proposed - fwdmax,replay,3,0.6,allocation changes,-0.293981,-126088,-111695,-119171,-147399,-147399,-111695,-135429,-116829
+proposed - fwdmax,replay,3,0.6,queued core-hours,-0.0321467,-132.162,-972.921,1000.46,-424.026,-972.921,1000.46,-726.442,1438.82
+proposed - fwdmax,replay,3,0.8,cover: all,-0.0423293,-0.0320179,-0.0288323,-0.0375948,-0.0296266,-0.0375948,-0.0288323,-0.0396388,-0.0263855
+proposed - fwdmax,replay,3,0.8,cover: follow-on,0.100206,0.0842196,0.0855119,0.0909112,0.0762358,0.0762358,0.0909112,0.0643982,0.106744
+proposed - fwdmax,replay,3,0.8,throttled core-hours,0.118507,102.117,97.0289,125.056,84.2678,84.2678,125.056,78.3439,134.595
+proposed - fwdmax,replay,3,0.8,allocated core-hours,-0.00705905,-678.53,-199.702,-1250.33,-585.562,-1250.33,-199.702,-969.832,-418.028
+proposed - fwdmax,replay,3,0.8,allocation changes,-0.203539,-113373,-86625.7,-116720,-136772,-136772,-86625.7,-124047,-103849
+proposed - fwdmax,replay,3,0.8,queued core-hours,-0.0675603,-157.83,-351.199,-36.7848,-85.5067,-351.199,-36.7848,-257.278,-57.4657
+proposed - fwdmax,replay,3,1,cover: all,-0.0210854,-0.017016,-0.0117457,-0.0218023,-0.0174999,-0.0218023,-0.0117457,-0.0215158,-0.0139548
+proposed - fwdmax,replay,3,1,cover: follow-on,0.0641899,0.056628,0.054349,0.0661403,0.0493948,0.0493948,0.0661403,0.041659,0.0720981
+proposed - fwdmax,replay,3,1,throttled core-hours,0.0691194,47.5068,36.3419,70.2122,35.9662,35.9662,70.2122,35.8489,63.8737
+proposed - fwdmax,replay,3,1,allocated core-hours,-0.0121959,-1317.65,-581.469,-2337.99,-1033.5,-2337.99,-581.469,-1627.07,-891.528
+proposed - fwdmax,replay,3,1,allocation changes,-0.145192,-97733.1,-59360.5,-116093,-117746,-117746,-59360.5,-106445,-90098.1
+proposed - fwdmax,replay,3,1,queued core-hours,-0.0648526,-107.8,-224.79,-47.5751,-51.0356,-224.79,-47.5751,-160.335,-55.3967
+proposed - fwdmax,replay,6,0.6,cover: all,-0.103291,-0.0487555,-0.0468959,-0.0351209,-0.0642498,-0.0642498,-0.0351209,-0.0566939,-0.0404429
+proposed - fwdmax,replay,6,0.6,cover: follow-on,0.0395676,0.0283102,0.0152936,0.0462929,0.023344,0.0152936,0.0462929,0.00495458,0.0506752
+proposed - fwdmax,replay,6,0.6,throttled core-hours,0.184812,277.376,295.305,276.648,260.173,260.173,295.305,215.325,339.834
+proposed - fwdmax,replay,6,0.6,allocated core-hours,-0.00737865,-622.469,-454.373,-830.225,-582.808,-830.225,-454.373,-934.617,-380.138
+proposed - fwdmax,replay,6,0.6,allocation changes,-0.295484,-125420,-111315,-118702,-146243,-146243,-111315,-134741,-116425
+proposed - fwdmax,replay,6,0.6,queued core-hours,0.239562,1431.77,526.14,2933.98,835.192,526.14,2933.98,455.07,4118.44
+proposed - fwdmax,replay,6,0.8,cover: all,-0.0606191,-0.0355699,-0.031627,-0.024663,-0.0504198,-0.0504198,-0.024663,-0.0422039,-0.0296355
+proposed - fwdmax,replay,6,0.8,cover: follow-on,0.00490408,0.00396311,-0.0146706,0.0233211,0.00323884,-0.0146706,0.0233211,-0.0109375,0.0209283
+proposed - fwdmax,replay,6,0.8,throttled core-hours,0.103294,117.429,127.371,115.588,109.327,109.327,127.371,92.2127,150.195
+proposed - fwdmax,replay,6,0.8,allocated core-hours,-0.00745395,-714.41,-262.089,-1257.02,-624.118,-1257.02,-262.089,-993.325,-445.478
+proposed - fwdmax,replay,6,0.8,allocation changes,-0.206478,-114325,-88199.6,-116903,-137873,-137873,-88199.6,-124824,-104668
+proposed - fwdmax,replay,6,0.8,queued core-hours,0.0689165,250.532,51.3747,409.841,290.379,51.3747,409.841,128.62,415.448
+proposed - fwdmax,replay,6,1,cover: all,-0.0358737,-0.024192,-0.020867,-0.0128617,-0.0388473,-0.0388473,-0.0128617,-0.0292315,-0.0200163
+proposed - fwdmax,replay,6,1,cover: follow-on,0.00385618,0.00330226,-0.0129071,0.0247753,-0.00196149,-0.0129071,0.0247753,-0.00851733,0.0138039
+proposed - fwdmax,replay,6,1,throttled core-hours,0.0624209,56.8304,66.959,51.5324,51.9999,51.5324,66.959,42.4671,76.1178
+proposed - fwdmax,replay,6,1,allocated core-hours,-0.0125074,-1348.19,-658.235,-2323.31,-1063.04,-2323.31,-658.235,-1625.01,-924.733
+proposed - fwdmax,replay,6,1,allocation changes,-0.146489,-98237,-60072.8,-116202,-118436,-118436,-60072.8,-106857,-90606.6
+proposed - fwdmax,replay,6,1,queued core-hours,0.0218035,57.5789,-87.2148,138.741,121.21,-87.2148,138.741,-14.813,147.404
+proposed - fwdmax,controller,1,0.6,cover: all,-0.181756,-0.124001,-0.115482,-0.128125,-0.128396,-0.128396,-0.115482,-0.15857,-0.0965619
+proposed - fwdmax,controller,1,0.6,cover: follow-on,0.171364,0.132866,0.124844,0.136027,0.137727,0.124844,0.137727,0.10712,0.159307
+proposed - fwdmax,controller,1,0.6,throttled core-hours,0.224523,238.705,219.683,275.021,221.411,219.683,275.021,173.19,324.881
+proposed - fwdmax,controller,1,0.6,allocated core-hours,-0.00867002,-736.21,-504.708,-952.976,-750.945,-952.976,-504.708,-1048.94,-424.508
+proposed - fwdmax,controller,1,0.6,allocation changes,-0.243097,-57495.9,-47014.2,-60712.9,-64760.6,-64760.6,-47014.2,-62178.9,-51912.3
+proposed - fwdmax,controller,1,0.6,queued core-hours,0.220258,744.707,-2059.37,5205.52,-912.036,-2059.37,5205.52,-1144.92,12094
+proposed - fwdmax,controller,1,0.8,cover: all,-0.0624878,-0.0473482,-0.0452794,-0.0523662,-0.0443988,-0.0523662,-0.0443988,-0.0581158,-0.0385524
+proposed - fwdmax,controller,1,0.8,cover: follow-on,0.095149,0.0809185,0.0819558,0.0839314,0.0768683,0.0768683,0.0839314,0.0621759,0.101333
+proposed - fwdmax,controller,1,0.8,throttled core-hours,0.0960861,74.387,63.9466,89.5998,69.6146,63.9466,89.5998,47.3461,104.127
+proposed - fwdmax,controller,1,0.8,allocated core-hours,-0.0068756,-661.554,-213.812,-1140.28,-630.566,-1140.28,-213.812,-932.779,-411.348
+proposed - fwdmax,controller,1,0.8,allocation changes,-0.215895,-64893.3,-49267.9,-68156.6,-77255.5,-77255.5,-49267.9,-70681.4,-59885.4
+proposed - fwdmax,controller,1,0.8,queued core-hours,-0.388166,-641.27,-798.39,-614.344,-511.076,-798.39,-511.076,-789.304,-522.88
+proposed - fwdmax,controller,1,1,cover: all,-0.0326227,-0.0263889,-0.0217865,-0.0306617,-0.0267184,-0.0306617,-0.0217865,-0.0329042,-0.021352
+proposed - fwdmax,controller,1,1,cover: follow-on,0.0539034,0.048239,0.0478264,0.053487,0.0434038,0.0434038,0.053487,0.0344769,0.0609457
+proposed - fwdmax,controller,1,1,throttled core-hours,0.0513698,31.0283,18.8849,46.3012,27.8986,18.8849,46.3012,16.858,48.4974
+proposed - fwdmax,controller,1,1,allocated core-hours,-0.0103951,-1120.77,-448.645,-1803.22,-1110.45,-1803.22,-448.645,-1494.67,-680.61
+proposed - fwdmax,controller,1,1,allocation changes,-0.160707,-57159.8,-33971.6,-69680.3,-67827.6,-69680.3,-33971.6,-63034.2,-52223.9
+proposed - fwdmax,controller,1,1,queued core-hours,-0.313654,-326.446,-369.979,-364.575,-244.785,-369.979,-244.785,-390.972,-273.148
+proposed - fwdmax,controller,3,0.6,cover: all,-0.161373,-0.109799,-0.100931,-0.111525,-0.116941,-0.116941,-0.100931,-0.146262,-0.083562
+proposed - fwdmax,controller,3,0.6,cover: follow-on,0.165482,0.12659,0.122227,0.137765,0.119779,0.119779,0.137765,0.101423,0.151614
+proposed - fwdmax,controller,3,0.6,throttled core-hours,0.302196,352.903,343.569,393.212,321.928,321.928,393.212,268.451,464.339
+proposed - fwdmax,controller,3,0.6,allocated core-hours,-0.00992321,-841.738,-622.337,-1061.91,-840.972,-1061.91,-622.337,-1172.36,-528.822
+proposed - fwdmax,controller,3,0.6,allocation changes,-0.244428,-57658.5,-47264.6,-61147.7,-64563.3,-64563.3,-47264.6,-62437.7,-52110.3
+proposed - fwdmax,controller,3,0.6,queued core-hours,0.766185,3383.03,-595.342,10256.7,487.762,-595.342,10256.7,333.13,15141
+proposed - fwdmax,controller,3,0.8,cover: all,-0.0484806,-0.0366427,-0.0333986,-0.0412192,-0.0353102,-0.0412192,-0.0333986,-0.0464564,-0.0294196
+proposed - fwdmax,controller,3,0.8,cover: follow-on,0.0872472,0.0738554,0.072319,0.0837857,0.0654614,0.0654614,0.0837857,0.0557145,0.0931037
+proposed - fwdmax,controller,3,0.8,throttled core-hours,0.146176,125.582,122.358,149.768,104.619,104.619,149.768,90.8879,166.675
+proposed - fwdmax,controller,3,0.8,allocated core-hours,-0.00731931,-703.671,-262.024,-1192.52,-656.47,-1192.52,-262.024,-975.337,-447.494
+proposed - fwdmax,controller,3,0.8,allocation changes,-0.217612,-65302.9,-49759.4,-68567.2,-77582.2,-77582.2,-49759.4,-71212.4,-60231.8
+proposed - fwdmax,controller,3,0.8,queued core-hours,-0.0507342,-123.91,-314.821,-10.4526,-46.455,-314.821,-10.4526,-212.79,-36.8103
+proposed - fwdmax,controller,3,1,cover: all,-0.0234953,-0.0189848,-0.0144729,-0.023369,-0.0191127,-0.023369,-0.0144729,-0.0246996,-0.0143306
+proposed - fwdmax,controller,3,1,cover: follow-on,0.048967,0.0437779,0.0426547,0.0533568,0.0353222,0.0353222,0.0533568,0.0314754,0.056601
+proposed - fwdmax,controller,3,1,throttled core-hours,0.0890734,60.1952,50.965,84.6726,44.948,44.948,84.6726,41.5952,83.8802
+proposed - fwdmax,controller,3,1,allocated core-hours,-0.0105617,-1137.98,-471.866,-1828.72,-1113.35,-1828.72,-471.866,-1514.02,-700.048
+proposed - fwdmax,controller,3,1,allocation changes,-0.16158,-57413,-34257.5,-69982.5,-67999,-69982.5,-34257.5,-63304.9,-52449.6
+proposed - fwdmax,controller,3,1,queued core-hours,-0.0427561,-71.5165,-179.689,-16.2151,-18.6459,-179.689,-16.2151,-122.49,-19.7856
+proposed - fwdmax,controller,6,0.6,cover: all,-0.0767565,-0.0356759,-0.0358759,-0.0229591,-0.0481925,-0.0481925,-0.0229591,-0.0479054,-0.0223289
+proposed - fwdmax,controller,6,0.6,cover: follow-on,0.0221714,0.0159033,0.00784214,0.0288245,0.0110431,0.00784214,0.0288245,-0.00744247,0.0383945
+proposed - fwdmax,controller,6,0.6,throttled core-hours,0.190354,289.804,300.498,309.575,259.34,259.34,309.575,227.059,369.058
+proposed - fwdmax,controller,6,0.6,allocated core-hours,-0.00906445,-765.48,-572.304,-962.762,-761.374,-962.762,-572.304,-1074.87,-469.714
+proposed - fwdmax,controller,6,0.6,allocation changes,-0.240456,-56146.5,-46164,-59854.9,-62420.6,-62420.6,-46164,-61122.6,-50488.8
+proposed - fwdmax,controller,6,0.6,queued core-hours,1.08129,6998.1,1698.81,16990.1,2305.37,1698.81,16990.1,2104.2,19718.6
+proposed - fwdmax,controller,6,0.8,cover: all,-0.0465893,-0.0269439,-0.0214721,-0.0155068,-0.0438527,-0.0438527,-0.0155068,-0.0359506,-0.0170984
+proposed - fwdmax,controller,6,0.8,cover: follow-on,0.00237232,0.00191529,-0.00896462,0.0113905,0.00331998,-0.00896462,0.0113905,-0.0138435,0.0194571
+proposed - fwdmax,controller,6,0.8,throttled core-hours,0.0934298,107.231,117.529,105.094,99.0684,99.0684,117.529,75.9489,141.165
+proposed - fwdmax,controller,6,0.8,allocated core-hours,-0.00697499,-668.302,-252.794,-1121.23,-630.884,-1121.23,-252.794,-925.045,-419.7
+proposed - fwdmax,controller,6,0.8,allocation changes,-0.218914,-65294.4,-50041.2,-68233.1,-77609,-77609,-50041.2,-71098.9,-60220.7
+proposed - fwdmax,controller,6,0.8,queued core-hours,0.0850783,325.272,186.101,431.066,358.648,186.101,431.066,174.668,506.536
+proposed - fwdmax,controller,6,1,cover: all,-0.028034,-0.0187041,-0.0122997,-0.00827744,-0.0355353,-0.0355353,-0.00827744,-0.0256444,-0.0105679
+proposed - fwdmax,controller,6,1,cover: follow-on,-0.00174853,-0.00150345,-0.0141882,0.0138367,-0.00415878,-0.0141882,0.0138367,-0.0146459,0.0112677
+proposed - fwdmax,controller,6,1,throttled core-hours,0.0524247,47.7636,54.5655,47.3736,41.3518,41.3518,54.5655,26.9671,68.5763
+proposed - fwdmax,controller,6,1,allocated core-hours,-0.0101437,-1090.02,-461.609,-1738.8,-1069.66,-1738.8,-461.609,-1476.63,-648.477
+proposed - fwdmax,controller,6,1,allocation changes,-0.162473,-57525.1,-34527.1,-69902.5,-68145.8,-69902.5,-34527.1,-63451.3,-52623.3
+proposed - fwdmax,controller,6,1,queued core-hours,0.0371397,100.148,-29.5026,173.933,156.013,-29.5026,173.933,6.8976,198.661
+fwdmax6 + encoded hold - proposed,replay,1,0.6,cover: all,0.000558547,0.000320348,0.00183647,0.00459203,-0.00546746,-0.00546746,0.00459203,-0.0152491,0.00832366
+fwdmax6 + encoded hold - proposed,replay,1,0.6,cover: follow-on,-0.00172151,-0.00157515,0.00162387,-0.00130512,-0.00504419,-0.00504419,0.00162387,-0.00587559,0.00266651
+fwdmax6 + encoded hold - proposed,replay,1,0.6,throttled core-hours,-0.0177729,-21.8808,-19.1301,-36.0214,-10.4907,-36.0214,-10.4907,-42.7314,9.97942
+fwdmax6 + encoded hold - proposed,replay,1,0.6,allocated core-hours,-0.00102546,-86.4138,-81.8439,-90.3471,-87.0505,-90.3471,-81.8439,-171.983,2.74297
+fwdmax6 + encoded hold - proposed,replay,1,0.6,allocation changes,-0.202127,-61614.9,-62000.2,-77175.6,-45669.1,-77175.6,-45669.1,-72300.5,-52942.2
+fwdmax6 + encoded hold - proposed,replay,1,0.6,queued core-hours,-0.191143,-338.529,-37.8901,-973.694,-4.00256,-973.694,-4.00256,-1708.75,-7.49611
+fwdmax6 + encoded hold - proposed,replay,1,0.8,cover: all,0.0178534,0.0126598,0.0157685,0.0105838,0.0116272,0.0105838,0.0157685,0.00970037,0.0163694
+fwdmax6 + encoded hold - proposed,replay,1,0.8,cover: follow-on,-0.00424512,-0.00395929,-0.00349964,-0.00314347,-0.00523476,-0.00523476,-0.00314347,-0.00911431,0.00162749
+fwdmax6 + encoded hold - proposed,replay,1,0.8,throttled core-hours,-0.045561,-38.1268,-36.3644,-44.3227,-33.6934,-44.3227,-33.6934,-48.6701,-29.0379
+fwdmax6 + encoded hold - proposed,replay,1,0.8,allocated core-hours,-0.000441754,-42.2108,-98.733,-0.071255,-27.8281,-98.733,-0.071255,-150.982,64.8007
+fwdmax6 + encoded hold - proposed,replay,1,0.8,allocation changes,-0.0946005,-42124.9,-43254.6,-51730.6,-31389.4,-51730.6,-31389.4,-46826.3,-37137.8
+fwdmax6 + encoded hold - proposed,replay,1,0.8,queued core-hours,-0.0290205,-27.2517,-16.6601,-48.3908,-16.7041,-48.3908,-16.6601,-62.5073,-4.58917
+fwdmax6 + encoded hold - proposed,replay,1,1,cover: all,0.0168245,0.0131059,0.0106024,0.0112142,0.0175013,0.0106024,0.0175013,0.0104671,0.016383
+fwdmax6 + encoded hold - proposed,replay,1,1,cover: follow-on,-0.00287071,-0.00270865,0.00146884,-0.00477374,-0.00482105,-0.00482105,0.00146884,-0.00850185,0.00316171
+fwdmax6 + encoded hold - proposed,replay,1,1,throttled core-hours,-0.0542942,-34.7113,-23.4714,-41.8987,-38.7637,-41.8987,-23.4714,-43.5046,-25.4608
+fwdmax6 + encoded hold - proposed,replay,1,1,allocated core-hours,-0.00063165,-67.4686,-75.0186,66.4765,-193.864,-193.864,66.4765,-229.679,133.459
+fwdmax6 + encoded hold - proposed,replay,1,1,allocation changes,-0.0584108,-33676,-46025.5,-28514.3,-26488.3,-46025.5,-26488.3,-37443.7,-30430.7
+fwdmax6 + encoded hold - proposed,replay,1,1,queued core-hours,-0.0238968,-16.6354,-2.0333,-22.2249,-25.6479,-25.6479,-2.0333,-27.8369,-3.55554
+fwdmax6 + encoded hold - proposed,replay,3,0.6,cover: all,0.00500251,0.00300195,0.00838704,0.00225317,-0.00163437,-0.00163437,0.00838704,-0.0139388,0.00958487
+fwdmax6 + encoded hold - proposed,replay,3,0.6,cover: follow-on,-0.00224147,-0.00201808,0.000756505,-0.00179995,-0.00501081,-0.00501081,0.000756505,-0.00743863,0.00355991
+fwdmax6 + encoded hold - proposed,replay,3,0.6,throttled core-hours,-0.022729,-32.5142,-37.4979,-44.8197,-15.2249,-44.8197,-15.2249,-57.6155,10.2226
+fwdmax6 + encoded hold - proposed,replay,3,0.6,allocated core-hours,-0.000918095,-77.2092,-67.0497,-81.9223,-82.6555,-82.6555,-67.0497,-158.339,11.8363
+fwdmax6 + encoded hold - proposed,replay,3,0.6,allocation changes,-0.206362,-62488.6,-63182.6,-77561.1,-46722.3,-77561.1,-46722.3,-73531.8,-53422.5
+fwdmax6 + encoded hold - proposed,replay,3,0.6,queued core-hours,-0.113953,-453.423,-107.285,-1278.78,25.7951,-1278.78,25.7951,-2126.4,-8.8068
+fwdmax6 + encoded hold - proposed,replay,3,0.8,cover: all,0.0178203,0.0129087,0.0167326,0.0111721,0.0108215,0.0108215,0.0167326,0.0105296,0.0159326
+fwdmax6 + encoded hold - proposed,replay,3,0.8,cover: follow-on,-0.0052363,-0.00484194,-0.0039611,-0.00490994,-0.00565478,-0.00565478,-0.0039611,-0.0107728,0.00110102
+fwdmax6 + encoded hold - proposed,replay,3,0.8,throttled core-hours,-0.0536061,-51.6666,-50.7055,-59.206,-45.0882,-59.206,-45.0882,-66.8432,-39.3824
+fwdmax6 + encoded hold - proposed,replay,3,0.8,allocated core-hours,-0.000324486,-30.9701,-84.9195,12.1614,-20.1523,-84.9195,12.1614,-136.835,76.1373
+fwdmax6 + encoded hold - proposed,replay,3,0.8,allocation changes,-0.0948906,-42096.8,-43086.1,-51889.8,-31314.5,-51889.8,-31314.5,-46796.4,-37102.8
+fwdmax6 + encoded hold - proposed,replay,3,0.8,queued core-hours,-0.0478431,-104.217,-80.322,-133.32,-99.0092,-133.32,-80.322,-175.183,-55.5833
+fwdmax6 + encoded hold - proposed,replay,3,1,cover: all,0.0143893,0.0113674,0.0101807,0.0100813,0.0138401,0.0100813,0.0138401,0.00912841,0.0139759
+fwdmax6 + encoded hold - proposed,replay,3,1,cover: follow-on,-0.00390109,-0.00366243,-0.00172144,-0.00835496,-0.000910899,-0.00835496,-0.000910899,-0.00928272,0.00213487
+fwdmax6 + encoded hold - proposed,replay,3,1,throttled core-hours,-0.0600181,-44.1026,-31.9301,-54.5135,-45.864,-54.5135,-31.9301,-55.7045,-33.4023
+fwdmax6 + encoded hold - proposed,replay,3,1,allocated core-hours,-0.000574842,-61.3488,-62.3541,72.1949,-193.887,-193.887,72.1949,-219.665,140.578
+fwdmax6 + encoded hold - proposed,replay,3,1,allocation changes,-0.0584846,-33651.8,-45979.2,-28457.9,-26518.3,-45979.2,-26518.3,-37442.7,-30397.3
+fwdmax6 + encoded hold - proposed,replay,3,1,queued core-hours,-0.0435583,-67.7083,-21.3601,-86.4711,-95.2936,-95.2936,-21.3601,-96.1504,-38.7599
+fwdmax6 + encoded hold - proposed,replay,6,0.6,cover: all,0.347178,0.146948,0.153501,0.133301,0.154041,0.133301,0.154041,0.110695,0.164502
+fwdmax6 + encoded hold - proposed,replay,6,0.6,cover: follow-on,0.0127223,0.00946283,0.0159571,0.00407793,0.00835343,0.00407793,0.0159571,0.00306074,0.0169181
+fwdmax6 + encoded hold - proposed,replay,6,0.6,throttled core-hours,-0.130873,-232.721,-238.73,-228.094,-231.341,-238.73,-228.094,-275.588,-167.883
+fwdmax6 + encoded hold - proposed,replay,6,0.6,allocated core-hours,0.00174798,146.373,157.448,123.659,158.01,123.659,158.01,62.5364,246.51
+fwdmax6 + encoded hold - proposed,replay,6,0.6,allocation changes,-0.204229,-61071.9,-62304.8,-75443.4,-45467.6,-75443.4,-45467.6,-72874.5,-51622.4
+fwdmax6 + encoded hold - proposed,replay,6,0.6,queued core-hours,-0.155646,-1153.09,-741.352,-2313.72,-404.188,-2313.72,-404.188,-3532.06,-428.555
+fwdmax6 + encoded hold - proposed,replay,6,0.8,cover: all,0.308426,0.170007,0.169611,0.160116,0.180294,0.160116,0.180294,0.157979,0.184372
+fwdmax6 + encoded hold - proposed,replay,6,0.8,cover: follow-on,0.0262827,0.0213438,0.0265494,0.0205442,0.0169379,0.0169379,0.0265494,0.0132615,0.0298478
+fwdmax6 + encoded hold - proposed,replay,6,0.8,throttled core-hours,-0.213095,-267.279,-270.011,-257.782,-274.043,-274.043,-257.782,-309.008,-236.071
+fwdmax6 + encoded hold - proposed,replay,6,0.8,allocated core-hours,0.00226377,215.349,170.272,247.476,228.3,170.272,247.476,101.816,327.522
+fwdmax6 + encoded hold - proposed,replay,6,0.8,allocation changes,-0.0887527,-38994.9,-39644.5,-49502.6,-27837.7,-49502.6,-27837.7,-43500.3,-34183.6
+fwdmax6 + encoded hold - proposed,replay,6,0.8,queued core-hours,-0.130663,-507.732,-510.18,-517.059,-495.958,-517.059,-495.958,-630.611,-414.043
+fwdmax6 + encoded hold - proposed,replay,6,1,cover: all,0.217768,0.141587,0.138833,0.134714,0.151215,0.134714,0.151215,0.129323,0.156837
+fwdmax6 + encoded hold - proposed,replay,6,1,cover: follow-on,0.020741,0.0178301,0.0232883,0.0125206,0.0176815,0.0125206,0.0232883,0.00987312,0.0272151
+fwdmax6 + encoded hold - proposed,replay,6,1,throttled core-hours,-0.236554,-228.812,-224.78,-222.048,-239.607,-239.607,-222.048,-266.695,-199.966
+fwdmax6 + encoded hold - proposed,replay,6,1,allocated core-hours,0.00158759,168.989,189.187,283.329,34.4497,34.4497,283.329,4.43377,383.468
+fwdmax6 + encoded hold - proposed,replay,6,1,allocation changes,-0.0546332,-31270.6,-43644.8,-26392.4,-23774.6,-43644.8,-23774.6,-34942.3,-28173
+fwdmax6 + encoded hold - proposed,replay,6,1,queued core-hours,-0.139059,-375.236,-315.907,-377.726,-432.074,-432.074,-315.907,-453.87,-302.219
+fwdmax6 + encoded hold - proposed,controller,1,0.6,cover: all,-0.0358894,-0.0200348,-0.017252,-0.018035,-0.0248174,-0.0248174,-0.017252,-0.0465301,0.000942378
+fwdmax6 + encoded hold - proposed,controller,1,0.6,cover: follow-on,0.00231879,0.00210595,0.00658952,0.00293258,-0.00320424,-0.00320424,0.00658952,-0.00310867,0.00608049
+fwdmax6 + encoded hold - proposed,controller,1,0.6,throttled core-hours,-0.000870619,-1.13343,5.94211,-31.4775,22.1351,-31.4775,22.1351,-39.2427,31.6054
+fwdmax6 + encoded hold - proposed,controller,1,0.6,allocated core-hours,-0.00125572,-105.704,-121.382,-93.2312,-102.498,-121.382,-93.2312,-179.628,-22.6122
+fwdmax6 + encoded hold - proposed,controller,1,0.6,allocation changes,-0.110541,-19788.9,-20790.5,-21849.3,-16726.9,-21849.3,-16726.9,-21430.3,-17225.1
+fwdmax6 + encoded hold - proposed,controller,1,0.6,queued core-hours,-0.584195,-2410.25,-193.145,-6614.63,-422.98,-6614.63,-193.145,-10056.6,-500.19
+fwdmax6 + encoded hold - proposed,controller,1,0.8,cover: all,0.0208802,0.0148326,0.0190853,0.0136086,0.011804,0.011804,0.0190853,0.0113774,0.0182487
+fwdmax6 + encoded hold - proposed,controller,1,0.8,cover: follow-on,-0.00533238,-0.00496635,-0.00469772,-0.00590692,-0.00429441,-0.00590692,-0.00429441,-0.00989034,0.000128896
+fwdmax6 + encoded hold - proposed,controller,1,0.8,throttled core-hours,-0.0499877,-42.4174,-37.6742,-52.8825,-36.6955,-52.8825,-36.6955,-55.2916,-32.0586
+fwdmax6 + encoded hold - proposed,controller,1,0.8,allocated core-hours,-0.00065534,-62.6217,-124.73,-33.3291,-29.8062,-124.73,-29.8062,-162.303,44.6343
+fwdmax6 + encoded hold - proposed,controller,1,0.8,allocation changes,-0.0582636,-13731.8,-11517.9,-18722.5,-10955.2,-18722.5,-10955.2,-15508.6,-11783.4
+fwdmax6 + encoded hold - proposed,controller,1,0.8,queued core-hours,-0.0585781,-59.2097,-21.481,-160.599,4.45105,-160.599,4.45105,-136.78,-12.7374
+fwdmax6 + encoded hold - proposed,controller,1,1,cover: all,0.0176765,0.0138322,0.013903,0.0110136,0.0165802,0.0110136,0.0165802,0.0115273,0.016723
+fwdmax6 + encoded hold - proposed,controller,1,1,cover: follow-on,-0.00237248,-0.00223762,0.00256176,-0.00724816,-0.00202646,-0.00724816,0.00256176,-0.00762237,0.00329014
+fwdmax6 + encoded hold - proposed,controller,1,1,throttled core-hours,-0.0538378,-34.1894,-26.973,-42.5266,-33.0687,-42.5266,-26.973,-42.7771,-26.3968
+fwdmax6 + encoded hold - proposed,controller,1,1,allocated core-hours,-9.138e-05,-9.7499,-238.515,145,64.2647,-238.515,145,-189.13,149.876
+fwdmax6 + encoded hold - proposed,controller,1,1,allocation changes,-0.0413412,-12341,-16568.9,-7942.2,-12512,-16568.9,-7942.2,-13936.4,-10476.3
+fwdmax6 + encoded hold - proposed,controller,1,1,queued core-hours,-0.0351691,-25.1226,-10.815,-47.771,-16.7817,-47.771,-10.815,-49.3072,-8.79084
+fwdmax6 + encoded hold - proposed,controller,3,0.6,cover: all,-0.0345727,-0.0197275,-0.0176293,-0.0195515,-0.0220016,-0.0220016,-0.0176293,-0.0421428,0.00444151
+fwdmax6 + encoded hold - proposed,controller,3,0.6,cover: follow-on,0.00141788,0.00126414,0.00584221,-0.00178989,-0.000259894,-0.00178989,0.00584221,-0.00320904,0.00560087
+fwdmax6 + encoded hold - proposed,controller,3,0.6,throttled core-hours,0.00701756,10.6716,13.3748,-24.5871,43.2271,-24.5871,43.2271,-43.0165,50.7061
+fwdmax6 + encoded hold - proposed,controller,3,0.6,allocated core-hours,-0.00133992,-112.531,-123.081,-96.2633,-118.249,-123.081,-96.2633,-187.823,-20.7683
+fwdmax6 + encoded hold - proposed,controller,3,0.6,allocation changes,-0.112588,-20066.9,-21230.4,-21928.6,-17041.7,-21928.6,-17041.7,-21673.5,-17444.1
+fwdmax6 + encoded hold - proposed,controller,3,0.6,queued core-hours,-0.462558,-3607.23,-209.102,-10202,-410.547,-10202,-209.102,-11815.6,-524.347
+fwdmax6 + encoded hold - proposed,controller,3,0.8,cover: all,0.0206379,0.0148423,0.0186932,0.0127303,0.0131035,0.0127303,0.0186932,0.0123794,0.0179229
+fwdmax6 + encoded hold - proposed,controller,3,0.8,cover: follow-on,-0.00411024,-0.00378291,0.000154327,-0.00462291,-0.00688014,-0.00688014,0.000154327,-0.00927291,0.00201865
+fwdmax6 + encoded hold - proposed,controller,3,0.8,throttled core-hours,-0.0567675,-55.8986,-56.1169,-69.4937,-42.0853,-69.4937,-42.0853,-73.7572,-42.2353
+fwdmax6 + encoded hold - proposed,controller,3,0.8,allocated core-hours,-0.000525449,-50.1464,-107.899,-16.5952,-25.9455,-107.899,-16.5952,-151.954,56.6949
+fwdmax6 + encoded hold - proposed,controller,3,0.8,allocation changes,-0.0582912,-13686,-11389.9,-18756.8,-10911.2,-18756.8,-10911.2,-15466.2,-11730.3
+fwdmax6 + encoded hold - proposed,controller,3,0.8,queued core-hours,-0.0604675,-140.189,-104.274,-255.028,-61.265,-255.028,-61.265,-248.313,-69.5899
+fwdmax6 + encoded hold - proposed,controller,3,1,cover: all,0.0153862,0.0121404,0.012337,0.0103386,0.0137455,0.0103386,0.0137455,0.00975758,0.0145555
+fwdmax6 + encoded hold - proposed,controller,3,1,cover: follow-on,-0.0040174,-0.00376755,-0.000766619,-0.00788862,-0.00264741,-0.00788862,-0.000766619,-0.00908018,0.00208861
+fwdmax6 + encoded hold - proposed,controller,3,1,throttled core-hours,-0.0623934,-45.9208,-38.6427,-56.7213,-42.3984,-56.7213,-38.6427,-58.8096,-35.4539
+fwdmax6 + encoded hold - proposed,controller,3,1,allocated core-hours,-8.2666e-06,-0.881283,-224.892,154.478,67.7706,-224.892,154.478,-178.531,160.989
+fwdmax6 + encoded hold - proposed,controller,3,1,allocation changes,-0.0413272,-12311.8,-16490.6,-7940.65,-12504.1,-16490.6,-7940.65,-13907.9,-10440.7
+fwdmax6 + encoded hold - proposed,controller,3,1,queued core-hours,-0.0527099,-84.3963,-50.1554,-119.931,-83.1023,-119.931,-50.1554,-127.793,-52.5919
+fwdmax6 + encoded hold - proposed,controller,6,0.6,cover: all,0.203629,0.0873807,0.0923226,0.0765599,0.0932596,0.0765599,0.0932596,0.0572944,0.12605
+fwdmax6 + encoded hold - proposed,controller,6,0.6,cover: follow-on,0.0079757,0.0058477,0.00981585,0.00204035,0.00568689,0.00204035,0.00981585,-0.00136034,0.013981
+fwdmax6 + encoded hold - proposed,controller,6,0.6,throttled core-hours,-0.071168,-128.975,-132.773,-146.876,-107.275,-146.876,-107.275,-197.577,-87.2369
+fwdmax6 + encoded hold - proposed,controller,6,0.6,allocated core-hours,0.000617179,51.6474,52.8018,49.2099,52.9306,49.2099,52.9306,-27.677,155.884
+fwdmax6 + encoded hold - proposed,controller,6,0.6,allocation changes,-0.11106,-19696.9,-20753.6,-21260,-17077,-21260,-17077,-21204.1,-16988.5
+fwdmax6 + encoded hold - proposed,controller,6,0.6,queued core-hours,-0.431626,-5814.04,-955.822,-15589.7,-896.598,-15589.7,-896.598,-16239.7,-1045.78
+fwdmax6 + encoded hold - proposed,controller,6,0.8,cover: all,0.284185,0.156695,0.158837,0.147131,0.164116,0.147131,0.164116,0.148209,0.165727
+fwdmax6 + encoded hold - proposed,controller,6,0.8,cover: follow-on,0.0218387,0.0176733,0.0205122,0.0222158,0.0102921,0.0102921,0.0222158,0.00947998,0.0260295
+fwdmax6 + encoded hold - proposed,controller,6,0.8,throttled core-hours,-0.18647,-234.01,-238.983,-228.389,-234.657,-238.983,-228.389,-254.539,-217.48
+fwdmax6 + encoded hold - proposed,controller,6,0.8,allocated core-hours,0.00161572,153.729,101.675,174.877,184.634,101.675,184.634,50.504,260.072
+fwdmax6 + encoded hold - proposed,controller,6,0.8,allocation changes,-0.053761,-12524.8,-10120.1,-17892.5,-9561.66,-17892.5,-9561.66,-14331.7,-10461.2
+fwdmax6 + encoded hold - proposed,controller,6,0.8,queued core-hours,-0.122838,-509.592,-555.369,-577.825,-395.581,-577.825,-395.581,-644.52,-404.307
+fwdmax6 + encoded hold - proposed,controller,6,1,cover: all,0.210758,0.136675,0.13424,0.130038,0.145746,0.130038,0.145746,0.126996,0.147574
+fwdmax6 + encoded hold - proposed,controller,6,1,cover: follow-on,0.0216775,0.0186065,0.0236561,0.0152245,0.0169389,0.0152245,0.0236561,0.0110536,0.0271103
+fwdmax6 + encoded hold - proposed,controller,6,1,throttled core-hours,-0.214169,-205.357,-206.624,-199.884,-209.561,-209.561,-199.884,-227.367,-186.92
+fwdmax6 + encoded hold - proposed,controller,6,1,allocated core-hours,0.00167855,178.545,-31.8306,321.784,245.681,-31.8306,321.784,3.52978,344.917
+fwdmax6 + encoded hold - proposed,controller,6,1,allocation changes,-0.0384301,-11395.8,-15550.3,-7198.85,-11438.2,-15550.3,-7198.85,-12979.5,-9514.52
+fwdmax6 + encoded hold - proposed,controller,6,1,queued core-hours,-0.130102,-363.851,-344.51,-367.874,-379.17,-379.17,-344.51,-439.178,-295.361
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.6,cover: all,-0.150551,-0.101708,-0.0993026,-0.0985166,-0.107303,-0.107303,-0.0985166,-0.140228,-0.0774101
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.6,cover: follow-on,0.17672,0.137175,0.136743,0.140427,0.134356,0.134356,0.140427,0.109741,0.165708
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.6,throttled core-hours,0.117455,127.104,128.347,117.627,135.336,117.627,135.336,79.074,200.452
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.6,allocated core-hours,-0.00513267,-434.308,-360.927,-493.269,-448.73,-493.269,-360.927,-704.26,-163.485
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.6,allocation changes,-0.40882,-168193,-175078,-168581,-160920,-175078,-160920,-183458,-153946
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.6,queued core-hours,-0.663411,-2823.53,-3687.16,-2480.5,-2302.93,-3687.16,-2302.93,-4466.97,-1787.65
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.8,cover: all,-0.0437241,-0.0330013,-0.0307066,-0.0338985,-0.0343988,-0.0343988,-0.0307066,-0.0412858,-0.0262373
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.8,cover: follow-on,0.0913078,0.0777034,0.0708738,0.0854265,0.0768099,0.0708738,0.0854265,0.0594528,0.0967987
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.8,throttled core-hours,0.0155249,12.2102,13.0293,8.42252,15.1789,8.42252,15.1789,-4.86342,33.4913
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.8,allocated core-hours,-0.00410474,-393.661,-272.761,-525.873,-382.349,-525.873,-272.761,-599.113,-209.361
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.8,allocation changes,-0.244245,-130296,-128251,-133062,-129573,-133062,-128251,-141822,-120276
+fwdmax6 + encoded hold - fwdmax6,replay,1,0.8,queued core-hours,-0.513733,-963.299,-1047.81,-972.189,-869.894,-1047.81,-869.894,-1311.95,-725.989
+fwdmax6 + encoded hold - fwdmax6,replay,1,1,cover: all,-0.0184185,-0.0148628,-0.0148755,-0.0151367,-0.0145763,-0.0151367,-0.0145763,-0.0191713,-0.0124972
+fwdmax6 + encoded hold - fwdmax6,replay,1,1,cover: follow-on,0.0530687,0.0474129,0.0444668,0.0503016,0.0474702,0.0444668,0.0503016,0.0355318,0.0596334
+fwdmax6 + encoded hold - fwdmax6,replay,1,1,throttled core-hours,-0.0197205,-12.163,-9.05088,-15.8729,-11.5653,-15.8729,-9.05088,-22.3934,-1.07119
+fwdmax6 + encoded hold - fwdmax6,replay,1,1,allocated core-hours,-0.007635,-821.274,-596.042,-1061.36,-806.416,-1061.36,-596.042,-981.446,-538.526
+fwdmax6 + encoded hold - fwdmax6,replay,1,1,allocation changes,-0.156083,-100403,-98011.4,-104931,-98265.8,-104931,-98011.4,-110145,-91858.2
+fwdmax6 + encoded hold - fwdmax6,replay,1,1,queued core-hours,-0.423791,-499.759,-521.146,-511.353,-466.778,-521.146,-466.778,-648.49,-391.377
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.6,cover: all,-0.121481,-0.0833949,-0.0791634,-0.0822536,-0.0887675,-0.0887675,-0.0791634,-0.125317,-0.0625204
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.6,cover: follow-on,0.177996,0.135737,0.133746,0.140296,0.13317,0.13317,0.140296,0.106975,0.167331
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.6,throttled core-hours,0.185308,218.56,215.387,218.39,221.902,215.387,221.902,150.888,330.561
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.6,allocated core-hours,-0.00621859,-525.755,-449.169,-591.61,-536.485,-591.61,-449.169,-802.171,-253.578
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.6,allocation changes,-0.414411,-170072,-177032,-170428,-162756,-177032,-162756,-185626,-155391
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.6,queued core-hours,-0.319085,-1652.14,-2574.25,-1276.98,-1105.2,-2574.25,-1105.2,-3112.43,-743.504
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.8,cover: all,-0.0316355,-0.0240866,-0.021784,-0.0246714,-0.0258044,-0.0258044,-0.021784,-0.0310905,-0.0191568
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.8,cover: follow-on,0.0931775,0.0784035,0.0764621,0.0861465,0.0726019,0.0726019,0.0861465,0.0582103,0.0983135
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.8,throttled core-hours,0.0519111,45.0141,41.8256,46.7343,46.4825,41.8256,46.7343,24.2252,71.0818
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.8,allocated core-hours,-0.00445773,-427.228,-303.358,-565.235,-413.09,-565.235,-303.358,-634.876,-240.448
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.8,allocation changes,-0.246033,-131029,-129041,-133861,-130186,-133861,-129041,-142598,-120971
+fwdmax6 + encoded hold - fwdmax6,replay,3,0.8,queued core-hours,-0.19371,-498.298,-601.218,-480.649,-413.027,-601.218,-413.027,-771.733,-331.173
+fwdmax6 + encoded hold - fwdmax6,replay,3,1,cover: all,-0.0131845,-0.0107067,-0.00942356,-0.0113197,-0.0113768,-0.0113768,-0.00942356,-0.0141593,-0.00863341
+fwdmax6 + encoded hold - fwdmax6,replay,3,1,cover: follow-on,0.0547434,0.0485368,0.048953,0.0514849,0.0451725,0.0451725,0.0514849,0.0350192,0.0619141
+fwdmax6 + encoded hold - fwdmax6,replay,3,1,throttled core-hours,0.00779616,5.3433,6.63329,5.72794,3.66867,3.66867,6.63329,-6.87529,19.1246
+fwdmax6 + encoded hold - fwdmax6,replay,3,1,allocated core-hours,-0.00786084,-845.094,-616.273,-1090.87,-828.137,-1090.87,-616.273,-1001.34,-560.097
+fwdmax6 + encoded hold - fwdmax6,replay,3,1,allocation changes,-0.156886,-100807,-98389.6,-105394,-98638.1,-105394,-98389.6,-110582,-92240.7
+fwdmax6 + encoded hold - fwdmax6,replay,3,1,queued core-hours,-0.151338,-265.12,-301.537,-254.694,-239.128,-301.537,-239.128,-375.209,-188.004
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.6,cover: all,-0.133349,-0.0877364,-0.0821827,-0.0880145,-0.0930119,-0.0930119,-0.0821827,-0.130529,-0.065463
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.6,cover: follow-on,0.0293443,0.0214738,0.0193934,0.0238638,0.0211643,0.0193934,0.0238638,-0.00114722,0.0438651
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.6,throttled core-hours,0.223949,282.785,285.373,281.048,281.933,281.048,285.373,201.75,407.406
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.6,allocated core-hours,-0.00696485,-588.342,-517.995,-653.921,-593.109,-653.921,-517.995,-877.386,-306.557
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.6,allocation changes,-0.418696,-171399,-178463,-171700,-164033,-178463,-164033,-187410,-156605
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.6,queued core-hours,-0.0485847,-319.432,-1236.74,73.9092,204.534,-1236.74,204.534,-1585.24,674.678
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.8,cover: all,-0.030365,-0.0225855,-0.019547,-0.0252697,-0.0229399,-0.0252697,-0.019547,-0.0297329,-0.0171565
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.8,cover: follow-on,0.0150612,0.0123662,0.0109556,0.0125033,0.0136398,0.0109556,0.0136398,-5.60905e-05,0.0248839
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.8,throttled core-hours,0.06635,61.412,59.1259,63.3662,61.7438,59.1259,63.3662,40.5578,87.4191
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.8,allocated core-hours,-0.00462232,-442.758,-319.469,-580.766,-428.039,-580.766,-319.469,-648.246,-251.615
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.8,allocation changes,-0.247202,-131473,-129496,-134316,-130607,-134316,-129496,-143038,-121363
+fwdmax6 + encoded hold - fwdmax6,replay,6,0.8,queued core-hours,-0.036062,-126.378,-230.717,-100.081,-48.3363,-230.717,-48.3363,-376.368,43.5662
+fwdmax6 + encoded hold - fwdmax6,replay,6,1,cover: all,-0.00979985,-0.00783594,-0.00632563,-0.00838293,-0.00879924,-0.00879924,-0.00632563,-0.0112223,-0.00587185
+fwdmax6 + encoded hold - fwdmax6,replay,6,1,cover: follow-on,0.0100389,0.00872148,0.00545336,0.0120001,0.00871094,0.00545336,0.0120001,0.00188816,0.0156486
+fwdmax6 + encoded hold - fwdmax6,replay,6,1,throttled core-hours,0.0134845,9.82522,11.8444,8.68866,8.94254,8.68866,11.8444,0.768534,23.1252
+fwdmax6 + encoded hold - fwdmax6,replay,6,1,allocated core-hours,-0.00793005,-852.2,-624.066,-1097.39,-835.146,-1097.39,-624.066,-1005.3,-563.647
+fwdmax6 + encoded hold - fwdmax6,replay,6,1,allocation changes,-0.157261,-100974,-98562.2,-105575,-98784.2,-105575,-98562.2,-110819,-92453.9
+fwdmax6 + encoded hold - fwdmax6,replay,6,1,queued core-hours,-0.0521915,-127.925,-151.781,-120.471,-111.524,-151.781,-111.524,-215.858,-49.7591
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.6,cover: all,-0.213625,-0.146207,-0.142058,-0.14244,-0.154123,-0.154123,-0.142058,-0.186517,-0.0957605
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.6,cover: follow-on,0.174624,0.135331,0.13404,0.140449,0.131506,0.131506,0.140449,0.106317,0.155901
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.6,throttled core-hours,0.199245,216.106,207.346,213.62,227.353,207.346,227.353,125.549,289.748
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.6,allocated core-hours,-0.00652947,-552.557,-507.673,-562.93,-587.068,-587.068,-507.673,-867.481,-274.085
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.6,allocation changes,-0.288734,-64638.1,-71063,-65206.8,-57644.5,-71063,-57644.5,-69495.2,-59190.6
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.6,queued core-hours,-0.757126,-5347.86,-11562.7,-2277.56,-2203.34,-11562.7,-2203.34,-11194.8,-1831.07
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.8,cover: all,-0.0479992,-0.0365642,-0.0342523,-0.0368047,-0.0386356,-0.0386356,-0.0342523,-0.0454449,-0.028413
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.8,cover: follow-on,0.0858634,0.0732534,0.0622072,0.0809684,0.0765845,0.0622072,0.0809684,0.0548526,0.0930274
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.8,throttled core-hours,0.0396702,30.7595,31.3869,26.1751,34.7166,26.1751,34.7166,6.71204,53.7986
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.8,allocated core-hours,-0.00258958,-247.93,-199.111,-306.428,-238.25,-306.428,-199.111,-514.25,-72.9103
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.8,allocation changes,-0.215244,-60877.7,-61606.3,-63586.8,-57440,-63586.8,-57440,-67011,-56279.5
+fwdmax6 + encoded hold - fwdmax6,controller,1,0.8,queued core-hours,-0.499484,-949.61,-1017.68,-939.809,-891.34,-1017.68,-891.34,-1296.79,-756.505
+fwdmax6 + encoded hold - fwdmax6,controller,1,1,cover: all,-0.0204427,-0.0166194,-0.014737,-0.0179368,-0.0171844,-0.0179368,-0.014737,-0.0212991,-0.0123867
+fwdmax6 + encoded hold - fwdmax6,controller,1,1,cover: follow-on,0.0467801,0.0420492,0.0407052,0.0415082,0.0439341,0.0407052,0.0439341,0.0310077,0.0550459
+fwdmax6 + encoded hold - fwdmax6,controller,1,1,throttled core-hours,-0.00402535,-2.42843,-4.25759,-2.24779,-0.779914,-4.25759,-0.779914,-17.0582,11.2369
+fwdmax6 + encoded hold - fwdmax6,controller,1,1,allocated core-hours,-0.00336702,-360.429,-413.724,-346.431,-321.133,-413.724,-321.133,-777.894,-94.3673
+fwdmax6 + encoded hold - fwdmax6,controller,1,1,allocation changes,-0.147077,-49347.9,-48420,-52385.5,-47238.2,-52385.5,-47238.2,-54890.6,-44841
+fwdmax6 + encoded hold - fwdmax6,controller,1,1,queued core-hours,-0.424304,-507.971,-542.71,-468.3,-512.905,-542.71,-468.3,-673.359,-397.226
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.6,cover: all,-0.196391,-0.134628,-0.130154,-0.129308,-0.144421,-0.144421,-0.129308,-0.168849,-0.08078
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.6,cover: follow-on,0.164615,0.1262,0.126299,0.133592,0.118709,0.118709,0.133592,0.0984972,0.148885
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.6,throttled core-hours,0.290857,345.05,332.37,350.213,352.566,332.37,352.566,212.708,426.875
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.6,allocated core-hours,-0.00788629,-666.688,-620.081,-683.776,-696.206,-696.206,-620.081,-965.609,-383.011
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.6,allocation changes,-0.29161,-65109.2,-71728.6,-65794,-57805,-71728.6,-57805,-70132.6,-59619.6
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.6,queued core-hours,-0.482152,-3902.31,-10246.6,-767.736,-692.617,-10246.6,-692.617,-9797.69,-267.362
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.8,cover: all,-0.036933,-0.0281492,-0.0242354,-0.0293974,-0.0308148,-0.0308148,-0.0242354,-0.0355782,-0.0214771
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.8,cover: follow-on,0.0770977,0.065608,0.0669828,0.0722033,0.0576378,0.0576378,0.0722033,0.0487968,0.0841384
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.8,throttled core-hours,0.0820034,70.3919,64.6042,70.9867,75.585,64.6042,75.585,40.2245,98.8653
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.8,allocated core-hours,-0.00295573,-282.769,-225.416,-353.311,-269.58,-353.311,-225.416,-556.745,-110.687
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.8,allocation changes,-0.216988,-61271.3,-61990.1,-64026.3,-57797.4,-64026.3,-57797.4,-67444.2,-56622.2
+fwdmax6 + encoded hold - fwdmax6,controller,3,0.8,queued core-hours,-0.167802,-439.211,-521.17,-423.102,-373.36,-521.17,-373.36,-732.857,-289.235
+fwdmax6 + encoded hold - fwdmax6,controller,3,1,cover: all,-0.0148711,-0.0120943,-0.00994243,-0.0135916,-0.0127489,-0.0135916,-0.00994243,-0.0160872,-0.0084424
+fwdmax6 + encoded hold - fwdmax6,controller,3,1,cover: follow-on,0.0390946,0.035142,0.0398155,0.0366812,0.0289294,0.0289294,0.0398155,0.0248491,0.0470595
+fwdmax6 + encoded hold - fwdmax6,controller,3,1,throttled core-hours,0.0252448,16.9916,11.2685,23.1557,16.5507,11.2685,23.1557,1.05394,32.306
+fwdmax6 + encoded hold - fwdmax6,controller,3,1,allocated core-hours,-0.00346313,-370.477,-419.454,-364.327,-327.649,-419.454,-327.649,-784.311,-114.112
+fwdmax6 + encoded hold - fwdmax6,controller,3,1,allocation changes,-0.147968,-49598.2,-48645.8,-52674.8,-47474.1,-52674.8,-47474.1,-55192.9,-45070.7
+fwdmax6 + encoded hold - fwdmax6,controller,3,1,queued core-hours,-0.145509,-258.283,-309.883,-197.018,-267.95,-309.883,-197.018,-383.726,-165.712
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.6,cover: all,-0.199156,-0.128444,-0.127096,-0.128025,-0.130211,-0.130211,-0.127096,-0.149411,-0.084465
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.6,cover: follow-on,0.010963,0.00801417,0.00969762,0.00846196,0.00588293,0.00588293,0.00969762,-0.0157517,0.0340643
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.6,throttled core-hours,0.294596,383.045,370.48,391.106,387.548,370.48,391.106,253.476,458.851
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.6,allocated core-hours,-0.00818271,-690.83,-644.28,-712.035,-716.175,-716.175,-644.28,-1015.13,-407.227
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.6,allocation changes,-0.291459,-64852.3,-71545.2,-65553.9,-57457.8,-71545.2,-57457.8,-70454,-59579.2
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.6,queued core-hours,-0.210077,-2036.1,-8443.52,1168.29,1166.95,-8443.52,1168.29,-8256.81,1741.04
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.8,cover: all,-0.0389054,-0.0286633,-0.0221457,-0.031493,-0.0323511,-0.0323511,-0.0221457,-0.035307,-0.0214402
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.8,cover: follow-on,0.00829558,0.00680352,0.0115988,0.0102587,-0.00144688,-0.00144688,0.0115988,-0.0063783,0.022129
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.8,throttled core-hours,0.0862055,81.0253,75.8197,82.0306,85.2255,75.8197,85.2255,50.4107,109.999
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.8,allocated core-hours,-0.00303402,-290.02,-229.208,-368.663,-272.19,-368.663,-229.208,-563.309,-116.88
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.8,allocation changes,-0.217808,-61385,-62155.8,-64134.9,-57864.4,-64134.9,-57864.4,-67538.7,-56696.9
+fwdmax6 + encoded hold - fwdmax6,controller,6,0.8,queued core-hours,0.00416364,15.0882,-58.4619,25.892,77.8346,-58.4619,77.8346,-249.315,198.236
+fwdmax6 + encoded hold - fwdmax6,controller,6,1,cover: all,-0.013267,-0.0105568,-0.00807196,-0.0124702,-0.0111284,-0.0124702,-0.00807196,-0.0143115,-0.00641949
+fwdmax6 + encoded hold - fwdmax6,controller,6,1,cover: follow-on,0.00418446,0.00365423,0.00278609,0.00524358,0.00293301,0.00278609,0.00524358,-0.00427029,0.0123457
+fwdmax6 + encoded hold - fwdmax6,controller,6,1,throttled core-hours,0.0256087,18.8143,14.2896,24.8776,17.2757,14.2896,24.8776,1.71432,34.3945
+fwdmax6 + encoded hold - fwdmax6,controller,6,1,allocated core-hours,-0.00339687,-363.159,-413.6,-356.116,-319.761,-413.6,-319.761,-777.669,-116.992
+fwdmax6 + encoded hold - fwdmax6,controller,6,1,allocation changes,-0.148386,-49682.7,-48715.3,-52763.3,-47569.4,-52763.3,-47569.4,-55271.6,-45129.5
+fwdmax6 + encoded hold - fwdmax6,controller,6,1,queued core-hours,-0.0345847,-87.1521,-129.596,-27.2693,-104.591,-129.596,-27.2693,-223.247,25.2727

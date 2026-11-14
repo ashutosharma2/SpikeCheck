@@ -400,6 +400,61 @@ Limits of this section:
 - It is validation data and one seed, on one trace and one time window. The intervals cover trace sampling only, not the search or the training of the trees, and they aren't significance tests.
 - The ceiling comes from a search, so the true hindsight optimum could be higher.
 
+## Follow-up: does the computed hold's gain survive a simulated autoscaler? (3 seeds, run 14 November 2026)
+
+Every comparison above is a replay with one rule: the allocation at step t is the forecast issued d steps earlier. A real autoscaler does more. It waits before scaling down, and it ignores small changes. The wait is itself a hold, computed inside the controller from its recent recommendations. So the replay leaves a question open: does the computed hold still throttle less than the learned hold when the controller already holds allocations for a while?
+
+The simulated autoscaler adds two things to the replay ([ADR-012](adr/012-autoscaler-simulation.md)):
+
+1. A scale-down window. The allocation follows the highest recommendation of the last 5 minutes, so increases pass at once and decreases wait one step.
+2. A tolerance. The allocation stays where it is while the recommendation is within 10% of it.
+
+Both values are the defaults of Kubernetes' Horizontal Pod Autoscaler. That autoscaler changes replica counts, and these traces are CPU per container, so they are reference values, not a model of one product. The delay is the same in both directions, as in the replay. Methods are matched at the same overall slack, measured on the allocation the simulator produces.
+
+The rule was fixed and pushed before the single test run at commit `9cb6071`: at slack 0.8, throttled core-hours, computed minus learned, had to have a 95% interval wholly below 0 at 5 and at 15 minutes. Before it scored the controller, the simulator had to reproduce the published replay with the window and tolerance switched off, and it did.
+
+The test wasn't blind. The same three methods had already been compared on these test traces in the replay, so a result close to the replay's was likely.
+
+The files are in [`results/autoscaler/`](../results/autoscaler/).
+
+### Result: the throttling gain carries over at both delays
+
+Test set, three seeds, slack 0.8, throttled core-hours, computed minus learned:
+
+| Delay | Replay | Simulated autoscaler | Rule |
+|---|---|---|---|
+| 5 min | −45.4 [−58.4, −33.2], −5.4% | −49.3 [−59.9, −36.1], −5.8% | Wholly below 0, carries over |
+| 15 min | −55.3 [−72.5, −42.0], −5.7% | −61.6 [−79.0, −45.9], −6.3% | Wholly below 0, carries over |
+
+All three seeds agree in sign at both delays. The replay column is matched on the simulator's slack, so its 15-minute value differs slightly from the −55.1 in the computed-hold section.
+
+The three methods in the simulated autoscaler, mean of 3 seeds:
+
+| Delay | Method | Throttled core-hours | All spikes | Follow-on | Allocation changes |
+|---|---|---|---|---|---|
+| 5 min | No hold (fwdmax) | 774 | 0.758 | 0.850 | 300,578 |
+| 5 min | Computed hold | 799 | 0.725 | 0.926 | 231,226 |
+| 5 min | Learned hold (proposed) | 849 | 0.710 | 0.931 | 235,684 |
+| 15 min | No hold (fwdmax) | 859 | 0.756 | 0.847 | 300,089 |
+| 15 min | Computed hold | 923 | 0.731 | 0.915 | 230,337 |
+| 15 min | Learned hold (proposed) | 985 | 0.719 | 0.920 | 234,786 |
+
+The prediction written before the run had two parts. The order held: no hold throttles least, then the computed hold, then the learned hold. The second part was wrong: it said the computed hold's gain would be a smaller share once the controller had its own window, and the share is 5.8% and 6.3% against 5.4% and 5.7% in the replay.
+
+Reported, not judged:
+- No hold still throttles least. The computed hold adds 25.1 core-hours [7.6, 52.6] at 5 minutes and 64.0 [40.0, 96.7] at 15.
+- The window and tolerance about halve the number of allocation changes: 300,578 for no hold at 5 minutes, against 557,949 in the replay.
+- Follow-on coverage, computed minus learned, is −0.0057 [−0.0112, −0.0005] at 5 minutes and −0.0051 [−0.0106, +0.0003] at 15.
+- At slack 0.6 the throttling gain isn't shown at either delay. At slack 1.0 it is: −32.9 [−40.2, −24.5] and −43.1 [−55.2, −32.1].
+- The methods are matched on slack over usage, not on allocated core-hours. The computed hold allocates about 0.1% more core-hours than the learned hold.
+- A backlog version, where CPU that wasn't served joins the next step's demand, favours the computed hold on test (−52.4 [−95.0, −20.1] and −148.2 [−234.1, −84.6] queued core-hours) but didn't separate the two holds on validation, so I don't lean on it.
+
+Limits of this section:
+- It is still a replay of recorded usage. It can't show how a workload responds to throttling, it has no latency signal, and CPU above the request isn't visible in the data.
+- The controller is two borrowed settings, not a model of a real autoscaler.
+- The intervals cover trace sampling only, on one trace and one time window, and they aren't significance tests.
+- It compares the two holds. It doesn't show that a hold is worth having: no hold still throttles least.
+
 ## Conclusion
 
 ### Does the paper's result hold?
@@ -414,7 +469,7 @@ Hardware, storage, network and training limits led me to stream the Alibaba trac
 
 The paper's spike-detection score alone does not establish provisioning value. Its recall doesn't consistently distinguish strategies: fwdmax and the proposed target have similar recall at slack 0.8 and above, while fwdmax6 scores slightly below fwdmax despite better coverage at a 30-minute delay (0.744 versus 0.590). The preferred approach also changes with actuation delay and spike type. The paper's over-provisioning metric produces values of 10¹⁵ to 10¹⁷ because its denominator is about 1e-10, so it cannot support reliable conclusions about resource efficiency.
 
-Actuation-delay-aware coverage and the throttling proxy usually moved together, though not always: at 15 minutes and slack 0.5, cbase covers 0.064 fewer spikes than the proposed target but throttles 9.3% less. These are offline comparisons using a proxy, not evidence of improved real-world provisioning. I have no autoscaler simulation, latency measurements or customer-impact data, and throttling is estimated from five-minute CPU maxima. Therefore, I cannot establish that better spike prediction leads to better real-world provisioning.
+Actuation-delay-aware coverage and the throttling proxy usually moved together, though not always: at 15 minutes and slack 0.5, cbase covers 0.064 fewer spikes than the proposed target but throttles 9.3% less. These are offline comparisons using a proxy, not evidence of improved real-world provisioning. I have no latency measurements or customer-impact data, and throttling is estimated from five-minute CPU maxima. A simulated autoscaler with a scale-down window and a tolerance gave the same ordering as the replay, but it is still a replay of recorded usage. Therefore, I cannot establish that better spike prediction leads to better real-world provisioning.
 
 ### Does the hold need to be learned?
 
@@ -446,5 +501,6 @@ From the repo root:
 6. `python scripts/spike_types.py data/data.npz results/spike_types` labels the test spikes and writes the counts. Then `python scripts/score_types.py data/data.npz data/models_seeds results/spike_types results/horizon30 results/replication` scores coverage per type from the saved predictions and checks the totals against the published results. `python scripts/test_spike_types.py` tests the labelling rules on synthetic traces.
 7. `python scripts/val_probs.py fwdmax_s0 proposed_s0 fwdmax6_s0` writes validation predictions, and `python scripts/score_hold.py val data/data.npz data/novelty_val <out_dir>` regenerates the dry run in [ADR-010](adr/010-computed-hold.md). `python scripts/test_score_hold.py` tests the scorer. `results/computed_hold/` holds the single test run, and `score_hold.py test` won't start if that folder exists.
 8. `python scripts/val_probs.py cbase_s0` adds the cbase validation predictions. Then `python selection/oracle_headroom.py data/data.npz data/novelty_val results/oracle_headroom` and `python selection/trained_selector.py data/data.npz data/novelty_val data/chosen_containers.csv results/trained_selector` regenerate the two checks in [ADR-011](adr/011-per-trace-policy-selection.md). `python selection/test_oracle_headroom.py` and `python selection/test_trained_selector.py` test them on synthetic traces.
+9. `python simulator/autoscaler.py val data/data.npz data/novelty_val <out_dir>` regenerates the dry run in [ADR-012](adr/012-autoscaler-simulation.md), and `python simulator/test_autoscaler.py` tests the simulator. `results/autoscaler/` holds the single test run, and `autoscaler.py test` won't start if that folder exists.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).
