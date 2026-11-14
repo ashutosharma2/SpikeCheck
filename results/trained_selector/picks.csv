@@ -1,0 +1,55 @@
+d,budget,policy,traces
+1,0.6,cbase,220
+1,0.6,proposed,0
+1,0.6,fwdmax,432
+1,0.6,fwdmax6,239
+1,0.6,fwdmax + encoded hold,0
+1,0.6,fwdmax6 + encoded hold,0
+1,0.8,cbase,81
+1,0.8,proposed,7
+1,0.8,fwdmax,365
+1,0.8,fwdmax6,438
+1,0.8,fwdmax + encoded hold,0
+1,0.8,fwdmax6 + encoded hold,0
+1,1.0,cbase,236
+1,1.0,proposed,15
+1,1.0,fwdmax,537
+1,1.0,fwdmax6,103
+1,1.0,fwdmax + encoded hold,0
+1,1.0,fwdmax6 + encoded hold,0
+3,0.6,cbase,52
+3,0.6,proposed,0
+3,0.6,fwdmax,12
+3,0.6,fwdmax6,827
+3,0.6,fwdmax + encoded hold,0
+3,0.6,fwdmax6 + encoded hold,0
+3,0.8,cbase,81
+3,0.8,proposed,0
+3,0.8,fwdmax,467
+3,0.8,fwdmax6,343
+3,0.8,fwdmax + encoded hold,0
+3,0.8,fwdmax6 + encoded hold,0
+3,1.0,cbase,41
+3,1.0,proposed,36
+3,1.0,fwdmax,205
+3,1.0,fwdmax6,609
+3,1.0,fwdmax + encoded hold,0
+3,1.0,fwdmax6 + encoded hold,0
+6,0.6,cbase,60
+6,0.6,proposed,0
+6,0.6,fwdmax,6
+6,0.6,fwdmax6,812
+6,0.6,fwdmax + encoded hold,0
+6,0.6,fwdmax6 + encoded hold,13
+6,0.8,cbase,57
+6,0.8,proposed,0
+6,0.8,fwdmax,26
+6,0.8,fwdmax6,808
+6,0.8,fwdmax + encoded hold,0
+6,0.8,fwdmax6 + encoded hold,0
+6,1.0,cbase,35
+6,1.0,proposed,0
+6,1.0,fwdmax,15
+6,1.0,fwdmax6,826
+6,1.0,fwdmax + encoded hold,0
+6,1.0,fwdmax6 + encoded hold,15

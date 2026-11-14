@@ -357,6 +357,49 @@ Limits of this section:
 - A full pass wouldn't have shown that a hold is worthwhile, only that computing it can stand in for learning it.
 - I searched for this comparison at a matched budget and didn't find it, but that search wasn't exhaustive, so I don't claim it's new.
 
+## Follow-up: would choosing a policy per trace help? (validation traces, seed 0, run 13 November 2026)
+
+Spike types prefer different policies, which suggests a selector: something that picks one policy per workload from a fixed library. It could be a rule, a trained classifier or a large language model. Before building one, I ran two cheap checks of whether there's anything for a selector to find. Each had its rule and a prediction written down before the run ([ADR-011](adr/011-per-trace-policy-selection.md)).
+
+Both checks use the 891 validation traces and seed 0, because the test traces have been used for every comparison above and suggested the idea. The library has six policies: cbase, proposed, fwdmax, fwdmax6, and the computed hold on fwdmax and on fwdmax6. Every trace gets one policy, all policies are read at the same quantile, and the mix is matched to the slack budget exactly as a single policy is.
+
+The files are in [`results/oracle_headroom/`](../results/oracle_headroom/) and [`results/trained_selector/`](../results/trained_selector/).
+
+### Result: hindsight finds a gain, but it doesn't carry over and a trained selector does worse
+
+Coverage gain against the best fixed policy, which was fwdmax6 in every cell. Brackets are 95% trace bootstrap intervals with the assignments frozen:
+
+| Delay | Slack | Ceiling: hindsight on the whole trace | Follow: first half applied to the second | Trained selector |
+|---|---|---|---|---|
+| 5 min | 0.6 | +0.042 [+0.034, +0.049] | +0.001 [−0.006, +0.010] | −0.008 [−0.019, +0.004] |
+| 5 min | 0.8 | +0.036 [+0.029, +0.040] | +0.001 [−0.004, +0.008] | −0.001 [−0.007, +0.005] |
+| 5 min | 1.0 | +0.032 [+0.025, +0.035] | −0.006 [−0.011, +0.001] | −0.019 [−0.026, −0.011] |
+| 15 min | 0.6 | +0.030 [+0.023, +0.033] | −0.005 [−0.011, +0.002] | +0.001 [−0.002, +0.005] |
+| 15 min | 0.8 | +0.027 [+0.021, +0.030] | −0.010 [−0.016, −0.004] | −0.018 [−0.028, −0.011] |
+| 15 min | 1.0 | +0.022 [+0.020, +0.025] | 0.000 [−0.003, +0.004] | −0.003 [−0.006, 0.000] |
+| 30 min | 0.6 | +0.024 [+0.018, +0.028] | −0.005 [−0.011, +0.001] | +0.001 [−0.003, +0.005] |
+| 30 min | 0.8 | +0.017 [+0.014, +0.020] | −0.002 [−0.006, +0.001] | −0.006 [−0.011, −0.002] |
+| 30 min | 1.0 | +0.015 [+0.013, +0.017] | −0.002 [−0.006, +0.001] | −0.004 [−0.008, −0.001] |
+
+The three columns:
+
+1. Ceiling is the best one-policy-per-trace assignment found with hindsight over the whole scored period. No real selector can know it.
+2. Follow takes the assignment hindsight picks on the first half of the scored period and scores it on the second half, against the fixed policy that was best on the first half.
+3. The trained selector is a decision tree of depth 3 that decides once per trace, at the first scored step, from twelve features of the steps before it. It is cross-fitted over five folds, so no trace is scored by a tree that saw it.
+
+Both rules read the 15-minute delay at slack 0.8. For the headroom check, follow had to have a lower bound above +0.01. Its lower bound is below 0, so nothing carries over. For the trained selector, the gain had to have a lower bound above 0. It is −0.018 with an interval wholly below 0. I dropped per-trace policy selection with this library.
+
+What else the runs show:
+- The policy that looks best on the first half of a trace isn't the best on its second half. The hindsight assignment moves 64% of traces off fwdmax6, and the first-half assignment moves 69% and then loses coverage.
+- The tree's labels look like noise. A tree trained on all 891 traces matches 46% of its own training labels. At 15 minutes and slack 0.8 it sent 467 traces to fwdmax and 81 to cbase, and both cover fewer spikes than fwdmax6 when used alone.
+- The selections also throttle more. At 15 minutes and slack 0.8 the hindsight assignment throttles 911 core-hours and the tree 995, against 827 for fwdmax6.
+- The prediction for the headroom check held: a ceiling of about +0.02 to +0.06 and a follow below +0.01, apart from two 30-minute cells just under +0.02. The prediction for the tree, a gain between −0.005 and +0.005, was wrong at the cell the rule reads.
+
+Limits of this section:
+- It doesn't show that no selector could work. One naive rule and one small tree were tested, with one set of features, one library and one decision per trace.
+- It is validation data and one seed, on one trace and one time window. The intervals cover trace sampling only, not the search or the training of the trees, and they aren't significance tests.
+- The ceiling comes from a search, so the true hindsight optimum could be higher.
+
 ## Conclusion
 
 ### Does the paper's result hold?
@@ -402,5 +445,6 @@ From the repo root:
 5. `RUNS="fwdmax6:0 fwdmax6:1 fwdmax6:2" RES=horizon30 scripts/overnight.sh` runs the 30-minute follow-up and writes `results/horizon30/`.
 6. `python scripts/spike_types.py data/data.npz results/spike_types` labels the test spikes and writes the counts. Then `python scripts/score_types.py data/data.npz data/models_seeds results/spike_types results/horizon30 results/replication` scores coverage per type from the saved predictions and checks the totals against the published results. `python scripts/test_spike_types.py` tests the labelling rules on synthetic traces.
 7. `python scripts/val_probs.py fwdmax_s0 proposed_s0 fwdmax6_s0` writes validation predictions, and `python scripts/score_hold.py val data/data.npz data/novelty_val <out_dir>` regenerates the dry run in [ADR-010](adr/010-computed-hold.md). `python scripts/test_score_hold.py` tests the scorer. `results/computed_hold/` holds the single test run, and `score_hold.py test` won't start if that folder exists.
+8. `python scripts/val_probs.py cbase_s0` adds the cbase validation predictions. Then `python selection/oracle_headroom.py data/data.npz data/novelty_val results/oracle_headroom` and `python selection/trained_selector.py data/data.npz data/novelty_val data/chosen_containers.csv results/trained_selector` regenerate the two checks in [ADR-011](adr/011-per-trace-policy-selection.md). `python selection/test_oracle_headroom.py` and `python selection/test_trained_selector.py` test them on synthetic traces.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).

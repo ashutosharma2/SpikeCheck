@@ -45,6 +45,9 @@ flowchart TD
     R4["results/spike_types/"]
     EVAL4["score_hold.py<br/>computed hold against learned hold,<br/>rule frozen, test run once"]
     R5["results/computed_hold/"]
+    VAL[("validation predictions<br/>val_probs.py, seed 0")]
+    EVAL5["selection/oracle_headroom.py,<br/>trained_selector.py<br/>one policy per trace,<br/>validation traces only"]
+    R6["results/oracle_headroom/<br/>results/trained_selector/"]
 
     OSS --> META
     OSS --> STREAM
@@ -71,10 +74,14 @@ flowchart TD
     PROBS --> EVAL4
     M --> EVAL4
     EVAL4 --> R5
+    TRAIN --> VAL
+    VAL --> EVAL5
+    M --> EVAL5
+    EVAL5 --> R6
 
 ```
 
-`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining.
+`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining. The two scripts in `selection/` read validation predictions that `val_probs.py` writes from the saved models, and they never touch the test traces.
 
 ## 2. From forecast to score
 
@@ -165,6 +172,7 @@ flowchart LR
         Q["readout: argmax, or<br/>quantile 0.1 … 0.995"]
         B["training-free baselines:<br/>persistence, rolling max,<br/>seasonal max, rolling percentile"]
         H["hold: learned in the target,<br/>or computed after training"]
+        P["policy per trace, validation only:<br/>one for all, a hindsight pick,<br/>or a trained tree"]
     end
     subgraph SCORE["Scored"]
         direction TB

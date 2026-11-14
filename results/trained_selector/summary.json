@@ -1,0 +1,32 @@
+{
+  "split": "val",
+  "seed": 0,
+  "traces": 891,
+  "folds": 5,
+  "depth": 3,
+  "min_leaf": 20,
+  "features": [
+    "cpu_mean",
+    "cpu_std",
+    "peak_ratio",
+    "step_change",
+    "acf_1",
+    "acf_day",
+    "early_spikes",
+    "close_share",
+    "mem_mean",
+    "net_mean",
+    "cpu_request",
+    "limit_ratio"
+  ],
+  "decide_step": 520,
+  "primary": {
+    "minutes": 15,
+    "budget": 0.8
+  },
+  "rule": "ci_lo > 0",
+  "gain": -0.018114547262722658,
+  "ci_lo": -0.02768372294369987,
+  "ci_hi": -0.010589134683290131,
+  "conclusion": "stop: the selector is not shown to beat the fixed policy"
+}

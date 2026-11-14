@@ -1,0 +1,25 @@
+trained on all 891 validation traces, 15 min, slack 0.8; shown, not scored
+accuracy on its own training labels: 0.455
+
+|--- cpu_mean <= 16.04
+|   |--- close_share <= 0.09
+|   |   |--- acf_1 <= 0.84
+|   |   |   |--- class: fwdmax6
+|   |   |--- acf_1 >  0.84
+|   |   |   |--- class: fwdmax
+|   |--- close_share >  0.09
+|   |   |--- net_mean <= 0.01
+|   |   |   |--- class: fwdmax6
+|   |   |--- net_mean >  0.01
+|   |   |   |--- class: fwdmax
+|--- cpu_mean >  16.04
+|   |--- early_spikes <= 4.50
+|   |   |--- cpu_std <= 9.08
+|   |   |   |--- class: fwdmax6
+|   |   |--- cpu_std >  9.08
+|   |   |   |--- class: cbase
+|   |--- early_spikes >  4.50
+|   |   |--- mem_mean <= 98.08
+|   |   |   |--- class: fwdmax6
+|   |   |--- mem_mean >  98.08
+|   |   |   |--- class: fwdmax6

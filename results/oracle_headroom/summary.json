@@ -1,0 +1,22 @@
+{
+  "split": "val",
+  "seed": 0,
+  "traces": 891,
+  "n_boot": 500,
+  "policies": [
+    "cbase",
+    "proposed",
+    "fwdmax",
+    "fwdmax6",
+    "fwdmax + encoded hold",
+    "fwdmax6 + encoded hold"
+  ],
+  "budgets": [
+    0.6,
+    0.8,
+    1.0
+  ],
+  "split_step": 1533,
+  "spikes": 28715,
+  "traces_without_spikes": 2
+}
