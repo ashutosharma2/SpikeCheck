@@ -120,3 +120,48 @@ Reported, not judged, in the controller setting:
 - The budget is measured in two ways, on purpose. The published replay matches methods on the slack of the forecast before any delay. The simulator matches them on the slack of the allocation it produces, because the window adds slack that has to count. So the replay column above differs slightly from ADR-010's dry run at 15 minutes (-57.8 against -56.9), and the reproduction check uses the published convention.
 
 - The first plan let scale-downs take effect at once while scale-ups took `d` steps. That changes two things compared with the replay at the same time, the delay and the window. The delay is now the same in both directions, as in the published replay, and the window is the only thing that slows a decrease.
+
+## Test result
+
+Added 2026-11-14 after the single test run at commit `9cb6071`. Nothing above changed. Before any controller setting was scored, the replay setting matched `results/computed_hold/by_method.csv`. Results are in `results/autoscaler/`.
+
+Test set, three seeds, slack 0.8, throttled core-hours, computed minus learned:
+
+| Delay | Replay setting | Controller setting | Rule |
+|---|---|---|---|
+| 5 min | -45.4 [-58.4, -33.2], -5.4% | -49.3 [-59.9, -36.1], -5.8% | Interval wholly below 0, carries over |
+| 15 min | -55.3 [-72.5, -42.0], -5.7% | -61.6 [-79.0, -45.9], -6.2% | Interval wholly below 0, carries over |
+
+By the rule above, the replay's throttling gain carries over to the simulated autoscaler at both delays. All three seeds agree in sign at both delays.
+
+The three methods in the controller setting, mean of three seeds:
+
+| Delay | Method | Throttled core-hours | All spikes | Follow-on | Allocation changes |
+|---|---|---|---|---|---|
+| 5 min | No hold | 774 | 0.758 | 0.850 | 300,578 |
+| 5 min | Computed hold | 799 | 0.725 | 0.926 | 231,226 |
+| 5 min | Learned hold | 849 | 0.710 | 0.931 | 235,684 |
+| 15 min | No hold | 859 | 0.756 | 0.847 | 300,089 |
+| 15 min | Computed hold | 923 | 0.731 | 0.915 | 230,337 |
+| 15 min | Learned hold | 985 | 0.719 | 0.920 | 234,786 |
+
+On the prediction:
+
+- The order holds at both delays: no hold throttles least, then the computed hold, then the learned hold.
+- The second part was wrong. The computed hold's gain as a share is not smaller in the controller setting: 5.8% and 6.2%, against 5.4% and 5.7% in the replay.
+
+Three limits on that reading:
+
+- The test wasn't blind. The same three methods had already been compared on these traces in the replay, and the controller adds a 5-minute window and a 10% tolerance on top of it. A result close to the replay's was likely.
+- This is still a replay of recorded usage. It can't show how a workload responds to throttling, it has no latency signal, and CPU above the request isn't visible in the data.
+- The intervals cover trace sampling only, on one trace and one time window. They aren't significance tests.
+
+Reported, not judged, in the controller setting:
+
+- No hold still throttles least. The computed hold adds 25.1 core-hours [7.6, 52.6] at 5 minutes and 64.0 [40.0, 96.7] at 15. The learned hold adds 74.4 [47.3, 104.1] and 125.6 [90.9, 166.7].
+- The window and tolerance about halve the number of allocation changes. No hold makes 300,578 at 5 minutes, against 557,949 in the replay setting.
+- Overall coverage, computed minus learned, is +0.0144 [+0.0109, +0.0173] at 5 minutes and +0.0117 [+0.0088, +0.0145] at 15. Follow-on coverage is -0.0057 [-0.0112, -0.0005] and -0.0051 [-0.0106, +0.0003].
+- At slack 0.6 the throttling gain isn't shown at either delay: -20.5 [-58.5, +32.2] and -5.1 [-62.2, +55.2]. At slack 1.0 it is: -32.9 [-40.2, -24.5] and -43.1 [-55.2, -32.1].
+- The methods are matched on slack over usage, not on allocated core-hours. The computed hold allocates slightly more than the learned hold: +118 core-hours [18, 257] at 5 minutes and +130 [30, 264] at 15, about 0.1% of the total.
+- At 30 minutes, `fwdmax6` with the encoded hold throttles 234.0 core-hours less than the paper's target [-254.5, -217.5], 18.7%, mostly from the longer look-ahead. Against plain `fwdmax6` the hold adds 81.0 [50.4, 110.0].
+- In the backlog version, queued core-hours, computed minus learned, are -52.4 [-95.0, -20.1] at 5 minutes and -148.2 [-234.1, -84.6] at 15. On validation the same comparison didn't separate the two holds, so I don't lean on it.
