@@ -48,6 +48,8 @@ flowchart TD
     VAL[("validation predictions<br/>val_probs.py, seed 0")]
     EVAL5["selection/oracle_headroom.py,<br/>trained_selector.py<br/>one policy per trace,<br/>validation traces only"]
     R6["results/oracle_headroom/<br/>results/trained_selector/"]
+    EVAL6["simulator/autoscaler.py<br/>scale-down window and tolerance,<br/>rule frozen, test run once"]
+    R7["results/autoscaler/"]
 
     OSS --> META
     OSS --> STREAM
@@ -78,10 +80,14 @@ flowchart TD
     VAL --> EVAL5
     M --> EVAL5
     EVAL5 --> R6
+    PROBS --> EVAL6
+    VAL --> EVAL6
+    M --> EVAL6
+    EVAL6 --> R7
 
 ```
 
-`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining. The two scripts in `selection/` read validation predictions that `val_probs.py` writes from the saved models, and they never touch the test traces.
+`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining. The two scripts in `selection/` read validation predictions that `val_probs.py` writes from the saved models, and they never touch the test traces. `simulator/autoscaler.py` reads the same saved predictions, dry-runs on validation and ran once on the test traces.
 
 ## 2. From forecast to score
 
@@ -180,6 +186,7 @@ flowchart LR
         MS["at equal over-provisioning:<br/>each quantile curve read at<br/>slack 0.4 … 1.5"]
         PD["seed-paired differences<br/>(seed k against seed k)"]
         TY["per spike type, at six label settings,<br/>with a 95% bootstrap over test traces"]
+        AS["as a replay, or through a simulated<br/>autoscaler with a scale-down<br/>window and a tolerance"]
     end
     FIXED --> VARIED --> SCORE
 ```

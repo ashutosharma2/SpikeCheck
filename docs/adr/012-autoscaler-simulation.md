@@ -130,7 +130,7 @@ Test set, three seeds, slack 0.8, throttled core-hours, computed minus learned:
 | Delay | Replay setting | Controller setting | Rule |
 |---|---|---|---|
 | 5 min | -45.4 [-58.4, -33.2], -5.4% | -49.3 [-59.9, -36.1], -5.8% | Interval wholly below 0, carries over |
-| 15 min | -55.3 [-72.5, -42.0], -5.7% | -61.6 [-79.0, -45.9], -6.2% | Interval wholly below 0, carries over |
+| 15 min | -55.3 [-72.5, -42.0], -5.7% | -61.6 [-79.0, -45.9], -6.3% | Interval wholly below 0, carries over |
 
 By the rule above, the replay's throttling gain carries over to the simulated autoscaler at both delays. All three seeds agree in sign at both delays.
 
@@ -148,7 +148,7 @@ The three methods in the controller setting, mean of three seeds:
 On the prediction:
 
 - The order holds at both delays: no hold throttles least, then the computed hold, then the learned hold.
-- The second part was wrong. The computed hold's gain as a share is not smaller in the controller setting: 5.8% and 6.2%, against 5.4% and 5.7% in the replay.
+- The second part was wrong. The computed hold's gain as a share is not smaller in the controller setting: 5.8% and 6.3%, against 5.4% and 5.7% in the replay.
 
 Three limits on that reading:
 
@@ -165,3 +165,5 @@ Reported, not judged, in the controller setting:
 - The methods are matched on slack over usage, not on allocated core-hours. The computed hold allocates slightly more than the learned hold: +118 core-hours [18, 257] at 5 minutes and +130 [30, 264] at 15, about 0.1% of the total.
 - At 30 minutes, `fwdmax6` with the encoded hold throttles 234.0 core-hours less than the paper's target [-254.5, -217.5], 18.7%, mostly from the longer look-ahead. Against plain `fwdmax6` the hold adds 81.0 [50.4, 110.0].
 - In the backlog version, queued core-hours, computed minus learned, are -52.4 [-95.0, -20.1] at 5 minutes and -148.2 [-234.1, -84.6] at 15. On validation the same comparison didn't separate the two holds, so I don't lean on it.
+
+Correction, added with the test result: the dry-run section above gives -4.6% for the controller setting at 5 minutes, in its table and once in the text. The value is -4.65%, which rounds to -4.7%. The frozen text is left as it was.
