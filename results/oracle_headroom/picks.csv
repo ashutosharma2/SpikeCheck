@@ -1,0 +1,109 @@
+check,d,budget,policy,traces
+ceiling,1,0.6,cbase,181
+ceiling,1,0.6,proposed,80
+ceiling,1,0.6,fwdmax,287
+ceiling,1,0.6,fwdmax6,291
+ceiling,1,0.6,fwdmax + encoded hold,22
+ceiling,1,0.6,fwdmax6 + encoded hold,30
+follow,1,0.6,cbase,230
+follow,1,0.6,proposed,80
+follow,1,0.6,fwdmax,264
+follow,1,0.6,fwdmax6,271
+follow,1,0.6,fwdmax + encoded hold,27
+follow,1,0.6,fwdmax6 + encoded hold,19
+ceiling,1,0.8,cbase,108
+ceiling,1,0.8,proposed,125
+ceiling,1,0.8,fwdmax,257
+ceiling,1,0.8,fwdmax6,319
+ceiling,1,0.8,fwdmax + encoded hold,36
+ceiling,1,0.8,fwdmax6 + encoded hold,46
+follow,1,0.8,cbase,158
+follow,1,0.8,proposed,118
+follow,1,0.8,fwdmax,288
+follow,1,0.8,fwdmax6,262
+follow,1,0.8,fwdmax + encoded hold,29
+follow,1,0.8,fwdmax6 + encoded hold,36
+ceiling,1,1,cbase,202
+ceiling,1,1,proposed,105
+ceiling,1,1,fwdmax,280
+ceiling,1,1,fwdmax6,252
+ceiling,1,1,fwdmax + encoded hold,27
+ceiling,1,1,fwdmax6 + encoded hold,25
+follow,1,1,cbase,270
+follow,1,1,proposed,103
+follow,1,1,fwdmax,275
+follow,1,1,fwdmax6,209
+follow,1,1,fwdmax + encoded hold,17
+follow,1,1,fwdmax6 + encoded hold,17
+ceiling,3,0.6,cbase,79
+ceiling,3,0.6,proposed,76
+ceiling,3,0.6,fwdmax,244
+ceiling,3,0.6,fwdmax6,392
+ceiling,3,0.6,fwdmax + encoded hold,44
+ceiling,3,0.6,fwdmax6 + encoded hold,56
+follow,3,0.6,cbase,107
+follow,3,0.6,proposed,84
+follow,3,0.6,fwdmax,331
+follow,3,0.6,fwdmax6,279
+follow,3,0.6,fwdmax + encoded hold,45
+follow,3,0.6,fwdmax6 + encoded hold,45
+ceiling,3,0.8,cbase,89
+ceiling,3,0.8,proposed,98
+ceiling,3,0.8,fwdmax,300
+ceiling,3,0.8,fwdmax6,322
+ceiling,3,0.8,fwdmax + encoded hold,43
+ceiling,3,0.8,fwdmax6 + encoded hold,39
+follow,3,0.8,cbase,122
+follow,3,0.8,proposed,83
+follow,3,0.8,fwdmax,334
+follow,3,0.8,fwdmax6,274
+follow,3,0.8,fwdmax + encoded hold,43
+follow,3,0.8,fwdmax6 + encoded hold,35
+ceiling,3,1,cbase,60
+ceiling,3,1,proposed,158
+ceiling,3,1,fwdmax,240
+ceiling,3,1,fwdmax6,325
+ceiling,3,1,fwdmax + encoded hold,53
+ceiling,3,1,fwdmax6 + encoded hold,55
+follow,3,1,cbase,65
+follow,3,1,proposed,142
+follow,3,1,fwdmax,282
+follow,3,1,fwdmax6,296
+follow,3,1,fwdmax + encoded hold,47
+follow,3,1,fwdmax6 + encoded hold,59
+ceiling,6,0.6,cbase,98
+ceiling,6,0.6,proposed,25
+ceiling,6,0.6,fwdmax,37
+ceiling,6,0.6,fwdmax6,566
+ceiling,6,0.6,fwdmax + encoded hold,17
+ceiling,6,0.6,fwdmax6 + encoded hold,148
+follow,6,0.6,cbase,129
+follow,6,0.6,proposed,32
+follow,6,0.6,fwdmax,45
+follow,6,0.6,fwdmax6,551
+follow,6,0.6,fwdmax + encoded hold,18
+follow,6,0.6,fwdmax6 + encoded hold,116
+ceiling,6,0.8,cbase,88
+ceiling,6,0.8,proposed,31
+ceiling,6,0.8,fwdmax,52
+ceiling,6,0.8,fwdmax6,552
+ceiling,6,0.8,fwdmax + encoded hold,17
+ceiling,6,0.8,fwdmax6 + encoded hold,151
+follow,6,0.8,cbase,72
+follow,6,0.8,proposed,42
+follow,6,0.8,fwdmax,43
+follow,6,0.8,fwdmax6,539
+follow,6,0.8,fwdmax + encoded hold,24
+follow,6,0.8,fwdmax6 + encoded hold,171
+ceiling,6,1,cbase,58
+ceiling,6,1,proposed,48
+ceiling,6,1,fwdmax,49
+ceiling,6,1,fwdmax6,526
+ceiling,6,1,fwdmax + encoded hold,25
+ceiling,6,1,fwdmax6 + encoded hold,185
+follow,6,1,cbase,66
+follow,6,1,proposed,69
+follow,6,1,fwdmax,59
+follow,6,1,fwdmax6,527
+follow,6,1,fwdmax + encoded hold,16
+follow,6,1,fwdmax6 + encoded hold,154

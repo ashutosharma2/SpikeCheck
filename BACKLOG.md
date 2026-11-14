@@ -17,6 +17,8 @@
 - [ ] Score spikes by size, with the cuts and a prediction fixed in advance
 - [ ] Work out why the follow-on result changes with the window: at 12 steps the 5-minute sign flips
 - [ ] Test the renewed-activity reading of the hold's lead on follow-on spikes where the previous peak is too low
+- [x] Check whether choosing a policy per trace could help before building a selector: two pre-set checks on validation found no usable signal ([ADR-011](docs/adr/011-per-trace-policy-selection.md))
+- [ ] Per-trace selection left untested: features beyond the twelve tried, a library whose policies differ more, and deciding again each day
 
 ## Repo
 - [ ] Reread docs/review.md before making the repo public

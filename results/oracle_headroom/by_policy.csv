@@ -1,0 +1,55 @@
+d,budget,policy,cover
+1,0.6,cbase,0.631475
+1,0.6,proposed,0.573987
+1,0.6,fwdmax,0.671924
+1,0.6,fwdmax6,0.682357
+1,0.6,fwdmax + encoded hold,0.566621
+1,0.6,fwdmax6 + encoded hold,0.573626
+1,0.8,cbase,0.712949
+1,0.8,proposed,0.709475
+1,0.8,fwdmax,0.749469
+1,0.8,fwdmax6,0.757799
+1,0.8,fwdmax + encoded hold,0.715016
+1,0.8,fwdmax6 + encoded hold,0.724378
+1,1,cbase,0.768943
+1,1,proposed,0.782186
+1,1,fwdmax,0.801278
+1,1,fwdmax6,0.809197
+1,1,fwdmax + encoded hold,0.784521
+1,1,fwdmax6 + encoded hold,0.793892
+3,0.6,cbase,0.459643
+3,0.6,proposed,0.599314
+3,0.6,fwdmax,0.681809
+3,0.6,fwdmax6,0.697877
+3,0.6,fwdmax + encoded hold,0.592648
+3,0.6,fwdmax6 + encoded hold,0.607901
+3,0.8,cbase,0.567659
+3,0.8,proposed,0.723722
+3,0.8,fwdmax,0.756254
+3,0.8,fwdmax6,0.769683
+3,0.8,fwdmax + encoded hold,0.730731
+3,0.8,fwdmax6 + encoded hold,0.744647
+3,1,cbase,0.649849
+3,1,proposed,0.793314
+3,1,fwdmax,0.807589
+3,1,fwdmax6,0.816991
+3,1,fwdmax + encoded hold,0.795959
+3,1,fwdmax6 + encoded hold,0.807331
+6,0.6,cbase,0.440528
+6,0.6,proposed,0.444788
+6,0.6,fwdmax,0.488176
+6,0.6,fwdmax6,0.673658
+6,0.6,fwdmax + encoded hold,0.43745
+6,0.6,fwdmax6 + encoded hold,0.587451
+6,0.8,cbase,0.544196
+6,0.8,proposed,0.57151
+6,0.8,fwdmax,0.595199
+6,0.8,fwdmax6,0.753075
+6,0.8,fwdmax + encoded hold,0.574089
+6,0.8,fwdmax6 + encoded hold,0.734975
+6,1,cbase,0.626018
+6,1,proposed,0.665818
+6,1,fwdmax,0.677889
+6,1,fwdmax6,0.804808
+6,1,fwdmax + encoded hold,0.668525
+6,1,fwdmax6 + encoded hold,0.798724
