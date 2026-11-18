@@ -1,0 +1,12 @@
+check,minutes,budget,outcome,mean,seed_0,seed_1,seed_2,seed_min,seed_max,ci_lo,ci_hi
+single minus cbase,5,0.8,single differs from cbase,0.0230975,0.0618909,0.00947644,-0.00207474,-0.00207474,0.0618909,0.0192843,0.0265768
+binary minus cbase,5,0.8,worse than a quantile readout of cbase,-0.123207,-0.101593,-0.142658,-0.12537,-0.142658,-0.101593,-0.138998,-0.107469
+proportional minus cbase,5,0.8,not shown to add anything at equal slack,-0.00182145,0.0181999,-0.0227182,-0.000946032,-0.0227182,0.0181999,-0.0107094,0.00707812
+exponential minus cbase,5,0.8,adds coverage that a quantile readout of cbase does not give,0.0295795,0.0654921,0.0105062,0.0127403,0.0105062,0.0654921,0.0240058,0.0344672
+single minus fwdmax (prediction),15,0.8,trails fwdmax,-0.176597,-0.160243,-0.177118,-0.19243,-0.19243,-0.160243,-0.189705,-0.164453
+binary minus fwdmax (prediction),15,0.8,trails fwdmax,-0.152657,-0.149259,-0.152608,-0.156103,-0.156103,-0.149259,-0.166601,-0.137584
+proportional minus fwdmax (prediction),15,0.8,trails fwdmax,-0.120874,-0.117247,-0.125704,-0.119671,-0.125704,-0.117247,-0.134652,-0.106676
+exponential minus fwdmax (prediction),15,0.8,trails fwdmax,-0.150325,-0.149904,-0.149933,-0.151139,-0.151139,-0.149904,-0.164548,-0.137096
+binary minus single (reported),5,0.8,,-0.146304,-0.163483,-0.152135,-0.123295,-0.163483,-0.123295,-0.161769,-0.129232
+proportional minus single (reported),5,0.8,,-0.024919,-0.043691,-0.0321947,0.00112871,-0.043691,0.00112871,-0.0333411,-0.0156544
+exponential minus single (reported),5,0.8,,0.00648201,0.00360122,0.00102974,0.0148151,0.00102974,0.0148151,0.00294808,0.0106742
