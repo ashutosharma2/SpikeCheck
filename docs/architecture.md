@@ -50,6 +50,9 @@ flowchart TD
     R6["results/oracle_headroom/<br/>results/trained_selector/"]
     EVAL6["simulator/autoscaler.py<br/>scale-down window and tolerance,<br/>rule frozen, test run once"]
     R7["results/autoscaler/"]
+    TRAIN2["strategy2/train_s2.py<br/>the altered loss: four variants,<br/>three seeds each"]
+    EVAL7["strategy2/score_s2.py<br/>altered loss against cbase's quantile curve,<br/>rule frozen, test run once"]
+    R8["results/strategy2/"]
 
     OSS --> META
     OSS --> STREAM
@@ -84,10 +87,17 @@ flowchart TD
     VAL --> EVAL6
     M --> EVAL6
     EVAL6 --> R7
+    DATA --> TRAIN2
+    UP --> TRAIN2
+    TRAIN2 --> EVAL7
+    PROBS --> EVAL7
+    VAL --> EVAL7
+    M --> EVAL7
+    EVAL7 --> R8
 
 ```
 
-`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining. The two scripts in `selection/` read validation predictions that `val_probs.py` writes from the saved models, and they never touch the test traces. `simulator/autoscaler.py` reads the same saved predictions, dry-runs on validation and ran once on the test traces.
+`scripts/get_data.sh` runs the first half, from download to `data.npz`. `scripts/run_all.sh` and `scripts/run_seeds.sh` do the training, and `eval_seeds.py` and `run_eval.py` write the results. `spike_types.py`, `score_types.py` and `score_hold.py` read the saved predictions, so they need no retraining. The two scripts in `selection/` read validation predictions that `val_probs.py` writes from the saved models, and they never touch the test traces. `simulator/autoscaler.py` reads the same saved predictions, dry-runs on validation and ran once on the test traces. `strategy2/train_all.sh` trains the Strategy 2 models, and `strategy2/score_s2.py` scores them against the saved predictions of the earlier models, with a dry run on validation and one run on the test traces.
 
 ## 2. From forecast to score
 
@@ -174,6 +184,7 @@ flowchart LR
     subgraph VARIED["Varied"]
         direction TB
         T["target:<br/>cbase, proposed, proposed_full,<br/>fwdmax, fwdmax6"]
+        L["loss: cross-entropy, or Strategy 2's<br/>single, binary, proportional,<br/>exponential (plain target)"]
         S["seed: 0, 1, 2"]
         Q["readout: argmax, or<br/>quantile 0.1 … 0.995"]
         B["training-free baselines:<br/>persistence, rolling max,<br/>seasonal max, rolling percentile"]
@@ -191,7 +202,7 @@ flowchart LR
     FIXED --> VARIED --> SCORE
 ```
 
-Any forecaster can cover more spikes by asking for more CPU, so forecasters are compared at equal over-provisioning: each model's quantile curve is read at the same slack. Pairing seeds then keeps training noise out of the differences.
+Any forecaster can cover more spikes by asking for more CPU, so forecasters are compared at equal over-provisioning: each model's quantile curve is read at the same slack. Differences are taken seed against seed, and the spread across seeds shows how much training noise is left in them.
 
 ## 6. The TempInc model
 

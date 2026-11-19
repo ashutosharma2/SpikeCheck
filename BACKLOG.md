@@ -7,7 +7,10 @@
 - [x] Fix links in docs/replication.md for the new layout
 
 ## Experiments
-- [ ] Strategy 2 from the paper (the altered loss) under the corrected metrics
+- [x] Strategy 2 from the paper (the altered loss) under the corrected metrics, at one setting per variant ([ADR-013](docs/adr/013-strategy-2.md))
+- [ ] Train more seeds of `cbase`, single and exponential: `cbase`'s own three seeds differ by 0.045, about twice single's gain
+- [ ] Work out why single's quantile curve differs from `cbase`'s
+- [ ] Strategy 2 left untested: the other settings in the authors' search of 48 configurations
 - [ ] Calibrate the quantile readout (conformal prediction) so the over-provisioning setting maps to a target miss rate
 - [x] Split spikes by type (isolated, follow-on, seasonal) and see where each method gains
 - [ ] Flag spikes that follow a slow ramp: first define how many rising steps and how big a rise count, then sensitivity-test it (deferred in [ADR-009](docs/adr/009-spike-types.md))

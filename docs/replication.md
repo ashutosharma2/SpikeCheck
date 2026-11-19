@@ -4,7 +4,7 @@ Run on 2026-10-22 as a follow-up to the [critical review](review.md). It tests o
 
 ## Scope: one part of the paper, and why
 
-I replicated Strategy 1 with the TempInc model on Alibaba. I didn't run the paper's Google data, its other five models or Strategy 2, so nothing here tests them.
+I replicated Strategy 1 with the TempInc model on Alibaba. I didn't run the paper's Google data or its other five models, so nothing here tests them. I tested Strategy 2 later, with TempInc on Alibaba and one setting per variant ([follow-up](#follow-up-does-the-papers-altered-loss-add-coverage-at-equal-slack-3-seeds-run-18-november-2026)).
 
 ### Why this scope
 
@@ -28,7 +28,7 @@ Hardware, network and training constraints later influenced how far the investig
 
 - Google: I didn't deliberately reject it. I started on Alibaba, and the follow-up questions never sent me back. I checked its size afterwards: about 2.4 TiB compressed, offered through BigQuery ([Google's trace notes](https://github.com/google/cluster-data/blob/master/ClusterData2019.md)), so adding it would need a different setup.
 - TempInc with Strategy 1: this is the pair behind the paper's headline result, 0.27 to 0.64 on Alibaba, and it's what the first run used. I don't claim it as an original research decision.
-- Strategy 2: it's unfinished and in the [backlog](../BACKLOG.md), not formally rejected. The review flagged its evidence as contradicting itself (item C4), but that isn't a test of it.
+- Strategy 2: I left it out of the first replication and tested it later, at one setting per variant ([ADR-013](adr/013-strategy-2.md)). I didn't repeat the authors' search of 48 configurations.
 
 None of this says whether the paper's other results are right.
 
@@ -455,11 +455,76 @@ Limits of this section:
 - The intervals cover trace sampling only, on one trace and one time window, and they aren't significance tests.
 - It compares the two holds. It doesn't show that a hold is worth having: no hold still throttles least.
 
+## Follow-up: does the paper's altered loss add coverage at equal slack? (3 seeds, run 18 November 2026)
+
+Everything above tests Strategy 1, which changes the target. The paper's Strategy 2 keeps the plain target and changes the loss. Each training label is spread over the classes above the true one, so a forecast that is too high costs less than one that is too low. It has four variants ([ADR-013](adr/013-strategy-2.md)):
+
+| Variant | Altered label before the softmax |
+|---|---|
+| Single | 1 on the true class |
+| Binary | 1 on the true class and on every class above it |
+| Proportional | 1 on the true class, falling by 0.1 per class above |
+| Exponential | 1 on the true class, divided by 1.6 per class above |
+
+The [review](review.md) made two predictions about this (item C4). Single is close to plain cross-entropy, so it should behave like `cbase`. And an altered label is an indirect way to ask for an upper quantile, which reading `cbase` at a higher quantile gives directly.
+
+I trained 12 models, four variants with three seeds each, on the same data, inputs, model and training settings as `cbase`. Each variant got one setting, fixed before training: `alpha` 0.99, temperature 0.1, and the middle value of the authors' search for proportional and exponential. The authors searched 48 configurations and the paper doesn't say which one produced its table, so a different setting might have done better than mine.
+
+The rule was fixed and pushed before the single test run at commit `3a446e5`. It reads coverage at a 5-minute delay and slack 0.8, the three-seed mean of variant minus `cbase`, with a 95% paired bootstrap over whole test traces. Single matches `cbase` if the interval is wholly inside ±0.01, and differs from it if the interval is wholly above or below 0. An altered variant adds coverage if the interval is wholly above 0, and is worse if it is wholly below. Before any variant was scored, `cbase`, `fwdmax` and `proposed` had to reproduce the published tables, and they did on all 408 values.
+
+The test set wasn't fresh. Every published comparison has used it, though these 12 models are new to it.
+
+The files are in [`results/strategy2/`](../results/strategy2/).
+
+### Result: one altered variant adds coverage, and single's gap rests mostly on one seed
+
+Test set, three seeds, slack 0.8, 5-minute delay, coverage against `cbase`:
+
+| Variant | Minus `cbase` [95% interval] | Seeds 0, 1, 2 | Rule | Minus single [95% interval] |
+|---|---|---|---|---|
+| Single | +0.023 [+0.019, +0.027] | +0.062, +0.009, −0.002 | Differs from `cbase` |  |
+| Binary | −0.123 [−0.139, −0.107] | −0.102, −0.143, −0.125 | Worse than `cbase` | −0.146 [−0.162, −0.129] |
+| Proportional | −0.002 [−0.011, +0.007] | +0.018, −0.023, −0.001 | Not shown to add anything | −0.025 [−0.033, −0.016] |
+| Exponential | +0.030 [+0.024, +0.034] | +0.065, +0.011, +0.013 | Adds coverage | +0.006 [+0.003, +0.011] |
+
+The prediction written before training had three parts. Two were wrong: single differs from `cbase` under the rule, and exponential beats `cbase`. The third held: all four variants trail `fwdmax` at a 15-minute delay, by 0.121 to 0.177.
+
+Single's gap needs care. The intervals cover trace sampling with the trained models held fixed, so they don't include the difference between training runs. `cbase`'s own three seeds range from 0.708 to 0.753, a spread of 0.045, which is larger than single's gain of 0.023. Most of that gain comes from seed 0, where `cbase` is weakest. The validation dry run used seed 0 alone and showed +0.065, so it overstated the three-seed result.
+
+Exponential is ahead of `cbase` on all three seeds. It is one pass out of three altered variants, so I report it as that and not as a finding about Strategy 2. Its lead over single is +0.006, so most of its +0.030 also appears with a loss that has no upward spread.
+
+The models at slack 0.8, mean of 3 seeds:
+
+| Model | Coverage, 5 min | 15 min | 30 min | Throttled core-hours, 5 min | 15 min | 30 min |
+|---|---|---|---|---|---|---|
+| `cbase` | 0.731 | 0.571 | 0.538 | 833 | 1,233 | 1,370 |
+| Single | 0.754 | 0.580 | 0.539 | 804 | 1,196 | 1,337 |
+| Binary | 0.608 | 0.604 | 0.602 | 3,872 | 3,975 | 4,048 |
+| Proportional | 0.729 | 0.636 | 0.627 | 1,244 | 1,622 | 1,735 |
+| Exponential | 0.761 | 0.606 | 0.574 | 822 | 1,207 | 1,337 |
+| `fwdmax` | 0.751 | 0.757 | 0.590 | 777 | 860 | 1,127 |
+| `proposed` | 0.709 | 0.725 | 0.555 | 837 | 961 | 1,240 |
+
+Reported, not judged:
+- Against `cbase` at 15 and 30 minutes, proportional gains +0.065 [+0.055, +0.076] and +0.089 [+0.078, +0.100], and binary gains +0.033 [+0.017, +0.047] and +0.064 [+0.047, +0.080]. Both throttle more across the three delays: proportional 27% to 49% more and binary 196% to 365% more. The throttling intervals for single and exponential include 0 at all three delays.
+- Against single, exponential is +0.026 [+0.021, +0.033] at 15 minutes and +0.035 [+0.030, +0.041] at 30. Proportional is +0.056 [+0.045, +0.067] and +0.088 [+0.077, +0.098].
+- At 30 minutes proportional is +0.037 [+0.026, +0.048] against `fwdmax`, but `fwdmax` only looks 25 minutes ahead. `fwdmax6`, which reaches the spike at that delay, covers 0.744 in the published table against proportional's 0.627.
+- At slack 0.6 and 1.0, 5 minutes, against `cbase`: single +0.025 [+0.019, +0.031] and +0.021 [+0.018, +0.025], binary −0.139 [−0.154, −0.123] and −0.118 [−0.133, −0.103], proportional −0.021 [−0.033, −0.007] and +0.008 [+0.000, +0.015], exponential +0.025 [+0.018, +0.032] and +0.029 [+0.025, +0.033].
+- Read at its most likely class, single covers 0.286 of spikes at slack 0.189, and `cbase` covers 0.293 at slack 0.181. Against `cbase`'s quantile curve at single's slack the difference is −0.038 [−0.042, −0.033], with seeds −0.003, −0.054, −0.056.
+- Spike F1 on the authors' evaluator, mean of 3 seeds: `cbase` 0.417, single 0.407, binary 0.208, proportional 0.415, exponential 0.433. The paper reports 0.387 for single and 0.275 for cross-entropy. Here single doesn't lead `cbase`, and their seed ranges overlap: 0.367 to 0.439 and 0.374 to 0.469.
+- By spike type at 5 minutes, exponential gains most on isolated spikes, +0.039 [+0.032, +0.046], and least on seasonal ones, +0.009 [+0.003, +0.013]. Proportional gains on the smallest quarter of spikes, +0.083 [+0.070, +0.099], and loses on the largest, −0.189 [−0.215, −0.162].
+
+Limits of this section:
+- Each variant was tried at one setting, so this doesn't show how the authors' tuned settings would behave.
+- Three seeds can't show whether single's or exponential's gain would return on a new training run.
+- I don't know why single's quantile curve differs from `cbase`'s.
+- It is one model, TempInc, with 8 input features against the paper's 18, on one trace and one time window. The intervals aren't significance tests.
+
 ## Conclusion
 
 ### Does the paper's result hold?
 
-I directionally reproduced the paper's spike-detection improvement using TempInc with Strategy 1 on Alibaba public data. On the authors' own evaluator, F1 increased from 0.41 to 0.68, compared with the paper's reported improvement from 0.27 to 0.64. However, this was a partial reproduction using reconstructed preprocessing, 5,946 traces instead of 5,168, eight input features instead of 18, and one seed. Google data, the other five models and Strategy 2 were not tested.
+I directionally reproduced the paper's spike-detection improvement using TempInc with Strategy 1 on Alibaba public data. On the authors' own evaluator, F1 increased from 0.41 to 0.68, compared with the paper's reported improvement from 0.27 to 0.64. However, this was a partial reproduction using reconstructed preprocessing, 5,946 traces instead of 5,168, eight input features instead of 18, and one seed. Google data and the other five models were not tested. Strategy 2 was tested separately, at one setting per variant.
 
 The scope reflected my original goal of conducting an adversarial review rather than a full replication. I started with the cheapest, most informative checks on Alibaba, then followed the questions raised by each result. TempInc with Strategy 1 was the pair used in the first run and associated with the paper's headline result, not a winner selected through a comparison of all models.
 
@@ -477,9 +542,15 @@ At both 5- and 15-minute actuation delays, the computed hold achieved higher ove
 
 Against no hold, the computed hold improved follow-on coverage at 15 minutes (0.917 versus 0.841), but reduced all-spike coverage (0.733 versus 0.757) and increased throttling (906 versus 860 core-hours). Therefore, the experiment identifies a trade-off rather than establishing that a hold is universally worthwhile. It is limited to one trace and one time window, and I had already seen related test results. My literature search wasn't exhaustive, so I don't claim the comparison is new.
 
+### Does the altered loss help?
+
+Under my rule, one of three altered losses added coverage over a quantile readout of `cbase` at a 5-minute delay. Exponential gained 0.030 and was ahead on all three seeds. Single, the same loss without the upward spread, gained 0.023, so most of exponential's gain at this delay doesn't need the spread. Binary was worse, and proportional wasn't shown to add anything. At 15 and 30 minutes proportional covers more spikes than `cbase` but throttles more.
+
+Single's gap from `cbase` rests mostly on one seed, and `cbase`'s own seeds differ by more than that gap, so I can't say it would return on a new training run. On the authors' evaluator single scored 0.407 and `cbase` 0.417, so the paper's gap of 0.387 against 0.275 didn't reproduce here. I tested one setting per variant, so this doesn't show how the authors' tuned settings would behave.
+
 ### Overall
 
-The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold.
+The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold. In the Strategy 2 test, one of three altered losses added coverage at a 5-minute delay, and most of that gain also appeared without the upward spread.
 
 ## Limitations (read before citing)
 - The first run used one seed per model (the horizon follow-up uses three), a 60-minute training cap and early stopping. The paper's learning rate of 0.01 made validation loss noisy, and cbase stopped after 7 epochs. The confidence intervals cover the sampling of test traces, not training variance.
@@ -487,8 +558,8 @@ The replication exposed limitations in the paper's evaluation. In the computed-h
 - The corrected spike detector (a 4-step refractory period, a minimum rise of 2 CPU points) changes which events count as spikes, so recall here can't be compared number for number with the paper's tables. Only the rows from the authors' evaluator can.
 - The throttling measure is crude. It treats the 5-minute maximum CPU as demand, ignores what happens inside each bin and any contention, and has no SLO signal.
 - Training and test traces cover the same time window, as in the paper. Generalisation across time and clusters is untested.
-- This is a partial replication (see [Scope](#scope-one-part-of-the-paper-and-why)). Nothing here tests the paper's Google results, its other five models or Strategy 2.
-- Not done yet: Strategy 2 (the altered loss) and conformal calibration.
+- This is a partial replication (see [Scope](#scope-one-part-of-the-paper-and-why)). Nothing here tests the paper's Google results or its other five models. Strategy 2 was tested with TempInc on Alibaba only, at one setting per variant.
+- Not done yet: conformal calibration.
 
 ## Reproduce
 From the repo root:
@@ -502,5 +573,6 @@ From the repo root:
 7. `python scripts/val_probs.py fwdmax_s0 proposed_s0 fwdmax6_s0` writes validation predictions, and `python scripts/score_hold.py val data/data.npz data/novelty_val <out_dir>` regenerates the dry run in [ADR-010](adr/010-computed-hold.md). `python scripts/test_score_hold.py` tests the scorer. `results/computed_hold/` holds the single test run, and `score_hold.py test` won't start if that folder exists.
 8. `python scripts/val_probs.py cbase_s0` adds the cbase validation predictions. Then `python selection/oracle_headroom.py data/data.npz data/novelty_val results/oracle_headroom` and `python selection/trained_selector.py data/data.npz data/novelty_val data/chosen_containers.csv results/trained_selector` regenerate the two checks in [ADR-011](adr/011-per-trace-policy-selection.md). `python selection/test_oracle_headroom.py` and `python selection/test_trained_selector.py` test them on synthetic traces.
 9. `python simulator/autoscaler.py val data/data.npz data/novelty_val <out_dir>` regenerates the dry run in [ADR-012](adr/012-autoscaler-simulation.md), and `python simulator/test_autoscaler.py` tests the simulator. `results/autoscaler/` holds the single test run, and `autoscaler.py test` won't start if that folder exists.
+10. `strategy2/train_all.sh` trains the 12 Strategy 2 models into `data/models_s2`, one at a time (about 7 hours). After steps 7 and 8, `python strategy2/score_s2.py val data/data.npz data/models_s2 data/novelty_val <out_dir> data/novelty_val/dry_run` regenerates the dry run in [ADR-013](adr/013-strategy-2.md). `python strategy2/test_s2.py` and `python strategy2/test_score_s2.py` test the loss and the scorer. `results/strategy2/` holds the single test run, and `score_s2.py test` won't start if that folder exists.
 
 `SPIKECHECK_DATA` and `SPIKECHECK_UPSTREAM` point the scripts at a different data folder or copy of the authors' code (see `scripts/common.sh`).
