@@ -2,7 +2,7 @@
 
 **Does forecasting CPU spikes help cloud provisioning, and how would you know?**
 
-Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds one part of the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work. That part is Strategy 1 with the TempInc model. The paper's Google data, other five models and Strategy 2 weren't run ([scope and why](docs/replication.md#scope-one-part-of-the-paper-and-why)).
+Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose changing what a forecaster is trained to predict so that it sees CPU spikes coming, and report that this doubles spike-prediction scores. SpikeCheck checks how those scores are computed, rebuilds one part of the experiment on the public Alibaba 2018 cluster trace, and tests what makes the method work. That part is Strategy 1 with the TempInc model, plus a later test of Strategy 2 at one setting per variant. The paper's Google data and other five models weren't run ([scope and why](docs/replication.md#scope-one-part-of-the-paper-and-why)).
 
 **[Read the project story](docs/project-story.md)**: the problems, decisions and fixes behind SpikeCheck, in SOART format.
 
@@ -16,6 +16,7 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 6. Test whether the hold needs to be learned, against a rule fixed before a single test run ([ADR-010](docs/adr/010-computed-hold.md)).
 7. Check whether choosing a policy per trace could help, on validation traces, before building any selector ([ADR-011](docs/adr/011-per-trace-policy-selection.md)).
 8. Test whether the computed hold's gain survives a simulated autoscaler with a scale-down window and a tolerance, against a rule fixed before a single test run ([ADR-012](docs/adr/012-autoscaler-simulation.md)).
+9. Test the paper's altered loss (Strategy 2) against the plain classifier read at a higher quantile, with a rule fixed before a single test run ([ADR-013](docs/adr/013-strategy-2.md)).
 
 ## Findings
 
@@ -31,12 +32,14 @@ Agulló et al. (2025, *Future Generation Computer Systems* 170, 107833) propose 
 | Computing the hold instead of learning it passes three of four pre-set checks, so the complete hypothesis isn't supported | Computed minus learned at slack 0.8: overall +0.011 and +0.008 and throttled CPU −5.4% and −5.7% at 5 and 15 minutes. Follow-on −0.004 passes at 5 minutes, and −0.008 fails the 1-point margin at 15. No hold still has the best overall coverage |
 | Choosing a policy per trace showed no usable signal in two pre-set checks | Validation traces, seed 0, 15-minute delay, slack 0.8, against the best fixed policy: hindsight gains +0.027, but the choice made on the first half of a trace loses 0.010 on the second half, and a trained decision tree loses 0.018 |
 | The computed hold's throttling gain over the learned hold carries over to a simulated autoscaler | With a 5-minute scale-down window and a 10% tolerance, at slack 0.8: −49.3 core-hours (−5.8%) at a 5-minute delay and −61.6 (−6.3%) at 15, both intervals wholly below zero, three seeds. The test wasn't blind, it is still a replay, and no hold still throttles least |
+| One of three altered losses adds coverage at equal slack, and most of that gain also appears without the upward spread | At a 5-minute delay and slack 0.8, against the plain classifier: exponential +0.030 [+0.024, +0.034], proportional −0.002 [−0.011, +0.007], binary −0.123 [−0.139, −0.107]. Single, the same loss with no spread, gains +0.023, but its seeds run from −0.002 to +0.062. One setting per variant |
+| The paper's F1 gap between its single variant and cross-entropy doesn't reproduce | On the authors' evaluator, single scores 0.407 and the plain classifier 0.417, mean of three seeds (paper: 0.387 and 0.275) |
 
 The details and every caveat are in the [replication write-up](docs/replication.md).
 
 ## Conclusion
 
-The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold.
+The replication exposed limitations in the paper's evaluation. In the computed-hold test, calculating the known part of the target and forecasting only the future gave higher overall coverage and less throttled CPU than learning the whole target, at a small follow-on cost that I can't rule out exceeding my margin at 15 minutes. I haven't established that follow-on protection depends on actuation delay, or that using a hold is better than having no hold. In the Strategy 2 test, one of three altered losses added coverage at a 5-minute delay, and most of that gain also appeared without the upward spread.
 
 The [full conclusion](docs/replication.md#conclusion) covers what was reproduced, where the evidence stops and what can't be claimed.
 
@@ -53,8 +56,9 @@ The [full conclusion](docs/replication.md#conclusion) covers what was reproduced
 | Computed hold: rule fixed first, test run once ([ADR-010](docs/adr/010-computed-hold.md)) | Done |
 | Per-trace policy selection: two checks on validation, rules fixed first, idea dropped ([ADR-011](docs/adr/011-per-trace-policy-selection.md)) | Done |
 | Simulated autoscaler: rule fixed first, test run once ([ADR-012](docs/adr/012-autoscaler-simulation.md)) | Done |
+| Strategy 2: one setting per variant, rule fixed first, test run once ([ADR-013](docs/adr/013-strategy-2.md)) | Done |
 | Next task | [NEXT.md](NEXT.md) |
-| Strategy 2 (altered loss), calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
+| Calibration, time and cluster holdouts | [Backlog](BACKLOG.md) |
 
 ## Architecture
 
@@ -84,6 +88,7 @@ flowchart LR
 | [010](docs/adr/010-computed-hold.md) | Compute the hold instead of learning it, tested against a rule fixed first |
 | [011](docs/adr/011-per-trace-policy-selection.md) | Check for headroom before building a per-trace policy selector |
 | [012](docs/adr/012-autoscaler-simulation.md) | Test the computed hold in a simulated autoscaler, against a rule fixed first |
+| [013](docs/adr/013-strategy-2.md) | Test the paper's Strategy 2 under the corrected metrics, against a rule fixed first |
 
 ## Repository layout
 
@@ -91,7 +96,8 @@ flowchart LR
 scripts/      pipeline: stream_alibaba, prep, train, baselines, metrics, evaluation, spike types, computed hold, runners
 selection/    per-trace policy selection: the headroom check, the trained selector and their tests
 simulator/    the simulated autoscaler and its tests
-results/      replication/, horizon/, horizon30/, spike_types/, computed_hold/, oracle_headroom/, trained_selector/, autoscaler/: CSV, JSON, plots
+strategy2/    the paper's altered loss: training, scorer and tests
+results/      replication/, horizon/, horizon30/, spike_types/, computed_hold/, oracle_headroom/, trained_selector/, autoscaler/, strategy2/: CSV, JSON, plots
 docs/         review, replication write-up, architecture diagrams, project story, ADRs
 data/         downloaded and generated data, models (not committed)
 upstream/     the authors' code at a pinned commit (not committed)

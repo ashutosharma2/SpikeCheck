@@ -1,0 +1,38 @@
+{
+  "split": "test",
+  "frozen_commit": "3a446e55d34d4f24a77cb1bf7d707096b053133d",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "traces": 893,
+  "n_boot": 500,
+  "budget": 0.8,
+  "margin": 0.01,
+  "n_spikes": {
+    "all": 27980,
+    "seasonal": 6749,
+    "follow-on": 1533,
+    "isolated": 13782,
+    "unknown": 5916,
+    "follow-on, previous peak covers": 1336,
+    "follow-on, previous peak short": 197,
+    "size q1": 7738,
+    "size q2": 7221,
+    "size q3": 6689,
+    "size q4": 6332
+  },
+  "outcomes": {
+    "single": "single differs from cbase",
+    "binary": "worse than a quantile readout of cbase",
+    "proportional": "not shown to add anything at equal slack",
+    "exponential": "adds coverage that a quantile readout of cbase does not give"
+  },
+  "predictions": {
+    "single is no different from cbase": false,
+    "no altered variant beats cbase at equal slack": false,
+    "all four variants trail fwdmax at a 15-minute delay": true
+  },
+  "altered_variants_adding_coverage": 1
+}

@@ -1,0 +1,2269 @@
+method,seed,d,budget,measure,value,n_spikes
+single,0,1,0.6,cover: all,0.702302,27980
+single,0,1,0.6,cover: seasonal,0.917716,6749
+single,0,1,0.6,cover: follow-on,0.791397,1533
+single,0,1,0.6,cover: isolated,0.631088,13782
+single,0,1,0.6,cover: unknown,0.599372,5916
+single,0,1,0.6,"cover: follow-on, previous peak covers",0.858882,1336
+single,0,1,0.6,"cover: follow-on, previous peak short",0.333737,197
+single,0,1,0.6,cover: size q1,0.911822,7738
+single,0,1,0.6,cover: size q2,0.794957,7221
+single,0,1,0.6,cover: size q3,0.644243,6689
+single,0,1,0.6,cover: size q4,0.40193,6332
+single,0,1,0.6,throttle core-hours,1065.35,
+single,0,3,0.6,cover: all,0.494703,27980
+single,0,3,0.6,cover: seasonal,0.462008,6749
+single,0,3,0.6,cover: follow-on,0.740679,1533
+single,0,3,0.6,cover: isolated,0.515791,13782
+single,0,3,0.6,cover: unknown,0.419135,5916
+single,0,3,0.6,"cover: follow-on, previous peak covers",0.811352,1336
+single,0,3,0.6,"cover: follow-on, previous peak short",0.261389,197
+single,0,3,0.6,cover: size q1,0.766522,7738
+single,0,3,0.6,cover: size q2,0.462064,7221
+single,0,3,0.6,cover: size q3,0.408293,6689
+single,0,3,0.6,cover: size q4,0.291029,6332
+single,0,3,0.6,throttle core-hours,1553.96,
+single,0,6,0.6,cover: all,0.451897,27980
+single,0,6,0.6,cover: seasonal,0.40315,6749
+single,0,6,0.6,cover: follow-on,0.748997,1533
+single,0,6,0.6,cover: isolated,0.480003,13782
+single,0,6,0.6,cover: unknown,0.365047,5916
+single,0,6,0.6,"cover: follow-on, previous peak covers",0.817904,1336
+single,0,6,0.6,"cover: follow-on, previous peak short",0.281688,197
+single,0,6,0.6,cover: size q1,0.714797,7738
+single,0,6,0.6,cover: size q2,0.391855,7221
+single,0,6,0.6,cover: size q3,0.371706,6689
+single,0,6,0.6,cover: size q4,0.283808,6332
+single,0,6,0.6,throttle core-hours,1728.99,
+single,0,1,0.8,cover: all,0.770305,27980
+single,0,1,0.8,cover: seasonal,0.9495,6749
+single,0,1,0.8,cover: follow-on,0.863242,1533
+single,0,1,0.8,cover: isolated,0.713276,13782
+single,0,1,0.8,cover: unknown,0.67465,5916
+single,0,1,0.8,"cover: follow-on, previous peak covers",0.925651,1336
+single,0,1,0.8,"cover: follow-on, previous peak short",0.439999,197
+single,0,1,0.8,cover: size q1,0.941418,7738
+single,0,1,0.8,cover: size q2,0.846404,7221
+single,0,1,0.8,cover: size q3,0.723562,6689
+single,0,1,0.8,cover: size q4,0.523792,6332
+single,0,1,0.8,throttle core-hours,758.177,
+single,0,3,0.8,cover: all,0.591275,27980
+single,0,3,0.8,cover: seasonal,0.560703,6749
+single,0,3,0.8,cover: follow-on,0.820393,1533
+single,0,3,0.8,cover: isolated,0.613356,13782
+single,0,3,0.8,cover: unknown,0.515337,5916
+single,0,3,0.8,"cover: follow-on, previous peak covers",0.884363,1336
+single,0,3,0.8,"cover: follow-on, previous peak short",0.386565,197
+single,0,3,0.8,cover: size q1,0.834026,7738
+single,0,3,0.8,cover: size q2,0.564977,7221
+single,0,3,0.8,cover: size q3,0.509348,6689
+single,0,3,0.8,cover: size q4,0.411155,6332
+single,0,3,0.8,throttle core-hours,1171.38,
+single,0,6,0.8,cover: all,0.546389,27980
+single,0,6,0.8,cover: seasonal,0.493256,6749
+single,0,6,0.8,cover: follow-on,0.826127,1533
+single,0,6,0.8,cover: isolated,0.576626,13782
+single,0,6,0.8,cover: unknown,0.464074,5916
+single,0,6,0.8,"cover: follow-on, previous peak covers",0.884995,1336
+single,0,6,0.8,"cover: follow-on, previous peak short",0.426903,197
+single,0,6,0.8,cover: size q1,0.793438,7738
+single,0,6,0.8,cover: size q2,0.49279,7221
+single,0,6,0.8,cover: size q3,0.458254,6689
+single,0,6,0.8,cover: size q4,0.398713,6332
+single,0,6,0.8,throttle core-hours,1322.92,
+single,0,1,1,cover: all,0.817737,27980
+single,0,1,1,cover: seasonal,0.968058,6749
+single,0,1,1,cover: follow-on,0.906544,1533
+single,0,1,1,cover: isolated,0.769936,13782
+single,0,1,1,cover: unknown,0.734597,5916
+single,0,1,1,"cover: follow-on, previous peak covers",0.95867,1336
+single,0,1,1,"cover: follow-on, previous peak short",0.553039,197
+single,0,1,1,cover: size q1,0.961284,7738
+single,0,1,1,cover: size q2,0.881696,7221
+single,0,1,1,cover: size q3,0.777659,6689
+single,0,1,1,cover: size q4,0.611716,6332
+single,0,1,1,throttle core-hours,580.648,
+single,0,3,1,cover: all,0.666121,27980
+single,0,3,1,cover: seasonal,0.639205,6749
+single,0,3,1,cover: follow-on,0.869568,1533
+single,0,3,1,cover: isolated,0.686163,13782
+single,0,3,1,cover: unknown,0.597418,5916
+single,0,3,1,"cover: follow-on, previous peak covers",0.928844,1336
+single,0,3,1,"cover: follow-on, previous peak short",0.467581,197
+single,0,3,1,cover: size q1,0.88481,7738
+single,0,3,1,cover: size q2,0.649881,7221
+single,0,3,1,cover: size q3,0.582488,6689
+single,0,3,1,cover: size q4,0.505742,6332
+single,0,3,1,throttle core-hours,930.179,
+single,0,6,1,cover: all,0.621921,27980
+single,0,6,1,cover: seasonal,0.570317,6749
+single,0,6,1,cover: follow-on,0.870824,1533
+single,0,6,1,cover: isolated,0.649243,13782
+single,0,6,1,cover: unknown,0.552641,5916
+single,0,6,1,"cover: follow-on, previous peak covers",0.920705,1336
+single,0,6,1,"cover: follow-on, previous peak short",0.532542,197
+single,0,6,1,cover: size q1,0.855402,7738
+single,0,6,1,cover: size q2,0.583935,7221
+single,0,6,1,cover: size q3,0.522823,6689
+single,0,6,1,cover: size q4,0.484598,6332
+single,0,6,1,throttle core-hours,1063.65,
+single,1,1,0.6,cover: all,0.695747,27980
+single,1,1,0.6,cover: seasonal,0.919769,6749
+single,1,1,0.6,cover: follow-on,0.787445,1533
+single,1,1,0.6,cover: isolated,0.620166,13782
+single,1,1,0.6,cover: unknown,0.592493,5916
+single,1,1,0.6,"cover: follow-on, previous peak covers",0.85994,1336
+single,1,1,0.6,"cover: follow-on, previous peak short",0.295803,197
+single,1,1,0.6,cover: size q1,0.904561,7738
+single,1,1,0.6,cover: size q2,0.797273,7221
+single,1,1,0.6,cover: size q3,0.62453,6689
+single,1,1,0.6,cover: size q4,0.400017,6332
+single,1,1,0.6,throttle core-hours,1090.66,
+single,1,3,0.6,cover: all,0.489298,27980
+single,1,3,0.6,cover: seasonal,0.449888,6749
+single,1,3,0.6,cover: follow-on,0.751674,1533
+single,1,3,0.6,cover: isolated,0.513963,13782
+single,1,3,0.6,cover: unknown,0.40881,5916
+single,1,3,0.6,"cover: follow-on, previous peak covers",0.826744,1336
+single,1,3,0.6,"cover: follow-on, previous peak short",0.242573,197
+single,1,3,0.6,cover: size q1,0.746378,7738
+single,1,3,0.6,cover: size q2,0.464928,7221
+single,1,3,0.6,cover: size q3,0.395667,6689
+single,1,3,0.6,cover: size q4,0.301836,6332
+single,1,3,0.6,throttle core-hours,1558.48,
+single,1,6,0.6,cover: all,0.445082,27980
+single,1,6,0.6,cover: seasonal,0.389994,6749
+single,1,6,0.6,cover: follow-on,0.737059,1533
+single,1,6,0.6,cover: isolated,0.475297,13782
+single,1,6,0.6,cover: unknown,0.361879,5916
+single,1,6,0.6,"cover: follow-on, previous peak covers",0.806959,1336
+single,1,6,0.6,"cover: follow-on, previous peak short",0.263016,197
+single,1,6,0.6,cover: size q1,0.69472,7738
+single,1,6,0.6,cover: size q2,0.3928,7221
+single,1,6,0.6,cover: size q3,0.355419,6689
+single,1,6,0.6,cover: size q4,0.294353,6332
+single,1,6,0.6,throttle core-hours,1733.4,
+single,1,1,0.8,cover: all,0.762935,27980
+single,1,1,0.8,cover: seasonal,0.953123,6749
+single,1,1,0.8,cover: follow-on,0.859082,1533
+single,1,1,0.8,cover: isolated,0.700283,13782
+single,1,1,0.8,cover: unknown,0.667009,5916
+single,1,1,0.8,"cover: follow-on, previous peak covers",0.924455,1336
+single,1,1,0.8,"cover: follow-on, previous peak short",0.415745,197
+single,1,1,0.8,cover: size q1,0.934045,7738
+single,1,1,0.8,cover: size q2,0.849896,7221
+single,1,1,0.8,cover: size q3,0.707413,6689
+single,1,1,0.8,cover: size q4,0.513313,6332
+single,1,1,0.8,throttle core-hours,780.742,
+single,1,3,0.8,cover: all,0.582086,27980
+single,1,3,0.8,cover: seasonal,0.544842,6749
+single,1,3,0.8,cover: follow-on,0.833542,1533
+single,1,3,0.8,cover: isolated,0.605492,13782
+single,1,3,0.8,cover: unknown,0.504888,5916
+single,1,3,0.8,"cover: follow-on, previous peak covers",0.902634,1336
+single,1,3,0.8,"cover: follow-on, previous peak short",0.364984,197
+single,1,3,0.8,cover: size q1,0.813149,7738
+single,1,3,0.8,cover: size q2,0.570744,7221
+single,1,3,0.8,cover: size q3,0.488276,6689
+single,1,3,0.8,cover: size q4,0.411749,6332
+single,1,3,0.8,throttle core-hours,1181.94,
+single,1,6,0.8,cover: all,0.539172,27980
+single,1,6,0.8,cover: seasonal,0.479498,6749
+single,1,6,0.8,cover: follow-on,0.818503,1533
+single,1,6,0.8,cover: isolated,0.571227,13782
+single,1,6,0.8,cover: unknown,0.460192,5916
+single,1,6,0.8,"cover: follow-on, previous peak covers",0.879467,1336
+single,1,6,0.8,"cover: follow-on, previous peak short",0.405066,197
+single,1,6,0.8,cover: size q1,0.768512,7738
+single,1,6,0.8,cover: size q2,0.500708,7221
+single,1,6,0.8,cover: size q3,0.445046,6689
+single,1,6,0.8,cover: size q4,0.402207,6332
+single,1,6,0.8,throttle core-hours,1330.87,
+single,1,1,1,cover: all,0.810205,27980
+single,1,1,1,cover: seasonal,0.970524,6749
+single,1,1,1,cover: follow-on,0.902585,1533
+single,1,1,1,cover: isolated,0.757806,13782
+single,1,1,1,cover: unknown,0.725444,5916
+single,1,1,1,"cover: follow-on, previous peak covers",0.958274,1336
+single,1,1,1,"cover: follow-on, previous peak short",0.524919,197
+single,1,1,1,cover: size q1,0.954458,7738
+single,1,1,1,cover: size q2,0.887125,7221
+single,1,1,1,cover: size q3,0.764857,6689
+single,1,1,1,cover: size q4,0.594107,6332
+single,1,1,1,throttle core-hours,600.436,
+single,1,3,1,cover: all,0.658478,27980
+single,1,3,1,cover: seasonal,0.625844,6749
+single,1,3,1,cover: follow-on,0.8832,1533
+single,1,3,1,cover: isolated,0.677905,13782
+single,1,3,1,cover: unknown,0.592217,5916
+single,1,3,1,"cover: follow-on, previous peak covers",0.944796,1336
+single,1,3,1,"cover: follow-on, previous peak short",0.46547,197
+single,1,3,1,cover: size q1,0.863896,7738
+single,1,3,1,cover: size q2,0.666801,7221
+single,1,3,1,cover: size q3,0.567261,6689
+single,1,3,1,cover: size q4,0.494316,6332
+single,1,3,1,throttle core-hours,941.62,
+single,1,6,1,cover: all,0.614705,27980
+single,1,6,1,cover: seasonal,0.555174,6749
+single,1,6,1,cover: follow-on,0.863263,1533
+single,1,6,1,cover: isolated,0.646177,13782
+single,1,6,1,cover: unknown,0.544892,5916
+single,1,6,1,"cover: follow-on, previous peak covers",0.911872,1336
+single,1,6,1,"cover: follow-on, previous peak short",0.533606,197
+single,1,6,1,cover: size q1,0.822414,7738
+single,1,6,1,cover: size q2,0.59509,7221
+single,1,6,1,cover: size q3,0.517934,6689
+single,1,6,1,cover: size q4,0.485471,6332
+single,1,6,1,throttle core-hours,1072.23,
+single,2,1,0.6,cover: all,0.652144,27980
+single,2,1,0.6,cover: seasonal,0.863638,6749
+single,2,1,0.6,cover: follow-on,0.776241,1533
+single,2,1,0.6,cover: isolated,0.577073,13782
+single,2,1,0.6,cover: unknown,0.553601,5916
+single,2,1,0.6,"cover: follow-on, previous peak covers",0.847116,1336
+single,2,1,0.6,"cover: follow-on, previous peak short",0.295582,197
+single,2,1,0.6,cover: size q1,0.850547,7738
+single,2,1,0.6,cover: size q2,0.726328,7221
+single,2,1,0.6,cover: size q3,0.613501,6689
+single,2,1,0.6,cover: size q4,0.365909,6332
+single,2,1,0.6,throttle core-hours,1201.81,
+single,2,3,0.6,cover: all,0.469583,27980
+single,2,3,0.6,cover: seasonal,0.424853,6749
+single,2,3,0.6,cover: follow-on,0.730312,1533
+single,2,3,0.6,cover: isolated,0.498985,13782
+single,2,3,0.6,cover: unknown,0.384552,5916
+single,2,3,0.6,"cover: follow-on, previous peak covers",0.802501,1336
+single,2,3,0.6,"cover: follow-on, previous peak short",0.240747,197
+single,2,3,0.6,cover: size q1,0.699396,7738
+single,2,3,0.6,cover: size q2,0.435031,7221
+single,2,3,0.6,cover: size q3,0.41997,6689
+single,2,3,0.6,cover: size q4,0.280552,6332
+single,2,3,0.6,throttle core-hours,1621.34,
+single,2,6,0.6,cover: all,0.438777,27980
+single,2,6,0.6,cover: seasonal,0.385517,6749
+single,2,6,0.6,cover: follow-on,0.744397,1533
+single,2,6,0.6,cover: isolated,0.469362,13782
+single,2,6,0.6,cover: unknown,0.349087,5916
+single,2,6,0.6,"cover: follow-on, previous peak covers",0.812222,1336
+single,2,6,0.6,"cover: follow-on, previous peak short",0.284428,197
+single,2,6,0.6,cover: size q1,0.660234,7738
+single,2,6,0.6,cover: size q2,0.385921,7221
+single,2,6,0.6,cover: size q3,0.394542,6689
+single,2,6,0.6,cover: size q4,0.27515,6332
+single,2,6,0.6,throttle core-hours,1759.62,
+single,2,1,0.8,cover: all,0.729508,27980
+single,2,1,0.8,cover: seasonal,0.914873,6749
+single,2,1,0.8,cover: follow-on,0.854256,1533
+single,2,1,0.8,cover: isolated,0.668626,13782
+single,2,1,0.8,cover: unknown,0.627547,5916
+single,2,1,0.8,"cover: follow-on, previous peak covers",0.919453,1336
+single,2,1,0.8,"cover: follow-on, previous peak short",0.412105,197
+single,2,1,0.8,cover: size q1,0.900991,7738
+single,2,1,0.8,cover: size q2,0.7951,7221
+single,2,1,0.8,cover: size q3,0.693875,6689
+single,2,1,0.8,cover: size q4,0.482789,6332
+single,2,1,0.8,throttle core-hours,873.734,
+single,2,3,0.8,cover: all,0.567201,27980
+single,2,3,0.8,cover: seasonal,0.526611,6749
+single,2,3,0.8,cover: follow-on,0.812793,1533
+single,2,3,0.8,cover: isolated,0.597224,13782
+single,2,3,0.8,cover: unknown,0.479923,5916
+single,2,3,0.8,"cover: follow-on, previous peak covers",0.877108,1336
+single,2,3,0.8,"cover: follow-on, previous peak short",0.376623,197
+single,2,3,0.8,cover: size q1,0.783745,7738
+single,2,3,0.8,cover: size q2,0.532548,7221
+single,2,3,0.8,cover: size q3,0.515155,6689
+single,2,3,0.8,cover: size q4,0.397071,6332
+single,2,3,0.8,throttle core-hours,1234.95,
+single,2,6,0.8,cover: all,0.53256,27980
+single,2,6,0.8,cover: seasonal,0.476358,6749
+single,2,6,0.8,cover: follow-on,0.820177,1533
+single,2,6,0.8,cover: isolated,0.567182,13782
+single,2,6,0.8,cover: unknown,0.441491,5916
+single,2,6,0.8,"cover: follow-on, previous peak covers",0.878285,1336
+single,2,6,0.8,"cover: follow-on, previous peak short",0.426102,197
+single,2,6,0.8,cover: size q1,0.743449,7738
+single,2,6,0.8,cover: size q2,0.479781,7221
+single,2,6,0.8,cover: size q3,0.481651,6689
+single,2,6,0.8,cover: size q4,0.388814,6332
+single,2,6,0.8,throttle core-hours,1356.99,
+single,2,1,1,cover: all,0.783004,27980
+single,2,1,1,cover: seasonal,0.944707,6749
+single,2,1,1,cover: follow-on,0.894669,1533
+single,2,1,1,cover: isolated,0.732683,13782
+single,2,1,1,cover: unknown,0.686826,5916
+single,2,1,1,"cover: follow-on, previous peak covers",0.953202,1336
+single,2,1,1,"cover: follow-on, previous peak short",0.497712,197
+single,2,1,1,cover: size q1,0.933639,7738
+single,2,1,1,cover: size q2,0.845257,7221
+single,2,1,1,cover: size q3,0.746125,6689
+single,2,1,1,cover: size q4,0.566885,6332
+single,2,1,1,throttle core-hours,678.932,
+single,2,3,1,cover: all,0.646638,27980
+single,2,3,1,cover: seasonal,0.616586,6749
+single,2,3,1,cover: follow-on,0.865192,1533
+single,2,3,1,cover: isolated,0.673452,13782
+single,2,3,1,cover: unknown,0.561824,5916
+single,2,3,1,"cover: follow-on, previous peak covers",0.920448,1336
+single,2,3,1,"cover: follow-on, previous peak short",0.490457,197
+single,2,3,1,cover: size q1,0.853954,7738
+single,2,3,1,cover: size q2,0.620032,7221
+single,2,3,1,cover: size q3,0.584639,6689
+single,2,3,1,cover: size q4,0.489125,6332
+single,2,3,1,throttle core-hours,987.099,
+single,2,6,1,cover: all,0.610963,27980
+single,2,6,1,cover: seasonal,0.557981,6749
+single,2,6,1,cover: follow-on,0.866496,1533
+single,2,6,1,cover: isolated,0.646443,13782
+single,2,6,1,cover: unknown,0.522537,5916
+single,2,6,1,"cover: follow-on, previous peak covers",0.913818,1336
+single,2,6,1,"cover: follow-on, previous peak short",0.545576,197
+single,2,6,1,cover: size q1,0.818146,7738
+single,2,6,1,cover: size q2,0.562612,7221
+single,2,6,1,cover: size q3,0.54829,6689
+single,2,6,1,cover: size q4,0.479124,6332
+single,2,6,1,throttle core-hours,1095.49,
+binary,0,1,0.6,cover: all,0.518717,27980
+binary,0,1,0.6,cover: seasonal,0.575894,6749
+binary,0,1,0.6,cover: follow-on,0.495165,1533
+binary,0,1,0.6,cover: isolated,0.535018,13782
+binary,0,1,0.6,cover: unknown,0.421616,5916
+binary,0,1,0.6,"cover: follow-on, previous peak covers",0.540391,1336
+binary,0,1,0.6,"cover: follow-on, previous peak short",0.188456,197
+binary,0,1,0.6,cover: size q1,0.932677,7738
+binary,0,1,0.6,cover: size q2,0.742911,7221
+binary,0,1,0.6,cover: size q3,0.260463,6689
+binary,0,1,0.6,cover: size q4,0.0299821,6332
+binary,0,1,0.6,throttle core-hours,4812.81,
+binary,0,3,0.6,cover: all,0.512418,27980
+binary,0,3,0.6,cover: seasonal,0.566255,6749
+binary,0,3,0.6,cover: follow-on,0.487024,1533
+binary,0,3,0.6,cover: isolated,0.52875,13782
+binary,0,3,0.6,cover: unknown,0.419536,5916
+binary,0,3,0.6,"cover: follow-on, previous peak covers",0.530236,1336
+binary,0,3,0.6,"cover: follow-on, previous peak short",0.193972,197
+binary,0,3,0.6,cover: size q1,0.929175,7738
+binary,0,3,0.6,cover: size q2,0.738201,7221
+binary,0,3,0.6,cover: size q3,0.247509,6689
+binary,0,3,0.6,cover: size q4,0.0254847,6332
+binary,0,3,0.6,throttle core-hours,4927.69,
+binary,0,6,0.6,cover: all,0.510095,27980
+binary,0,6,0.6,cover: seasonal,0.566835,6749
+binary,0,6,0.6,cover: follow-on,0.463992,1533
+binary,0,6,0.6,cover: isolated,0.526834,13782
+binary,0,6,0.6,cover: unknown,0.418316,5916
+binary,0,6,0.6,"cover: follow-on, previous peak covers",0.502767,1336
+binary,0,6,0.6,"cover: follow-on, previous peak short",0.201033,197
+binary,0,6,0.6,cover: size q1,0.929215,7738
+binary,0,6,0.6,cover: size q2,0.737188,7221
+binary,0,6,0.6,cover: size q3,0.241918,6689
+binary,0,6,0.6,cover: size q4,0.0222304,6332
+binary,0,6,0.6,throttle core-hours,5010.15,
+binary,0,1,0.8,cover: all,0.606821,27980
+binary,0,1,0.8,cover: seasonal,0.683252,6749
+binary,0,1,0.8,cover: follow-on,0.564496,1533
+binary,0,1,0.8,cover: isolated,0.618119,13782
+binary,0,1,0.8,cover: unknown,0.504278,5916
+binary,0,1,0.8,"cover: follow-on, previous peak covers",0.611351,1336
+binary,0,1,0.8,"cover: follow-on, previous peak short",0.246742,197
+binary,0,1,0.8,cover: size q1,0.997778,7738
+binary,0,1,0.8,cover: size q2,0.939556,7221
+binary,0,1,0.8,cover: size q3,0.333,6689
+binary,0,1,0.8,cover: size q4,0.038863,6332
+binary,0,1,0.8,throttle core-hours,4052.65,
+binary,0,3,0.8,cover: all,0.602259,27980
+binary,0,3,0.8,cover: seasonal,0.67706,6749
+binary,0,3,0.8,cover: follow-on,0.559812,1533
+binary,0,3,0.8,cover: isolated,0.61279,13782
+binary,0,3,0.8,cover: unknown,0.503392,5916
+binary,0,3,0.8,"cover: follow-on, previous peak covers",0.604501,1336
+binary,0,3,0.8,"cover: follow-on, previous peak short",0.256741,197
+binary,0,3,0.8,cover: size q1,0.997663,7738
+binary,0,3,0.8,cover: size q2,0.93766,7221
+binary,0,3,0.8,cover: size q3,0.320574,6689
+binary,0,3,0.8,cover: size q4,0.0341331,6332
+binary,0,3,0.8,throttle core-hours,4161.56,
+binary,0,6,0.8,cover: all,0.600662,27980
+binary,0,6,0.8,cover: seasonal,0.677509,6749
+binary,0,6,0.8,cover: follow-on,0.54139,1533
+binary,0,6,0.8,cover: isolated,0.611814,13782
+binary,0,6,0.8,cover: unknown,0.502371,5916
+binary,0,6,0.8,"cover: follow-on, previous peak covers",0.581881,1336
+binary,0,6,0.8,"cover: follow-on, previous peak short",0.266791,197
+binary,0,6,0.8,cover: size q1,0.997664,7738
+binary,0,6,0.8,cover: size q2,0.939501,7221
+binary,0,6,0.8,cover: size q3,0.315908,6689
+binary,0,6,0.8,cover: size q4,0.0299024,6332
+binary,0,6,0.8,throttle core-hours,4232.44,
+binary,0,1,1,cover: all,0.663141,27980
+binary,0,1,1,cover: seasonal,0.739587,6749
+binary,0,1,1,cover: follow-on,0.619992,1533
+binary,0,1,1,cover: isolated,0.672448,13782
+binary,0,1,1,cover: unknown,0.565428,5916
+binary,0,1,1,"cover: follow-on, previous peak covers",0.661822,1336
+binary,0,1,1,"cover: follow-on, previous peak short",0.336313,197
+binary,0,1,1,cover: size q1,1,7738
+binary,0,1,1,cover: size q2,0.959901,7221
+binary,0,1,1,cover: size q3,0.492782,6689
+binary,0,1,1,cover: size q4,0.0930217,6332
+binary,0,1,1,throttle core-hours,3493.9,
+binary,0,3,1,cover: all,0.658683,27980
+binary,0,3,1,cover: seasonal,0.733325,6749
+binary,0,3,1,cover: follow-on,0.614432,1533
+binary,0,3,1,cover: isolated,0.667851,13782
+binary,0,3,1,cover: unknown,0.563639,5916
+binary,0,3,1,"cover: follow-on, previous peak covers",0.654705,1336
+binary,0,3,1,"cover: follow-on, previous peak short",0.341313,197
+binary,0,3,1,cover: size q1,1,7738
+binary,0,3,1,cover: size q2,0.958558,7221
+binary,0,3,1,cover: size q3,0.481701,6689
+binary,0,3,1,cover: size q4,0.0865608,6332
+binary,0,3,1,throttle core-hours,3594.22,
+binary,0,6,1,cover: all,0.657265,27980
+binary,0,6,1,cover: seasonal,0.73313,6749
+binary,0,6,1,cover: follow-on,0.59865,1533
+binary,0,6,1,cover: isolated,0.667018,13782
+binary,0,6,1,cover: unknown,0.563183,5916
+binary,0,6,1,"cover: follow-on, previous peak covers",0.635099,1336
+binary,0,6,1,"cover: follow-on, previous peak short",0.351466,197
+binary,0,6,1,cover: size q1,1,7738
+binary,0,6,1,cover: size q2,0.960005,7221
+binary,0,6,1,cover: size q3,0.478243,6689
+binary,0,6,1,cover: size q4,0.0822967,6332
+binary,0,6,1,throttle core-hours,3655.32,
+binary,1,1,0.6,cover: all,0.522394,27980
+binary,1,1,0.6,cover: seasonal,0.579578,6749
+binary,1,1,0.6,cover: follow-on,0.505936,1533
+binary,1,1,0.6,cover: isolated,0.538119,13782
+binary,1,1,0.6,cover: unknown,0.42479,5916
+binary,1,1,0.6,"cover: follow-on, previous peak covers",0.553496,1336
+binary,1,1,0.6,"cover: follow-on, previous peak short",0.183396,197
+binary,1,1,0.6,cover: size q1,0.928018,7738
+binary,1,1,0.6,cover: size q2,0.737866,7221
+binary,1,1,0.6,cover: size q3,0.26762,6689
+binary,1,1,0.6,cover: size q4,0.0501168,6332
+binary,1,1,0.6,throttle core-hours,4376.84,
+binary,1,3,0.6,cover: all,0.516299,27980
+binary,1,3,0.6,cover: seasonal,0.569625,6749
+binary,1,3,0.6,cover: follow-on,0.49921,1533
+binary,1,3,0.6,cover: isolated,0.53304,13782
+binary,1,3,0.6,cover: unknown,0.420892,5916
+binary,1,3,0.6,"cover: follow-on, previous peak covers",0.544983,1336
+binary,1,3,0.6,"cover: follow-on, previous peak short",0.188791,197
+binary,1,3,0.6,cover: size q1,0.924425,7738
+binary,1,3,0.6,cover: size q2,0.733012,7221
+binary,1,3,0.6,cover: size q3,0.255969,6689
+binary,1,3,0.6,cover: size q4,0.0454181,6332
+binary,1,3,0.6,throttle core-hours,4488.15,
+binary,1,6,0.6,cover: all,0.512868,27980
+binary,1,6,0.6,cover: seasonal,0.569393,6749
+binary,1,6,0.6,cover: follow-on,0.476422,1533
+binary,1,6,0.6,cover: isolated,0.529821,13782
+binary,1,6,0.6,cover: unknown,0.418335,5916
+binary,1,6,0.6,"cover: follow-on, previous peak covers",0.518835,1336
+binary,1,6,0.6,"cover: follow-on, previous peak short",0.188791,197
+binary,1,6,0.6,cover: size q1,0.924344,7738
+binary,1,6,0.6,cover: size q2,0.729611,7221
+binary,1,6,0.6,cover: size q3,0.248373,6689
+binary,1,6,0.6,cover: size q4,0.0422595,6332
+binary,1,6,0.6,throttle core-hours,4579.49,
+binary,1,1,0.8,cover: all,0.6108,27980
+binary,1,1,0.8,cover: seasonal,0.68622,6749
+binary,1,1,0.8,cover: follow-on,0.57208,1533
+binary,1,1,0.8,cover: isolated,0.621848,13782
+binary,1,1,0.8,cover: unknown,0.509056,5916
+binary,1,1,0.8,"cover: follow-on, previous peak covers",0.621081,1336
+binary,1,1,0.8,"cover: follow-on, previous peak short",0.239763,197
+binary,1,1,0.8,cover: size q1,0.99535,7738
+binary,1,1,0.8,cover: size q2,0.931382,7221
+binary,1,1,0.8,cover: size q3,0.339484,6689
+binary,1,1,0.8,cover: size q4,0.0618848,6332
+binary,1,1,0.8,throttle core-hours,3711.84,
+binary,1,3,0.8,cover: all,0.606595,27980
+binary,1,3,0.8,cover: seasonal,0.680726,6749
+binary,1,3,0.8,cover: follow-on,0.568594,1533
+binary,1,3,0.8,cover: isolated,0.617448,13782
+binary,1,3,0.8,cover: unknown,0.506591,5916
+binary,1,3,0.8,"cover: follow-on, previous peak covers",0.61563,1336
+binary,1,3,0.8,"cover: follow-on, previous peak short",0.249607,197
+binary,1,3,0.8,cover: size q1,0.995118,7738
+binary,1,3,0.8,cover: size q2,0.930291,7221
+binary,1,3,0.8,cover: size q3,0.328662,6689
+binary,1,3,0.8,cover: size q4,0.0562631,6332
+binary,1,3,0.8,throttle core-hours,3815.58,
+binary,1,6,0.8,cover: all,0.604,27980
+binary,1,6,0.8,cover: seasonal,0.680711,6749
+binary,1,6,0.8,cover: follow-on,0.552478,1533
+binary,1,6,0.8,cover: isolated,0.615204,13782
+binary,1,6,0.8,cover: unknown,0.503738,5916
+binary,1,6,0.8,"cover: follow-on, previous peak covers",0.597138,1336
+binary,1,6,0.8,"cover: follow-on, previous peak short",0.249607,197
+binary,1,6,0.8,cover: size q1,0.995113,7738
+binary,1,6,0.8,cover: size q2,0.929035,7221
+binary,1,6,0.8,cover: size q3,0.322159,6689
+binary,1,6,0.8,cover: size q4,0.0531046,6332
+binary,1,6,0.8,throttle core-hours,3891.2,
+binary,1,1,1,cover: all,0.667158,27980
+binary,1,1,1,cover: seasonal,0.742582,6749
+binary,1,1,1,cover: follow-on,0.627059,1533
+binary,1,1,1,cover: isolated,0.676497,13782
+binary,1,1,1,cover: unknown,0.569748,5916
+binary,1,1,1,"cover: follow-on, previous peak covers",0.670719,1336
+binary,1,1,1,"cover: follow-on, previous peak short",0.330967,197
+binary,1,1,1,cover: size q1,1,7738
+binary,1,1,1,cover: size q2,0.958131,7221
+binary,1,1,1,cover: size q3,0.493011,6689
+binary,1,1,1,cover: size q4,0.11255,6332
+binary,1,1,1,throttle core-hours,3211.37,
+binary,1,3,1,cover: all,0.663109,27980
+binary,1,3,1,cover: seasonal,0.737647,6749
+binary,1,3,1,cover: follow-on,0.621743,1533
+binary,1,3,1,cover: isolated,0.672354,13782
+binary,1,3,1,cover: unknown,0.567258,5916
+binary,1,3,1,"cover: follow-on, previous peak covers",0.663485,1336
+binary,1,3,1,"cover: follow-on, previous peak short",0.338659,197
+binary,1,3,1,cover: size q1,1,7738
+binary,1,3,1,cover: size q2,0.957501,7221
+binary,1,3,1,cover: size q3,0.484021,6689
+binary,1,3,1,cover: size q4,0.104875,6332
+binary,1,3,1,throttle core-hours,3306.79,
+binary,1,6,1,cover: all,0.660953,27980
+binary,1,6,1,cover: seasonal,0.737252,6749
+binary,1,6,1,cover: follow-on,0.60909,1533
+binary,1,6,1,cover: isolated,0.670547,13782
+binary,1,6,1,cover: unknown,0.564999,5916
+binary,1,6,1,"cover: follow-on, previous peak covers",0.649147,1336
+binary,1,6,1,"cover: follow-on, previous peak short",0.33743,197
+binary,1,6,1,cover: size q1,1,7738
+binary,1,6,1,cover: size q2,0.956662,7221
+binary,1,6,1,cover: size q3,0.478534,6689
+binary,1,6,1,cover: size q4,0.102099,6332
+binary,1,6,1,throttle core-hours,3372.69,
+binary,2,1,0.6,cover: all,0.516351,27980
+binary,2,1,0.6,cover: seasonal,0.570198,6749
+binary,2,1,0.6,cover: follow-on,0.492531,1533
+binary,2,1,0.6,cover: isolated,0.533181,13782
+binary,2,1,0.6,cover: unknown,0.421884,5916
+binary,2,1,0.6,"cover: follow-on, previous peak covers",0.537378,1336
+binary,2,1,0.6,"cover: follow-on, previous peak short",0.188388,197
+binary,2,1,0.6,cover: size q1,0.927363,7738
+binary,2,1,0.6,cover: size q2,0.73978,7221
+binary,2,1,0.6,cover: size q3,0.256119,6689
+binary,2,1,0.6,cover: size q4,0.0341785,6332
+binary,2,1,0.6,throttle core-hours,4610.13,
+binary,2,3,0.6,cover: all,0.512693,27980
+binary,2,3,0.6,cover: seasonal,0.566272,6749
+binary,2,3,0.6,cover: follow-on,0.487536,1533
+binary,2,3,0.6,cover: isolated,0.529054,13782
+binary,2,3,0.6,cover: unknown,0.419973,5916
+binary,2,3,0.6,"cover: follow-on, previous peak covers",0.531583,1336
+binary,2,3,0.6,"cover: follow-on, previous peak short",0.188823,197
+binary,2,3,0.6,cover: size q1,0.926457,7738
+binary,2,3,0.6,cover: size q2,0.736374,7221
+binary,2,3,0.6,cover: size q3,0.248825,6689
+binary,2,3,0.6,cover: size q4,0.0307117,6332
+binary,2,3,0.6,throttle core-hours,4712.71,
+binary,2,6,0.6,cover: all,0.509712,27980
+binary,2,6,0.6,cover: seasonal,0.565132,6749
+binary,2,6,0.6,cover: follow-on,0.466941,1533
+binary,2,6,0.6,cover: isolated,0.525542,13782
+binary,2,6,0.6,cover: unknown,0.420693,5916
+binary,2,6,0.6,"cover: follow-on, previous peak covers",0.508471,1336
+binary,2,6,0.6,"cover: follow-on, previous peak short",0.185294,197
+binary,2,6,0.6,cover: size q1,0.925787,7738
+binary,2,6,0.6,cover: size q2,0.735914,7221
+binary,2,6,0.6,cover: size q3,0.240375,6689
+binary,2,6,0.6,cover: size q4,0.027809,6332
+binary,2,6,0.6,throttle core-hours,4795.17,
+binary,2,1,0.8,cover: all,0.606213,27980
+binary,2,1,0.8,cover: seasonal,0.680524,6749
+binary,2,1,0.8,cover: follow-on,0.562,1533
+binary,2,1,0.8,cover: isolated,0.617501,13782
+binary,2,1,0.8,cover: unknown,0.506599,5916
+binary,2,1,0.8,"cover: follow-on, previous peak covers",0.60855,1336
+binary,2,1,0.8,"cover: follow-on, previous peak short",0.246308,197
+binary,2,1,0.8,cover: size q1,0.997084,7738
+binary,2,1,0.8,cover: size q2,0.935718,7221
+binary,2,1,0.8,cover: size q3,0.329994,6689
+binary,2,1,0.8,cover: size q4,0.0445747,6332
+binary,2,1,0.8,throttle core-hours,3850.47,
+binary,2,3,0.8,cover: all,0.603527,27980
+binary,2,3,0.8,cover: seasonal,0.678375,6749
+binary,2,3,0.8,cover: follow-on,0.559295,1533
+binary,2,3,0.8,cover: isolated,0.614201,13782
+binary,2,3,0.8,cover: unknown,0.504737,5916
+binary,2,3,0.8,"cover: follow-on, previous peak covers",0.604725,1336
+binary,2,3,0.8,"cover: follow-on, previous peak short",0.251198,197
+binary,2,3,0.8,cover: size q1,0.997048,7738
+binary,2,3,0.8,cover: size q2,0.934784,7221
+binary,2,3,0.8,cover: size q3,0.323531,6689
+binary,2,3,0.8,cover: size q4,0.0406458,6332
+binary,2,3,0.8,throttle core-hours,3948.18,
+binary,2,6,0.8,cover: all,0.601006,27980
+binary,2,6,0.8,cover: seasonal,0.677192,6749
+binary,2,6,0.8,cover: follow-on,0.541563,1533
+binary,2,6,0.8,cover: isolated,0.611135,13782
+binary,2,6,0.8,cover: unknown,0.505902,5916
+binary,2,6,0.8,"cover: follow-on, previous peak covers",0.585118,1336
+binary,2,6,0.8,"cover: follow-on, previous peak short",0.246184,197
+binary,2,6,0.8,cover: size q1,0.997021,7738
+binary,2,6,0.8,cover: size q2,0.936228,7221
+binary,2,6,0.8,cover: size q3,0.315299,6689
+binary,2,6,0.8,cover: size q4,0.036588,6332
+binary,2,6,0.8,throttle core-hours,4019.14,
+binary,2,1,1,cover: all,0.662372,27980
+binary,2,1,1,cover: seasonal,0.736685,6749
+binary,2,1,1,cover: follow-on,0.617174,1533
+binary,2,1,1,cover: isolated,0.672041,13782
+binary,2,1,1,cover: unknown,0.566781,5916
+binary,2,1,1,"cover: follow-on, previous peak covers",0.659094,1336
+binary,2,1,1,"cover: follow-on, previous peak short",0.332884,197
+binary,2,1,1,cover: size q1,1,7738
+binary,2,1,1,cover: size q2,0.958002,7221
+binary,2,1,1,cover: size q3,0.488886,6689
+binary,2,1,1,cover: size q4,0.0959046,6332
+binary,2,1,1,throttle core-hours,3317.38,
+binary,2,3,1,cover: all,0.659978,27980
+binary,2,3,1,cover: seasonal,0.734536,6749
+binary,2,3,1,cover: follow-on,0.615875,1533
+binary,2,3,1,cover: isolated,0.669103,13782
+binary,2,3,1,cover: unknown,0.565092,5916
+binary,2,3,1,"cover: follow-on, previous peak covers",0.657043,1336
+binary,2,3,1,"cover: follow-on, previous peak short",0.336685,197
+binary,2,3,1,cover: size q1,1,7738
+binary,2,3,1,cover: size q2,0.957379,7221
+binary,2,3,1,cover: size q3,0.483472,6689
+binary,2,3,1,cover: size q4,0.0917581,6332
+binary,2,3,1,throttle core-hours,3408.2,
+binary,2,6,1,cover: all,0.657818,27980
+binary,2,6,1,cover: seasonal,0.733202,6749
+binary,2,6,1,cover: follow-on,0.601048,1533
+binary,2,6,1,cover: isolated,0.66673,13782
+binary,2,6,1,cover: unknown,0.565766,5916
+binary,2,6,1,"cover: follow-on, previous peak covers",0.63965,1336
+binary,2,6,1,"cover: follow-on, previous peak short",0.339259,197
+binary,2,6,1,cover: size q1,1,7738
+binary,2,6,1,cover: size q2,0.95852,7221
+binary,2,6,1,cover: size q3,0.477127,6689
+binary,2,6,1,cover: size q4,0.0876123,6332
+binary,2,6,1,throttle core-hours,3468.53,
+proportional,0,1,0.6,cover: all,0.63444,27980
+proportional,0,1,0.6,cover: seasonal,0.820022,6749
+proportional,0,1,0.6,cover: follow-on,0.656068,1533
+proportional,0,1,0.6,cover: isolated,0.587888,13782
+proportional,0,1,0.6,cover: unknown,0.525569,5916
+proportional,0,1,0.6,"cover: follow-on, previous peak covers",0.722281,1336
+proportional,0,1,0.6,"cover: follow-on, previous peak short",0.207031,197
+proportional,0,1,0.6,cover: size q1,0.972222,7738
+proportional,0,1,0.6,cover: size q2,0.794314,7221
+proportional,0,1,0.6,cover: size q3,0.488872,6689
+proportional,0,1,0.6,cover: size q4,0.193109,6332
+proportional,0,1,0.6,throttle core-hours,1921.69,
+proportional,0,3,0.6,cover: all,0.528833,27980
+proportional,0,3,0.6,cover: seasonal,0.558828,6749
+proportional,0,3,0.6,cover: follow-on,0.621901,1533
+proportional,0,3,0.6,cover: isolated,0.543079,13782
+proportional,0,3,0.6,cover: unknown,0.437308,5916
+proportional,0,3,0.6,"cover: follow-on, previous peak covers",0.6885,1336
+proportional,0,3,0.6,"cover: follow-on, previous peak short",0.170249,197
+proportional,0,3,0.6,cover: size q1,0.950733,7738
+proportional,0,3,0.6,cover: size q2,0.645902,7221
+proportional,0,3,0.6,cover: size q3,0.295205,6689
+proportional,0,3,0.6,cover: size q4,0.126545,6332
+proportional,0,3,0.6,throttle core-hours,2319.67,
+proportional,0,6,0.6,cover: all,0.518088,27980
+proportional,0,6,0.6,cover: seasonal,0.547236,6749
+proportional,0,6,0.6,cover: follow-on,0.613988,1533
+proportional,0,6,0.6,cover: isolated,0.53163,13782
+proportional,0,6,0.6,cover: unknown,0.428438,5916
+proportional,0,6,0.6,"cover: follow-on, previous peak covers",0.677261,1336
+proportional,0,6,0.6,"cover: follow-on, previous peak short",0.184893,197
+proportional,0,6,0.6,cover: size q1,0.945592,7738
+proportional,0,6,0.6,cover: size q2,0.626646,7221
+proportional,0,6,0.6,cover: size q3,0.278657,6689
+proportional,0,6,0.6,cover: size q4,0.124787,6332
+proportional,0,6,0.6,throttle core-hours,2456.39,
+proportional,0,1,0.8,cover: all,0.726614,27980
+proportional,0,1,0.8,cover: seasonal,0.897467,6749
+proportional,0,1,0.8,cover: follow-on,0.765034,1533
+proportional,0,1,0.8,cover: isolated,0.685124,13782
+proportional,0,1,0.8,cover: unknown,0.618405,5916
+proportional,0,1,0.8,"cover: follow-on, previous peak covers",0.832486,1336
+proportional,0,1,0.8,"cover: follow-on, previous peak short",0.30759,197
+proportional,0,1,0.8,cover: size q1,0.996653,7738
+proportional,0,1,0.8,cover: size q2,0.905471,7221
+proportional,0,1,0.8,cover: size q3,0.622594,6689
+proportional,0,1,0.8,cover: size q4,0.302531,6332
+proportional,0,1,0.8,throttle core-hours,1294.68,
+proportional,0,3,0.8,cover: all,0.634271,27980
+proportional,0,3,0.8,cover: seasonal,0.677752,6749
+proportional,0,3,0.8,cover: follow-on,0.730046,1533
+proportional,0,3,0.8,cover: isolated,0.642799,13782
+proportional,0,3,0.8,cover: unknown,0.539984,5916
+proportional,0,3,0.8,"cover: follow-on, previous peak covers",0.798021,1336
+proportional,0,3,0.8,"cover: follow-on, previous peak short",0.269054,197
+proportional,0,3,0.8,cover: size q1,0.994943,7738
+proportional,0,3,0.8,cover: size q2,0.830101,7221
+proportional,0,3,0.8,cover: size q3,0.413631,6689
+proportional,0,3,0.8,cover: size q4,0.203269,6332
+proportional,0,3,0.8,throttle core-hours,1666.77,
+proportional,0,6,0.8,cover: all,0.626778,27980
+proportional,0,6,0.8,cover: seasonal,0.671393,6749
+proportional,0,6,0.8,cover: follow-on,0.722782,1533
+proportional,0,6,0.8,cover: isolated,0.634865,13782
+proportional,0,6,0.8,cover: unknown,0.532162,5916
+proportional,0,6,0.8,"cover: follow-on, previous peak covers",0.785196,1336
+proportional,0,6,0.8,"cover: follow-on, previous peak short",0.299511,197
+proportional,0,6,0.8,cover: size q1,0.994198,7738
+proportional,0,6,0.8,cover: size q2,0.820918,7221
+proportional,0,6,0.8,cover: size q3,0.39353,6689
+proportional,0,6,0.8,cover: size q4,0.202775,6332
+proportional,0,6,0.8,throttle core-hours,1776.19,
+proportional,0,1,1,cover: all,0.78839,27980
+proportional,0,1,1,cover: seasonal,0.934357,6749
+proportional,0,1,1,cover: follow-on,0.843235,1533
+proportional,0,1,1,cover: isolated,0.755837,13782
+proportional,0,1,1,cover: unknown,0.683494,5916
+proportional,0,1,1,"cover: follow-on, previous peak covers",0.904723,1336
+proportional,0,1,1,"cover: follow-on, previous peak short",0.426242,197
+proportional,0,1,1,cover: size q1,1,7738
+proportional,0,1,1,cover: size q2,0.961822,7221
+proportional,0,1,1,cover: size q3,0.714567,6689
+proportional,0,1,1,cover: size q4,0.409996,6332
+proportional,0,1,1,throttle core-hours,924.889,
+proportional,0,3,1,cover: all,0.708883,27980
+proportional,0,3,1,cover: seasonal,0.750799,6749
+proportional,0,3,1,cover: follow-on,0.809433,1533
+proportional,0,3,1,cover: isolated,0.717255,13782
+proportional,0,3,1,cover: unknown,0.615505,5916
+proportional,0,3,1,"cover: follow-on, previous peak covers",0.873277,1336
+proportional,0,3,1,"cover: follow-on, previous peak short",0.376459,197
+proportional,0,3,1,cover: size q1,0.999689,7738
+proportional,0,3,1,cover: size q2,0.934651,7221
+proportional,0,3,1,cover: size q3,0.522965,6689
+proportional,0,3,1,cover: size q4,0.292438,6332
+proportional,0,3,1,throttle core-hours,1256.29,
+proportional,0,6,1,cover: all,0.702173,27980
+proportional,0,6,1,cover: seasonal,0.741053,6749
+proportional,0,6,1,cover: follow-on,0.804226,1533
+proportional,0,6,1,cover: isolated,0.712035,13782
+proportional,0,6,1,cover: unknown,0.608399,5916
+proportional,0,6,1,"cover: follow-on, previous peak covers",0.863407,1336
+proportional,0,6,1,"cover: follow-on, previous peak short",0.40288,197
+proportional,0,6,1,cover: size q1,0.999586,7738
+proportional,0,6,1,cover: size q2,0.928716,7221
+proportional,0,6,1,cover: size q3,0.500843,6689
+proportional,0,6,1,cover: size q4,0.293052,6332
+proportional,0,6,1,throttle core-hours,1348.76,
+proportional,1,1,0.6,cover: all,0.639275,27980
+proportional,1,1,0.6,cover: seasonal,0.824266,6749
+proportional,1,1,0.6,cover: follow-on,0.673601,1533
+proportional,1,1,0.6,cover: isolated,0.588664,13782
+proportional,1,1,0.6,cover: unknown,0.537247,5916
+proportional,1,1,0.6,"cover: follow-on, previous peak covers",0.742762,1336
+proportional,1,1,0.6,"cover: follow-on, previous peak short",0.204574,197
+proportional,1,1,0.6,cover: size q1,0.980155,7738
+proportional,1,1,0.6,cover: size q2,0.807316,7221
+proportional,1,1,0.6,cover: size q3,0.468838,6689
+proportional,1,1,0.6,cover: size q4,0.211117,6332
+proportional,1,1,0.6,throttle core-hours,1718.71,
+proportional,1,3,0.6,cover: all,0.52914,27980
+proportional,1,3,0.6,cover: seasonal,0.559732,6749
+proportional,1,3,0.6,cover: follow-on,0.644071,1533
+proportional,1,3,0.6,cover: isolated,0.540022,13782
+proportional,1,3,0.6,cover: unknown,0.439108,5916
+proportional,1,3,0.6,"cover: follow-on, previous peak covers",0.713059,1336
+proportional,1,3,0.6,"cover: follow-on, previous peak short",0.176213,197
+proportional,1,3,0.6,cover: size q1,0.96174,7738
+proportional,1,3,0.6,cover: size q2,0.63634,7221
+proportional,1,3,0.6,cover: size q3,0.272959,6689
+proportional,1,3,0.6,cover: size q4,0.148857,6332
+proportional,1,3,0.6,throttle core-hours,2150.46,
+proportional,1,6,0.6,cover: all,0.516195,27980
+proportional,1,6,0.6,cover: seasonal,0.542678,6749
+proportional,1,6,0.6,cover: follow-on,0.633551,1533
+proportional,1,6,0.6,cover: isolated,0.529304,13782
+proportional,1,6,0.6,cover: unknown,0.425035,5916
+proportional,1,6,0.6,"cover: follow-on, previous peak covers",0.699087,1336
+proportional,1,6,0.6,"cover: follow-on, previous peak short",0.189103,197
+proportional,1,6,0.6,cover: size q1,0.95329,7738
+proportional,1,6,0.6,cover: size q2,0.611091,7221
+proportional,1,6,0.6,cover: size q3,0.258095,6689
+proportional,1,6,0.6,cover: size q4,0.146478,6332
+proportional,1,6,0.6,throttle core-hours,2292.97,
+proportional,1,1,0.8,cover: all,0.73074,27980
+proportional,1,1,0.8,cover: seasonal,0.895754,6749
+proportional,1,1,0.8,cover: follow-on,0.784523,1533
+proportional,1,1,0.8,cover: isolated,0.687073,13782
+proportional,1,1,0.8,cover: unknown,0.630284,5916
+proportional,1,1,0.8,"cover: follow-on, previous peak covers",0.852555,1336
+proportional,1,1,0.8,"cover: follow-on, previous peak short",0.323154,197
+proportional,1,1,0.8,cover: size q1,0.998592,7738
+proportional,1,1,0.8,cover: size q2,0.919046,7221
+proportional,1,1,0.8,cover: size q3,0.607281,6689
+proportional,1,1,0.8,cover: size q4,0.31909,6332
+proportional,1,1,0.8,throttle core-hours,1189.76,
+proportional,1,3,0.8,cover: all,0.6335,27980
+proportional,1,3,0.8,cover: seasonal,0.672533,6749
+proportional,1,3,0.8,cover: follow-on,0.749821,1533
+proportional,1,3,0.8,cover: isolated,0.640275,13782
+proportional,1,3,0.8,cover: unknown,0.543046,5916
+proportional,1,3,0.8,"cover: follow-on, previous peak covers",0.820701,1336
+proportional,1,3,0.8,"cover: follow-on, previous peak short",0.269135,197
+proportional,1,3,0.8,cover: size q1,0.99655,7738
+proportional,1,3,0.8,cover: size q2,0.831356,7221
+proportional,1,3,0.8,cover: size q3,0.389345,6689
+proportional,1,3,0.8,cover: size q4,0.222121,6332
+proportional,1,3,0.8,throttle core-hours,1592.11,
+proportional,1,6,0.8,cover: all,0.625361,27980
+proportional,1,6,0.8,cover: seasonal,0.666883,6749
+proportional,1,6,0.8,cover: follow-on,0.736012,1533
+proportional,1,6,0.8,cover: isolated,0.631924,13782
+proportional,1,6,0.8,cover: unknown,0.534028,5916
+proportional,1,6,0.8,"cover: follow-on, previous peak covers",0.797639,1336
+proportional,1,6,0.8,"cover: follow-on, previous peak short",0.318078,197
+proportional,1,6,0.8,cover: size q1,0.996022,7738
+proportional,1,6,0.8,cover: size q2,0.818908,7221
+proportional,1,6,0.8,cover: size q3,0.369294,6689
+proportional,1,6,0.8,cover: size q4,0.222178,6332
+proportional,1,6,0.8,throttle core-hours,1707.08,
+proportional,1,1,1,cover: all,0.792188,27980
+proportional,1,1,1,cover: seasonal,0.931381,6749
+proportional,1,1,1,cover: follow-on,0.859975,1533
+proportional,1,1,1,cover: isolated,0.758511,13782
+proportional,1,1,1,cover: unknown,0.694287,5916
+proportional,1,1,1,"cover: follow-on, previous peak covers",0.921254,1336
+proportional,1,1,1,"cover: follow-on, previous peak short",0.444394,197
+proportional,1,1,1,cover: size q1,1,7738
+proportional,1,1,1,cover: size q2,0.971457,7221
+proportional,1,1,1,cover: size q3,0.710886,6689
+proportional,1,1,1,cover: size q4,0.419682,6332
+proportional,1,1,1,throttle core-hours,866.774,
+proportional,1,3,1,cover: all,0.708196,27980
+proportional,1,3,1,cover: seasonal,0.748413,6749
+proportional,1,3,1,cover: follow-on,0.820125,1533
+proportional,1,3,1,cover: isolated,0.714685,13782
+proportional,1,3,1,cover: unknown,0.618197,5916
+proportional,1,3,1,"cover: follow-on, previous peak covers",0.885981,1336
+proportional,1,3,1,"cover: follow-on, previous peak short",0.373502,197
+proportional,1,3,1,cover: size q1,0.99978,7738
+proportional,1,3,1,cover: size q2,0.945869,7221
+proportional,1,3,1,cover: size q3,0.502927,6689
+proportional,1,3,1,cover: size q4,0.29767,6332
+proportional,1,3,1,throttle core-hours,1228.56,
+proportional,1,6,1,cover: all,0.699951,27980
+proportional,1,6,1,cover: seasonal,0.737531,6749
+proportional,1,6,1,cover: follow-on,0.811407,1533
+proportional,1,6,1,cover: isolated,0.706843,13782
+proportional,1,6,1,cover: unknown,0.612141,5916
+proportional,1,6,1,"cover: follow-on, previous peak covers",0.866937,1336
+proportional,1,6,1,"cover: follow-on, previous peak short",0.434819,197
+proportional,1,6,1,cover: size q1,0.99989,7738
+proportional,1,6,1,cover: size q2,0.937386,7221
+proportional,1,6,1,cover: size q3,0.479454,6689
+proportional,1,6,1,cover: size q4,0.295568,6332
+proportional,1,6,1,throttle core-hours,1330.39,
+proportional,2,1,0.6,cover: all,0.638848,27980
+proportional,2,1,0.6,cover: seasonal,0.816914,6749
+proportional,2,1,0.6,cover: follow-on,0.672724,1533
+proportional,2,1,0.6,cover: isolated,0.591995,13782
+proportional,2,1,0.6,cover: unknown,0.536079,5916
+proportional,2,1,0.6,"cover: follow-on, previous peak covers",0.739773,1336
+proportional,2,1,0.6,"cover: follow-on, previous peak short",0.218013,197
+proportional,2,1,0.6,cover: size q1,0.974699,7738
+proportional,2,1,0.6,cover: size q2,0.813284,7221
+proportional,2,1,0.6,cover: size q3,0.486418,6689
+proportional,2,1,0.6,cover: size q4,0.190518,6332
+proportional,2,1,0.6,throttle core-hours,1843.21,
+proportional,2,3,0.6,cover: all,0.532038,27980
+proportional,2,3,0.6,cover: seasonal,0.549235,6749
+proportional,2,3,0.6,cover: follow-on,0.639683,1533
+proportional,2,3,0.6,cover: isolated,0.548004,13782
+proportional,2,3,0.6,cover: unknown,0.447328,5916
+proportional,2,3,0.6,"cover: follow-on, previous peak covers",0.706339,1336
+proportional,2,3,0.6,"cover: follow-on, previous peak short",0.187643,197
+proportional,2,3,0.6,cover: size q1,0.944991,7738
+proportional,2,3,0.6,cover: size q2,0.644918,7221
+proportional,2,3,0.6,cover: size q3,0.312507,6689
+proportional,2,3,0.6,cover: size q4,0.130567,6332
+proportional,2,3,0.6,throttle core-hours,2225.07,
+proportional,2,6,0.6,cover: all,0.517686,27980
+proportional,2,6,0.6,cover: seasonal,0.536619,6749
+proportional,2,6,0.6,cover: follow-on,0.627293,1533
+proportional,2,6,0.6,cover: isolated,0.535383,13782
+proportional,2,6,0.6,cover: unknown,0.426456,5916
+proportional,2,6,0.6,"cover: follow-on, previous peak covers",0.69163,1336
+proportional,2,6,0.6,"cover: follow-on, previous peak short",0.190979,197
+proportional,2,6,0.6,cover: size q1,0.940457,7738
+proportional,2,6,0.6,cover: size q2,0.615801,7221
+proportional,2,6,0.6,cover: size q3,0.294286,6689
+proportional,2,6,0.6,cover: size q4,0.125144,6332
+proportional,2,6,0.6,throttle core-hours,2366.05,
+proportional,2,1,0.8,cover: all,0.730637,27980
+proportional,2,1,0.8,cover: seasonal,0.897466,6749
+proportional,2,1,0.8,cover: follow-on,0.784392,1533
+proportional,2,1,0.8,cover: isolated,0.686757,13782
+proportional,2,1,0.8,cover: unknown,0.628611,5916
+proportional,2,1,0.8,"cover: follow-on, previous peak covers",0.84941,1336
+proportional,2,1,0.8,"cover: follow-on, previous peak short",0.343462,197
+proportional,2,1,0.8,cover: size q1,0.996158,7738
+proportional,2,1,0.8,cover: size q2,0.910956,7221
+proportional,2,1,0.8,cover: size q3,0.639545,6689
+proportional,2,1,0.8,cover: size q4,0.296749,6332
+proportional,2,1,0.8,throttle core-hours,1246.2,
+proportional,2,3,0.8,cover: all,0.639959,27980
+proportional,2,3,0.8,cover: seasonal,0.673777,6749
+proportional,2,3,0.8,cover: follow-on,0.747863,1533
+proportional,2,3,0.8,cover: isolated,0.651206,13782
+proportional,2,3,0.8,cover: unknown,0.547218,5916
+proportional,2,3,0.8,"cover: follow-on, previous peak covers",0.816683,1336
+proportional,2,3,0.8,"cover: follow-on, previous peak short",0.281139,197
+proportional,2,3,0.8,cover: size q1,0.992539,7738
+proportional,2,3,0.8,cover: size q2,0.832021,7221
+proportional,2,3,0.8,cover: size q3,0.432967,6689
+proportional,2,3,0.8,cover: size q4,0.208726,6332
+proportional,2,3,0.8,throttle core-hours,1605.78,
+proportional,2,6,0.8,cover: all,0.629165,27980
+proportional,2,6,0.8,cover: seasonal,0.667603,6749
+proportional,2,6,0.8,cover: follow-on,0.734526,1533
+proportional,2,6,0.8,cover: isolated,0.63864,13782
+proportional,2,6,0.8,cover: unknown,0.535939,5916
+proportional,2,6,0.8,"cover: follow-on, previous peak covers",0.798594,1336
+proportional,2,6,0.8,"cover: follow-on, previous peak short",0.300034,197
+proportional,2,6,0.8,cover: size q1,0.992108,7738
+proportional,2,6,0.8,cover: size q2,0.817363,7221
+proportional,2,6,0.8,cover: size q3,0.407702,6689
+proportional,2,6,0.8,cover: size q4,0.204961,6332
+proportional,2,6,0.8,throttle core-hours,1721.42,
+proportional,2,1,1,cover: all,0.790279,27980
+proportional,2,1,1,cover: seasonal,0.933097,6749
+proportional,2,1,1,cover: follow-on,0.856081,1533
+proportional,2,1,1,cover: isolated,0.756907,13782
+proportional,2,1,1,cover: unknown,0.688041,5916
+proportional,2,1,1,"cover: follow-on, previous peak covers",0.916351,1336
+proportional,2,1,1,"cover: follow-on, previous peak short",0.447346,197
+proportional,2,1,1,cover: size q1,0.999665,7738
+proportional,2,1,1,cover: size q2,0.965525,7221
+proportional,2,1,1,cover: size q3,0.727892,6689
+proportional,2,1,1,cover: size q4,0.400452,6332
+proportional,2,1,1,throttle core-hours,899.172,
+proportional,2,3,1,cover: all,0.714034,27980
+proportional,2,3,1,cover: seasonal,0.749815,6749
+proportional,2,3,1,cover: follow-on,0.821946,1533
+proportional,2,3,1,cover: isolated,0.725188,13782
+proportional,2,3,1,cover: unknown,0.619266,5916
+proportional,2,3,1,"cover: follow-on, previous peak covers",0.886099,1336
+proportional,2,3,1,"cover: follow-on, previous peak short",0.386878,197
+proportional,2,3,1,cover: size q1,0.999442,7738
+proportional,2,3,1,cover: size q2,0.940143,7221
+proportional,2,3,1,cover: size q3,0.536931,6689
+proportional,2,3,1,cover: size q4,0.294485,6332
+proportional,2,3,1,throttle core-hours,1224.44,
+proportional,2,6,1,cover: all,0.705104,27980
+proportional,2,6,1,cover: seasonal,0.741113,6749
+proportional,2,6,1,cover: follow-on,0.807956,1533
+proportional,2,6,1,cover: isolated,0.716258,13782
+proportional,2,6,1,cover: unknown,0.611388,5916
+proportional,2,6,1,"cover: follow-on, previous peak covers",0.868106,1336
+proportional,2,6,1,"cover: follow-on, previous peak short",0.400035,197
+proportional,2,6,1,cover: size q1,0.999553,7738
+proportional,2,6,1,cover: size q2,0.931849,7221
+proportional,2,6,1,cover: size q3,0.509397,6689
+proportional,2,6,1,cover: size q4,0.293433,6332
+proportional,2,6,1,throttle core-hours,1322.42,
+exponential,0,1,0.6,cover: all,0.701942,27980
+exponential,0,1,0.6,cover: seasonal,0.91378,6749
+exponential,0,1,0.6,cover: follow-on,0.794446,1533
+exponential,0,1,0.6,cover: isolated,0.633522,13782
+exponential,0,1,0.6,cover: unknown,0.595696,5916
+exponential,0,1,0.6,"cover: follow-on, previous peak covers",0.862311,1336
+exponential,0,1,0.6,"cover: follow-on, previous peak short",0.33421,197
+exponential,0,1,0.6,cover: size q1,0.924922,7738
+exponential,0,1,0.6,cover: size q2,0.783359,7221
+exponential,0,1,0.6,cover: size q3,0.624551,6689
+exponential,0,1,0.6,cover: size q4,0.418354,6332
+exponential,0,1,0.6,throttle core-hours,1065.17,
+exponential,0,3,0.6,cover: all,0.494874,27980
+exponential,0,3,0.6,cover: seasonal,0.463101,6749
+exponential,0,3,0.6,cover: follow-on,0.734818,1533
+exponential,0,3,0.6,cover: isolated,0.519081,13782
+exponential,0,3,0.6,cover: unknown,0.412551,5916
+exponential,0,3,0.6,"cover: follow-on, previous peak covers",0.811756,1336
+exponential,0,3,0.6,"cover: follow-on, previous peak short",0.213043,197
+exponential,0,3,0.6,cover: size q1,0.792868,7738
+exponential,0,3,0.6,cover: size q2,0.446883,7221
+exponential,0,3,0.6,cover: size q3,0.382523,6689
+exponential,0,3,0.6,cover: size q4,0.304125,6332
+exponential,0,3,0.6,throttle core-hours,1551.34,
+exponential,0,6,0.6,cover: all,0.464955,27980
+exponential,0,6,0.6,cover: seasonal,0.424567,6749
+exponential,0,6,0.6,cover: follow-on,0.737597,1533
+exponential,0,6,0.6,cover: isolated,0.492869,13782
+exponential,0,6,0.6,cover: unknown,0.375352,5916
+exponential,0,6,0.6,"cover: follow-on, previous peak covers",0.811472,1336
+exponential,0,6,0.6,"cover: follow-on, previous peak short",0.236596,197
+exponential,0,6,0.6,cover: size q1,0.761443,7738
+exponential,0,6,0.6,cover: size q2,0.396689,7221
+exponential,0,6,0.6,cover: size q3,0.353082,6689
+exponential,0,6,0.6,cover: size q4,0.298664,6332
+exponential,0,6,0.6,throttle core-hours,1711.96,
+exponential,0,1,0.8,cover: all,0.773906,27980
+exponential,0,1,0.8,cover: seasonal,0.950665,6749
+exponential,0,1,0.8,cover: follow-on,0.870297,1533
+exponential,0,1,0.8,cover: isolated,0.720645,13782
+exponential,0,1,0.8,cover: unknown,0.67136,5916
+exponential,0,1,0.8,"cover: follow-on, previous peak covers",0.930416,1336
+exponential,0,1,0.8,"cover: follow-on, previous peak short",0.46259,197
+exponential,0,1,0.8,cover: size q1,0.964712,7738
+exponential,0,1,0.8,cover: size q2,0.846954,7221
+exponential,0,1,0.8,cover: size q3,0.703807,6689
+exponential,0,1,0.8,cover: size q4,0.531479,6332
+exponential,0,1,0.8,throttle core-hours,761.303,
+exponential,0,3,0.8,cover: all,0.601614,27980
+exponential,0,3,0.8,cover: seasonal,0.574604,6749
+exponential,0,3,0.8,cover: follow-on,0.821964,1533
+exponential,0,3,0.8,cover: isolated,0.626519,13782
+exponential,0,3,0.8,cover: unknown,0.517312,5916
+exponential,0,3,0.8,"cover: follow-on, previous peak covers",0.894102,1336
+exponential,0,3,0.8,"cover: follow-on, previous peak short",0.33274,197
+exponential,0,3,0.8,cover: size q1,0.890644,7738
+exponential,0,3,0.8,cover: size q2,0.573888,7221
+exponential,0,3,0.8,cover: size q3,0.473637,6689
+exponential,0,3,0.8,cover: size q4,0.415219,6332
+exponential,0,3,0.8,throttle core-hours,1174.27,
+exponential,0,6,0.8,cover: all,0.568361,27980
+exponential,0,6,0.8,cover: seasonal,0.5312,6749
+exponential,0,6,0.8,cover: follow-on,0.816514,1533
+exponential,0,6,0.8,cover: isolated,0.595887,13782
+exponential,0,6,0.8,cover: unknown,0.482328,5916
+exponential,0,6,0.8,"cover: follow-on, previous peak covers",0.881884,1336
+exponential,0,6,0.8,"cover: follow-on, previous peak short",0.373186,197
+exponential,0,6,0.8,cover: size q1,0.868587,7738
+exponential,0,6,0.8,cover: size q2,0.516238,7221
+exponential,0,6,0.8,cover: size q3,0.433272,6689
+exponential,0,6,0.8,cover: size q4,0.403618,6332
+exponential,0,6,0.8,throttle core-hours,1312.74,
+exponential,0,1,1,cover: all,0.82297,27980
+exponential,0,1,1,cover: seasonal,0.969601,6749
+exponential,0,1,1,cover: follow-on,0.909924,1533
+exponential,0,1,1,cover: isolated,0.781136,13782
+exponential,0,1,1,cover: unknown,0.73062,5916
+exponential,0,1,1,"cover: follow-on, previous peak covers",0.961414,1336
+exponential,0,1,1,"cover: follow-on, previous peak short",0.56073,197
+exponential,0,1,1,cover: size q1,0.981243,7738
+exponential,0,1,1,cover: size q2,0.890311,7221
+exponential,0,1,1,cover: size q3,0.760928,6689
+exponential,0,1,1,cover: size q4,0.618299,6332
+exponential,0,1,1,throttle core-hours,575.884,
+exponential,0,3,1,cover: all,0.680134,27980
+exponential,0,3,1,cover: seasonal,0.661644,6749
+exponential,0,3,1,cover: follow-on,0.877941,1533
+exponential,0,3,1,cover: isolated,0.701914,13782
+exponential,0,3,1,cover: unknown,0.599233,5916
+exponential,0,3,1,"cover: follow-on, previous peak covers",0.940814,1336
+exponential,0,3,1,"cover: follow-on, previous peak short",0.451556,197
+exponential,0,3,1,cover: size q1,0.936104,7738
+exponential,0,3,1,cover: size q2,0.68031,7221
+exponential,0,3,1,cover: size q3,0.54823,6689
+exponential,0,3,1,cover: size q4,0.506469,6332
+exponential,0,3,1,throttle core-hours,925.343,
+exponential,0,6,1,cover: all,0.646629,27980
+exponential,0,6,1,cover: seasonal,0.612614,6749
+exponential,0,6,1,cover: follow-on,0.871733,1533
+exponential,0,6,1,cover: isolated,0.672193,13782
+exponential,0,6,1,cover: unknown,0.567549,5916
+exponential,0,6,1,"cover: follow-on, previous peak covers",0.922857,1336
+exponential,0,6,1,"cover: follow-on, previous peak short",0.525025,197
+exponential,0,6,1,cover: size q1,0.921616,7738
+exponential,0,6,1,cover: size q2,0.62312,7221
+exponential,0,6,1,cover: size q3,0.503379,6689
+exponential,0,6,1,cover: size q4,0.488718,6332
+exponential,0,6,1,throttle core-hours,1048.08,
+exponential,1,1,0.6,cover: all,0.690355,27980
+exponential,1,1,0.6,cover: seasonal,0.903767,6749
+exponential,1,1,0.6,cover: follow-on,0.780768,1533
+exponential,1,1,0.6,cover: isolated,0.619215,13782
+exponential,1,1,0.6,cover: unknown,0.589194,5916
+exponential,1,1,0.6,"cover: follow-on, previous peak covers",0.857953,1336
+exponential,1,1,0.6,"cover: follow-on, previous peak short",0.257315,197
+exponential,1,1,0.6,cover: size q1,0.941794,7738
+exponential,1,1,0.6,cover: size q2,0.794773,7221
+exponential,1,1,0.6,cover: size q3,0.594933,6689
+exponential,1,1,0.6,cover: size q4,0.364808,6332
+exponential,1,1,0.6,throttle core-hours,1149.72,
+exponential,1,3,0.6,cover: all,0.506087,27980
+exponential,1,3,0.6,cover: seasonal,0.474675,6749
+exponential,1,3,0.6,cover: follow-on,0.746445,1533
+exponential,1,3,0.6,cover: isolated,0.53014,13782
+exponential,1,3,0.6,cover: unknown,0.423605,5916
+exponential,1,3,0.6,"cover: follow-on, previous peak covers",0.825192,1336
+exponential,1,3,0.6,"cover: follow-on, previous peak short",0.212411,197
+exponential,1,3,0.6,cover: size q1,0.833932,7738
+exponential,1,3,0.6,cover: size q2,0.489837,7221
+exponential,1,3,0.6,cover: size q3,0.368672,6689
+exponential,1,3,0.6,cover: size q4,0.269141,6332
+exponential,1,3,0.6,throttle core-hours,1608.21,
+exponential,1,6,0.6,cover: all,0.471788,27980
+exponential,1,6,0.6,cover: seasonal,0.431307,6749
+exponential,1,6,0.6,cover: follow-on,0.737364,1533
+exponential,1,6,0.6,cover: isolated,0.499749,13782
+exponential,1,6,0.6,cover: unknown,0.384012,5916
+exponential,1,6,0.6,"cover: follow-on, previous peak covers",0.807861,1336
+exponential,1,6,0.6,"cover: follow-on, previous peak short",0.259269,197
+exponential,1,6,0.6,cover: size q1,0.797289,7738
+exponential,1,6,0.6,cover: size q2,0.429862,7221
+exponential,1,6,0.6,cover: size q3,0.33691,6689
+exponential,1,6,0.6,cover: size q4,0.264306,6332
+exponential,1,6,0.6,throttle core-hours,1768.96,
+exponential,1,1,0.8,cover: all,0.763965,27980
+exponential,1,1,0.8,cover: seasonal,0.942838,6749
+exponential,1,1,0.8,cover: follow-on,0.863816,1533
+exponential,1,1,0.8,cover: isolated,0.706155,13782
+exponential,1,1,0.8,cover: unknown,0.668704,5916
+exponential,1,1,0.8,"cover: follow-on, previous peak covers",0.93164,1336
+exponential,1,1,0.8,"cover: follow-on, previous peak short",0.403849,197
+exponential,1,1,0.8,cover: size q1,0.972561,7738
+exponential,1,1,0.8,cover: size q2,0.858192,7221
+exponential,1,1,0.8,cover: size q3,0.684792,6689
+exponential,1,1,0.8,cover: size q4,0.48523,6332
+exponential,1,1,0.8,throttle core-hours,814.208,
+exponential,1,3,0.8,cover: all,0.609271,27980
+exponential,1,3,0.8,cover: seasonal,0.57932,6749
+exponential,1,3,0.8,cover: follow-on,0.836057,1533
+exponential,1,3,0.8,cover: isolated,0.634343,13782
+exponential,1,3,0.8,cover: unknown,0.526265,5916
+exponential,1,3,0.8,"cover: follow-on, previous peak covers",0.907057,1336
+exponential,1,3,0.8,"cover: follow-on, previous peak short",0.354552,197
+exponential,1,3,0.8,cover: size q1,0.911336,7738
+exponential,1,3,0.8,cover: size q2,0.620468,7221
+exponential,1,3,0.8,cover: size q3,0.465389,6689
+exponential,1,3,0.8,cover: size q4,0.379359,6332
+exponential,1,3,0.8,throttle core-hours,1206.63,
+exponential,1,6,0.8,cover: all,0.578038,27980
+exponential,1,6,0.8,cover: seasonal,0.539136,6749
+exponential,1,6,0.8,cover: follow-on,0.816009,1533
+exponential,1,6,0.8,cover: isolated,0.605025,13782
+exponential,1,6,0.8,cover: unknown,0.497883,5916
+exponential,1,6,0.8,"cover: follow-on, previous peak covers",0.879761,1336
+exponential,1,6,0.8,"cover: follow-on, previous peak short",0.383656,197
+exponential,1,6,0.8,cover: size q1,0.892586,7738
+exponential,1,6,0.8,cover: size q2,0.563296,7221
+exponential,1,6,0.8,cover: size q3,0.425316,6689
+exponential,1,6,0.8,cover: size q4,0.371789,6332
+exponential,1,6,0.8,throttle core-hours,1336.12,
+exponential,1,1,1,cover: all,0.814138,27980
+exponential,1,1,1,cover: seasonal,0.96551,6749
+exponential,1,1,1,cover: follow-on,0.913673,1533
+exponential,1,1,1,cover: isolated,0.766889,13782
+exponential,1,1,1,cover: unknown,0.725734,5916
+exponential,1,1,1,"cover: follow-on, previous peak covers",0.967216,1336
+exponential,1,1,1,"cover: follow-on, previous peak short",0.550558,197
+exponential,1,1,1,cover: size q1,0.983615,7738
+exponential,1,1,1,cover: size q2,0.900183,7221
+exponential,1,1,1,cover: size q3,0.750911,6689
+exponential,1,1,1,cover: size q4,0.575696,6332
+exponential,1,1,1,throttle core-hours,612.068,
+exponential,1,3,1,cover: all,0.686262,27980
+exponential,1,3,1,cover: seasonal,0.662626,6749
+exponential,1,3,1,cover: follow-on,0.891264,1533
+exponential,1,3,1,cover: isolated,0.706319,13782
+exponential,1,3,1,cover: unknown,0.613379,5916
+exponential,1,3,1,"cover: follow-on, previous peak covers",0.953409,1336
+exponential,1,3,1,"cover: follow-on, previous peak short",0.469816,197
+exponential,1,3,1,cover: size q1,0.946887,7738
+exponential,1,3,1,cover: size q2,0.723799,7221
+exponential,1,3,1,cover: size q3,0.546415,6689
+exponential,1,3,1,cover: size q4,0.472692,6332
+exponential,1,3,1,throttle core-hours,943.572,
+exponential,1,6,1,cover: all,0.657189,27980
+exponential,1,6,1,cover: seasonal,0.621607,6749
+exponential,1,6,1,cover: follow-on,0.869147,1533
+exponential,1,6,1,cover: isolated,0.680332,13782
+exponential,1,6,1,cover: unknown,0.588941,5916
+exponential,1,6,1,"cover: follow-on, previous peak covers",0.921655,1336
+exponential,1,6,1,"cover: follow-on, previous peak short",0.513054,197
+exponential,1,6,1,cover: size q1,0.934561,7738
+exponential,1,6,1,cover: size q2,0.6734,7221
+exponential,1,6,1,cover: size q3,0.501698,6689
+exponential,1,6,1,cover: size q4,0.463996,6332
+exponential,1,6,1,throttle core-hours,1053.68,
+exponential,2,1,0.6,cover: all,0.658225,27980
+exponential,2,1,0.6,cover: seasonal,0.859674,6749
+exponential,2,1,0.6,cover: follow-on,0.773861,1533
+exponential,2,1,0.6,cover: isolated,0.5898,13782
+exponential,2,1,0.6,cover: unknown,0.557849,5916
+exponential,2,1,0.6,"cover: follow-on, previous peak covers",0.850496,1336
+exponential,2,1,0.6,"cover: follow-on, previous peak short",0.254144,197
+exponential,2,1,0.6,cover: size q1,0.90256,7738
+exponential,2,1,0.6,cover: size q2,0.746923,7221
+exponential,2,1,0.6,cover: size q3,0.589877,6689
+exponential,2,1,0.6,cover: size q4,0.330684,6332
+exponential,2,1,0.6,throttle core-hours,1233.72,
+exponential,2,3,0.6,cover: all,0.500096,27980
+exponential,2,3,0.6,cover: seasonal,0.469402,6749
+exponential,2,3,0.6,cover: follow-on,0.723657,1533
+exponential,2,3,0.6,cover: isolated,0.52618,13782
+exponential,2,3,0.6,cover: unknown,0.416418,5916
+exponential,2,3,0.6,"cover: follow-on, previous peak covers",0.800373,1336
+exponential,2,3,0.6,"cover: follow-on, previous peak short",0.203383,197
+exponential,2,3,0.6,cover: size q1,0.803293,7738
+exponential,2,3,0.6,cover: size q2,0.489048,7221
+exponential,2,3,0.6,cover: size q3,0.400009,6689
+exponential,2,3,0.6,cover: size q4,0.247906,6332
+exponential,2,3,0.6,throttle core-hours,1648.68,
+exponential,2,6,0.6,cover: all,0.467963,27980
+exponential,2,6,0.6,cover: seasonal,0.425975,6749
+exponential,2,6,0.6,cover: follow-on,0.743827,1533
+exponential,2,6,0.6,cover: isolated,0.497952,13782
+exponential,2,6,0.6,cover: unknown,0.374518,5916
+exponential,2,6,0.6,"cover: follow-on, previous peak covers",0.813035,1336
+exponential,2,6,0.6,"cover: follow-on, previous peak short",0.274475,197
+exponential,2,6,0.6,cover: size q1,0.773592,7738
+exponential,2,6,0.6,cover: size q2,0.431267,7221
+exponential,2,6,0.6,cover: size q3,0.370994,6689
+exponential,2,6,0.6,cover: size q4,0.238756,6332
+exponential,2,6,0.6,throttle core-hours,1791.35,
+exponential,2,1,0.8,cover: all,0.744323,27980
+exponential,2,1,0.8,cover: seasonal,0.914419,6749
+exponential,2,1,0.8,cover: follow-on,0.85831,1533
+exponential,2,1,0.8,cover: isolated,0.69307,13782
+exponential,2,1,0.8,cover: unknown,0.640139,5916
+exponential,2,1,0.8,"cover: follow-on, previous peak covers",0.927803,1336
+exponential,2,1,0.8,"cover: follow-on, previous peak short",0.387026,197
+exponential,2,1,0.8,cover: size q1,0.953715,7738
+exponential,2,1,0.8,cover: size q2,0.830394,7221
+exponential,2,1,0.8,cover: size q3,0.689158,6689
+exponential,2,1,0.8,cover: size q4,0.448556,6332
+exponential,2,1,0.8,throttle core-hours,889.13,
+exponential,2,3,0.8,cover: all,0.608491,27980
+exponential,2,3,0.8,cover: seasonal,0.585802,6749
+exponential,2,3,0.8,cover: follow-on,0.817404,1533
+exponential,2,3,0.8,cover: isolated,0.635099,13782
+exponential,2,3,0.8,cover: unknown,0.518255,5916
+exponential,2,3,0.8,"cover: follow-on, previous peak covers",0.888273,1336
+exponential,2,3,0.8,"cover: follow-on, previous peak short",0.336789,197
+exponential,2,3,0.8,cover: size q1,0.898777,7738
+exponential,2,3,0.8,cover: size q2,0.620937,7221
+exponential,2,3,0.8,cover: size q3,0.497968,6689
+exponential,2,3,0.8,cover: size q4,0.356309,6332
+exponential,2,3,0.8,throttle core-hours,1240.04,
+exponential,2,6,0.8,cover: all,0.575233,27980
+exponential,2,6,0.8,cover: seasonal,0.537246,6749
+exponential,2,6,0.8,cover: follow-on,0.817281,1533
+exponential,2,6,0.8,cover: isolated,0.605861,13782
+exponential,2,6,0.8,cover: unknown,0.484496,5916
+exponential,2,6,0.8,"cover: follow-on, previous peak covers",0.876184,1336
+exponential,2,6,0.8,"cover: follow-on, previous peak short",0.417816,197
+exponential,2,6,0.8,cover: size q1,0.877887,7738
+exponential,2,6,0.8,cover: size q2,0.550292,7221
+exponential,2,6,0.8,cover: size q3,0.464254,6689
+exponential,2,6,0.8,cover: size q4,0.351054,6332
+exponential,2,6,0.8,throttle core-hours,1361.58,
+exponential,2,1,1,cover: all,0.795899,27980
+exponential,2,1,1,cover: seasonal,0.942833,6749
+exponential,2,1,1,cover: follow-on,0.899196,1533
+exponential,2,1,1,cover: isolated,0.755874,13782
+exponential,2,1,1,cover: unknown,0.694753,5916
+exponential,2,1,1,"cover: follow-on, previous peak covers",0.960197,1336
+exponential,2,1,1,"cover: follow-on, previous peak short",0.485506,197
+exponential,2,1,1,cover: size q1,0.972712,7738
+exponential,2,1,1,cover: size q2,0.87741,7221
+exponential,2,1,1,cover: size q3,0.745938,6689
+exponential,2,1,1,cover: size q4,0.539648,6332
+exponential,2,1,1,throttle core-hours,694.445,
+exponential,2,3,1,cover: all,0.686842,27980
+exponential,2,3,1,cover: seasonal,0.675024,6749
+exponential,2,3,1,cover: follow-on,0.873379,1533
+exponential,2,3,1,cover: isolated,0.709651,13782
+exponential,2,3,1,cover: unknown,0.598851,5916
+exponential,2,3,1,"cover: follow-on, previous peak covers",0.931837,1336
+exponential,2,3,1,"cover: follow-on, previous peak short",0.476933,197
+exponential,2,3,1,cover: size q1,0.937156,7738
+exponential,2,3,1,cover: size q2,0.717658,7221
+exponential,2,3,1,cover: size q3,0.580071,6689
+exponential,2,3,1,cover: size q4,0.458596,6332
+exponential,2,3,1,throttle core-hours,987.8,
+exponential,2,6,1,cover: all,0.654837,27980
+exponential,2,6,1,cover: seasonal,0.618176,6749
+exponential,2,6,1,cover: follow-on,0.863521,1533
+exponential,2,6,1,cover: isolated,0.686477,13782
+exponential,2,6,1,cover: unknown,0.568876,5916
+exponential,2,6,1,"cover: follow-on, previous peak covers",0.910812,1336
+exponential,2,6,1,"cover: follow-on, previous peak short",0.54281,197
+exponential,2,6,1,cover: size q1,0.919931,7738
+exponential,2,6,1,cover: size q2,0.656623,7221
+exponential,2,6,1,cover: size q3,0.540221,6689
+exponential,2,6,1,cover: size q4,0.449923,6332
+exponential,2,6,1,throttle core-hours,1094.54,
+cbase,0,1,0.6,cover: all,0.62718,27980
+cbase,0,1,0.6,cover: seasonal,0.861975,6749
+cbase,0,1,0.6,cover: follow-on,0.768695,1533
+cbase,0,1,0.6,cover: isolated,0.537658,13782
+cbase,0,1,0.6,cover: unknown,0.531207,5916
+cbase,0,1,0.6,"cover: follow-on, previous peak covers",0.841611,1336
+cbase,0,1,0.6,"cover: follow-on, previous peak short",0.274193,197
+cbase,0,1,0.6,cover: size q1,0.822189,7738
+cbase,0,1,0.6,cover: size q2,0.71108,7221
+cbase,0,1,0.6,cover: size q3,0.510803,6689
+cbase,0,1,0.6,cover: size q4,0.416128,6332
+cbase,0,1,0.6,throttle core-hours,1113.9,
+cbase,0,3,0.6,cover: all,0.459675,27980
+cbase,0,3,0.6,cover: seasonal,0.428176,6749
+cbase,0,3,0.6,cover: follow-on,0.733412,1533
+cbase,0,3,0.6,cover: isolated,0.481214,13782
+cbase,0,3,0.6,cover: unknown,0.3745,5916
+cbase,0,3,0.6,"cover: follow-on, previous peak covers",0.804745,1336
+cbase,0,3,0.6,"cover: follow-on, previous peak short",0.249647,197
+cbase,0,3,0.6,cover: size q1,0.686931,7738
+cbase,0,3,0.6,cover: size q2,0.470398,7221
+cbase,0,3,0.6,cover: size q3,0.322294,6689
+cbase,0,3,0.6,cover: size q4,0.314856,6332
+cbase,0,3,0.6,throttle core-hours,1574.27,
+cbase,0,6,0.6,cover: all,0.436725,27980
+cbase,0,6,0.6,cover: seasonal,0.401304,6749
+cbase,0,6,0.6,cover: follow-on,0.726305,1533
+cbase,0,6,0.6,cover: isolated,0.457713,13782
+cbase,0,6,0.6,cover: unknown,0.353202,5916
+cbase,0,6,0.6,"cover: follow-on, previous peak covers",0.796467,1336
+cbase,0,6,0.6,"cover: follow-on, previous peak short",0.250481,197
+cbase,0,6,0.6,cover: size q1,0.649853,7738
+cbase,0,6,0.6,cover: size q2,0.441064,7221
+cbase,0,6,0.6,cover: size q3,0.301382,6689
+cbase,0,6,0.6,cover: size q4,0.314297,6332
+cbase,0,6,0.6,throttle core-hours,1731.57,
+cbase,0,1,0.8,cover: all,0.708414,27980
+cbase,0,1,0.8,cover: seasonal,0.913442,6749
+cbase,0,1,0.8,cover: follow-on,0.84036,1533
+cbase,0,1,0.8,cover: isolated,0.635798,13782
+cbase,0,1,0.8,cover: unknown,0.609493,5916
+cbase,0,1,0.8,"cover: follow-on, previous peak covers",0.90858,1336
+cbase,0,1,0.8,"cover: follow-on, previous peak short",0.377715,197
+cbase,0,1,0.8,cover: size q1,0.886633,7738
+cbase,0,1,0.8,cover: size q2,0.807651,7221
+cbase,0,1,0.8,cover: size q3,0.600892,6689
+cbase,0,1,0.8,cover: size q4,0.491036,6332
+cbase,0,1,0.8,throttle core-hours,874.913,
+cbase,0,3,0.8,cover: all,0.566984,27980
+cbase,0,3,0.8,cover: seasonal,0.553628,6749
+cbase,0,3,0.8,cover: follow-on,0.811514,1533
+cbase,0,3,0.8,cover: isolated,0.585035,13782
+cbase,0,3,0.8,cover: unknown,0.476805,5916
+cbase,0,3,0.8,"cover: follow-on, previous peak covers",0.876145,1336
+cbase,0,3,0.8,"cover: follow-on, previous peak short",0.373205,197
+cbase,0,3,0.8,cover: size q1,0.786147,7738
+cbase,0,3,0.8,cover: size q2,0.62473,7221
+cbase,0,3,0.8,cover: size q3,0.417989,6689
+cbase,0,3,0.8,cover: size q4,0.3907,6332
+cbase,0,3,0.8,throttle core-hours,1256.32,
+cbase,0,6,0.8,cover: all,0.543046,27980
+cbase,0,6,0.8,cover: seasonal,0.519543,6749
+cbase,0,6,0.8,cover: follow-on,0.811274,1533
+cbase,0,6,0.8,cover: isolated,0.562297,13782
+cbase,0,6,0.8,cover: unknown,0.455507,5916
+cbase,0,6,0.8,"cover: follow-on, previous peak covers",0.872792,1336
+cbase,0,6,0.8,"cover: follow-on, previous peak short",0.394077,197
+cbase,0,6,0.8,cover: size q1,0.75349,7738
+cbase,0,6,0.8,cover: size q2,0.592662,7221
+cbase,0,6,0.8,cover: size q3,0.39511,6689
+cbase,0,6,0.8,cover: size q4,0.385569,6332
+cbase,0,6,0.8,throttle core-hours,1386.59,
+cbase,0,1,1,cover: all,0.763729,27980
+cbase,0,1,1,cover: seasonal,0.940895,6749
+cbase,0,1,1,cover: follow-on,0.88255,1533
+cbase,0,1,1,cover: isolated,0.705592,13782
+cbase,0,1,1,cover: unknown,0.666265,5916
+cbase,0,1,1,"cover: follow-on, previous peak covers",0.943057,1336
+cbase,0,1,1,"cover: follow-on, previous peak short",0.472207,197
+cbase,0,1,1,cover: size q1,0.922447,7738
+cbase,0,1,1,cover: size q2,0.865759,7221
+cbase,0,1,1,cover: size q3,0.674857,6689
+cbase,0,1,1,cover: size q4,0.547295,6332
+cbase,0,1,1,throttle core-hours,722.69,
+cbase,0,3,1,cover: all,0.649235,27980
+cbase,0,3,1,cover: seasonal,0.649432,6749
+cbase,0,3,1,cover: follow-on,0.861252,1533
+cbase,0,3,1,cover: isolated,0.663662,13782
+cbase,0,3,1,cover: unknown,0.560462,5916
+cbase,0,3,1,"cover: follow-on, previous peak covers",0.919255,1336
+cbase,0,3,1,"cover: follow-on, previous peak short",0.467893,197
+cbase,0,3,1,cover: size q1,0.850659,7738
+cbase,0,3,1,cover: size q2,0.735683,7221
+cbase,0,3,1,cover: size q3,0.505733,6689
+cbase,0,3,1,cover: size q4,0.456095,6332
+cbase,0,3,1,throttle core-hours,1044.33,
+cbase,0,6,1,cover: all,0.625592,27980
+cbase,0,6,1,cover: seasonal,0.611331,6749
+cbase,0,6,1,cover: follow-on,0.857567,1533
+cbase,0,6,1,cover: isolated,0.64344,13782
+cbase,0,6,1,cover: unknown,0.54017,5916
+cbase,0,6,1,"cover: follow-on, previous peak covers",0.908739,1336
+cbase,0,6,1,"cover: follow-on, previous peak short",0.510532,197
+cbase,0,6,1,cover: size q1,0.826301,7738
+cbase,0,6,1,cover: size q2,0.705473,7221
+cbase,0,6,1,cover: size q3,0.477836,6689
+cbase,0,6,1,cover: size q4,0.445305,6332
+cbase,0,6,1,throttle core-hours,1155.16,
+cbase,1,1,0.6,cover: all,0.689326,27980
+cbase,1,1,0.6,cover: seasonal,0.920014,6749
+cbase,1,1,0.6,cover: follow-on,0.80378,1533
+cbase,1,1,0.6,cover: isolated,0.610868,13782
+cbase,1,1,0.6,cover: unknown,0.579276,5916
+cbase,1,1,0.6,"cover: follow-on, previous peak covers",0.871266,1336
+cbase,1,1,0.6,"cover: follow-on, previous peak short",0.346113,197
+cbase,1,1,0.6,cover: size q1,0.890733,7738
+cbase,1,1,0.6,cover: size q2,0.782665,7221
+cbase,1,1,0.6,cover: size q3,0.605573,6689
+cbase,1,1,0.6,cover: size q4,0.42523,6332
+cbase,1,1,0.6,throttle core-hours,1011.3,
+cbase,1,3,0.6,cover: all,0.472683,27980
+cbase,1,3,0.6,cover: seasonal,0.435223,6749
+cbase,1,3,0.6,cover: follow-on,0.751045,1533
+cbase,1,3,0.6,cover: isolated,0.497625,13782
+cbase,1,3,0.6,cover: unknown,0.38518,5916
+cbase,1,3,0.6,"cover: follow-on, previous peak covers",0.819979,1336
+cbase,1,3,0.6,"cover: follow-on, previous peak short",0.283555,197
+cbase,1,3,0.6,cover: size q1,0.719976,7738
+cbase,1,3,0.6,cover: size q2,0.442104,7221
+cbase,1,3,0.6,cover: size q3,0.368154,6689
+cbase,1,3,0.6,cover: size q4,0.315774,6332
+cbase,1,3,0.6,throttle core-hours,1522.3,
+cbase,1,6,0.6,cover: all,0.436569,27980
+cbase,1,6,0.6,cover: seasonal,0.387955,6749
+cbase,1,6,0.6,cover: follow-on,0.753195,1533
+cbase,1,6,0.6,cover: isolated,0.465216,13782
+cbase,1,6,0.6,cover: unknown,0.343247,5916
+cbase,1,6,0.6,"cover: follow-on, previous peak covers",0.817754,1336
+cbase,1,6,0.6,"cover: follow-on, previous peak short",0.315373,197
+cbase,1,6,0.6,cover: size q1,0.674243,7738
+cbase,1,6,0.6,cover: size q2,0.387234,7221
+cbase,1,6,0.6,cover: size q3,0.337876,6689
+cbase,1,6,0.6,cover: size q4,0.30664,6332
+cbase,1,6,0.6,throttle core-hours,1693.67,
+cbase,1,1,0.8,cover: all,0.753459,27980
+cbase,1,1,0.8,cover: seasonal,0.948278,6749
+cbase,1,1,0.8,cover: follow-on,0.863595,1533
+cbase,1,1,0.8,cover: isolated,0.692699,13782
+cbase,1,1,0.8,cover: unknown,0.644215,5916
+cbase,1,1,0.8,"cover: follow-on, previous peak covers",0.923869,1336
+cbase,1,1,0.8,"cover: follow-on, previous peak short",0.454834,197
+cbase,1,1,0.8,cover: size q1,0.934241,7738
+cbase,1,1,0.8,cover: size q2,0.846528,7221
+cbase,1,1,0.8,cover: size q3,0.677016,6689
+cbase,1,1,0.8,cover: size q4,0.50715,6332
+cbase,1,1,0.8,throttle core-hours,780.929,
+cbase,1,3,0.8,cover: all,0.576285,27980
+cbase,1,3,0.8,cover: seasonal,0.545601,6749
+cbase,1,3,0.8,cover: follow-on,0.82745,1533
+cbase,1,3,0.8,cover: isolated,0.600824,13782
+cbase,1,3,0.8,cover: unknown,0.489039,5916
+cbase,1,3,0.8,"cover: follow-on, previous peak covers",0.892621,1336
+cbase,1,3,0.8,"cover: follow-on, previous peak short",0.38548,197
+cbase,1,3,0.8,cover: size q1,0.822042,7738
+cbase,1,3,0.8,cover: size q2,0.572796,7221
+cbase,1,3,0.8,cover: size q3,0.466714,6689
+cbase,1,3,0.8,cover: size q4,0.395685,6332
+cbase,1,3,0.8,throttle core-hours,1200.8,
+cbase,1,6,0.8,cover: all,0.536559,27980
+cbase,1,6,0.8,cover: seasonal,0.48792,6749
+cbase,1,6,0.8,cover: follow-on,0.833093,1533
+cbase,1,6,0.8,cover: isolated,0.566715,13782
+cbase,1,6,0.8,cover: unknown,0.444956,5916
+cbase,1,6,0.8,"cover: follow-on, previous peak covers",0.88739,1336
+cbase,1,6,0.8,"cover: follow-on, previous peak short",0.464863,197
+cbase,1,6,0.8,cover: size q1,0.786515,7738
+cbase,1,6,0.8,cover: size q2,0.502354,7221
+cbase,1,6,0.8,cover: size q3,0.426231,6689
+cbase,1,6,0.8,cover: size q4,0.386657,6332
+cbase,1,6,0.8,throttle core-hours,1348.03,
+cbase,1,1,1,cover: all,0.799181,27980
+cbase,1,1,1,cover: seasonal,0.963495,6749
+cbase,1,1,1,cover: follow-on,0.901322,1533
+cbase,1,1,1,cover: isolated,0.750871,13782
+cbase,1,1,1,cover: unknown,0.697805,5916
+cbase,1,1,1,"cover: follow-on, previous peak covers",0.954243,1336
+cbase,1,1,1,"cover: follow-on, previous peak short",0.542425,197
+cbase,1,1,1,cover: size q1,0.95845,7738
+cbase,1,1,1,cover: size q2,0.888545,7221
+cbase,1,1,1,cover: size q3,0.735604,6689
+cbase,1,1,1,cover: size q4,0.569797,6332
+cbase,1,1,1,throttle core-hours,632.322,
+cbase,1,3,1,cover: all,0.655566,27980
+cbase,1,3,1,cover: seasonal,0.633343,6749
+cbase,1,3,1,cover: follow-on,0.871016,1533
+cbase,1,3,1,cover: isolated,0.677533,13782
+cbase,1,3,1,cover: unknown,0.573912,5916
+cbase,1,3,1,"cover: follow-on, previous peak covers",0.930581,1336
+cbase,1,3,1,"cover: follow-on, previous peak short",0.46706,197
+cbase,1,3,1,cover: size q1,0.884323,7738
+cbase,1,3,1,cover: size q2,0.680626,7221
+cbase,1,3,1,cover: size q3,0.547774,6689
+cbase,1,3,1,cover: size q4,0.461304,6332
+cbase,1,3,1,throttle core-hours,983.451,
+cbase,1,6,1,cover: all,0.616458,27980
+cbase,1,6,1,cover: seasonal,0.567453,6749
+cbase,1,6,1,cover: follow-on,0.874776,1533
+cbase,1,6,1,cover: isolated,0.648434,13782
+cbase,1,6,1,cover: unknown,0.530934,5916
+cbase,1,6,1,"cover: follow-on, previous peak covers",0.918253,1336
+cbase,1,6,1,"cover: follow-on, previous peak short",0.579927,197
+cbase,1,6,1,cover: size q1,0.855747,7738
+cbase,1,6,1,cover: size q2,0.605556,7221
+cbase,1,6,1,cover: size q3,0.504212,6689
+cbase,1,6,1,cover: size q4,0.455044,6332
+cbase,1,6,1,throttle core-hours,1110.97,
+cbase,2,1,0.6,cover: all,0.658794,27980
+cbase,2,1,0.6,cover: seasonal,0.876915,6749
+cbase,2,1,0.6,cover: follow-on,0.78733,1533
+cbase,2,1,0.6,cover: isolated,0.583487,13782
+cbase,2,1,0.6,cover: unknown,0.55209,5916
+cbase,2,1,0.6,"cover: follow-on, previous peak covers",0.855723,1336
+cbase,2,1,0.6,"cover: follow-on, previous peak short",0.32351,197
+cbase,2,1,0.6,cover: size q1,0.868078,7738
+cbase,2,1,0.6,cover: size q2,0.729209,7221
+cbase,2,1,0.6,cover: size q3,0.571082,6689
+cbase,2,1,0.6,cover: size q4,0.415396,6332
+cbase,2,1,0.6,throttle core-hours,1076,
+cbase,2,3,0.6,cover: all,0.465851,27980
+cbase,2,3,0.6,cover: seasonal,0.420835,6749
+cbase,2,3,0.6,cover: follow-on,0.736241,1533
+cbase,2,3,0.6,cover: isolated,0.498091,13782
+cbase,2,3,0.6,cover: unknown,0.372032,5916
+cbase,2,3,0.6,"cover: follow-on, previous peak covers",0.804683,1336
+cbase,2,3,0.6,"cover: follow-on, previous peak short",0.272081,197
+cbase,2,3,0.6,cover: size q1,0.72037,7738
+cbase,2,3,0.6,cover: size q2,0.417318,7221
+cbase,2,3,0.6,cover: size q3,0.36726,6689
+cbase,2,3,0.6,cover: size q4,0.314313,6332
+cbase,2,3,0.6,throttle core-hours,1553.18,
+cbase,2,6,0.6,cover: all,0.431543,27980
+cbase,2,6,0.6,cover: seasonal,0.383689,6749
+cbase,2,6,0.6,cover: follow-on,0.738112,1533
+cbase,2,6,0.6,cover: isolated,0.463945,13782
+cbase,2,6,0.6,cover: unknown,0.33121,5916
+cbase,2,6,0.6,"cover: follow-on, previous peak covers",0.808447,1336
+cbase,2,6,0.6,"cover: follow-on, previous peak short",0.261117,197
+cbase,2,6,0.6,cover: size q1,0.665345,7738
+cbase,2,6,0.6,cover: size q2,0.367878,7221
+cbase,2,6,0.6,cover: size q3,0.344688,6689
+cbase,2,6,0.6,cover: size q4,0.31018,6332
+cbase,2,6,0.6,throttle core-hours,1708.73,
+cbase,2,1,0.8,cover: all,0.731583,27980
+cbase,2,1,0.8,cover: seasonal,0.920325,6749
+cbase,2,1,0.8,cover: follow-on,0.848616,1533
+cbase,2,1,0.8,cover: isolated,0.674125,13782
+cbase,2,1,0.8,cover: unknown,0.619792,5916
+cbase,2,1,0.8,"cover: follow-on, previous peak covers",0.90939,1336
+cbase,2,1,0.8,"cover: follow-on, previous peak short",0.436461,197
+cbase,2,1,0.8,cover: size q1,0.921676,7738
+cbase,2,1,0.8,cover: size q2,0.812324,7221
+cbase,2,1,0.8,cover: size q3,0.656833,6689
+cbase,2,1,0.8,cover: size q4,0.486166,6332
+cbase,2,1,0.8,throttle core-hours,844.242,
+cbase,2,3,0.8,cover: all,0.56897,27980
+cbase,2,3,0.8,cover: seasonal,0.528995,6749
+cbase,2,3,0.8,cover: follow-on,0.808816,1533
+cbase,2,3,0.8,cover: isolated,0.605816,13782
+cbase,2,3,0.8,cover: unknown,0.466585,5916
+cbase,2,3,0.8,"cover: follow-on, previous peak covers",0.871767,1336
+cbase,2,3,0.8,"cover: follow-on, previous peak short",0.381895,197
+cbase,2,3,0.8,cover: size q1,0.825649,7738
+cbase,2,3,0.8,cover: size q2,0.549822,7221
+cbase,2,3,0.8,cover: size q3,0.464008,6689
+cbase,2,3,0.8,cover: size q4,0.388012,6332
+cbase,2,3,0.8,throttle core-hours,1243.21,
+cbase,2,6,0.8,cover: all,0.533999,27980
+cbase,2,6,0.8,cover: seasonal,0.487178,6749
+cbase,2,6,0.8,cover: follow-on,0.810284,1533
+cbase,2,6,0.8,cover: isolated,0.571804,13782
+cbase,2,6,0.8,cover: unknown,0.427749,5916
+cbase,2,6,0.8,"cover: follow-on, previous peak covers",0.868591,1336
+cbase,2,6,0.8,"cover: follow-on, previous peak short",0.414856,197
+cbase,2,6,0.8,cover: size q1,0.781088,7738
+cbase,2,6,0.8,cover: size q2,0.488655,7221
+cbase,2,6,0.8,cover: size q3,0.434413,6689
+cbase,2,6,0.8,cover: size q4,0.388955,6332
+cbase,2,6,0.8,throttle core-hours,1374.08,
+cbase,2,1,1,cover: all,0.784228,27980
+cbase,2,1,1,cover: seasonal,0.94769,6749
+cbase,2,1,1,cover: follow-on,0.889373,1533
+cbase,2,1,1,cover: isolated,0.740689,13782
+cbase,2,1,1,cover: unknown,0.671934,5916
+cbase,2,1,1,"cover: follow-on, previous peak covers",0.9431,1336
+cbase,2,1,1,"cover: follow-on, previous peak short",0.52501,197
+cbase,2,1,1,cover: size q1,0.954362,7738
+cbase,2,1,1,cover: size q2,0.870351,7221
+cbase,2,1,1,cover: size q3,0.722384,6689
+cbase,2,1,1,cover: size q4,0.543436,6332
+cbase,2,1,1,throttle core-hours,684.198,
+cbase,2,3,1,cover: all,0.649163,27980
+cbase,2,3,1,cover: seasonal,0.617647,6749
+cbase,2,3,1,cover: follow-on,0.859645,1533
+cbase,2,3,1,cover: isolated,0.685778,13782
+cbase,2,3,1,cover: unknown,0.545277,5916
+cbase,2,3,1,"cover: follow-on, previous peak covers",0.916787,1336
+cbase,2,3,1,"cover: follow-on, previous peak short",0.472122,197
+cbase,2,3,1,cover: size q1,0.89152,7738
+cbase,2,3,1,cover: size q2,0.663679,7221
+cbase,2,3,1,cover: size q3,0.542356,6689
+cbase,2,3,1,cover: size q4,0.449267,6332
+cbase,2,3,1,throttle core-hours,1021.62,
+cbase,2,6,1,cover: all,0.615076,27980
+cbase,2,6,1,cover: seasonal,0.569071,6749
+cbase,2,6,1,cover: follow-on,0.860571,1533
+cbase,2,6,1,cover: isolated,0.654688,13782
+cbase,2,6,1,cover: unknown,0.511666,5916
+cbase,2,6,1,"cover: follow-on, previous peak covers",0.907319,1336
+cbase,2,6,1,"cover: follow-on, previous peak short",0.543535,197
+cbase,2,6,1,cover: size q1,0.857321,7738
+cbase,2,6,1,cover: size q2,0.597357,7221
+cbase,2,6,1,cover: size q3,0.508611,6689
+cbase,2,6,1,cover: size q4,0.451717,6332
+cbase,2,6,1,throttle core-hours,1133.3,
+fwdmax,0,1,0.6,cover: all,0.668721,27980
+fwdmax,0,1,0.6,cover: seasonal,0.875415,6749
+fwdmax,0,1,0.6,cover: follow-on,0.776746,1533
+fwdmax,0,1,0.6,cover: isolated,0.599315,13782
+fwdmax,0,1,0.6,cover: unknown,0.566619,5916
+fwdmax,0,1,0.6,"cover: follow-on, previous peak covers",0.847902,1336
+fwdmax,0,1,0.6,"cover: follow-on, previous peak short",0.294184,197
+fwdmax,0,1,0.6,cover: size q1,0.847912,7738
+fwdmax,0,1,0.6,cover: size q2,0.747259,7221
+fwdmax,0,1,0.6,cover: size q3,0.59454,6689
+fwdmax,0,1,0.6,cover: size q4,0.438538,6332
+fwdmax,0,1,0.6,throttle core-hours,1079.38,
+fwdmax,0,3,0.6,cover: all,0.675563,27980
+fwdmax,0,3,0.6,cover: seasonal,0.897509,6749
+fwdmax,0,3,0.6,cover: follow-on,0.756545,1533
+fwdmax,0,3,0.6,cover: isolated,0.600349,13782
+fwdmax,0,3,0.6,cover: unknown,0.576599,5916
+fwdmax,0,3,0.6,"cover: follow-on, previous peak covers",0.827706,1336
+fwdmax,0,3,0.6,"cover: follow-on, previous peak short",0.273957,197
+fwdmax,0,3,0.6,cover: size q1,0.858268,7738
+fwdmax,0,3,0.6,cover: size q2,0.760299,7221
+fwdmax,0,3,0.6,cover: size q3,0.603963,6689
+fwdmax,0,3,0.6,cover: size q4,0.43129,6332
+fwdmax,0,3,0.6,throttle core-hours,1169.69,
+fwdmax,0,6,0.6,cover: all,0.479669,27980
+fwdmax,0,6,0.6,cover: seasonal,0.457078,6749
+fwdmax,0,6,0.6,cover: follow-on,0.727805,1533
+fwdmax,0,6,0.6,cover: isolated,0.50526,13782
+fwdmax,0,6,0.6,cover: unknown,0.381526,5916
+fwdmax,0,6,0.6,"cover: follow-on, previous peak covers",0.800718,1336
+fwdmax,0,6,0.6,"cover: follow-on, previous peak short",0.233335,197
+fwdmax,0,6,0.6,cover: size q1,0.677267,7738
+fwdmax,0,6,0.6,cover: size q2,0.449746,7221
+fwdmax,0,6,0.6,cover: size q3,0.395702,6689
+fwdmax,0,6,0.6,cover: size q4,0.361021,6332
+fwdmax,0,6,0.6,throttle core-hours,1479.88,
+fwdmax,0,1,0.8,cover: all,0.745923,27980
+fwdmax,0,1,0.8,cover: seasonal,0.927704,6749
+fwdmax,0,1,0.8,cover: follow-on,0.850973,1533
+fwdmax,0,1,0.8,cover: isolated,0.688117,13782
+fwdmax,0,1,0.8,cover: unknown,0.645989,5916
+fwdmax,0,1,0.8,"cover: follow-on, previous peak covers",0.9181,1336
+fwdmax,0,1,0.8,"cover: follow-on, previous peak short",0.395733,197
+fwdmax,0,1,0.8,cover: size q1,0.901202,7738
+fwdmax,0,1,0.8,cover: size q2,0.818181,7221
+fwdmax,0,1,0.8,cover: size q3,0.689484,6689
+fwdmax,0,1,0.8,cover: size q4,0.533381,6332
+fwdmax,0,1,0.8,throttle core-hours,793.908,
+fwdmax,0,3,0.8,cover: all,0.751518,27980
+fwdmax,0,3,0.8,cover: seasonal,0.944413,6749
+fwdmax,0,3,0.8,cover: follow-on,0.838131,1533
+fwdmax,0,3,0.8,cover: isolated,0.690277,13782
+fwdmax,0,3,0.8,cover: unknown,0.651687,5916
+fwdmax,0,3,0.8,"cover: follow-on, previous peak covers",0.901825,1336
+fwdmax,0,3,0.8,"cover: follow-on, previous peak short",0.406181,197
+fwdmax,0,3,0.8,cover: size q1,0.906912,7738
+fwdmax,0,3,0.8,cover: size q2,0.827981,7221
+fwdmax,0,3,0.8,cover: size q3,0.691712,6689
+fwdmax,0,3,0.8,cover: size q4,0.537599,6332
+fwdmax,0,3,0.8,throttle core-hours,873.32,
+fwdmax,0,6,0.8,cover: all,0.59075,27980
+fwdmax,0,6,0.8,cover: seasonal,0.574622,6749
+fwdmax,0,6,0.8,cover: follow-on,0.822756,1533
+fwdmax,0,6,0.8,cover: isolated,0.614039,13782
+fwdmax,0,6,0.8,cover: unknown,0.494775,5916
+fwdmax,0,6,0.8,"cover: follow-on, previous peak covers",0.885797,1336
+fwdmax,0,6,0.8,"cover: follow-on, previous peak short",0.395232,197
+fwdmax,0,6,0.8,cover: size q1,0.777453,7738
+fwdmax,0,6,0.8,cover: size q2,0.587626,7221
+fwdmax,0,6,0.8,cover: size q3,0.506607,6689
+fwdmax,0,6,0.8,cover: size q4,0.45504,6332
+fwdmax,0,6,0.8,throttle core-hours,1128.68,
+fwdmax,0,1,1,cover: all,0.798299,27980
+fwdmax,0,1,1,cover: seasonal,0.952609,6749
+fwdmax,0,1,1,cover: follow-on,0.893093,1533
+fwdmax,0,1,1,cover: isolated,0.750512,13782
+fwdmax,0,1,1,cover: unknown,0.709024,5916
+fwdmax,0,1,1,"cover: follow-on, previous peak covers",0.951361,1336
+fwdmax,0,1,1,"cover: follow-on, previous peak short",0.497934,197
+fwdmax,0,1,1,cover: size q1,0.933589,7738
+fwdmax,0,1,1,cover: size q2,0.862435,7221
+fwdmax,0,1,1,cover: size q3,0.754726,6689
+fwdmax,0,1,1,cover: size q4,0.605858,6332
+fwdmax,0,1,1,throttle core-hours,628.79,
+fwdmax,0,3,1,cover: all,0.80209,27980
+fwdmax,0,3,1,cover: seasonal,0.962879,6749
+fwdmax,0,3,1,cover: follow-on,0.880808,1533
+fwdmax,0,3,1,cover: isolated,0.75261,13782
+fwdmax,0,3,1,cover: unknown,0.713532,5916
+fwdmax,0,3,1,"cover: follow-on, previous peak covers",0.937204,1336
+fwdmax,0,3,1,"cover: follow-on, previous peak short",0.498349,197
+fwdmax,0,3,1,cover: size q1,0.93795,7738
+fwdmax,0,3,1,cover: size q2,0.870016,7221
+fwdmax,0,3,1,cover: size q3,0.755311,6689
+fwdmax,0,3,1,cover: size q4,0.608015,6332
+fwdmax,0,3,1,throttle core-hours,698.68,
+fwdmax,0,6,1,cover: all,0.676651,27980
+fwdmax,0,6,1,cover: seasonal,0.672861,6749
+fwdmax,0,6,1,cover: follow-on,0.866457,1533
+fwdmax,0,6,1,cover: isolated,0.691039,13782
+fwdmax,0,6,1,cover: unknown,0.598271,5916
+fwdmax,0,6,1,"cover: follow-on, previous peak covers",0.920923,1336
+fwdmax,0,6,1,"cover: follow-on, previous peak short",0.497084,197
+fwdmax,0,6,1,cover: size q1,0.849035,7738
+fwdmax,0,6,1,cover: size q2,0.693246,7221
+fwdmax,0,6,1,cover: size q3,0.594961,6689
+fwdmax,0,6,1,cover: size q4,0.533359,6332
+fwdmax,0,6,1,throttle core-hours,904.875,
+fwdmax,1,1,0.6,cover: all,0.67348,27980
+fwdmax,1,1,0.6,cover: seasonal,0.87066,6749
+fwdmax,1,1,0.6,cover: follow-on,0.76651,1533
+fwdmax,1,1,0.6,cover: isolated,0.598764,13782
+fwdmax,1,1,0.6,cover: unknown,0.598489,5916
+fwdmax,1,1,0.6,"cover: follow-on, previous peak covers",0.836962,1336
+fwdmax,1,1,0.6,"cover: follow-on, previous peak short",0.288727,197
+fwdmax,1,1,0.6,cover: size q1,0.874751,7738
+fwdmax,1,1,0.6,cover: size q2,0.748864,7221
+fwdmax,1,1,0.6,cover: size q3,0.603939,6689
+fwdmax,1,1,0.6,cover: size q4,0.415011,6332
+fwdmax,1,1,0.6,throttle core-hours,1054.1,
+fwdmax,1,3,0.6,cover: all,0.683653,27980
+fwdmax,1,3,0.6,cover: seasonal,0.903739,6749
+fwdmax,1,3,0.6,cover: follow-on,0.753096,1533
+fwdmax,1,3,0.6,cover: isolated,0.603063,13782
+fwdmax,1,3,0.6,cover: unknown,0.602324,5916
+fwdmax,1,3,0.6,"cover: follow-on, previous peak covers",0.818656,1336
+fwdmax,1,3,0.6,"cover: follow-on, previous peak short",0.308486,197
+fwdmax,1,3,0.6,cover: size q1,0.885896,7738
+fwdmax,1,3,0.6,cover: size q2,0.776444,7221
+fwdmax,1,3,0.6,cover: size q3,0.611017,6689
+fwdmax,1,3,0.6,cover: size q4,0.407414,6332
+fwdmax,1,3,0.6,throttle core-hours,1147.59,
+fwdmax,1,6,0.6,cover: all,0.467353,27980
+fwdmax,1,6,0.6,cover: seasonal,0.43082,6749
+fwdmax,1,6,0.6,cover: follow-on,0.705044,1533
+fwdmax,1,6,0.6,cover: isolated,0.48609,13782
+fwdmax,1,6,0.6,cover: unknown,0.403789,5916
+fwdmax,1,6,0.6,"cover: follow-on, previous peak covers",0.776494,1336
+fwdmax,1,6,0.6,"cover: follow-on, previous peak short",0.220488,197
+fwdmax,1,6,0.6,cover: size q1,0.702967,7738
+fwdmax,1,6,0.6,cover: size q2,0.416653,7221
+fwdmax,1,6,0.6,cover: size q3,0.381026,6689
+fwdmax,1,6,0.6,cover: size q4,0.328436,6332
+fwdmax,1,6,0.6,throttle core-hours,1482.79,
+fwdmax,1,1,0.8,cover: all,0.752119,27980
+fwdmax,1,1,0.8,cover: seasonal,0.916168,6749
+fwdmax,1,1,0.8,cover: follow-on,0.843603,1533
+fwdmax,1,1,0.8,cover: isolated,0.690263,13782
+fwdmax,1,1,0.8,cover: unknown,0.685364,5916
+fwdmax,1,1,0.8,"cover: follow-on, previous peak covers",0.90622,1336
+fwdmax,1,1,0.8,"cover: follow-on, previous peak short",0.418955,197
+fwdmax,1,1,0.8,cover: size q1,0.928106,7738
+fwdmax,1,1,0.8,cover: size q2,0.820793,7221
+fwdmax,1,1,0.8,cover: size q3,0.698898,6689
+fwdmax,1,1,0.8,cover: size q4,0.514959,6332
+fwdmax,1,1,0.8,throttle core-hours,772.882,
+fwdmax,1,3,0.8,cover: all,0.759204,27980
+fwdmax,1,3,0.8,cover: seasonal,0.941066,6749
+fwdmax,1,3,0.8,cover: follow-on,0.833242,1533
+fwdmax,1,3,0.8,cover: isolated,0.693035,13782
+fwdmax,1,3,0.8,cover: unknown,0.686697,5916
+fwdmax,1,3,0.8,"cover: follow-on, previous peak covers",0.8984,1336
+fwdmax,1,3,0.8,"cover: follow-on, previous peak short",0.391356,197
+fwdmax,1,3,0.8,cover: size q1,0.935131,7738
+fwdmax,1,3,0.8,cover: size q2,0.839538,7221
+fwdmax,1,3,0.8,cover: size q3,0.701792,6689
+fwdmax,1,3,0.8,cover: size q4,0.513248,6332
+fwdmax,1,3,0.8,throttle core-hours,847.473,
+fwdmax,1,6,0.8,cover: all,0.581107,27980
+fwdmax,1,6,0.8,cover: seasonal,0.545432,6749
+fwdmax,1,6,0.8,cover: follow-on,0.791266,1533
+fwdmax,1,6,0.8,cover: isolated,0.59502,13782
+fwdmax,1,6,0.8,cover: unknown,0.534937,5916
+fwdmax,1,6,0.8,"cover: follow-on, previous peak covers",0.855648,1336
+fwdmax,1,6,0.8,"cover: follow-on, previous peak short",0.354641,197
+fwdmax,1,6,0.8,cover: size q1,0.814488,7738
+fwdmax,1,6,0.8,cover: size q2,0.547997,7221
+fwdmax,1,6,0.8,cover: size q3,0.493775,6689
+fwdmax,1,6,0.8,cover: size q4,0.42592,6332
+fwdmax,1,6,0.8,throttle core-hours,1125.06,
+fwdmax,1,1,1,cover: all,0.803894,27980
+fwdmax,1,1,1,cover: seasonal,0.940469,6749
+fwdmax,1,1,1,cover: follow-on,0.882957,1533
+fwdmax,1,1,1,cover: isolated,0.752961,13782
+fwdmax,1,1,1,cover: unknown,0.746254,5916
+fwdmax,1,1,1,"cover: follow-on, previous peak covers",0.939334,1336
+fwdmax,1,1,1,"cover: follow-on, previous peak short",0.500622,197
+fwdmax,1,1,1,cover: size q1,0.954469,7738
+fwdmax,1,1,1,cover: size q2,0.866995,7221
+fwdmax,1,1,1,cover: size q3,0.763773,6689
+fwdmax,1,1,1,cover: size q4,0.590306,6332
+fwdmax,1,1,1,throttle core-hours,611.852,
+fwdmax,1,3,1,cover: all,0.810204,27980
+fwdmax,1,3,1,cover: seasonal,0.959871,6749
+fwdmax,1,3,1,cover: follow-on,0.874784,1533
+fwdmax,1,3,1,cover: isolated,0.754938,13782
+fwdmax,1,3,1,cover: unknown,0.751477,5916
+fwdmax,1,3,1,"cover: follow-on, previous peak covers",0.934191,1336
+fwdmax,1,3,1,"cover: follow-on, previous peak short",0.471897,197
+fwdmax,1,3,1,cover: size q1,0.959415,7738
+fwdmax,1,3,1,cover: size q2,0.881283,7221
+fwdmax,1,3,1,cover: size q3,0.766735,6689
+fwdmax,1,3,1,cover: size q4,0.592723,6332
+fwdmax,1,3,1,throttle core-hours,673.59,
+fwdmax,1,6,1,cover: all,0.668959,27980
+fwdmax,1,6,1,cover: seasonal,0.64301,6749
+fwdmax,1,6,1,cover: follow-on,0.841116,1533
+fwdmax,1,6,1,cover: isolated,0.677858,13782
+fwdmax,1,6,1,cover: unknown,0.63322,5916
+fwdmax,1,6,1,"cover: follow-on, previous peak covers",0.89696,1336
+fwdmax,1,6,1,"cover: follow-on, previous peak short",0.4624,197
+fwdmax,1,6,1,cover: size q1,0.881916,7738
+fwdmax,1,6,1,cover: size q2,0.664605,7221
+fwdmax,1,6,1,cover: size q3,0.580335,6689
+fwdmax,1,6,1,cover: size q4,0.507302,6332
+fwdmax,1,6,1,throttle core-hours,903.293,
+fwdmax,2,1,0.6,cover: all,0.679949,27980
+fwdmax,2,1,0.6,cover: seasonal,0.889846,6749
+fwdmax,2,1,0.6,cover: follow-on,0.779111,1533
+fwdmax,2,1,0.6,cover: isolated,0.60847,13782
+fwdmax,2,1,0.6,cover: unknown,0.58132,5916
+fwdmax,2,1,0.6,"cover: follow-on, previous peak covers",0.852193,1336
+fwdmax,2,1,0.6,"cover: follow-on, previous peak short",0.283492,197
+fwdmax,2,1,0.6,cover: size q1,0.886721,7738
+fwdmax,2,1,0.6,cover: size q2,0.770533,7221
+fwdmax,2,1,0.6,cover: size q3,0.583609,6689
+fwdmax,2,1,0.6,cover: size q4,0.425733,6332
+fwdmax,2,1,0.6,throttle core-hours,1051.24,
+fwdmax,2,3,0.6,cover: all,0.684968,27980
+fwdmax,2,3,0.6,cover: seasonal,0.904775,6749
+fwdmax,2,3,0.6,cover: follow-on,0.765984,1533
+fwdmax,2,3,0.6,cover: isolated,0.610416,13782
+fwdmax,2,3,0.6,cover: unknown,0.586896,5916
+fwdmax,2,3,0.6,"cover: follow-on, previous peak covers",0.839468,1336
+fwdmax,2,3,0.6,"cover: follow-on, previous peak short",0.267638,197
+fwdmax,2,3,0.6,cover: size q1,0.894385,7738
+fwdmax,2,3,0.6,cover: size q2,0.784372,7221
+fwdmax,2,3,0.6,cover: size q3,0.592866,6689
+fwdmax,2,3,0.6,cover: size q4,0.412986,6332
+fwdmax,2,3,0.6,throttle core-hours,1163.11,
+fwdmax,2,6,0.6,cover: all,0.484095,27980
+fwdmax,2,6,0.6,cover: seasonal,0.456364,6749
+fwdmax,2,6,0.6,cover: follow-on,0.727167,1533
+fwdmax,2,6,0.6,cover: isolated,0.505856,13782
+fwdmax,2,6,0.6,cover: unknown,0.402051,5916
+fwdmax,2,6,0.6,"cover: follow-on, previous peak covers",0.799326,1336
+fwdmax,2,6,0.6,"cover: follow-on, previous peak short",0.237807,197
+fwdmax,2,6,0.6,cover: size q1,0.724831,7738
+fwdmax,2,6,0.6,cover: size q2,0.460756,7221
+fwdmax,2,6,0.6,cover: size q3,0.371327,6689
+fwdmax,2,6,0.6,cover: size q4,0.335647,6332
+fwdmax,2,6,0.6,throttle core-hours,1486.02,
+fwdmax,2,1,0.8,cover: all,0.75577,27980
+fwdmax,2,1,0.8,cover: seasonal,0.935347,6749
+fwdmax,2,1,0.8,cover: follow-on,0.859371,1533
+fwdmax,2,1,0.8,cover: isolated,0.694907,13782
+fwdmax,2,1,0.8,cover: unknown,0.66585,5916
+fwdmax,2,1,0.8,"cover: follow-on, previous peak covers",0.923051,1336
+fwdmax,2,1,0.8,"cover: follow-on, previous peak short",0.427512,197
+fwdmax,2,1,0.8,cover: size q1,0.927932,7738
+fwdmax,2,1,0.8,cover: size q2,0.842887,7221
+fwdmax,2,1,0.8,cover: size q3,0.684677,6689
+fwdmax,2,1,0.8,cover: size q4,0.521134,6332
+fwdmax,2,1,0.8,throttle core-hours,765.435,
+fwdmax,2,3,0.8,cover: all,0.75963,27980
+fwdmax,2,3,0.8,cover: seasonal,0.94751,6749
+fwdmax,2,3,0.8,cover: follow-on,0.851188,1533
+fwdmax,2,3,0.8,cover: isolated,0.695347,13782
+fwdmax,2,3,0.8,cover: unknown,0.671325,5916
+fwdmax,2,3,0.8,"cover: follow-on, previous peak covers",0.912858,1336
+fwdmax,2,3,0.8,"cover: follow-on, previous peak short",0.43296,197
+fwdmax,2,3,0.8,cover: size q1,0.931541,7738
+fwdmax,2,3,0.8,cover: size q2,0.849558,7221
+fwdmax,2,3,0.8,cover: size q3,0.688382,6689
+fwdmax,2,3,0.8,cover: size q4,0.522259,6332
+fwdmax,2,3,0.8,throttle core-hours,859.954,
+fwdmax,2,6,0.8,cover: all,0.598166,27980
+fwdmax,2,6,0.8,cover: seasonal,0.582565,6749
+fwdmax,2,6,0.8,cover: follow-on,0.817417,1533
+fwdmax,2,6,0.8,cover: isolated,0.613197,13782
+fwdmax,2,6,0.8,cover: unknown,0.524132,5916
+fwdmax,2,6,0.8,"cover: follow-on, previous peak covers",0.879115,1336
+fwdmax,2,6,0.8,"cover: follow-on, previous peak short",0.398995,197
+fwdmax,2,6,0.8,cover: size q1,0.822796,7738
+fwdmax,2,6,0.8,cover: size q2,0.607599,7221
+fwdmax,2,6,0.8,cover: size q3,0.482775,6689
+fwdmax,2,6,0.8,cover: size q4,0.434796,6332
+fwdmax,2,6,0.8,throttle core-hours,1127.97,
+fwdmax,2,1,1,cover: all,0.807708,27980
+fwdmax,2,1,1,cover: seasonal,0.955955,6749
+fwdmax,2,1,1,cover: follow-on,0.901163,1533
+fwdmax,2,1,1,cover: isolated,0.757784,13782
+fwdmax,2,1,1,cover: unknown,0.730676,5916
+fwdmax,2,1,1,"cover: follow-on, previous peak covers",0.95702,1336
+fwdmax,2,1,1,"cover: follow-on, previous peak short",0.522355,197
+fwdmax,2,1,1,cover: size q1,0.952645,7738
+fwdmax,2,1,1,cover: size q2,0.886426,7221
+fwdmax,2,1,1,cover: size q3,0.753908,6689
+fwdmax,2,1,1,cover: size q4,0.597652,6332
+fwdmax,2,1,1,throttle core-hours,604.138,
+fwdmax,2,3,1,cover: all,0.809446,27980
+fwdmax,2,3,1,cover: seasonal,0.964911,6749
+fwdmax,2,3,1,cover: follow-on,0.891567,1533
+fwdmax,2,3,1,cover: isolated,0.755552,13782
+fwdmax,2,3,1,cover: unknown,0.736364,5916
+fwdmax,2,3,1,"cover: follow-on, previous peak covers",0.946099,1336
+fwdmax,2,3,1,"cover: follow-on, previous peak short",0.521743,197
+fwdmax,2,3,1,cover: size q1,0.954079,7738
+fwdmax,2,3,1,cover: size q2,0.891051,7221
+fwdmax,2,3,1,cover: size q3,0.754343,6689
+fwdmax,2,3,1,cover: size q4,0.597844,6332
+fwdmax,2,3,1,throttle core-hours,687.216,
+fwdmax,2,6,1,cover: all,0.684133,27980
+fwdmax,2,6,1,cover: seasonal,0.677641,6749
+fwdmax,2,6,1,cover: follow-on,0.864869,1533
+fwdmax,2,6,1,cover: isolated,0.693406,13782
+fwdmax,2,6,1,cover: unknown,0.623103,5916
+fwdmax,2,6,1,"cover: follow-on, previous peak covers",0.916736,1336
+fwdmax,2,6,1,"cover: follow-on, previous peak short",0.513121,197
+fwdmax,2,6,1,cover: size q1,0.884614,7738
+fwdmax,2,6,1,cover: size q2,0.721901,7221
+fwdmax,2,6,1,cover: size q3,0.572863,6689
+fwdmax,2,6,1,cover: size q4,0.51361,6332
+fwdmax,2,6,1,throttle core-hours,906.646,
+proposed,0,1,0.6,cover: all,0.576408,27980
+proposed,0,1,0.6,cover: seasonal,0.770343,6749
+proposed,0,1,0.6,cover: follow-on,0.911915,1533
+proposed,0,1,0.6,cover: isolated,0.479305,13782
+proposed,0,1,0.6,cover: unknown,0.494439,5916
+proposed,0,1,0.6,"cover: follow-on, previous peak covers",0.999111,1336
+proposed,0,1,0.6,"cover: follow-on, previous peak short",0.320577,197
+proposed,0,1,0.6,cover: size q1,0.818962,7738
+proposed,0,1,0.6,cover: size q2,0.626043,7221
+proposed,0,1,0.6,cover: size q3,0.465042,6689
+proposed,0,1,0.6,cover: size q4,0.341038,6332
+proposed,0,1,0.6,throttle core-hours,1234.41,
+proposed,0,3,0.6,cover: all,0.60439,27980
+proposed,0,3,0.6,cover: seasonal,0.799299,6749
+proposed,0,3,0.6,cover: follow-on,0.897625,1533
+proposed,0,3,0.6,cover: isolated,0.512369,13782
+proposed,0,3,0.6,cover: unknown,0.520428,5916
+proposed,0,3,0.6,"cover: follow-on, previous peak covers",0.981895,1336
+proposed,0,3,0.6,"cover: follow-on, previous peak short",0.326131,197
+proposed,0,3,0.6,cover: size q1,0.845976,7738
+proposed,0,3,0.6,cover: size q2,0.663161,7221
+proposed,0,3,0.6,cover: size q3,0.485599,6689
+proposed,0,3,0.6,cover: size q4,0.367629,6332
+proposed,0,3,0.6,throttle core-hours,1431.45,
+proposed,0,6,0.6,cover: all,0.435022,27980
+proposed,0,6,0.6,cover: seasonal,0.394968,6749
+proposed,0,6,0.6,cover: follow-on,0.743941,1533
+proposed,0,6,0.6,cover: isolated,0.447639,13782
+proposed,0,6,0.6,cover: unknown,0.371276,5916
+proposed,0,6,0.6,"cover: follow-on, previous peak covers",0.818881,1336
+proposed,0,6,0.6,"cover: follow-on, previous peak short",0.235715,197
+proposed,0,6,0.6,cover: size q1,0.680756,7738
+proposed,0,6,0.6,cover: size q2,0.369757,7221
+proposed,0,6,0.6,cover: size q3,0.32461,6689
+proposed,0,6,0.6,cover: size q4,0.32579,6332
+proposed,0,6,0.6,throttle core-hours,1758.1,
+proposed,0,1,0.8,cover: all,0.707212,27980
+proposed,0,1,0.8,cover: seasonal,0.895405,6749
+proposed,0,1,0.8,cover: follow-on,0.931848,1533
+proposed,0,1,0.8,cover: isolated,0.627311,13782
+proposed,0,1,0.8,cover: unknown,0.620448,5916
+proposed,0,1,0.8,"cover: follow-on, previous peak covers",1,1336
+proposed,0,1,0.8,"cover: follow-on, previous peak short",0.46966,197
+proposed,0,1,0.8,cover: size q1,0.913621,7738
+proposed,0,1,0.8,cover: size q2,0.787181,7221
+proposed,0,1,0.8,cover: size q3,0.603415,6689
+proposed,0,1,0.8,cover: size q4,0.473422,6332
+proposed,0,1,0.8,throttle core-hours,842.726,
+proposed,0,3,0.8,cover: all,0.723165,27980
+proposed,0,3,0.8,cover: seasonal,0.914131,6749
+proposed,0,3,0.8,cover: follow-on,0.923368,1533
+proposed,0,3,0.8,cover: isolated,0.644296,13782
+proposed,0,3,0.8,cover: unknown,0.637166,5916
+proposed,0,3,0.8,"cover: follow-on, previous peak covers",0.989,1336
+proposed,0,3,0.8,"cover: follow-on, previous peak short",0.478266,197
+proposed,0,3,0.8,cover: size q1,0.923768,7738
+proposed,0,3,0.8,cover: size q2,0.805562,7221
+proposed,0,3,0.8,cover: size q3,0.623382,6689
+proposed,0,3,0.8,cover: size q4,0.489462,6332
+proposed,0,3,0.8,throttle core-hours,968.606,
+proposed,0,6,0.8,cover: all,0.560283,27980
+proposed,0,6,0.8,cover: seasonal,0.524023,6749
+proposed,0,6,0.8,cover: follow-on,0.808054,1533
+proposed,0,6,0.8,cover: isolated,0.579379,13782
+proposed,0,6,0.8,cover: unknown,0.492955,5916
+proposed,0,6,0.8,"cover: follow-on, previous peak covers",0.878454,1336
+proposed,0,6,0.8,"cover: follow-on, previous peak short",0.33062,197
+proposed,0,6,0.8,cover: size q1,0.820775,7738
+proposed,0,6,0.8,cover: size q2,0.523372,7221
+proposed,0,6,0.8,cover: size q3,0.426926,6689
+proposed,0,6,0.8,cover: size q4,0.424917,6332
+proposed,0,6,0.8,throttle core-hours,1251.15,
+proposed,0,1,1,cover: all,0.779167,27980
+proposed,0,1,1,cover: seasonal,0.940537,6749
+proposed,0,1,1,cover: follow-on,0.940729,1533
+proposed,0,1,1,cover: isolated,0.717064,13782
+proposed,0,1,1,cover: unknown,0.697889,5916
+proposed,0,1,1,"cover: follow-on, previous peak covers",1,1336
+proposed,0,1,1,"cover: follow-on, previous peak short",0.538768,197
+proposed,0,1,1,cover: size q1,0.950802,7738
+proposed,0,1,1,cover: size q2,0.85463,7221
+proposed,0,1,1,cover: size q3,0.700571,6689
+proposed,0,1,1,cover: size q4,0.566393,6332
+proposed,0,1,1,throttle core-hours,639.454,
+proposed,0,3,1,cover: all,0.790479,27980
+proposed,0,3,1,cover: seasonal,0.952733,6749
+proposed,0,3,1,cover: follow-on,0.93506,1533
+proposed,0,3,1,cover: isolated,0.730246,13782
+proposed,0,3,1,cover: unknown,0.708235,5916
+proposed,0,3,1,"cover: follow-on, previous peak covers",0.992592,1336
+proposed,0,3,1,"cover: follow-on, previous peak short",0.544894,197
+proposed,0,3,1,cover: size q1,0.956424,7738
+proposed,0,3,1,cover: size q2,0.870398,7221
+proposed,0,3,1,cover: size q3,0.711114,6689
+proposed,0,3,1,cover: size q4,0.580388,6332
+proposed,0,3,1,throttle core-hours,734.634,
+proposed,0,6,1,cover: all,0.656141,27980
+proposed,0,6,1,cover: seasonal,0.623185,6749
+proposed,0,6,1,cover: follow-on,0.853565,1533
+proposed,0,6,1,cover: isolated,0.675148,13782
+proposed,0,6,1,cover: unknown,0.598298,5916
+proposed,0,6,1,"cover: follow-on, previous peak covers",0.915509,1336
+proposed,0,6,1,"cover: follow-on, previous peak short",0.433482,197
+proposed,0,6,1,cover: size q1,0.892918,7738
+proposed,0,6,1,cover: size q2,0.655345,7221
+proposed,0,6,1,cover: size q3,0.524198,6689
+proposed,0,6,1,cover: size q4,0.507077,6332
+proposed,0,6,1,throttle core-hours,970.926,
+proposed,1,1,0.6,cover: all,0.567708,27980
+proposed,1,1,0.6,cover: seasonal,0.743475,6749
+proposed,1,1,0.6,cover: follow-on,0.915483,1533
+proposed,1,1,0.6,cover: isolated,0.478902,13782
+proposed,1,1,0.6,cover: unknown,0.483956,5916
+proposed,1,1,0.6,"cover: follow-on, previous peak covers",0.998666,1336
+proposed,1,1,0.6,"cover: follow-on, previous peak short",0.35136,197
+proposed,1,1,0.6,cover: size q1,0.783667,7738
+proposed,1,1,0.6,cover: size q2,0.602576,7221
+proposed,1,1,0.6,cover: size q3,0.50142,6689
+proposed,1,1,0.6,cover: size q4,0.334057,6332
+proposed,1,1,0.6,throttle core-hours,1242.44,
+proposed,1,3,0.6,cover: all,0.599807,27980
+proposed,1,3,0.6,cover: seasonal,0.793039,6749
+proposed,1,3,0.6,cover: follow-on,0.901105,1533
+proposed,1,3,0.6,cover: isolated,0.50872,13782
+proposed,1,3,0.6,cover: unknown,0.513491,5916
+proposed,1,3,0.6,"cover: follow-on, previous peak covers",0.981451,1336
+proposed,1,3,0.6,"cover: follow-on, previous peak short",0.35622,197
+proposed,1,3,0.6,cover: size q1,0.818861,7738
+proposed,1,3,0.6,cover: size q2,0.658407,7221
+proposed,1,3,0.6,cover: size q3,0.512171,6689
+proposed,1,3,0.6,cover: size q4,0.357863,6332
+proposed,1,3,0.6,throttle core-hours,1429.91,
+proposed,1,6,0.6,cover: all,0.433827,27980
+proposed,1,6,0.6,cover: seasonal,0.391084,6749
+proposed,1,6,0.6,cover: follow-on,0.753202,1533
+proposed,1,6,0.6,cover: isolated,0.447049,13782
+proposed,1,6,0.6,cover: unknown,0.369026,5916
+proposed,1,6,0.6,"cover: follow-on, previous peak covers",0.828596,1336
+proposed,1,6,0.6,"cover: follow-on, previous peak short",0.241898,197
+proposed,1,6,0.6,cover: size q1,0.649056,7738
+proposed,1,6,0.6,cover: size q2,0.369188,7221
+proposed,1,6,0.6,cover: size q3,0.356026,6689
+proposed,1,6,0.6,cover: size q4,0.326709,6332
+proposed,1,6,0.6,throttle core-hours,1740.97,
+proposed,1,1,0.8,cover: all,0.706361,27980
+proposed,1,1,0.8,cover: seasonal,0.886234,6749
+proposed,1,1,0.8,cover: follow-on,0.931916,1533
+proposed,1,1,0.8,cover: isolated,0.632664,13782
+proposed,1,1,0.8,cover: unknown,0.614401,5916
+proposed,1,1,0.8,"cover: follow-on, previous peak covers",1,1336
+proposed,1,1,0.8,"cover: follow-on, previous peak short",0.470189,197
+proposed,1,1,0.8,cover: size q1,0.896801,7738
+proposed,1,1,0.8,cover: size q2,0.767298,7221
+proposed,1,1,0.8,cover: size q3,0.644115,6689
+proposed,1,1,0.8,cover: size q4,0.469899,6332
+proposed,1,1,0.8,throttle core-hours,844.241,
+proposed,1,3,0.8,cover: all,0.72213,27980
+proposed,1,3,0.8,cover: seasonal,0.905462,6749
+proposed,1,3,0.8,cover: follow-on,0.924143,1533
+proposed,1,3,0.8,cover: isolated,0.648098,13782
+proposed,1,3,0.8,cover: unknown,0.633105,5916
+proposed,1,3,0.8,"cover: follow-on, previous peak covers",0.989927,1336
+proposed,1,3,0.8,"cover: follow-on, previous peak short",0.478018,197
+proposed,1,3,0.8,cover: size q1,0.913373,7738
+proposed,1,3,0.8,cover: size q2,0.790279,7221
+proposed,1,3,0.8,cover: size q3,0.654245,6689
+proposed,1,3,0.8,cover: size q4,0.482417,6332
+proposed,1,3,0.8,throttle core-hours,970.691,
+proposed,1,6,0.8,cover: all,0.557372,27980
+proposed,1,6,0.8,cover: seasonal,0.526837,6749
+proposed,1,6,0.8,cover: follow-on,0.814484,1533
+proposed,1,6,0.8,cover: isolated,0.572379,13782
+proposed,1,6,0.8,cover: unknown,0.490618,5916
+proposed,1,6,0.8,"cover: follow-on, previous peak covers",0.880358,1336
+proposed,1,6,0.8,"cover: follow-on, previous peak short",0.367748,197
+proposed,1,6,0.8,cover: size q1,0.790596,7738
+proposed,1,6,0.8,cover: size q2,0.505896,7221
+proposed,1,6,0.8,cover: size q3,0.466892,6689
+proposed,1,6,0.8,cover: size q4,0.426644,6332
+proposed,1,6,0.8,throttle core-hours,1237.26,
+proposed,1,1,1,cover: all,0.778066,27980
+proposed,1,1,1,cover: seasonal,0.933858,6749
+proposed,1,1,1,cover: follow-on,0.944419,1533
+proposed,1,1,1,cover: isolated,0.719571,13782
+proposed,1,1,1,cover: unknown,0.693504,5916
+proposed,1,1,1,"cover: follow-on, previous peak covers",1,1336
+proposed,1,1,1,"cover: follow-on, previous peak short",0.567487,197
+proposed,1,1,1,cover: size q1,0.941756,7738
+proposed,1,1,1,cover: size q2,0.840458,7221
+proposed,1,1,1,cover: size q3,0.727146,6689
+proposed,1,1,1,cover: size q4,0.56067,6332
+proposed,1,1,1,throttle core-hours,646.284,
+proposed,1,3,1,cover: all,0.788586,27980
+proposed,1,3,1,cover: seasonal,0.947279,6749
+proposed,1,3,1,cover: follow-on,0.940823,1533
+proposed,1,3,1,cover: isolated,0.729146,13782
+proposed,1,3,1,cover: unknown,0.706574,5916
+proposed,1,3,1,"cover: follow-on, previous peak covers",0.993327,1336
+proposed,1,3,1,"cover: follow-on, previous peak short",0.584754,197
+proposed,1,3,1,cover: size q1,0.95059,7738
+proposed,1,3,1,cover: size q2,0.856414,7221
+proposed,1,3,1,cover: size q3,0.729722,6689
+proposed,1,3,1,cover: size q4,0.575444,6332
+proposed,1,3,1,throttle core-hours,743.191,
+proposed,1,6,1,cover: all,0.656256,27980
+proposed,1,6,1,cover: seasonal,0.639054,6749
+proposed,1,6,1,cover: follow-on,0.865595,1533
+proposed,1,6,1,cover: isolated,0.666459,13782
+proposed,1,6,1,cover: unknown,0.597867,5916
+proposed,1,6,1,"cover: follow-on, previous peak covers",0.920716,1336
+proposed,1,6,1,"cover: follow-on, previous peak short",0.491778,197
+proposed,1,6,1,cover: size q1,0.871742,7738
+proposed,1,6,1,cover: size q2,0.639418,7221
+proposed,1,6,1,cover: size q3,0.559935,6689
+proposed,1,6,1,cover: size q4,0.513877,6332
+proposed,1,6,1,throttle core-hours,954.119,
+proposed,2,1,0.6,cover: all,0.576501,27980
+proposed,2,1,0.6,cover: seasonal,0.761331,6749
+proposed,2,1,0.6,cover: follow-on,0.917544,1533
+proposed,2,1,0.6,cover: isolated,0.487973,13782
+proposed,2,1,0.6,cover: unknown,0.483509,5916
+proposed,2,1,0.6,"cover: follow-on, previous peak covers",0.999251,1336
+proposed,2,1,0.6,"cover: follow-on, previous peak short",0.363424,197
+proposed,2,1,0.6,cover: size q1,0.790959,7738
+proposed,2,1,0.6,cover: size q2,0.630761,7221
+proposed,2,1,0.6,cover: size q3,0.486689,6689
+proposed,2,1,0.6,cover: size q4,0.34742,6332
+proposed,2,1,0.6,throttle core-hours,1216.56,
+proposed,2,3,0.6,cover: all,0.606159,27980
+proposed,2,3,0.6,cover: seasonal,0.801642,6749
+proposed,2,3,0.6,cover: follow-on,0.904518,1533
+proposed,2,3,0.6,cover: isolated,0.515004,13782
+proposed,2,3,0.6,cover: unknown,0.518197,5916
+proposed,2,3,0.6,"cover: follow-on, previous peak covers",0.98344,1336
+proposed,2,3,0.6,"cover: follow-on, previous peak short",0.369295,197
+proposed,2,3,0.6,cover: size q1,0.817423,7738
+proposed,2,3,0.6,cover: size q2,0.668183,7221
+proposed,2,3,0.6,cover: size q3,0.516772,6689
+proposed,2,3,0.6,cover: size q4,0.371682,6332
+proposed,2,3,0.6,throttle core-hours,1394.97,
+proposed,2,6,0.6,cover: all,0.421002,27980
+proposed,2,6,0.6,cover: seasonal,0.364173,6749
+proposed,2,6,0.6,cover: follow-on,0.750878,1533
+proposed,2,6,0.6,cover: isolated,0.439793,13782
+proposed,2,6,0.6,cover: unknown,0.356577,5916
+proposed,2,6,0.6,"cover: follow-on, previous peak covers",0.825882,1336
+proposed,2,6,0.6,"cover: follow-on, previous peak short",0.242228,197
+proposed,2,6,0.6,cover: size q1,0.617782,7738
+proposed,2,6,0.6,cover: size q2,0.352278,7221
+proposed,2,6,0.6,cover: size q3,0.343701,6689
+proposed,2,6,0.6,cover: size q4,0.340559,6332
+proposed,2,6,0.6,throttle core-hours,1731.66,
+proposed,2,1,0.8,cover: all,0.71373,27980
+proposed,2,1,0.8,cover: seasonal,0.898835,6749
+proposed,2,1,0.8,cover: follow-on,0.93424,1533
+proposed,2,1,0.8,cover: isolated,0.636411,13782
+proposed,2,1,0.8,cover: unknown,0.625545,5916
+proposed,2,1,0.8,"cover: follow-on, previous peak covers",1,1336
+proposed,2,1,0.8,"cover: follow-on, previous peak short",0.488276,197
+proposed,2,1,0.8,cover: size q1,0.891752,7738
+proposed,2,1,0.8,cover: size q2,0.786726,7221
+proposed,2,1,0.8,cover: size q3,0.641619,6689
+proposed,2,1,0.8,cover: size q4,0.489112,6332
+proposed,2,1,0.8,throttle core-hours,823.522,
+proposed,2,3,0.8,cover: all,0.730314,27980
+proposed,2,3,0.8,cover: seasonal,0.922107,6749
+proposed,2,3,0.8,cover: follow-on,0.927065,1533
+proposed,2,3,0.8,cover: isolated,0.651829,13782
+proposed,2,3,0.8,cover: unknown,0.643369,5916
+proposed,2,3,0.8,"cover: follow-on, previous peak covers",0.991541,1336
+proposed,2,3,0.8,"cover: follow-on, previous peak short",0.489807,197
+proposed,2,3,0.8,cover: size q1,0.907603,7738
+proposed,2,3,0.8,cover: size q2,0.80798,7221
+proposed,2,3,0.8,cover: size q3,0.655188,6689
+proposed,2,3,0.8,cover: size q4,0.504449,6332
+proposed,2,3,0.8,throttle core-hours,943.027,
+proposed,2,6,0.8,cover: all,0.548795,27980
+proposed,2,6,0.8,cover: seasonal,0.499793,6749
+proposed,2,6,0.8,cover: follow-on,0.820002,1533
+proposed,2,6,0.8,cover: isolated,0.572358,13782
+proposed,2,6,0.8,cover: unknown,0.479527,5916
+proposed,2,6,0.8,"cover: follow-on, previous peak covers",0.886881,1336
+proposed,2,6,0.8,"cover: follow-on, previous peak short",0.366448,197
+proposed,2,6,0.8,cover: size q1,0.751368,7738
+proposed,2,6,0.8,cover: size q2,0.505208,7221
+proposed,2,6,0.8,cover: size q3,0.462047,6689
+proposed,2,6,0.8,cover: size q4,0.442589,6332
+proposed,2,6,0.8,throttle core-hours,1232.92,
+proposed,2,1,1,cover: all,0.77971,27980
+proposed,2,1,1,cover: seasonal,0.938988,6749
+proposed,2,1,1,cover: follow-on,0.945491,1533
+proposed,2,1,1,cover: isolated,0.71752,13782
+proposed,2,1,1,cover: unknown,0.699924,5916
+proposed,2,1,1,"cover: follow-on, previous peak covers",1,1336
+proposed,2,1,1,"cover: follow-on, previous peak short",0.575826,197
+proposed,2,1,1,cover: size q1,0.929828,7738
+proposed,2,1,1,cover: size q2,0.849358,7221
+proposed,2,1,1,cover: size q3,0.722324,6689
+proposed,2,1,1,cover: size q4,0.577453,6332
+proposed,2,1,1,throttle core-hours,632.215,
+proposed,2,3,1,cover: all,0.792018,27980
+proposed,2,3,1,cover: seasonal,0.954893,6749
+proposed,2,3,1,cover: follow-on,0.940845,1533
+proposed,2,3,1,cover: isolated,0.729379,13782
+proposed,2,3,1,cover: unknown,0.713567,5916
+proposed,2,3,1,"cover: follow-on, previous peak covers",0.993172,1336
+proposed,2,3,1,"cover: follow-on, previous peak short",0.585979,197
+proposed,2,3,1,cover: size q1,0.937841,7738
+proposed,2,3,1,cover: size q2,0.862941,7221
+proposed,2,3,1,cover: size q3,0.733814,6689
+proposed,2,3,1,cover: size q4,0.594421,6332
+proposed,2,3,1,throttle core-hours,722.947,
+proposed,2,6,1,cover: all,0.64568,27980
+proposed,2,6,1,cover: seasonal,0.605011,6749
+proposed,2,6,1,cover: follow-on,0.862868,1533
+proposed,2,6,1,cover: isolated,0.665801,13782
+proposed,2,6,1,cover: unknown,0.588921,5916
+proposed,2,6,1,"cover: follow-on, previous peak covers",0.921405,1336
+proposed,2,6,1,"cover: follow-on, previous peak short",0.465882,197
+proposed,2,6,1,cover: size q1,0.831243,7738
+proposed,2,6,1,cover: size q2,0.636759,7221
+proposed,2,6,1,cover: size q3,0.557148,6689
+proposed,2,6,1,cover: size q4,0.522609,6332
+proposed,2,6,1,throttle core-hours,957.737,
